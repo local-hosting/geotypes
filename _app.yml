@@ -1,0 +1,12 @@
+# Geotypes — Preview workspace (POI taxonomy + map preview)
+# Preview: yarn preview   (from this directory)
+
+map:
+  .html: text/nunjucks
+
+localsDataFiles:
+  - _secrets.yml
+
+esbuild:
+  entries:
+    /scripts/preview.js: scripts/preview.mjs

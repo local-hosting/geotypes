@@ -1,0 +1,388 @@
+community_and_government:
+  name: Community and Government
+  id: 63be6904847c3692a84b9b9a
+  subcategories:
+    cemetery:
+      name: Cemetery
+      id: 4bf58dd8d48988d15c941735
+    prison:
+      name: Prison
+      id: 5310b8e5bcbc57f1066bcbf1
+    residential_building:
+      name: Residential Building
+      id: 4e67e38e036454776db1fb3a
+      subcategories:
+        apartment_or_condo:
+          name: Apartment or Condo
+          id: 4d954b06a243a5684965b473
+        home_private:
+          name: Home (private)
+          id: 4bf58dd8d48988d103941735
+    housing_development:
+      name: Housing Development
+      id: 4f2a210c4b9023bd5841ed28
+    trailer_park:
+      name: Trailer Park
+      id: 52f2ab2ebcbc57f1066b8b55
+    housing_authority:
+      name: Housing Authority
+      id: 63be6904847c3692a84b9ba9
+    public_and_social_service:
+      name: Public and Social Service
+      id: 63be6904847c3692a84b9bb1
+    animal_shelter:
+      name: Animal Shelter
+      id: 4e52d2d203646f7c19daa8ae
+    library:
+      name: Library
+      id: 4bf58dd8d48988d12f941735
+    senior_citizen_service:
+      name: Senior Citizen Service
+      id: 63be6904847c3692a84b9bb3
+    summer_camp:
+      name: Summer Camp
+      id: 52e81612bcbc57f1066b7a10
+    disabled_persons_service:
+      name: Disabled Persons Service
+      id: 63be6904847c3692a84b9b9c
+    homeless_shelter:
+      name: Homeless Shelter
+      id: 63be6904847c3692a84b9ba8
+    utility_company:
+      name: Utility Company
+      id: 63be6904847c3692a84b9bb4
+    cultural_center:
+      name: Cultural Center
+      id: 52e81612bcbc57f1066b7a32
+    social_club:
+      name: Social Club
+      id: 52e81612bcbc57f1066b7a33
+    polling_place:
+      name: Polling Place
+      id: 4cae28ecbf23941eb1190695
+    assisted_living:
+      name: Assisted Living
+      id: 5032891291d4c4b30a586d68
+    town_hall:
+      name: Town Hall
+      id: 52e81612bcbc57f1066b7a38
+    addiction_treatment_center:
+      name: Addiction Treatment Center
+      id: 63be6904847c3692a84b9b9b
+    spiritual_center:
+      name: Spiritual Center
+      id: 4bf58dd8d48988d131941735
+      subcategories:
+        shrine:
+          name: Shrine
+          id: 4eb1d80a4b900d56c88a45ff
+        synagogue:
+          name: Synagogue
+          id: 4bf58dd8d48988d139941735
+        terreiro:
+          name: Terreiro
+          id: 56aa371be4b08b9a8d5734f6
+        temple:
+          name: Temple
+          id: 4bf58dd8d48988d13a941735
+        kingdom_hall:
+          name: Kingdom Hall
+          id: 5744ccdfe4b0c0459246b4ac
+        church:
+          name: Church
+          id: 4bf58dd8d48988d132941735
+        sikh_temple:
+          name: Sikh Temple
+          id: 5bae9231bedf3950379f89c9
+        confucian_temple:
+          name: Confucian Temple
+          id: 56aa371be4b08b9a8d5734fc
+        hindu_temple:
+          name: Hindu Temple
+          id: 52e81612bcbc57f1066b7a3f
+        monastery:
+          name: Monastery
+          id: 52e81612bcbc57f1066b7a40
+        mosque:
+          name: Mosque
+          id: 4bf58dd8d48988d138941735
+        prayer_room:
+          name: Prayer Room
+          id: 52e81612bcbc57f1066b7a41
+        buddhist_temple:
+          name: Buddhist Temple
+          id: 52e81612bcbc57f1066b7a3e
+        cemevi:
+          name: Cemevi
+          id: 58daa1558bbb0b01f18ec1eb
+    dump:
+      name: Dump
+      id: 63be6904847c3692a84b9b9e
+    government_building:
+      name: Government Building
+      id: 4bf58dd8d48988d126941735
+      subcategories:
+        embassy_or_consulate:
+          name: Embassy or Consulate
+          id: 4bf58dd8d48988d12c951735
+        post_office:
+          name: Post Office
+          id: 4bf58dd8d48988d172941735
+        law_enforcement_and_public_safety:
+          name: Law Enforcement and Public Safety
+          id: 63be6904847c3692a84b9ba3
+          subcategories:
+            rescue_service:
+              name: Rescue Service
+              id: 63be6904847c3692a84b9ba5
+            police_station:
+              name: Police Station
+              id: 4bf58dd8d48988d12e941735
+            fire_station:
+              name: Fire Station
+              id: 4bf58dd8d48988d12c941735
+            probation_office:
+              name: Probation Office
+              id: 63be6904847c3692a84b9ba4
+        city_hall:
+          name: City Hall
+          id: 4bf58dd8d48988d129941735
+        government_department:
+          name: Government Department
+          id: 63be6904847c3692a84b9ba2
+        capitol_building:
+          name: Capitol Building
+          id: 4bf58dd8d48988d12a941735
+        military:
+          name: Military
+          id: 63be6904847c3692a84b9ba6
+          subcategories:
+            military_base:
+              name: Military Base
+              id: 4e52adeebd41615f56317744
+        courthouse:
+          name: Courthouse
+          id: 4bf58dd8d48988d12b941735
+    education:
+      name: Education
+      id: 4bf58dd8d48988d13b941735
+      subcategories:
+        college_and_university:
+          name: College and University
+          id: 4d4b7105d754a06372d81259
+          subcategories:
+            student_center:
+              name: Student Center
+              id: 4bf58dd8d48988d1ab941735
+            college_track:
+              name: College Track
+              id: 4bf58dd8d48988d1b6941735
+            medical_school:
+              name: Medical School
+              id: 4bf58dd8d48988d1b3941735
+            college_library:
+              name: College Library
+              id: 4bf58dd8d48988d1a7941735
+            college_classroom:
+              name: College Classroom
+              id: 4bf58dd8d48988d1a0941735
+            university:
+              name: University
+              id: 4bf58dd8d48988d1ae941735
+            college_cricket_pitch:
+              name: College Cricket Pitch
+              id: 4bf58dd8d48988d1b9941735
+            college_technology_building:
+              name: College Technology Building
+              id: 4bf58dd8d48988d19f941735
+            college_soccer_field:
+              name: College Soccer Field
+              id: 4bf58dd8d48988d1b7941735
+            college_arts_building:
+              name: College Arts Building
+              id: 4bf58dd8d48988d199941735
+            college_administrative_building:
+              name: College Administrative Building
+              id: 4bf58dd8d48988d197941735
+            college_gym:
+              name: College Gym
+              id: 4bf58dd8d48988d1b2941735
+            college_residence_hall:
+              name: College Residence Hall
+              id: 4bf58dd8d48988d1a3941735
+            college_lab:
+              name: College Lab
+              id: 4bf58dd8d48988d1a5941735
+            college_engineering_building:
+              name: College Engineering Building
+              id: 4bf58dd8d48988d19e941735
+            college_stadium:
+              name: College Stadium
+              id: 4bf58dd8d48988d1b4941735
+            college_basketball_court:
+              name: College Basketball Court
+              id: 4bf58dd8d48988d1ba941735
+            college_football_field:
+              name: College Football Field
+              id: 4bf58dd8d48988d1b8941735
+            college_rec_center:
+              name: College Rec Center
+              id: 4bf58dd8d48988d1a9941735
+            college_academic_building:
+              name: College Academic Building
+              id: 4bf58dd8d48988d198941735
+            college_communications_building:
+              name: College Communications Building
+              id: 4bf58dd8d48988d19a941735
+            college_theater:
+              name: College Theater
+              id: 4bf58dd8d48988d1ac941735
+            college_history_building:
+              name: College History Building
+              id: 4bf58dd8d48988d19d941735
+            community_college:
+              name: Community College
+              id: 4bf58dd8d48988d1a2941735
+            college_tennis_court:
+              name: College Tennis Court
+              id: 4e39a9cebd410d7aed40cbc4
+            college_bookstore:
+              name: College Bookstore
+              id: 4bf58dd8d48988d1b1941735
+            college_baseball_diamond:
+              name: College Baseball Diamond
+              id: 4bf58dd8d48988d1bb941735
+            college_hockey_rink:
+              name: College Hockey Rink
+              id: 4bf58dd8d48988d1b5941735
+            college_quad:
+              name: College Quad
+              id: 4bf58dd8d48988d1aa941735
+            college_science_building:
+              name: College Science Building
+              id: 4bf58dd8d48988d19b941735
+            law_school:
+              name: Law School
+              id: 4bf58dd8d48988d1a6941735
+            college_math_building:
+              name: College Math Building
+              id: 4bf58dd8d48988d19c941735
+            college_auditorium:
+              name: College Auditorium
+              id: 4bf58dd8d48988d1af941735
+            college_cafeteria:
+              name: College Cafeteria
+              id: 4bf58dd8d48988d1a1941735
+            fraternity_house:
+              name: Fraternity House
+              id: 4bf58dd8d48988d1b0941735
+            sorority_house:
+              name: Sorority House
+              id: 4bf58dd8d48988d141941735
+        flight_school:
+          name: Flight School
+          id: 52e81612bcbc57f1066b7a49
+        computer_training_school:
+          name: Computer Training School
+          id: 63be6904847c3692a84b9ba0
+        language_school:
+          name: Language School
+          id: 52e81612bcbc57f1066b7a48
+        nursery_school:
+          name: Nursery School
+          id: 4f4533814b9074f6e4fb0107
+        culinary_school:
+          name: Culinary School
+          id: 58daa1558bbb0b01f18ec200
+        trade_school:
+          name: Trade School
+          id: 4bf58dd8d48988d1ad941735
+        art_school:
+          name: Art School
+          id: 63be6904847c3692a84b9b9f
+        religious_school:
+          name: Religious School
+          id: 52e81612bcbc57f1066b7a47
+        circus_school:
+          name: Circus School
+          id: 52e81612bcbc57f1066b7a43
+        primary_and_secondary_school:
+          name: Primary and Secondary School
+          id: 63be6904847c3692a84b9ba1
+          subcategories:
+            elementary_school:
+              name: Elementary School
+              id: 4f4533804b9074f6e4fb0105
+            middle_school:
+              name: Middle School
+              id: 4f4533814b9074f6e4fb0106
+            high_school:
+              name: High School
+              id: 4bf58dd8d48988d13d941735
+        driving_school:
+          name: Driving School
+          id: 52e81612bcbc57f1066b7a42
+        music_school:
+          name: Music School
+          id: 4f04b10d2fb6e1c99f3db0be
+        preschool:
+          name: Preschool
+          id: 52e81612bcbc57f1066b7a45
+        adult_education:
+          name: Adult Education
+          id: 56aa371ce4b08b9a8d573570
+        private_school:
+          name: Private School
+          id: 52e81612bcbc57f1066b7a46
+    public_bathroom:
+      name: Public Bathroom
+      id: 5744ccdfe4b0c0459246b4c4
+    organization:
+      name: Organization
+      id: 63be6904847c3692a84b9baa
+      subcategories:
+        environmental_organization:
+          name: Environmental Organization
+          id: 63be6904847c3692a84b9bac
+        club_house:
+          name: Club House
+          id: 52e81612bcbc57f1066b7a35
+        lgbtq_organization:
+          name: LGBTQ Organization
+          id: 63be6904847c3692a84b9bae
+        youth_organization:
+          name: Youth Organization
+          id: 63be6904847c3692a84b9bb0
+        veterans_organization:
+          name: Veterans' Organization
+          id: 5f2c5de85b4c177b9a6de29c
+        non_profit_organization:
+          name: Non-Profit Organization
+          id: 50328a8e91d4c4b30a586d6c
+        charity:
+          name: Charity
+          id: 63be6904847c3692a84b9bab
+        social_services_organization:
+          name: Social Services Organization
+          id: 63be6904847c3692a84b9baf
+        labor_union:
+          name: Labor Union
+          id: 63be6904847c3692a84b9bad
+    domestic_abuse_treatment_center:
+      name: Domestic Abuse Treatment Center
+      id: 63be6904847c3692a84b9b9d
+    community_center:
+      name: Community Center
+      id: 52e81612bcbc57f1066b7a34
+    retirement_home:
+      name: Retirement Home
+      id: 63be6904847c3692a84b9bb2
+    observatory:
+      name: Observatory
+      id: 5744ccdfe4b0c0459246b4d9
+    rehabilitation_center:
+      name: Rehabilitation Center
+      id: 56aa371be4b08b9a8d57351d
+    government_lobbyist:
+      name: Government Lobbyist
+      id: 63be6904847c3692a84b9ba7

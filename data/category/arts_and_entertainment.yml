@@ -1,0 +1,133 @@
+arts_and_entertainment:
+  name: Arts and Entertainment
+  id: 4d4b7104d754a06370d81259
+  subcategories:
+    dance_hall:
+      id: 63be6904847c3692a84b9b23
+      name: Dance Hall
+    strip_club:
+      id: 4bf58dd8d48988d1d6941735
+      name: Strip Club
+    aquarium:
+      id: 4fceea171983d5d06c3e9823
+      name: Aquarium
+    mini_golf_course:
+      id: 52e81612bcbc57f1066b79eb
+      name: Mini Golf Course
+    escape_room:
+      id: 5f2c2834b6d05514c704451e
+      name: Escape Room
+    water_park:
+      id: 4bf58dd8d48988d193941735
+      name: Water Park
+    comedy_club:
+      id: 4bf58dd8d48988d18e941735
+      name: Comedy Club
+    pool_hall:
+      id: 4bf58dd8d48988d1e3931735
+      name: Pool Hall
+    fair:
+      id: 4eb1daf44b900d56c88a4600
+      name: Fair
+    stadium:
+      id: 4bf58dd8d48988d184941735
+      name: Stadium
+    movie_theater:
+      id: 4bf58dd8d48988d17f941735
+      name: Movie Theater
+    bingo_center:
+      id: 63be6904847c3692a84b9b20
+      name: Bingo Center
+    roller_rink:
+      id: 52e81612bcbc57f1066b79e9
+      name: Roller Rink
+    performing_arts_venue:
+      id: 4bf58dd8d48988d1f2931735
+      name: Performing Arts Venue
+    night_club:
+      id: 4bf58dd8d48988d11f941735
+      name: Night Club
+    vr_cafe:
+      id: 5f2c14a5b6d05514c7042eb7
+      name: VR Cafe
+    ticket_seller:
+      id: 63be6904847c3692a84b9b25
+      name: Ticket Seller
+    country_dance_club:
+      id: 52e81612bcbc57f1066b79ef
+      name: Country Dance Club
+    planetarium:
+      id: 4bf58dd8d48988d192941735
+      name: Planetarium
+    party_center:
+      id: 63be6904847c3692a84b9b24
+      name: Party Center
+    exhibit:
+      id: 56aa371be4b08b9a8d573532
+      name: Exhibit
+    gaming_cafe:
+      id: 4bf58dd8d48988d18d941735
+      name: Gaming Cafe
+    disc_golf_course:
+      id: 63be6904847c3692a84b9c03
+      name: Disc Golf Course
+    psychic_and_astrologer:
+      id: 52f2ab2ebcbc57f1066b8b43
+      name: Psychic and Astrologer
+    pachinko_parlor:
+      id: 5744ccdfe4b0c0459246b4b8
+      name: Pachinko Parlor
+    carnival:
+      id: 63be6904847c3692a84b9b21
+      name: Carnival
+    karaoke_box:
+      id: 5744ccdfe4b0c0459246b4bb
+      name: Karaoke Box
+    art_gallery:
+      id: 4bf58dd8d48988d1e2931735
+      name: Art Gallery
+    bowling_alley:
+      id: 4bf58dd8d48988d1e4931735
+      name: Bowling Alley
+    disc_golf:
+      id: 52e81612bcbc57f1066b79e8
+      name: Disc Golf
+    samba_school:
+      id: 56aa371be4b08b9a8d5734f9
+      name: Samba School
+    laser_tag_center:
+      id: 52e81612bcbc57f1066b79e6
+      name: Laser Tag Center
+    country_club:
+      id: 63be6904847c3692a84b9b22
+      name: Country Club
+    amusement_park:
+      id: 4bf58dd8d48988d182941735
+      name: Amusement Park
+    arcade:
+      id: 4bf58dd8d48988d1e1931735
+      name: Arcade
+    go_kart_track:
+      id: 52e81612bcbc57f1066b79ea
+      name: Go Kart Track
+    public_art:
+      id: 507c8c4091d498d9fc8c67a9
+      name: Public Art
+    zoo:
+      id: 4bf58dd8d48988d17b941735
+      name: Zoo
+    circus:
+      id: 52e81612bcbc57f1066b79e7
+      name: Circus
+    museum:
+      id: 4bf58dd8d48988d181941735
+      name: Museum
+    casino:
+      id: 4bf58dd8d48988d17c941735
+      name: Casino
+    salsa_club:
+      id: 52e81612bcbc57f1066b79ec
+      name: Salsa Club
+    internet_cafe:
+      id: 4bf58dd8d48988d1f0941735
+      name: Internet Cafe

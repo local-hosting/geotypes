@@ -1,0 +1,219 @@
+travel_and_transportation:
+  name: Travel and Transportation
+  id: 4d4b7105d754a06379d81259
+  subcategories:
+    pier:
+      name: Pier
+      id: 4e74f6cabd41c4836eac4c31
+    toll_plaza:
+      name: Toll Plaza
+      id: 52f2ab2ebcbc57f1066b8b4e
+    travel_lounge:
+      name: Travel Lounge
+      id: 4f04b25d2fb6e1c99f3db0c0
+    tourist_information_and_service:
+      name: Tourist Information and Service
+      id: 4f4530164b9074f6e4fb00ff
+      subcategories:
+        tour_provider:
+          name: Tour Provider
+          id: 56aa371be4b08b9a8d573520
+    boat_or_ferry:
+      name: Boat or Ferry
+      id: 4bf58dd8d48988d12d951735
+    electric_vehicle_charging_station:
+      name: Electric Vehicle Charging Station
+      id: 5032872391d4c4b30a586d64
+    lodging:
+      name: Lodging
+      id: 63be6904847c3692a84b9c25
+      subcategories:
+        cabin:
+          name: Cabin
+          id: 63be6904847c3692a84b9c26
+        lodge:
+          name: Lodge
+          id: 63be6904847c3692a84b9c27
+        boarding_house:
+          name: Boarding House
+          id: 4f4530a74b9074f6e4fb0100
+        hostel:
+          name: Hostel
+          id: 4bf58dd8d48988d1ee931735
+        hotel:
+          name: Hotel
+          id: 4bf58dd8d48988d1fa931735
+          subcategories:
+            hotel_pool:
+              name: Hotel Pool
+              id: 4bf58dd8d48988d132951735
+        bed_and_breakfast:
+          name: Bed and Breakfast
+          id: 4bf58dd8d48988d1f8931735
+        vacation_rental:
+          name: Vacation Rental
+          id: 56aa371be4b08b9a8d5734e1
+        motel:
+          name: Motel
+          id: 4bf58dd8d48988d1fb931735
+        inn:
+          name: Inn
+          id: 5bae9231bedf3950379f89cb
+        resort:
+          name: Resort
+          id: 4bf58dd8d48988d12f951735
+    train:
+      name: Train
+      id: 4bf58dd8d48988d12a951735
+    moving_target:
+      name: Moving Target
+      id: 4f2a23984b9023bd5841ed2c
+    toll_booth:
+      name: Toll Booth
+      id: 52f2ab2ebcbc57f1066b8b4d
+    road:
+      name: Road
+      id: 4bf58dd8d48988d1f9931735
+      subcategories:
+        intersection:
+          name: Intersection
+          id: 52f2ab2ebcbc57f1066b8b4c
+    parking:
+      name: Parking
+      id: 4c38df4de52ce0d596b336e1
+    port:
+      name: Port
+      id: 56aa371be4b08b9a8d57353e
+    truck_stop:
+      name: Truck Stop
+      id: 57558b36e4b065ecebd306dd
+    travel_agency:
+      name: Travel Agency
+      id: 4f04b08c2fb6e1c99f3db0bd
+    baggage_locker:
+      name: Baggage Locker
+      id: 5744ccdfe4b0c0459246b4e8
+    hot_air_balloon_tour_agency:
+      name: Hot Air Balloon Tour Agency
+      id: 63be6904847c3692a84b9c24
+    platform:
+      name: Platform
+      id: 4f4531504b9074f6e4fb0102
+    cable_car:
+      name: Cable Car
+      id: 52f2ab2ebcbc57f1066b8b50
+    transport_hub:
+      name: Transport Hub
+      id: 63be6904847c3692a84b9c28
+      subcategories:
+        rental_car_location:
+          name: Rental Car Location
+          id: 4bf58dd8d48988d1ef941735
+        tram_station:
+          name: Tram Station
+          id: 52f2ab2ebcbc57f1066b8b51
+        bus_stop:
+          name: Bus Stop
+          id: 52f2ab2ebcbc57f1066b8b4f
+        heliport:
+          name: Heliport
+          id: 56aa371ce4b08b9a8d57356e
+        bus_station:
+          name: Bus Station
+          id: 4bf58dd8d48988d1fe931735
+        taxi_stand:
+          name: Taxi Stand
+          id: 53fca564498e1a175f32528b
+        rail_station:
+          name: Rail Station
+          id: 4bf58dd8d48988d129951735
+        metro_station:
+          name: Metro Station
+          id: 4bf58dd8d48988d1fd931735
+        marine_terminal:
+          name: Marine Terminal
+          id: 5f2c1af1b6d05514c704319d
+        light_rail_station:
+          name: Light Rail Station
+          id: 4bf58dd8d48988d1fc931735
+        airport:
+          name: Airport
+          id: 4bf58dd8d48988d1ed931735
+          subcategories:
+            airport_ticket_counter:
+              name: Airport Ticket Counter
+              id: 60a674555c7917283bad6839
+            airport_gate:
+              name: Airport Gate
+              id: 4bf58dd8d48988d1f0931735
+            airport_tram_station:
+              name: Airport Tram Station
+              id: 4bf58dd8d48988d1ec931735
+            airport_service:
+              name: Airport Service
+              id: 56aa371be4b08b9a8d57352f
+            airport_food_court:
+              name: Airport Food Court
+              id: 4bf58dd8d48988d1ef931735
+            private_airport:
+              name: Private Airport
+              id: 63be6904847c3692a84b9c2a
+            plane:
+              name: Plane
+              id: 4bf58dd8d48988d1f7931735
+            international_airport:
+              name: International Airport
+              id: 63be6904847c3692a84b9c29
+            airport_terminal:
+              name: Airport Terminal
+              id: 4bf58dd8d48988d1eb931735
+            airport_lounge:
+              name: Airport Lounge
+              id: 4eb1bc533b7b2c5b1d4306cb
+            airfield:
+              name: Airfield
+              id: 5f2c42335b4c177b9a6dc927
+            baggage_claim:
+              name: Baggage Claim
+              id: 5744ccdfe4b0c0459246b4e5
+    bike_rental:
+      name: Bike Rental
+      id: 4e4c9077bd41f78e849722f9
+    cruise:
+      name: Cruise
+      id: 55077a22498e5e9248869ba2
+    border_crossing:
+      name: Border Crossing
+      id: 52f2ab2ebcbc57f1066b8b4b
+    boat_rental:
+      name: Boat Rental
+      id: 5744ccdfe4b0c0459246b4c1
+    rest_area:
+      name: Rest Area
+      id: 4d954b16a243a5684b65b473
+    transportation_service:
+      name: Transportation Service
+      id: 54541b70498ea6ccd0204bff
+      subcategories:
+        limo_service:
+          name: Limo Service
+          id: 63be6904847c3692a84b9c2c
+        taxi:
+          name: Taxi
+          id: 4bf58dd8d48988d130951735
+        charter_bus:
+          name: Charter Bus
+          id: 63be6904847c3692a84b9c2b
+        public_transportation:
+          name: Public Transportation
+          id: 63be6904847c3692a84b9c2d
+          subcategories:
+            bus_line:
+              name: Bus Line
+              id: 4bf58dd8d48988d12b951735
+    rv_park:
+      name: RV Park
+      id: 52f2ab2ebcbc57f1066b8b53
+    fuel_station:
+      name: Fuel Station
+      id: 4bf58dd8d48988d113951735

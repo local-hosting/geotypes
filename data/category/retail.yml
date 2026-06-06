@@ -1,0 +1,451 @@
+retail:
+  name: Retail
+  id: 4d4b7105d754a06378d81259
+  subcategories:
+    cosmetics_store:
+      name: Cosmetics Store
+      id: 4bf58dd8d48988d10c951735
+    auction_house:
+      name: Auction House
+      id: 63be6904847c3692a84b9be2
+    textiles_store:
+      name: Textiles Store
+      id: 52f2ab2ebcbc57f1066b8b26
+    toy_store:
+      name: Toy Store
+      id: 4bf58dd8d48988d1f3941735
+    mobility_store:
+      name: Mobility Store
+      id: 56aa371be4b08b9a8d57354a
+    boutique:
+      name: Boutique
+      id: 4bf58dd8d48988d104951735
+    shopping_plaza:
+      name: Shopping Plaza
+      id: 5744ccdfe4b0c0459246b4dc
+    medical_supply_store:
+      name: Medical Supply Store
+      id: 58daa1558bbb0b01f18ec206
+    department_store:
+      name: Department Store
+      id: 4bf58dd8d48988d1f6941735
+    bookstore:
+      name: Bookstore
+      id: 4bf58dd8d48988d114951735
+      subcategories:
+        used_bookstore:
+          name: Used Bookstore
+          id: 52f2ab2ebcbc57f1066b8b30
+    drugstore:
+      name: Drugstore
+      id: 5745c2e4498e11e7bccabdbd
+    knitting_store:
+      name: Knitting Store
+      id: 52f2ab2ebcbc57f1066b8b25
+    big_box_store:
+      name: Big Box Store
+      id: 52f2ab2ebcbc57f1066b8b42
+    discount_store:
+      name: Discount Store
+      id: 52dea92d3cf9994f4e043dbb
+    computers_and_electronics_retail:
+      name: Computers and Electronics Retail
+      id: 63be6904847c3692a84b9bea
+      subcategories:
+        video_games_store:
+          name: Video Games Store
+          id: 4bf58dd8d48988d10b951735
+        camera_store:
+          name: Camera Store
+          id: 4eb1bdf03b7b55596b4a7491
+        mobile_phone_store:
+          name: Mobile Phone Store
+          id: 4f04afc02fb6e1c99f3db0bc
+        electronics_store:
+          name: Electronics Store
+          id: 4bf58dd8d48988d122951735
+    smoke_shop:
+      name: Smoke Shop
+      id: 4bf58dd8d48988d123951735
+    shopping_mall:
+      name: Shopping Mall
+      id: 4bf58dd8d48988d1fd941735
+    fashion_retail:
+      name: Fashion Retail
+      id: 63be6904847c3692a84b9bec
+      subcategories:
+        bridal_store:
+          name: Bridal Store
+          id: 4bf58dd8d48988d11a951735
+        clothing_store:
+          name: Clothing Store
+          id: 4bf58dd8d48988d103951735
+        shoe_store:
+          name: Shoe Store
+          id: 4bf58dd8d48988d107951735
+        jewelry_store:
+          name: Jewelry Store
+          id: 4bf58dd8d48988d111951735
+        men_s_store:
+          name: Men's Store
+          id: 4bf58dd8d48988d106951735
+        lingerie_store:
+          name: Lingerie Store
+          id: 4bf58dd8d48988d109951735
+        swimwear_store:
+          name: Swimwear Store
+          id: 63be6904847c3692a84b9bee
+        batik_store:
+          name: Batik Store
+          id: 56aa371be4b08b9a8d5734cb
+        watch_store:
+          name: Watch Store
+          id: 52f2ab2ebcbc57f1066b8b2e
+        sunglasses_store:
+          name: Sunglasses Store
+          id: 63be6904847c3692a84b9bed
+        women_s_store:
+          name: Women's Store
+          id: 4bf58dd8d48988d108951735
+        children_s_clothing_store:
+          name: Children's Clothing Store
+          id: 4bf58dd8d48988d105951735
+        fashion_accessories_store:
+          name: Fashion Accessories Store
+          id: 4bf58dd8d48988d102951735
+    marijuana_dispensary:
+      name: Marijuana Dispensary
+      id: 52c71aaf3cf9994f4e043d17
+    hobby_store:
+      name: Hobby Store
+      id: 4bf58dd8d48988d1fb941735
+    warehouse_or_wholesale_store:
+      name: Warehouse or Wholesale Store
+      id: 52e816a6bcbc57f1066b7a54
+    arts_and_crafts_store:
+      name: Arts and Crafts Store
+      id: 4bf58dd8d48988d127951735
+    sporting_goods_retail:
+      name: Sporting Goods Retail
+      id: 4bf58dd8d48988d1f2941735
+      subcategories:
+        golf_store:
+          name: Golf Store
+          id: 63be6904847c3692a84b9bf6
+        skate_store:
+          name: Skate Store
+          id: 5bae9231bedf3950379f89d2
+        soccer_store:
+          name: Soccer Store
+          id: 63be6904847c3692a84b9bf8
+        dive_store:
+          name: Dive Store
+          id: 52f2ab2ebcbc57f1066b8b1a
+        hunting_supply_store:
+          name: Hunting Supply Store
+          id: 50aaa5234b90af0d42d5de12
+        baseball_store:
+          name: Baseball Store
+          id: 63be6904847c3692a84b9bf5
+        gun_store:
+          name: Gun Store
+          id: 52f2ab2ebcbc57f1066b8b19
+        ski_store:
+          name: Ski Store
+          id: 56aa371be4b08b9a8d573566
+        fishing_store:
+          name: Fishing Store
+          id: 52f2ab2ebcbc57f1066b8b16
+        surf_store:
+          name: Surf Store
+          id: 63be6904847c3692a84b9bf9
+        running_store:
+          name: Running Store
+          id: 63be6904847c3692a84b9bf7
+        bicycle_store:
+          name: Bicycle Store
+          id: 4bf58dd8d48988d115951735
+        tennis_store:
+          name: Tennis Store
+          id: 63be6904847c3692a84b9bfa
+    garden_center:
+      name: Garden Center
+      id: 4eb1c0253b7b52c0e1adc2e9
+    print_store:
+      name: Print Store
+      id: 52f2ab2ebcbc57f1066b8b28
+    flea_market:
+      name: Flea Market
+      id: 4bf58dd8d48988d1f7941735
+    dance_store:
+      name: Dance Store
+      id: 63be6904847c3692a84b9beb
+    market:
+      name: Market
+      id: 50be8ee891d4fa8dcc7199a7
+    swimming_pool_supply_store:
+      name: Swimming Pool Supply Store
+      id: 63be6904847c3692a84b9bfb
+    vape_store:
+      name: Vape Store
+      id: 56aa371be4b08b9a8d57355c
+    perfume_store:
+      name: Perfume Store
+      id: 52f2ab2ebcbc57f1066b8b23
+    pet_supplies_store:
+      name: Pet Supplies Store
+      id: 4bf58dd8d48988d100951735
+    floating_market:
+      name: Floating Market
+      id: 56aa371be4b08b9a8d573505
+    costume_store:
+      name: Costume Store
+      id: 52f2ab2ebcbc57f1066b8b17
+    record_store:
+      name: Record Store
+      id: 4bf58dd8d48988d10d951735
+    construction_supplies_store:
+      name: Construction Supplies Store
+      id: 5454144b498ec1f095bff2f2
+    music_store:
+      name: Music Store
+      id: 4bf58dd8d48988d1fe941735
+    convenience_store:
+      name: Convenience Store
+      id: 4d954b0ea243a5684a65b473
+    video_store:
+      name: Video Store
+      id: 4bf58dd8d48988d126951735
+    cannabis_store:
+      name: Cannabis Store
+      id: 63be6904847c3692a84b9be9
+    board_store:
+      name: Board Store
+      id: 4bf58dd8d48988d1f1941735
+    adult_store:
+      name: Adult Store
+      id: 5267e446e4b0ec79466e48c4
+    outlet_mall:
+      name: Outlet Mall
+      id: 5744ccdfe4b0c0459246b4df
+    leather_goods_store:
+      name: Leather Goods Store
+      id: 52f2ab2ebcbc57f1066b8b2b
+    stationery_store:
+      name: Stationery Store
+      id: 52f2ab2ebcbc57f1066b8b21
+    furniture_and_home_store:
+      name: Furniture and Home Store
+      id: 4bf58dd8d48988d1f8941735
+      subcategories:
+        lighting_store:
+          name: Lighting Store
+          id: 55888a5a498e782e3303b43a
+        housewares_store:
+          name: Housewares Store
+          id: 63be6904847c3692a84b9bf2
+        kitchen_supply_store:
+          name: Kitchen Supply Store
+          id: 58daa1558bbb0b01f18ec1b4
+        mattress_store:
+          name: Mattress Store
+          id: 52f2ab2ebcbc57f1066b8b27
+        carpet_store:
+          name: Carpet Store
+          id: 52f2ab2ebcbc57f1066b8b2a
+        home_appliance_store:
+          name: Home Appliance Store
+          id: 63be6904847c3692a84b9bf1
+    automotive_retail:
+      name: Automotive Retail
+      id: 63be6904847c3692a84b9be3
+      subcategories:
+        car_parts_and_accessories:
+          name: Car Parts and Accessories
+          id: 63be6904847c3692a84b9be6
+        motorsports_store:
+          name: Motorsports Store
+          id: 59d79d6b2e268052fa2a3332
+        moped_dealership:
+          name: Moped Dealership
+          id: 63be6904847c3692a84b9be7
+        car_dealership:
+          name: Car Dealership
+          id: 4eb1c1623b7b52c0e1adc2ec
+          subcategories:
+            new_car_dealership:
+              name: New Car Dealership
+              id: 5e8f50bd03c7a9000c1e2fbc
+            classic_and_antique_car_dealership:
+              name: Classic and Antique Car Dealership
+              id: 63be6904847c3692a84b9be4
+            rv_and_motorhome_dealership:
+              name: RV and Motorhome Dealership
+              id: 63be6904847c3692a84b9be5
+            used_car_dealership:
+              name: Used Car Dealership
+              id: 5e8f501a03c7a9000c1e2e88
+        motorcycle_dealership:
+          name: Motorcycle Dealership
+          id: 5032833091d4c4b30a586d60
+        motor_scooter_dealership:
+          name: Motor Scooter Dealership
+          id: 63be6904847c3692a84b9be8
+    vintage_and_thrift_store:
+      name: Vintage and Thrift Store
+      id: 4bf58dd8d48988d101951735
+    outdoor_supply_store:
+      name: Outdoor Supply Store
+      id: 52f2ab2ebcbc57f1066b8b22
+    duty_free_store:
+      name: Duty-free Store
+      id: 589ddde98ae3635c072819ee
+    food_and_beverage_retail:
+      name: Food and Beverage Retail
+      id: 4bf58dd8d48988d1f9941735
+      subcategories:
+        herbs_and_spices_store:
+          name: Herbs and Spices Store
+          id: 52f2ab2ebcbc57f1066b8b2c
+        fruit_and_vegetable_store:
+          name: Fruit and Vegetable Store
+          id: 52f2ab2ebcbc57f1066b8b1c
+        supermarket:
+          name: Supermarket
+          id: 52f2ab2ebcbc57f1066b8b46
+        sausage_store:
+          name: Sausage Store
+          id: 56aa371be4b08b9a8d573564
+        tur_ucu_shop:
+          name: Turşucu Shop
+          id: 58daa1558bbb0b01f18ec1e5
+        coffee_roaster:
+          name: Coffee Roaster
+          id: 5e18993feee47d000759b256
+        health_food_store:
+          name: Health Food Store
+          id: 50aa9e744b90af0d42d5de0e
+        wine_store:
+          name: Wine Store
+          id: 4bf58dd8d48988d119951735
+        candy_store:
+          name: Candy Store
+          id: 4bf58dd8d48988d117951735
+        farmers_market:
+          name: Farmers Market
+          id: 4bf58dd8d48988d1fa941735
+        grocery_store:
+          name: Grocery Store
+          id: 4bf58dd8d48988d118951735
+          subcategories:
+            organic_grocery:
+              name: Organic Grocery
+              id: 52f2ab2ebcbc57f1066b8b45
+        dairy_store:
+          name: Dairy Store
+          id: 58daa1558bbb0b01f18ec1ca
+        fish_market:
+          name: Fish Market
+          id: 4bf58dd8d48988d10e951735
+        kosher_store:
+          name: Kosher Store
+          id: 63be6904847c3692a84b9bef
+        chocolate_store:
+          name: Chocolate Store
+          id: 52f2ab2ebcbc57f1066b8b31
+        butcher:
+          name: Butcher
+          id: 4bf58dd8d48988d11d951735
+        cheese_store:
+          name: Cheese Store
+          id: 4bf58dd8d48988d11e951735
+        kuruyemi_i_shop:
+          name: Kuruyemişçi Shop
+          id: 58daa1558bbb0b01f18ec1e8
+        liquor_store:
+          name: Liquor Store
+          id: 4bf58dd8d48988d186941735
+        beer_store:
+          name: Beer Store
+          id: 5370f356bcbc57f1066c94c2
+        meat_and_seafood_store:
+          name: Meat and Seafood Store
+          id: 63be6904847c3692a84b9bf0
+        gourmet_store:
+          name: Gourmet Store
+          id: 4bf58dd8d48988d1f5941735
+        imported_food_store:
+          name: Imported Food Store
+          id: 5f2c41945b4c177b9a6dc7d6
+    packaging_supply_store:
+      name: Packaging Supply Store
+      id: 63be6904847c3692a84b9bf3
+    office_supply_store:
+      name: Office Supply Store
+      id: 4bf58dd8d48988d121951735
+    supplement_store:
+      name: Supplement Store
+      id: 5744ccdfe4b0c0459246b4cd
+    luggage_store:
+      name: Luggage Store
+      id: 52f2ab2ebcbc57f1066b8b29
+    miscellaneous_store:
+      name: Miscellaneous Store
+      id: 4bf58dd8d48988d1ff941735
+    party_supply_store:
+      name: Party Supply Store
+      id: 63be6904847c3692a84b9bf4
+    fireworks_store:
+      name: Fireworks Store
+      id: 52f2ab2ebcbc57f1066b8b3a
+    hardware_store:
+      name: Hardware Store
+      id: 4bf58dd8d48988d112951735
+    outlet_store:
+      name: Outlet Store
+      id: 52f2ab2ebcbc57f1066b8b35
+    betting_shop:
+      name: Betting Shop
+      id: 52f2ab2ebcbc57f1066b8b40
+    eyecare_store:
+      name: Eyecare Store
+      id: 4d954afda243a5684865b473
+    framing_store:
+      name: Framing Store
+      id: 52f2ab2ebcbc57f1066b8b24
+    antique_store:
+      name: Antique Store
+      id: 4bf58dd8d48988d116951735
+    baby_store:
+      name: Baby Store
+      id: 52f2ab2ebcbc57f1066b8b32
+    flower_store:
+      name: Flower Store
+      id: 4bf58dd8d48988d11b951735
+    gift_store:
+      name: Gift Store
+      id: 4bf58dd8d48988d128951735
+    newsagent:
+      name: Newsagent
+      id: 5f2c5a295b4c177b9a6ddd0e
+    pawn_shop:
+      name: Pawn Shop
+      id: 52f2ab2ebcbc57f1066b8b34
+    newsstand:
+      name: Newsstand
+      id: 4f04ad622fb6e1c99f3db0b9
+    comic_book_store:
+      name: Comic Book Store
+      id: 52f2ab2ebcbc57f1066b8b18
+    pop_up_store:
+      name: Pop-Up Store
+      id: 52f2ab2ebcbc57f1066b8b3d
+    pharmacy:
+      name: Pharmacy
+      id: 4bf58dd8d48988d10f951735
+    tobacco_store:
+      name: Tobacco Store
+      id: 63be6904847c3692a84b9bfc
+    souvenir_store:
+      name: Souvenir Store
+      id: 52f2ab2ebcbc57f1066b8b1b

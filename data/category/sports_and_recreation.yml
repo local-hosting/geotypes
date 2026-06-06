@@ -1,0 +1,281 @@
+sports_and_recreation:
+  name: Sports and Recreation
+  id: 4f4528bc4b90abdf24c9de85
+  subcategories:
+    rugby:
+      name: Rugby
+      id: 63be6904847c3692a84b9c14
+      subcategories:
+        rugby_pitch:
+          name: Rugby Pitch
+          id: 52e81612bcbc57f1066b7a2c
+    martial_arts_dojo:
+      name: Martial Arts Dojo
+      id: 4bf58dd8d48988d101941735
+    personal_trainer:
+      name: Personal Trainer
+      id: 63be6904847c3692a84b9c0e
+    fishing_area:
+      name: Fishing Area
+      id: 52e81612bcbc57f1066b7a0f
+    water_sports:
+      name: Water Sports
+      id: 63be6904847c3692a84b9c1c
+      subcategories:
+        scuba_diving_instructor:
+          name: Scuba Diving Instructor
+          id: 63be6904847c3692a84b9c20
+        rafting_spot:
+          name: Rafting Spot
+          id: 52e81612bcbc57f1066b7a29
+        swimming:
+          name: Swimming
+          id: 63be6904847c3692a84b9c22
+          subcategories:
+            swim_school:
+              name: Swim School
+              id: 52e81612bcbc57f1066b7a44
+            swimming_pool:
+              name: Swimming Pool
+              id: 4bf58dd8d48988d15e941735
+            swimming_club:
+              name: Swimming Club
+              id: 63be6904847c3692a84b9c23
+        canoe_and_kayak_rental:
+          name: Canoe and Kayak Rental
+          id: 63be6904847c3692a84b9c1d
+        sailing_club:
+          name: Sailing Club
+          id: 63be6904847c3692a84b9c1f
+        surfing:
+          name: Surfing
+          id: 63be6904847c3692a84b9c21
+        rafting_outfitter:
+          name: Rafting Outfitter
+          id: 63be6904847c3692a84b9c1e
+    skating:
+      name: Skating
+      id: 63be6904847c3692a84b9c17
+      subcategories:
+        skating_rink:
+          name: Skating Rink
+          id: 4bf58dd8d48988d168941735
+        skate_park:
+          name: Skate Park
+          id: 4bf58dd8d48988d167941735
+    golf:
+      name: Golf
+      id: 63be6904847c3692a84b9c08
+      subcategories:
+        golf_driving_range:
+          name: Golf Driving Range
+          id: 58daa1558bbb0b01f18ec1b0
+        golf_course:
+          name: Golf Course
+          id: 4bf58dd8d48988d1e6941735
+        golf_club:
+          name: Golf Club
+          id: 63be6904847c3692a84b9c09
+    indoor_play_area:
+      name: Indoor Play Area
+      id: 5744ccdfe4b0c0459246b4b5
+    sports_club:
+      name: Sports Club
+      id: 52e81612bcbc57f1066b7a2e
+    volleyball_court:
+      name: Volleyball Court
+      id: 4eb1bf013b7b6f98df247e07
+    curling_ice:
+      name: Curling Ice
+      id: 56aa371be4b08b9a8d57351a
+    athletic_field:
+      name: Athletic Field
+      id: 63be6904847c3692a84b9bfd
+    race_track:
+      name: Race Track
+      id: 4bf58dd8d48988d1f4931735
+      subcategories:
+        racecourse:
+          name: Racecourse
+          id: 56aa371be4b08b9a8d573514
+    football:
+      name: Football
+      id: 63be6904847c3692a84b9c05
+      subcategories:
+        football_field:
+          name: Football Field
+          id: 63be6904847c3692a84b9c07
+        football_club:
+          name: Football Club
+          id: 63be6904847c3692a84b9c06
+    soccer:
+      name: Soccer
+      id: 63be6904847c3692a84b9c1a
+      subcategories:
+        soccer_field:
+          name: Soccer Field
+          id: 4cce455aebf7b749d5e191f5
+        soccer_club:
+          name: Soccer Club
+          id: 63be6904847c3692a84b9c1b
+    hunting_area:
+      name: Hunting Area
+      id: 63be6904847c3692a84b9c0d
+    paintball_field:
+      name: Paintball Field
+      id: 5032829591d4c4b30a586d5e
+    baseball:
+      name: Baseball
+      id: 63be6904847c3692a84b9bfe
+      subcategories:
+        baseball_field:
+          name: Baseball Field
+          id: 4bf58dd8d48988d1e8941735
+        batting_cages:
+          name: Batting Cages
+          id: 63be6904847c3692a84b9c00
+        baseball_club:
+          name: Baseball Club
+          id: 63be6904847c3692a84b9bff
+    running_and_track:
+      name: Running and Track
+      id: 63be6904847c3692a84b9c15
+      subcategories:
+        running_club:
+          name: Running Club
+          id: 63be6904847c3692a84b9c16
+        track:
+          name: Track
+          id: 4bf58dd8d48988d106941735
+    gun_range:
+      name: Gun Range
+      id: 52e81612bcbc57f1066b7a11
+    recreation_center:
+      name: Recreation Center
+      id: 52e81612bcbc57f1066b7a26
+    bowling_green:
+      name: Bowling Green
+      id: 52e81612bcbc57f1066b7a2f
+    sauna:
+      name: Sauna
+      id: 58daa1558bbb0b01f18ec1ae
+    gym_and_studio:
+      name: Gym and Studio
+      id: 4bf58dd8d48988d175941735
+      subcategories:
+        gym:
+          name: Gym
+          id: 4bf58dd8d48988d176941735
+        cycle_studio:
+          name: Cycle Studio
+          id: 52f2ab2ebcbc57f1066b8b49
+        gym_pool:
+          name: Gym Pool
+          id: 4bf58dd8d48988d105941735
+        climbing_gym:
+          name: Climbing Gym
+          id: 503289d391d4c4b30a586d6a
+        dance_studio:
+          name: Dance Studio
+          id: 4bf58dd8d48988d134941735
+        yoga_studio:
+          name: Yoga Studio
+          id: 4bf58dd8d48988d102941735
+        outdoor_gym:
+          name: Outdoor Gym
+          id: 58daa1558bbb0b01f18ec203
+        pilates_studio:
+          name: Pilates Studio
+          id: 5744ccdfe4b0c0459246b4b2
+        boxing_gym:
+          name: Boxing Gym
+          id: 52f2ab2ebcbc57f1066b8b47
+    snow_sports:
+      name: Snow Sports
+      id: 63be6904847c3692a84b9c19
+      subcategories:
+        ski_lodge:
+          name: Ski Lodge
+          id: 4bf58dd8d48988d1eb941735
+        ski_resort_and_area:
+          name: Ski Resort and Area
+          id: 4bf58dd8d48988d1e9941735
+          subcategories:
+            ski_chairlift:
+              name: Ski Chairlift
+              id: 4eb1c0ed3b7b52c0e1adc2ea
+            ski_trail:
+              name: Ski Trail
+              id: 4eb1c0f63b7b52c0e1adc2eb
+        ski_chalet:
+          name: Ski Chalet
+          id: 4bf58dd8d48988d1ec941735
+    cricket_ground:
+      name: Cricket Ground
+      id: 4bf58dd8d48988d18a941735
+    hockey:
+      name: Hockey
+      id: 63be6904847c3692a84b9c0b
+      subcategories:
+        hockey_rink:
+          name: Hockey Rink
+          id: 56aa371be4b08b9a8d57352c
+        hockey_field:
+          name: Hockey Field
+          id: 4f452cd44b9081a197eba860
+        hockey_club:
+          name: Hockey Club
+          id: 63be6904847c3692a84b9c0c
+    basketball:
+      name: Basketball
+      id: 63be6904847c3692a84b9c01
+      subcategories:
+        basketball_club:
+          name: Basketball Club
+          id: 63be6904847c3692a84b9c02
+        basketball_court:
+          name: Basketball Court
+          id: 4bf58dd8d48988d1e1941735
+    skydiving_center:
+      name: Skydiving Center
+      id: 63be6904847c3692a84b9c18
+      subcategories:
+        skydiving_drop_zone:
+          name: Skydiving Drop Zone
+          id: 58daa1558bbb0b01f18ec1b9
+    equestrian_facility:
+      name: Equestrian Facility
+      id: 63be6904847c3692a84b9c04
+    racquet_sports:
+      name: Racquet Sports
+      id: 63be6904847c3692a84b9c0f
+      subcategories:
+        racquet_sport_club:
+          name: Racquet Sport Club
+          id: 63be6904847c3692a84b9c10
+        squash_court:
+          name: Squash Court
+          id: 52e81612bcbc57f1066b7a2d
+        racquetball_club:
+          name: Racquetball Club
+          id: 63be6904847c3692a84b9c11
+        badminton_court:
+          name: Badminton Court
+          id: 52e81612bcbc57f1066b7a2b
+        tennis:
+          name: Tennis
+          id: 63be6904847c3692a84b9c12
+          subcategories:
+            tennis_club:
+              name: Tennis Club
+              id: 63be6904847c3692a84b9c13
+            tennis_court:
+              name: Tennis Court
+              id: 4e39a956bd410d7aed40cbc3
+    gymnastics:
+      name: Gymnastics
+      id: 63be6904847c3692a84b9c0a
+      subcategories:
+        gymnastics_center:
+          name: Gymnastics Center
+          id: 52f2ab2ebcbc57f1066b8b48

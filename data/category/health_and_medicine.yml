@@ -1,0 +1,182 @@
+health_and_medicine:
+  name: Health and Medicine
+  id: 63be6904847c3692a84b9bb9
+  subcategories:
+    mental_health_service:
+      name: Mental Health Service
+      id: 63be6904847c3692a84b9bc1
+      subcategories:
+        psychologist:
+          name: Psychologist
+          id: 63be6904847c3692a84b9bc2
+        mental_health_clinic:
+          name: Mental Health Clinic
+          id: 52e81612bcbc57f1066b7a39
+    hospital:
+      name: Hospital
+      id: 4bf58dd8d48988d196941735
+      subcategories:
+        hospital_unit:
+          name: Hospital Unit
+          id: 58daa1558bbb0b01f18ec1f7
+        children_s_hospital:
+          name: Children's Hospital
+          id: 63be6904847c3692a84b9bc0
+    medical_center:
+      name: Medical Center
+      id: 4bf58dd8d48988d104941735
+    emergency_service:
+      name: Emergency Service
+      id: 63be6904847c3692a84b9bbc
+      subcategories:
+        ambulance_service:
+          name: Ambulance Service
+          id: 63be6904847c3692a84b9bbd
+        emergency_room:
+          name: Emergency Room
+          id: 4bf58dd8d48988d194941735
+    weight_loss_center:
+      name: Weight Loss Center
+      id: 590a0744340a5803fd8508c3
+    other_healthcare_professional:
+      name: Other Healthcare Professional
+      id: 63be6904847c3692a84b9bc5
+    nutritionist:
+      name: Nutritionist
+      id: 58daa1558bbb0b01f18ec1d0
+    nurse:
+      name: Nurse
+      id: 63be6904847c3692a84b9bc3
+    medical_lab:
+      name: Medical Lab
+      id: 4f4531b14b9074f6e4fb0103
+    chiropractor:
+      name: Chiropractor
+      id: 52e81612bcbc57f1066b7a3a
+    women_s_health_clinic:
+      name: Women's Health Clinic
+      id: 63be6904847c3692a84b9bdf
+    veterinarian:
+      name: Veterinarian
+      id: 4d954af4a243a5684765b473
+    assisted_living_service:
+      name: Assisted Living Service
+      id: 63be6904847c3692a84b9bbb
+    podiatrist:
+      name: Podiatrist
+      id: 63be6904847c3692a84b9bdd
+    optometrist:
+      name: Optometrist
+      id: 522e32fae4b09b556e370f19
+    physician:
+      name: Physician
+      id: 63be6904847c3692a84b9bc6
+      subcategories:
+        family_medicine_doctor:
+          name: Family Medicine Doctor
+          id: 63be6904847c3692a84b9bcb
+        general_surgeon:
+          name: General Surgeon
+          id: 63be6904847c3692a84b9bcd
+        neurologist:
+          name: Neurologist
+          id: 63be6904847c3692a84b9bd0
+        anesthesiologist:
+          name: Anesthesiologist
+          id: 63be6904847c3692a84b9bc7
+        psychiatrist:
+          name: Psychiatrist
+          id: 63be6904847c3692a84b9bd9
+        doctor_s_office:
+          name: Doctor's Office
+          id: 4bf58dd8d48988d177941735
+        gastroenterologist:
+          name: Gastroenterologist
+          id: 63be6904847c3692a84b9bcc
+        oncologist:
+          name: Oncologist
+          id: 63be6904847c3692a84b9bd2
+        internal_medicine_doctor:
+          name: Internal Medicine Doctor
+          id: 63be6904847c3692a84b9bcf
+        radiologist:
+          name: Radiologist
+          id: 63be6904847c3692a84b9bda
+        dermatologist:
+          name: Dermatologist
+          id: 63be6904847c3692a84b9bc9
+        geriatric_doctor:
+          name: Geriatric Doctor
+          id: 63be6904847c3692a84b9bce
+        obstetrician_gynecologist_ob_gyn:
+          name: Obstetrician Gynecologist (Ob-gyn)
+          id: 63be6904847c3692a84b9bd1
+        respiratory_doctor:
+          name: Respiratory Doctor
+          id: 63be6904847c3692a84b9bdb
+        ear_nose_and_throat_doctor:
+          name: Ear, Nose and Throat Doctor
+          id: 63be6904847c3692a84b9bca
+        urologist:
+          name: Urologist
+          id: 63be6904847c3692a84b9bdc
+        orthopedic_surgeon:
+          name: Orthopedic Surgeon
+          id: 63be6904847c3692a84b9bd5
+        pathologist:
+          name: Pathologist
+          id: 63be6904847c3692a84b9bd6
+        ophthalmologist:
+          name: Ophthalmologist
+          id: 63be6904847c3692a84b9bd3
+        plastic_surgeon:
+          name: Plastic Surgeon
+          id: 63be6904847c3692a84b9bd8
+        pediatrician:
+          name: Pediatrician
+          id: 63be6904847c3692a84b9bd7
+        cardiologist:
+          name: Cardiologist
+          id: 63be6904847c3692a84b9bc8
+        oral_surgeon:
+          name: Oral Surgeon
+          id: 63be6904847c3692a84b9bd4
+    acupuncture_clinic:
+      name: Acupuncture Clinic
+      id: 52e81612bcbc57f1066b7a3b
+    alternative_medicine_clinic:
+      name: Alternative Medicine Clinic
+      id: 52e81612bcbc57f1066b7a3c
+    dentist:
+      name: Dentist
+      id: 4bf58dd8d48988d178941735
+    maternity_clinic:
+      name: Maternity Clinic
+      id: 56aa371be4b08b9a8d5734ff
+    healthcare_clinic:
+      name: Healthcare Clinic
+      id: 63be6904847c3692a84b9bbe
+    blood_bank:
+      name: Blood Bank
+      id: 5f2c43a65b4c177b9a6dcc62
+    physical_therapy_clinic:
+      name: Physical Therapy Clinic
+      id: 5744ccdfe4b0c0459246b4af
+    home_health_care_service:
+      name: Home Health Care Service
+      id: 63be6904847c3692a84b9bbf
+    aids_resource:
+      name: AIDS Resource
+      id: 63be6904847c3692a84b9bba
+    nursing_home:
+      name: Nursing Home
+      id: 63be6904847c3692a84b9bc4
+    sports_medicine_clinic:
+      name: Sports Medicine Clinic
+      id: 63be6904847c3692a84b9bde
+    urgent_care_center:
+      name: Urgent Care Center
+      id: 56aa371be4b08b9a8d573526
+    hospice:
+      name: Hospice
+      id: 5f2c5b8b5b4c177b9a6ddf0b

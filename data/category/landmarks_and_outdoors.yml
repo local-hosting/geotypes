@@ -1,0 +1,216 @@
+landmarks_and_outdoors:
+  name: Landmarks and Outdoors
+  id: 4d4b7105d754a06377d81259
+  subcategories:
+    tunnel:
+      name: Tunnel
+      id: 52f2ab2ebcbc57f1066b8b4a
+    dive_spot:
+      name: Dive Spot
+      id: 52e81612bcbc57f1066b7a12
+    pedestrian_plaza:
+      name: Pedestrian Plaza
+      id: 52e81612bcbc57f1066b7a25
+    botanical_garden:
+      name: Botanical Garden
+      id: 52e81612bcbc57f1066b7a22
+    bathing_area:
+      name: Bathing Area
+      id: 52e81612bcbc57f1066b7a28
+    hiking_trail:
+      name: Hiking Trail
+      id: 4bf58dd8d48988d159941735
+    bridge:
+      name: Bridge
+      id: 4bf58dd8d48988d1df941735
+    island:
+      name: Island
+      id: 50aaa4314b90af0d42d5de10
+    plaza:
+      name: Plaza
+      id: 4bf58dd8d48988d164941735
+    cave:
+      name: Cave
+      id: 56aa371be4b08b9a8d573511
+    harbor_or_marina:
+      name: Harbor or Marina
+      id: 4bf58dd8d48988d1e0941735
+    historic_and_protected_site:
+      name: Historic and Protected Site
+      id: 4deefb944765f83613cdba6e
+    hot_spring:
+      name: Hot Spring
+      id: 4bf58dd8d48988d160941735
+    windmill:
+      name: Windmill
+      id: 5bae9231bedf3950379f89c7
+    fountain:
+      name: Fountain
+      id: 56aa371be4b08b9a8d573547
+    dam:
+      name: Dam
+      id: 5fac018b99ce226e27fe7573
+    field:
+      name: Field
+      id: 4bf58dd8d48988d15f941735
+    memorial_site:
+      name: Memorial Site
+      id: 5642206c498e4bfca532186c
+    palace:
+      name: Palace
+      id: 52e81612bcbc57f1066b7a14
+    garden:
+      name: Garden
+      id: 4bf58dd8d48988d15a941735
+    campground:
+      name: Campground
+      id: 4bf58dd8d48988d1e4941735
+    scenic_lookout:
+      name: Scenic Lookout
+      id: 4bf58dd8d48988d165941735
+    hill:
+      name: Hill
+      id: 5bae9231bedf3950379f89cd
+    picnic_shelter:
+      name: Picnic Shelter
+      id: 5fac010d99ce226e27fe7467
+    park:
+      name: Park
+      id: 4bf58dd8d48988d163941735
+      subcategories:
+        playground:
+          name: Playground
+          id: 4bf58dd8d48988d1e7941735
+        state_or_provincial_park:
+          name: State or Provincial Park
+          id: 5bae9231bedf3950379f89d0
+        national_park:
+          name: National Park
+          id: 52e81612bcbc57f1066b7a21
+        urban_park:
+          name: Urban Park
+          id: 63be6904847c3692a84b9be1
+        picnic_area:
+          name: Picnic Area
+          id: 5fabfe3599ce226e27fe709a
+        dog_park:
+          name: Dog Park
+          id: 4bf58dd8d48988d1e5941735
+        natural_park:
+          name: Natural Park
+          id: 63be6904847c3692a84b9be0
+    reservoir:
+      name: Reservoir
+      id: 56aa371be4b08b9a8d573541
+    volcano:
+      name: Volcano
+      id: 5032848691d4c4b30a586d61
+    forest:
+      name: Forest
+      id: 52e81612bcbc57f1066b7a23
+    surf_spot:
+      name: Surf Spot
+      id: 4bf58dd8d48988d1e3941735
+    farm:
+      name: Farm
+      id: 4bf58dd8d48988d15b941735
+    mountain:
+      name: Mountain
+      id: 4eb1d4d54b900d56c88a45fc
+    mountain_hut:
+      name: Mountain Hut
+      id: 55a5a1ebe4b013909087cb77
+    waterfront:
+      name: Waterfront
+      id: 56aa371be4b08b9a8d5734c3
+    stable:
+      name: Stable
+      id: 4eb1baf03b7b2c5b1d4306ca
+    monument:
+      name: Monument
+      id: 4bf58dd8d48988d12d941735
+    states_and_municipalities:
+      name: States and Municipalities
+      id: 530e33ccbcbc57f1066bbfe4
+      subcategories:
+        state:
+          name: State
+          id: 530e33ccbcbc57f1066bbff8
+        neighborhood:
+          name: Neighborhood
+          id: 4f2a25ac4b909258e854f55f
+        country:
+          name: Country
+          id: 530e33ccbcbc57f1066bbff7
+        county:
+          name: County
+          id: 5345731ebcbc57f1066c39b2
+        village:
+          name: Village
+          id: 530e33ccbcbc57f1066bbff9
+        town:
+          name: Town
+          id: 530e33ccbcbc57f1066bbff3
+        city:
+          name: City
+          id: 50aa9e094b90af0d42d5de0d
+    canal:
+      name: Canal
+      id: 56aa371be4b08b9a8d573562
+    canal_lock:
+      name: Canal Lock
+      id: 56aa371be4b08b9a8d57353b
+    other_great_outdoors:
+      name: Other Great Outdoors
+      id: 4bf58dd8d48988d162941735
+    waterfall:
+      name: Waterfall
+      id: 56aa371be4b08b9a8d573560
+    tree:
+      name: Tree
+      id: 52e81612bcbc57f1066b7a24
+    sculpture_garden:
+      name: Sculpture Garden
+      id: 4bf58dd8d48988d166941735
+    beach:
+      name: Beach
+      id: 4bf58dd8d48988d1e2941735
+    boat_launch:
+      name: Boat Launch
+      id: 5fabfc8099ce226e27fe6b0d
+    lighthouse:
+      name: Lighthouse
+      id: 4bf58dd8d48988d15d941735
+    bike_trail:
+      name: Bike Trail
+      id: 56aa371be4b08b9a8d57355e
+    well:
+      name: Well
+      id: 4fbc1be21983fc883593e321
+    structure:
+      name: Structure
+      id: 4bf58dd8d48988d130941735
+    nature_preserve:
+      name: Nature Preserve
+      id: 52e81612bcbc57f1066b7a13
+    bay:
+      name: Bay
+      id: 56aa371be4b08b9a8d573544
+    rock_climbing_spot:
+      name: Rock Climbing Spot
+      id: 50328a4b91d4c4b30a586d6b
+    castle:
+      name: Castle
+      id: 50aaa49e4b90af0d42d5de11
+    nudist_beach:
+      name: Nudist Beach
+      id: 52e81612bcbc57f1066b7a30
+    roof_deck:
+      name: Roof Deck
+      id: 4bf58dd8d48988d133951735
+    river:
+      name: River
+      id: 4eb1d4dd4b900d56c88a45fd
+    lake:
+      name: Lake
+      id: 4bf58dd8d48988d161941735

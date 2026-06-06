@@ -1,0 +1,1207 @@
+dining_and_drinking:
+  name: Dining and Drinking
+  id: 63be6904847c3692a84b9bb5
+  subcategories:
+    food_truck:
+      name: Food Truck
+      id: 4bf58dd8d48988d1cb941735
+    cafeteria:
+      name: Cafeteria
+      id: 4bf58dd8d48988d128941735
+    donut_shop:
+      name: Donut Shop
+      id: 4bf58dd8d48988d148941735
+    distillery:
+      name: Distillery
+      id: 4e0e22f5a56208c4ea9a85a0
+    snack_place:
+      name: Snack Place
+      id: 4bf58dd8d48988d1c7941735
+    bagel_shop:
+      name: Bagel Shop
+      id: 4bf58dd8d48988d179941735
+    cidery:
+      name: Cidery
+      id: 5e189fd6eee47d000759bbfd
+    food_stand:
+      name: Food Stand
+      id: 56aa371be4b08b9a8d57350b
+    brewery:
+      name: Brewery
+      id: 50327c8591d4c4b30a586d5d
+    vineyard:
+      name: Vineyard
+      id: 4bf58dd8d48988d1de941735
+    food_court:
+      name: Food Court
+      id: 4bf58dd8d48988d120951735
+    juice_bar:
+      name: Juice Bar
+      id: 4bf58dd8d48988d112941735
+    restaurant:
+      name: Restaurant
+      id: 4d4b7105d754a06374d81259
+      subcategories:
+        belgian_restaurant:
+          name: Belgian Restaurant
+          id: 52e81612bcbc57f1066b7a02
+        caucasian_restaurant:
+          name: Caucasian Restaurant
+          id: 5293a7d53cf9994f4e043a45
+        afghan_restaurant:
+          name: Afghan Restaurant
+          id: 503288ae91d4c4b30a586d67
+        bistro:
+          name: Bistro
+          id: 52e81612bcbc57f1066b79f1
+        indian_restaurant:
+          name: Indian Restaurant
+          id: 4bf58dd8d48988d10f941735
+          subcategories:
+            hyderabadi_restaurant:
+              name: Hyderabadi Restaurant
+              id: 54135bf5e4b08f3d2429dfe6
+            north_indian_restaurant:
+              name: North Indian Restaurant
+              id: 54135bf5e4b08f3d2429dfdd
+            awadhi_restaurant:
+              name: Awadhi Restaurant
+              id: 54135bf5e4b08f3d2429dff3
+            mughlai_restaurant:
+              name: Mughlai Restaurant
+              id: 54135bf5e4b08f3d2429dff4
+            dhaba:
+              name: Dhaba
+              id: 54135bf5e4b08f3d2429dfe1
+            udupi_restaurant:
+              name: Udupi Restaurant
+              id: 54135bf5e4b08f3d2429dfec
+            goan_restaurant:
+              name: Goan Restaurant
+              id: 54135bf5e4b08f3d2429dfe8
+            gujarati_restaurant:
+              name: Gujarati Restaurant
+              id: 54135bf5e4b08f3d2429dfe9
+            northeast_indian_restaurant:
+              name: Northeast Indian Restaurant
+              id: 54135bf5e4b08f3d2429dff6
+            chaat_place:
+              name: Chaat Place
+              id: 54135bf5e4b08f3d2429dfe2
+            karnataka_restaurant:
+              name: Karnataka Restaurant
+              id: 54135bf5e4b08f3d2429dfeb
+            dosa_place:
+              name: Dosa Place
+              id: 54135bf5e4b08f3d2429dfe3
+            punjabi_restaurant:
+              name: Punjabi Restaurant
+              id: 54135bf5e4b08f3d2429dff0
+            multicuisine_indian_restaurant:
+              name: Multicuisine Indian Restaurant
+              id: 54135bf5e4b08f3d2429dfe0
+            indian_sweet_shop:
+              name: Indian Sweet Shop
+              id: 54135bf5e4b08f3d2429dfe4
+            irani_cafe:
+              name: Irani Cafe
+              id: 54135bf5e4b08f3d2429dfe7
+            rajasthani_restaurant:
+              name: Rajasthani Restaurant
+              id: 54135bf5e4b08f3d2429dff1
+            jain_restaurant:
+              name: Jain Restaurant
+              id: 54135bf5e4b08f3d2429dfea
+            maharashtrian_restaurant:
+              name: Maharashtrian Restaurant
+              id: 54135bf5e4b08f3d2429dfee
+            kerala_restaurant:
+              name: Kerala Restaurant
+              id: 54135bf5e4b08f3d2429dfed
+            parsi_restaurant:
+              name: Parsi Restaurant
+              id: 54135bf5e4b08f3d2429dfef
+            andhra_restaurant:
+              name: Andhra Restaurant
+              id: 54135bf5e4b08f3d2429dfe5
+            chettinad_restaurant:
+              name: Chettinad Restaurant
+              id: 54135bf5e4b08f3d2429dff2
+            bengali_restaurant:
+              name: Bengali Restaurant
+              id: 54135bf5e4b08f3d2429dff5
+            south_indian_restaurant:
+              name: South Indian Restaurant
+              id: 54135bf5e4b08f3d2429dfde
+        southern_food_restaurant:
+          name: Southern Food Restaurant
+          id: 4bf58dd8d48988d14f941735
+        hawaiian_restaurant:
+          name: Hawaiian Restaurant
+          id: 52e81612bcbc57f1066b79fe
+          subcategories:
+            poke_restaurant:
+              name: Poke Restaurant
+              id: 5bae9231bedf3950379f89d4
+        bangladeshi_restaurant:
+          name: Bangladeshi Restaurant
+          id: 5e179ee74ae8e90006e9a746
+        caribbean_restaurant:
+          name: Caribbean Restaurant
+          id: 4bf58dd8d48988d144941735
+          subcategories:
+            cuban_restaurant:
+              name: Cuban Restaurant
+              id: 4bf58dd8d48988d154941735
+            puerto_rican_restaurant:
+              name: Puerto Rican Restaurant
+              id: 5f2c2abab6d05514c70446e4
+        bbq_joint:
+          name: BBQ Joint
+          id: 4bf58dd8d48988d1df931735
+        seafood_restaurant:
+          name: Seafood Restaurant
+          id: 4bf58dd8d48988d1ce941735
+        mediterranean_restaurant:
+          name: Mediterranean Restaurant
+          id: 4bf58dd8d48988d1c0941735
+        kebab_restaurant:
+          name: Kebab Restaurant
+          id: 5283c7b4e4b094cb91ec88d7
+        modern_european_restaurant:
+          name: Modern European Restaurant
+          id: 52e81612bcbc57f1066b79f9
+        dumpling_restaurant:
+          name: Dumpling Restaurant
+          id: 4bf58dd8d48988d108941735
+        vegan_and_vegetarian_restaurant:
+          name: Vegan and Vegetarian Restaurant
+          id: 4bf58dd8d48988d1d3941735
+        poutine_restaurant:
+          name: Poutine Restaurant
+          id: 56aa371be4b08b9a8d5734c7
+        hot_dog_joint:
+          name: Hot Dog Joint
+          id: 4bf58dd8d48988d16f941735
+        fondue_restaurant:
+          name: Fondue Restaurant
+          id: 52e81612bcbc57f1066b7a09
+        friterie:
+          name: Friterie
+          id: 55d25775498e9f6a0816a37a
+        african_restaurant:
+          name: African Restaurant
+          id: 4bf58dd8d48988d1c8941735
+          subcategories:
+            mauritian_restaurant:
+              name: Mauritian Restaurant
+              id: 5f2c344a5b4c177b9a6dc011
+            ethiopian_restaurant:
+              name: Ethiopian Restaurant
+              id: 4bf58dd8d48988d10a941735
+        gluten_free_restaurant:
+          name: Gluten-Free Restaurant
+          id: 4c2cd86ed066bed06c3c5209
+        russian_restaurant:
+          name: Russian Restaurant
+          id: 5293a7563cf9994f4e043a44
+          subcategories:
+            pelmeni_house:
+              name: Pelmeni House
+              id: 52e928d0bcbc57f1066b7e9c
+            blini_house:
+              name: Blini House
+              id: 52e928d0bcbc57f1066b7e9d
+        polish_restaurant:
+          name: Polish Restaurant
+          id: 52e81612bcbc57f1066b7a04
+        australian_restaurant:
+          name: Australian Restaurant
+          id: 4bf58dd8d48988d169941735
+        indian_chinese_restaurant:
+          name: Indian Chinese Restaurant
+          id: 54135bf5e4b08f3d2429dfdf
+        mac_and_cheese_joint:
+          name: Mac and Cheese Joint
+          id: 4bf58dd8d48988d1bf941735
+        american_restaurant:
+          name: American Restaurant
+          id: 4bf58dd8d48988d14e941735
+          subcategories:
+            new_american_restaurant:
+              name: New American Restaurant
+              id: 4bf58dd8d48988d157941735
+        greek_restaurant:
+          name: Greek Restaurant
+          id: 4bf58dd8d48988d10e941735
+          subcategories:
+            grilled_meat_restaurant:
+              name: Grilled Meat Restaurant
+              id: 53d6c1b0e4b02351e88a83d6
+            magirio:
+              name: Magirio
+              id: 53d6c1b0e4b02351e88a83e4
+            souvlaki_shop:
+              name: Souvlaki Shop
+              id: 52e81612bcbc57f1066b79f3
+            kafenio:
+              name: Kafenio
+              id: 53d6c1b0e4b02351e88a83e6
+            modern_greek_restaurant:
+              name: Modern Greek Restaurant
+              id: 53d6c1b0e4b02351e88a83d4
+            patsa_restaurant:
+              name: Patsa Restaurant
+              id: 53d6c1b0e4b02351e88a83e0
+            fish_taverna:
+              name: Fish Taverna
+              id: 53d6c1b0e4b02351e88a83d8
+            tsipouro_restaurant:
+              name: Tsipouro Restaurant
+              id: 53d6c1b0e4b02351e88a83de
+            bougatsa_shop:
+              name: Bougatsa Shop
+              id: 53d6c1b0e4b02351e88a83e8
+            ouzeri:
+              name: Ouzeri
+              id: 53d6c1b0e4b02351e88a83dc
+            taverna:
+              name: Taverna
+              id: 53d6c1b0e4b02351e88a83d2
+            meze_restaurant:
+              name: Meze Restaurant
+              id: 53d6c1b0e4b02351e88a83da
+            cretan_restaurant:
+              name: Cretan Restaurant
+              id: 53d6c1b0e4b02351e88a83e2
+        jewish_restaurant:
+          name: Jewish Restaurant
+          id: 52e81612bcbc57f1066b79fd
+          subcategories:
+            kosher_restaurant:
+              name: Kosher Restaurant
+              id: 52e81612bcbc57f1066b79fc
+        latin_american_restaurant:
+          name: Latin American Restaurant
+          id: 4bf58dd8d48988d1be941735
+          subcategories:
+            arepa_restaurant:
+              name: Arepa Restaurant
+              id: 4bf58dd8d48988d152941735
+            salvadoran_restaurant:
+              name: Salvadoran Restaurant
+              id: 5745c7ac498e5d0483112fdb
+            south_american_restaurant:
+              name: South American Restaurant
+              id: 4bf58dd8d48988d1cd941735
+              subcategories:
+                venezuelan_restaurant:
+                  name: Venezuelan Restaurant
+                  id: 56aa371be4b08b9a8d573558
+                peruvian_restaurant:
+                  name: Peruvian Restaurant
+                  id: 4eb1bfa43b7b52c0e1adc2e8
+                  subcategories:
+                    peruvian_roast_chicken_joint:
+                      name: Peruvian Roast Chicken Joint
+                      id: 5f2c1c31b6d05514c704334c
+                colombian_restaurant:
+                  name: Colombian Restaurant
+                  id: 58daa1558bbb0b01f18ec1f4
+                brazilian_restaurant:
+                  name: Brazilian Restaurant
+                  id: 4bf58dd8d48988d16b941735
+                  subcategories:
+                    goiano_restaurant:
+                      name: Goiano Restaurant
+                      id: 52939af83cf9994f4e043a3d
+                    northeastern_brazilian_restaurant:
+                      name: Northeastern Brazilian Restaurant
+                      id: 52939aae3cf9994f4e043a37
+                    mineiro_restaurant:
+                      name: Mineiro Restaurant
+                      id: 52939aed3cf9994f4e043a3c
+                    pastelaria:
+                      name: Pastelaria
+                      id: 5294cbda3cf9994f4e043a63
+                    central_brazilian_restaurant:
+                      name: Central Brazilian Restaurant
+                      id: 52939a9e3cf9994f4e043a36
+                    baiano_restaurant:
+                      name: Baiano Restaurant
+                      id: 52939ae13cf9994f4e043a3b
+                    churrascaria:
+                      name: Churrascaria
+                      id: 52939a643cf9994f4e043a33
+                    southern_brazilian_restaurant:
+                      name: Southern Brazilian Restaurant
+                      id: 52939ad03cf9994f4e043a3a
+                    tapiocaria:
+                      name: Tapiocaria
+                      id: 52939a7d3cf9994f4e043a34
+                    empada_house:
+                      name: Empada House
+                      id: 5294c55c3cf9994f4e043a61
+                    southeastern_brazilian_restaurant:
+                      name: Southeastern Brazilian Restaurant
+                      id: 52939ac53cf9994f4e043a39
+                    northern_brazilian_restaurant:
+                      name: Northern Brazilian Restaurant
+                      id: 52939ab93cf9994f4e043a38
+                    acai_house:
+                      name: Acai House
+                      id: 5294c7523cf9994f4e043a62
+                argentinian_restaurant:
+                  name: Argentinian Restaurant
+                  id: 4bf58dd8d48988d107941735
+            empanada_restaurant:
+              name: Empanada Restaurant
+              id: 52939a8c3cf9994f4e043a35
+            honduran_restaurant:
+              name: Honduran Restaurant
+              id: 5f2c32587ff30c0d7ac09638
+        moroccan_restaurant:
+          name: Moroccan Restaurant
+          id: 4bf58dd8d48988d1c3941735
+        sri_lankan_restaurant:
+          name: Sri Lankan Restaurant
+          id: 5413605de4b0ae91d18581a9
+        theme_restaurant:
+          name: Theme Restaurant
+          id: 56aa371be4b08b9a8d573538
+        fast_food_restaurant:
+          name: Fast Food Restaurant
+          id: 4bf58dd8d48988d16e941735
+        eastern_european_restaurant:
+          name: Eastern European Restaurant
+          id: 4bf58dd8d48988d109941735
+          subcategories:
+            tatar_restaurant:
+              name: Tatar Restaurant
+              id: 52e928d0bcbc57f1066b7e98
+            bosnian_restaurant:
+              name: Bosnian Restaurant
+              id: 58daa1558bbb0b01f18ec1ee
+            bulgarian_restaurant:
+              name: Bulgarian Restaurant
+              id: 56aa371be4b08b9a8d5734f3
+            belarusian_restaurant:
+              name: Belarusian Restaurant
+              id: 52e928d0bcbc57f1066b7e97
+            romanian_restaurant:
+              name: Romanian Restaurant
+              id: 52960bac3cf9994f4e043ac4
+        pakistani_restaurant:
+          name: Pakistani Restaurant
+          id: 52e81612bcbc57f1066b79f8
+        comfort_food_restaurant:
+          name: Comfort Food Restaurant
+          id: 52e81612bcbc57f1066b7a00
+        turkish_restaurant:
+          name: Turkish Restaurant
+          id: 4f04af1f2fb6e1c99f3db0bb
+          subcategories:
+            pilavc:
+              name: Pilavcı
+              id: 58daa1558bbb0b01f18ec1df
+            kofte_place:
+              name: Kofte Place
+              id: 5283c7b4e4b094cb91ec88db
+            turkish_coffeehouse:
+              name: Turkish Coffeehouse
+              id: 56aa371be4b08b9a8d5734c1
+            cigkofte_place:
+              name: Cigkofte Place
+              id: 530faca9bcbc57f1066bc2f4
+            gozleme_place:
+              name: Gozleme Place
+              id: 5283c7b4e4b094cb91ec88d9
+            kumru_restaurant:
+              name: Kumru Restaurant
+              id: 56aa371be4b08b9a8d5734bd
+            p_i_place:
+              name: Çöp Şiş Place
+              id: 58daa1558bbb0b01f18ec1e2
+            kokore_restaurant:
+              name: Kokoreç Restaurant
+              id: 5283c7b4e4b094cb91ec88d6
+            doner_restaurant:
+              name: Doner Restaurant
+              id: 5283c7b4e4b094cb91ec88d8
+            s_place:
+              name: Söğüş Place
+              id: 58daa1558bbb0b01f18ec1dc
+            turkish_home_cooking_restaurant:
+              name: Turkish Home Cooking Restaurant
+              id: 5283c7b4e4b094cb91ec88d4
+            manti_place:
+              name: Manti Place
+              id: 5283c7b4e4b094cb91ec88d5
+            pide_place:
+              name: Pide Place
+              id: 530faca9bcbc57f1066bc2f2
+            meyhane:
+              name: Meyhane
+              id: 5283c7b4e4b094cb91ec88da
+            tantuni_restaurant:
+              name: Tantuni Restaurant
+              id: 56aa371be4b08b9a8d5734bf
+            kumpir_restaurant:
+              name: Kumpir Restaurant
+              id: 56aa371be4b08b9a8d573535
+            borek_place:
+              name: Borek Place
+              id: 530faca9bcbc57f1066bc2f3
+        soup_spot:
+          name: Soup Spot
+          id: 4bf58dd8d48988d1dd931735
+        burger_joint:
+          name: Burger Joint
+          id: 4bf58dd8d48988d16c941735
+        sandwich_spot:
+          name: Sandwich Spot
+          id: 4bf58dd8d48988d1c5941735
+        cajun_and_creole_restaurant:
+          name: Cajun and Creole Restaurant
+          id: 4bf58dd8d48988d17a941735
+        german_restaurant:
+          name: German Restaurant
+          id: 4bf58dd8d48988d10d941735
+          subcategories:
+            palatine_restaurant:
+              name: Palatine Restaurant
+              id: 56aa371ce4b08b9a8d573578
+            franconian_restaurant:
+              name: Franconian Restaurant
+              id: 56aa371ce4b08b9a8d573574
+            rhenisch_restaurant:
+              name: Rhenisch Restaurant
+              id: 56aa371ce4b08b9a8d57357b
+            apple_wine_pub:
+              name: Apple Wine Pub
+              id: 56aa371ce4b08b9a8d573583
+            german_pop_up_restaurant:
+              name: German Pop-Up Restaurant
+              id: 56aa371ce4b08b9a8d573592
+            swabian_restaurant:
+              name: Swabian Restaurant
+              id: 56aa371ce4b08b9a8d573576
+            silesian_restaurant:
+              name: Silesian Restaurant
+              id: 56aa371ce4b08b9a8d57357f
+            currywurst_joint:
+              name: Currywurst Joint
+              id: 56aa371ce4b08b9a8d57358b
+            bratwurst_joint:
+              name: Bratwurst Joint
+              id: 56aa371ce4b08b9a8d57358e
+            schnitzel_restaurant:
+              name: Schnitzel Restaurant
+              id: 56aa371ce4b08b9a8d573587
+            bavarian_restaurant:
+              name: Bavarian Restaurant
+              id: 56aa371ce4b08b9a8d573572
+        steakhouse:
+          name: Steakhouse
+          id: 4bf58dd8d48988d1cc941735
+        gastropub:
+          name: Gastropub
+          id: 4bf58dd8d48988d155941735
+        asian_restaurant:
+          name: Asian Restaurant
+          id: 4bf58dd8d48988d142941735
+          subcategories:
+            mongolian_restaurant:
+              name: Mongolian Restaurant
+              id: 4eb1d5724b900d56c88a45fe
+            singaporean_restaurant:
+              name: Singaporean Restaurant
+              id: 5f2c430e5b4c177b9a6dcabd
+            hotpot_restaurant:
+              name: Hotpot Restaurant
+              id: 52af0bd33cf9994f4e043bdd
+            burmese_restaurant:
+              name: Burmese Restaurant
+              id: 56aa371be4b08b9a8d573568
+            korean_restaurant:
+              name: Korean Restaurant
+              id: 4bf58dd8d48988d113941735
+              subcategories:
+                korean_bbq_restaurant:
+                  name: Korean BBQ Restaurant
+                  id: 5f2c3f6b5b4c177b9a6dc388
+                gukbap_restaurant:
+                  name: Gukbap Restaurant
+                  id: 56aa371be4b08b9a8d5734e7
+                bunsik_restaurant:
+                  name: Bunsik Restaurant
+                  id: 56aa371be4b08b9a8d5734f0
+                bossam_jokbal_restaurant:
+                  name: Bossam/Jokbal Restaurant
+                  id: 56aa371be4b08b9a8d5734e4
+                janguh_restaurant:
+                  name: Janguh Restaurant
+                  id: 56aa371be4b08b9a8d5734ed
+                samgyetang_restaurant:
+                  name: Samgyetang Restaurant
+                  id: 56aa371be4b08b9a8d5734ea
+            filipino_restaurant:
+              name: Filipino Restaurant
+              id: 4eb1bd1c3b7b55596b4a748f
+            thai_restaurant:
+              name: Thai Restaurant
+              id: 4bf58dd8d48988d149941735
+              subcategories:
+                som_tum_restaurant:
+                  name: Som Tum Restaurant
+                  id: 56aa371be4b08b9a8d573502
+            chinese_restaurant:
+              name: Chinese Restaurant
+              id: 4bf58dd8d48988d145941735
+              subcategories:
+                peking_duck_restaurant:
+                  name: Peking Duck Restaurant
+                  id: 52af3b463cf9994f4e043bfe
+                jiangsu_restaurant:
+                  name: Jiangsu Restaurant
+                  id: 52af3b213cf9994f4e043bfa
+                hubei_restaurant:
+                  name: Hubei Restaurant
+                  id: 52af3ae63cf9994f4e043bf6
+                cha_chaan_teng:
+                  name: Cha Chaan Teng
+                  id: 58daa1558bbb0b01f18ec1d3
+                shaanxi_restaurant:
+                  name: Shaanxi Restaurant
+                  id: 52af3b633cf9994f4e043c01
+                hong_kong_restaurant:
+                  name: Hong Kong Restaurant
+                  id: 52af3add3cf9994f4e043bf5
+                hainan_restaurant:
+                  name: Hainan Restaurant
+                  id: 52af3abe3cf9994f4e043bf2
+                xinjiang_restaurant:
+                  name: Xinjiang Restaurant
+                  id: 52af3b913cf9994f4e043c06
+                hakka_restaurant:
+                  name: Hakka Restaurant
+                  id: 52af3ac83cf9994f4e043bf3
+                macanese_restaurant:
+                  name: Macanese Restaurant
+                  id: 52af3b343cf9994f4e043bfc
+                huaiyang_restaurant:
+                  name: Huaiyang Restaurant
+                  id: 52af3af23cf9994f4e043bf7
+                yunnan_restaurant:
+                  name: Yunnan Restaurant
+                  id: 52af3b9a3cf9994f4e043c07
+                guizhou_restaurant:
+                  name: Guizhou Restaurant
+                  id: 52af3ab53cf9994f4e043bf1
+                taiwanese_restaurant:
+                  name: Taiwanese Restaurant
+                  id: 52af3b813cf9994f4e043c04
+                beijing_restaurant:
+                  name: Beijing Restaurant
+                  id: 52af3a723cf9994f4e043bec
+                imperial_restaurant:
+                  name: Imperial Restaurant
+                  id: 52af3b053cf9994f4e043bf9
+                shandong_restaurant:
+                  name: Shandong Restaurant
+                  id: 52af3b513cf9994f4e043bff
+                jiangxi_restaurant:
+                  name: Jiangxi Restaurant
+                  id: 52af3b293cf9994f4e043bfb
+                anhui_restaurant:
+                  name: Anhui Restaurant
+                  id: 52af3a5e3cf9994f4e043bea
+                shanxi_restaurant:
+                  name: Shanxi Restaurant
+                  id: 52af3b6e3cf9994f4e043c02
+                zhejiang_restaurant:
+                  name: Zhejiang Restaurant
+                  id: 52af3ba23cf9994f4e043c08
+                manchu_restaurant:
+                  name: Manchu Restaurant
+                  id: 52af3b3b3cf9994f4e043bfd
+                cantonese_restaurant:
+                  name: Cantonese Restaurant
+                  id: 52af3a7c3cf9994f4e043bed
+                hunan_restaurant:
+                  name: Hunan Restaurant
+                  id: 52af3afc3cf9994f4e043bf8
+                chinese_breakfast_restaurant:
+                  name: Chinese Breakfast Restaurant
+                  id: 52af3a903cf9994f4e043bee
+                dongbei_restaurant:
+                  name: Dongbei Restaurant
+                  id: 52af3a9f3cf9994f4e043bef
+                fujian_restaurant:
+                  name: Fujian Restaurant
+                  id: 52af3aaa3cf9994f4e043bf0
+                szechuan_restaurant:
+                  name: Szechuan Restaurant
+                  id: 52af3b773cf9994f4e043c03
+                tianjin_restaurant:
+                  name: Tianjin Restaurant
+                  id: 52af3b893cf9994f4e043c05
+                henan_restaurant:
+                  name: Henan Restaurant
+                  id: 52af3ad23cf9994f4e043bf4
+                shanghai_restaurant:
+                  name: Shanghai Restaurant
+                  id: 52af3b593cf9994f4e043c00
+                dim_sum_restaurant:
+                  name: Dim Sum Restaurant
+                  id: 4bf58dd8d48988d1f5931735
+                chinese_aristocrat_restaurant:
+                  name: Chinese Aristocrat Restaurant
+                  id: 52af3a673cf9994f4e043beb
+            cambodian_restaurant:
+              name: Cambodian Restaurant
+              id: 52e81612bcbc57f1066b7a03
+            indonesian_restaurant:
+              name: Indonesian Restaurant
+              id: 4deefc054765f83613cdba6f
+              subcategories:
+                betawinese_restaurant:
+                  name: Betawinese Restaurant
+                  id: 52960eda3cf9994f4e043aca
+                sundanese_restaurant:
+                  name: Sundanese Restaurant
+                  id: 52960eda3cf9994f4e043ac6
+                manadonese_restaurant:
+                  name: Manadonese Restaurant
+                  id: 52960eda3cf9994f4e043ac8
+                indonesian_meatball_restaurant:
+                  name: Indonesian Meatball Restaurant
+                  id: 52960eda3cf9994f4e043acc
+                padangnese_restaurant:
+                  name: Padangnese Restaurant
+                  id: 52960eda3cf9994f4e043ac5
+                balinese_restaurant:
+                  name: Balinese Restaurant
+                  id: 52960eda3cf9994f4e043acb
+                javanese_restaurant:
+                  name: Javanese Restaurant
+                  id: 52960eda3cf9994f4e043ac7
+                acehnese_restaurant:
+                  name: Acehnese Restaurant
+                  id: 52960eda3cf9994f4e043ac9
+            satay_restaurant:
+              name: Satay Restaurant
+              id: 56aa371be4b08b9a8d57350e
+            noodle_restaurant:
+              name: Noodle Restaurant
+              id: 4bf58dd8d48988d1d1941735
+            himalayan_restaurant:
+              name: Himalayan Restaurant
+              id: 52e81612bcbc57f1066b79fb
+            japanese_restaurant:
+              name: Japanese Restaurant
+              id: 4bf58dd8d48988d111941735
+              subcategories:
+                kaiseki_restaurant:
+                  name: Kaiseki Restaurant
+                  id: 55a59bace4b013909087cb21
+                shabu_shabu_restaurant:
+                  name: Shabu-Shabu Restaurant
+                  id: 55a59bace4b013909087cb15
+                kushikatsu_restaurant:
+                  name: Kushikatsu Restaurant
+                  id: 55a59bace4b013909087cb06
+                soba_restaurant:
+                  name: Soba Restaurant
+                  id: 55a59bace4b013909087cb27
+                ramen_restaurant:
+                  name: Ramen Restaurant
+                  id: 55a59bace4b013909087cb24
+                tempura_restaurant:
+                  name: Tempura Restaurant
+                  id: 55a59a31e4b013909087cb00
+                wagashi_place:
+                  name: Wagashi Place
+                  id: 55a59bace4b013909087cb33
+                unagi_restaurant:
+                  name: Unagi Restaurant
+                  id: 55a59bace4b013909087cb0f
+                yakitori_restaurant:
+                  name: Yakitori Restaurant
+                  id: 55a59bace4b013909087cb09
+                tonkatsu_restaurant:
+                  name: Tonkatsu Restaurant
+                  id: 55a59af1e4b013909087cb03
+                takoyaki_place:
+                  name: Takoyaki Place
+                  id: 55a59bace4b013909087cb2d
+                teishoku_restaurant:
+                  name: Teishoku Restaurant
+                  id: 5f2c239eb6d05514c70441ee
+                sushi_restaurant:
+                  name: Sushi Restaurant
+                  id: 4bf58dd8d48988d1d2941735
+                yoshoku_restaurant:
+                  name: Yoshoku Restaurant
+                  id: 55a59bace4b013909087cb36
+                donburi_restaurant:
+                  name: Donburi Restaurant
+                  id: 55a59bace4b013909087cb0c
+                japanese_curry_restaurant:
+                  name: Japanese Curry Restaurant
+                  id: 55a59bace4b013909087cb30
+                monjayaki_restaurant:
+                  name: Monjayaki Restaurant
+                  id: 55a59bace4b013909087cb1b
+                okonomiyaki_restaurant:
+                  name: Okonomiyaki Restaurant
+                  id: 55a59bace4b013909087cb18
+                udon_restaurant:
+                  name: Udon Restaurant
+                  id: 55a59bace4b013909087cb2a
+                sukiyaki_restaurant:
+                  name: Sukiyaki Restaurant
+                  id: 55a59bace4b013909087cb12
+                japanese_family_restaurant:
+                  name: Japanese Family Restaurant
+                  id: 5f2c2436b6d05514c704433e
+                nabe_restaurant:
+                  name: Nabe Restaurant
+                  id: 55a59bace4b013909087cb1e
+            vietnamese_restaurant:
+              name: Vietnamese Restaurant
+              id: 4bf58dd8d48988d14a941735
+            tibetan_restaurant:
+              name: Tibetan Restaurant
+              id: 52af39fb3cf9994f4e043be9
+            malay_restaurant:
+              name: Malay Restaurant
+              id: 4bf58dd8d48988d156941735
+              subcategories:
+                mamak_restaurant:
+                  name: Mamak Restaurant
+                  id: 5ae9595eb77c77002c2f9f26
+        scottish_restaurant:
+          name: Scottish Restaurant
+          id: 5744ccdde4b0c0459246b4a3
+        slovak_restaurant:
+          name: Slovak Restaurant
+          id: 56aa371be4b08b9a8d57355a
+        portuguese_restaurant:
+          name: Portuguese Restaurant
+          id: 4def73e84765ae376e57713a
+        deli:
+          name: Deli
+          id: 4bf58dd8d48988d146941735
+        molecular_gastronomy_restaurant:
+          name: Molecular Gastronomy Restaurant
+          id: 4bf58dd8d48988d1c2941735
+        ukrainian_restaurant:
+          name: Ukrainian Restaurant
+          id: 52e928d0bcbc57f1066b7e96
+          subcategories:
+            west_ukrainian_restaurant:
+              name: West-Ukrainian Restaurant
+              id: 52e928d0bcbc57f1066b7e9b
+            varenyky_restaurant:
+              name: Varenyky Restaurant
+              id: 52e928d0bcbc57f1066b7e9a
+        middle_eastern_restaurant:
+          name: Middle Eastern Restaurant
+          id: 4bf58dd8d48988d115941735
+          subcategories:
+            syrian_restaurant:
+              name: Syrian Restaurant
+              id: 5bae9231bedf3950379f89da
+            lebanese_restaurant:
+              name: Lebanese Restaurant
+              id: 58daa1558bbb0b01f18ec1cd
+            yemeni_restaurant:
+              name: Yemeni Restaurant
+              id: 5bae9231bedf3950379f89ea
+            egyptian_restaurant:
+              name: Egyptian Restaurant
+              id: 5bae9231bedf3950379f89e1
+            iraqi_restaurant:
+              name: Iraqi Restaurant
+              id: 5bae9231bedf3950379f89e7
+            shawarma_restaurant:
+              name: Shawarma Restaurant
+              id: 5bae9231bedf3950379f89e4
+            kurdish_restaurant:
+              name: Kurdish Restaurant
+              id: 5744ccdfe4b0c0459246b4ca
+            persian_restaurant:
+              name: Persian Restaurant
+              id: 52e81612bcbc57f1066b79f7
+              subcategories:
+                dizi_place:
+                  name: Dizi Place
+                  id: 58daa1558bbb0b01f18ec1c0
+                jegaraki:
+                  name: Jegaraki
+                  id: 58daa1558bbb0b01f18ec1c7
+                tabbakhi:
+                  name: Tabbakhi
+                  id: 5744ccdfe4b0c0459246b4a8
+                gilaki_restaurant:
+                  name: Gilaki Restaurant
+                  id: 58daa1558bbb0b01f18ec1c4
+                ash_and_haleem_place:
+                  name: Ash and Haleem Place
+                  id: 58daa1558bbb0b01f18ec1bc
+            israeli_restaurant:
+              name: Israeli Restaurant
+              id: 56aa371be4b08b9a8d573529
+        salad_restaurant:
+          name: Salad Restaurant
+          id: 4bf58dd8d48988d1bd941735
+        scandinavian_restaurant:
+          name: Scandinavian Restaurant
+          id: 4bf58dd8d48988d1c6941735
+        armenian_restaurant:
+          name: Armenian Restaurant
+          id: 5f2c2b7db6d05514c7044837
+        hungarian_restaurant:
+          name: Hungarian Restaurant
+          id: 52e81612bcbc57f1066b79fa
+        fish_and_chips_shop:
+          name: Fish and Chips Shop
+          id: 4edd64a0c7ddd24ca188df1a
+        buffet:
+          name: Buffet
+          id: 52e81612bcbc57f1066b79f4
+        wings_joint:
+          name: Wings Joint
+          id: 4bf58dd8d48988d14c941735
+        pizzeria:
+          name: Pizzeria
+          id: 4bf58dd8d48988d1ca941735
+        french_restaurant:
+          name: French Restaurant
+          id: 4bf58dd8d48988d10c941735
+          subcategories:
+            southwestern_french_restaurant:
+              name: Southwestern French Restaurant
+              id: 57558b36e4b065ecebd306ba
+            savoyard_restaurant:
+              name: Savoyard Restaurant
+              id: 57558b36e4b065ecebd306da
+            alsatian_restaurant:
+              name: Alsatian Restaurant
+              id: 57558b36e4b065ecebd306b6
+            lyonese_bouchon:
+              name: Lyonese Bouchon
+              id: 57558b35e4b065ecebd306ad
+            corsican_restaurant:
+              name: Corsican Restaurant
+              id: 57558b36e4b065ecebd306d1
+            breton_restaurant:
+              name: Breton Restaurant
+              id: 57558b36e4b065ecebd306c5
+            labour_canteen:
+              name: Labour Canteen
+              id: 57558b36e4b065ecebd306b2
+            brasserie:
+              name: Brasserie
+              id: 57558b36e4b065ecebd306b0
+            proven_al_restaurant:
+              name: Provençal Restaurant
+              id: 57558b36e4b065ecebd306d7
+            norman_restaurant:
+              name: Norman Restaurant
+              id: 57558b36e4b065ecebd306d4
+            basque_restaurant:
+              name: Basque Restaurant
+              id: 57558b36e4b065ecebd306bc
+            burgundian_restaurant:
+              name: Burgundian Restaurant
+              id: 57558b36e4b065ecebd306c0
+            estaminet:
+              name: Estaminet
+              id: 57558b36e4b065ecebd306b4
+            auvergne_restaurant:
+              name: Auvergne Restaurant
+              id: 57558b36e4b065ecebd306b8
+            catalan_restaurant:
+              name: Catalan Restaurant
+              id: 57558b36e4b065ecebd306cb
+            ch_ti_restaurant:
+              name: Ch'ti Restaurant
+              id: 57558b36e4b065ecebd306ce
+        swiss_restaurant:
+          name: Swiss Restaurant
+          id: 4bf58dd8d48988d158941735
+        dutch_restaurant:
+          name: Dutch Restaurant
+          id: 5744ccdfe4b0c0459246b4d0
+        italian_restaurant:
+          name: Italian Restaurant
+          id: 4bf58dd8d48988d110941735
+          subcategories:
+            marche_restaurant:
+              name: Marche Restaurant
+              id: 55a5a1ebe4b013909087cbb0
+            malga:
+              name: Malga
+              id: 55a5a1ebe4b013909087cb79
+            campanian_restaurant:
+              name: Campanian Restaurant
+              id: 55a5a1ebe4b013909087cb95
+            calabria_restaurant:
+              name: Calabria Restaurant
+              id: 55a5a1ebe4b013909087cba4
+            abruzzo_restaurant:
+              name: Abruzzo Restaurant
+              id: 55a5a1ebe4b013909087cbb6
+            basilicata_restaurant:
+              name: Basilicata Restaurant
+              id: 55a5a1ebe4b013909087cba1
+            lombard_restaurant:
+              name: Lombard Restaurant
+              id: 55a5a1ebe4b013909087cbbf
+            trentino_restaurant:
+              name: Trentino Restaurant
+              id: 55a5a1ebe4b013909087cbbc
+            romagna_restaurant:
+              name: Romagna Restaurant
+              id: 55a5a1ebe4b013909087cb8c
+            molise_restaurant:
+              name: Molise Restaurant
+              id: 55a5a1ebe4b013909087cbb3
+            agriturismo:
+              name: Agriturismo
+              id: 55a5a1ebe4b013909087cb7c
+            sardinian_restaurant:
+              name: Sardinian Restaurant
+              id: 55a5a1ebe4b013909087cb8f
+            puglia_restaurant:
+              name: Puglia Restaurant
+              id: 55a5a1ebe4b013909087cb83
+            ligurian_restaurant:
+              name: Ligurian Restaurant
+              id: 55a5a1ebe4b013909087cb98
+            tuscan_restaurant:
+              name: Tuscan Restaurant
+              id: 55a5a1ebe4b013909087cb9e
+            aosta_restaurant:
+              name: Aosta Restaurant
+              id: 55a5a1ebe4b013909087cba7
+            piadineria:
+              name: Piadineria
+              id: 55a5a1ebe4b013909087cb74
+            umbrian_restaurant:
+              name: Umbrian Restaurant
+              id: 55a5a1ebe4b013909087cbc2
+            veneto_restaurant:
+              name: Veneto Restaurant
+              id: 55a5a1ebe4b013909087cbad
+            trattoria:
+              name: Trattoria
+              id: 55a5a1ebe4b013909087cb7f
+            piedmontese_restaurant:
+              name: Piedmontese Restaurant
+              id: 55a5a1ebe4b013909087cbaa
+            south_tyrolean_restaurant:
+              name: South Tyrolean Restaurant
+              id: 55a5a1ebe4b013909087cbb9
+            sicilian_restaurant:
+              name: Sicilian Restaurant
+              id: 55a5a1ebe4b013909087cb86
+            emilia_restaurant:
+              name: Emilia Restaurant
+              id: 55a5a1ebe4b013909087cb89
+            roman_restaurant:
+              name: Roman Restaurant
+              id: 55a5a1ebe4b013909087cb92
+            friuli_restaurant:
+              name: Friuli Restaurant
+              id: 55a5a1ebe4b013909087cb9b
+        diner:
+          name: Diner
+          id: 4bf58dd8d48988d147941735
+        austrian_restaurant:
+          name: Austrian Restaurant
+          id: 52e81612bcbc57f1066b7a01
+        mexican_restaurant:
+          name: Mexican Restaurant
+          id: 4bf58dd8d48988d1c1941735
+          subcategories:
+            botanero:
+              name: Botanero
+              id: 58daa1558bbb0b01f18ec1d9
+            burrito_restaurant:
+              name: Burrito Restaurant
+              id: 4bf58dd8d48988d153941735
+            taco_restaurant:
+              name: Taco Restaurant
+              id: 4bf58dd8d48988d151941735
+            tex_mex_restaurant:
+              name: Tex-Mex Restaurant
+              id: 56aa371ae4b08b9a8d5734ba
+            yucatecan_restaurant:
+              name: Yucatecan Restaurant
+              id: 5744ccdfe4b0c0459246b4d3
+        halal_restaurant:
+          name: Halal Restaurant
+          id: 52e81612bcbc57f1066b79ff
+        falafel_restaurant:
+          name: Falafel Restaurant
+          id: 4bf58dd8d48988d10b941735
+        czech_restaurant:
+          name: Czech Restaurant
+          id: 52f2ae52bcbc57f1066b8b81
+        fried_chicken_joint:
+          name: Fried Chicken Joint
+          id: 4d4ae6fc7a7b7dea34424761
+        english_restaurant:
+          name: English Restaurant
+          id: 52e81612bcbc57f1066b7a05
+        spanish_restaurant:
+          name: Spanish Restaurant
+          id: 4bf58dd8d48988d150941735
+          subcategories:
+            paella_restaurant:
+              name: Paella Restaurant
+              id: 4bf58dd8d48988d14d941735
+            tapas_restaurant:
+              name: Tapas Restaurant
+              id: 4bf58dd8d48988d1db931735
+    bakery:
+      name: Bakery
+      id: 4bf58dd8d48988d16a941735
+    dessert_shop:
+      name: Dessert Shop
+      id: 4bf58dd8d48988d1d0941735
+      subcategories:
+        waffle_shop:
+          name: Waffle Shop
+          id: 62d5af45da6648532de303ee
+        gelato_shop:
+          name: Gelato Shop
+          id: 5f2c407c5b4c177b9a6dc536
+        ice_cream_parlor:
+          name: Ice Cream Parlor
+          id: 4bf58dd8d48988d1c9941735
+        pastry_shop:
+          name: Pastry Shop
+          id: 5744ccdfe4b0c0459246b4e2
+        pie_shop:
+          name: Pie Shop
+          id: 52e81612bcbc57f1066b7a0a
+        cupcake_shop:
+          name: Cupcake Shop
+          id: 4bf58dd8d48988d1bc941735
+        frozen_yogurt_shop:
+          name: Frozen Yogurt Shop
+          id: 512e7cae91d4cbb4e5efe0af
+    creperie:
+      name: Creperie
+      id: 52e81612bcbc57f1066b79f2
+    breakfast_spot:
+      name: Breakfast Spot
+      id: 4bf58dd8d48988d143941735
+    meadery:
+      name: Meadery
+      id: 5e189d71eee47d000759b7e2
+    smoothie_shop:
+      name: Smoothie Shop
+      id: 52f2ab2ebcbc57f1066b8b41
+    cafe_coffee_and_tea_house:
+      name: Cafe, Coffee, and Tea House
+      id: 63be6904847c3692a84b9bb6
+      subcategories:
+        pet_caf:
+          name: Pet Café
+          id: 56aa371be4b08b9a8d573508
+        bubble_tea_shop:
+          name: Bubble Tea Shop
+          id: 52e81612bcbc57f1066b7a0c
+        caf:
+          name: Café
+          id: 4bf58dd8d48988d16d941735
+        coffee_shop:
+          name: Coffee Shop
+          id: 4bf58dd8d48988d1e0931735
+        tea_room:
+          name: Tea Room
+          id: 4bf58dd8d48988d1dc931735
+    night_market:
+      name: Night Market
+      id: 53e510b7498ebcb1801b55d4
+    winery:
+      name: Winery
+      id: 4bf58dd8d48988d14b941735
+    bar:
+      name: Bar
+      id: 4bf58dd8d48988d116941735
+      subcategories:
+        hookah_bar:
+          name: Hookah Bar
+          id: 4bf58dd8d48988d119941735
+        sake_bar:
+          name: Sake Bar
+          id: 4bf58dd8d48988d11c941735
+        irish_pub:
+          name: Irish Pub
+          id: 52e81612bcbc57f1066b7a06
+        lounge:
+          name: Lounge
+          id: 4bf58dd8d48988d121941735
+        ice_bar:
+          name: Ice Bar
+          id: 5f2c40f15b4c177b9a6dc684
+        rooftop_bar:
+          name: Rooftop Bar
+          id: 5f2c224bb6d05514c70440a3
+        karaoke_bar:
+          name: Karaoke Bar
+          id: 4bf58dd8d48988d120941735
+        beer_garden:
+          name: Beer Garden
+          id: 4bf58dd8d48988d117941735
+        beer_bar:
+          name: Beer Bar
+          id: 56aa371ce4b08b9a8d57356c
+        beach_bar:
+          name: Beach Bar
+          id: 52e81612bcbc57f1066b7a0d
+        speakeasy:
+          name: Speakeasy
+          id: 4bf58dd8d48988d1d4941735
+        wine_bar:
+          name: Wine Bar
+          id: 4bf58dd8d48988d123941735
+        cocktail_bar:
+          name: Cocktail Bar
+          id: 4bf58dd8d48988d11e941735
+        pub:
+          name: Pub
+          id: 4bf58dd8d48988d11b941735
+        gay_bar:
+          name: Gay Bar
+          id: 4bf58dd8d48988d1d8941735
+        piano_bar:
+          name: Piano Bar
+          id: 4bf58dd8d48988d1e8931735
+        champagne_bar:
+          name: Champagne Bar
+          id: 52e81612bcbc57f1066b7a0e
+        tiki_bar:
+          name: Tiki Bar
+          id: 56aa371be4b08b9a8d57354d
+        whisky_bar:
+          name: Whisky Bar
+          id: 4bf58dd8d48988d122941735
+        dive_bar:
+          name: Dive Bar
+          id: 4bf58dd8d48988d118941735
+        sports_bar:
+          name: Sports Bar
+          id: 4bf58dd8d48988d11d941735
+        hotel_bar:
+          name: Hotel Bar
+          id: 4bf58dd8d48988d1d5941735
+        apres_ski_bar:
+          name: Apres Ski Bar
+          id: 4bf58dd8d48988d1ea941735

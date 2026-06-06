@@ -1,0 +1,143 @@
+#!/usr/bin/env ts-node
+import * as fs from 'fs';
+import * as path from 'path';
+import * as yaml from 'js-yaml';
+// import { Feature } from '../../src/generated/geospatial';
+import { TagCode } from '../../src/generated/tags';
+import { convertTagToTagCode } from '../utils/schema';
+
+// Helper function to convert tag string to TagCode
+function convertTagToTagCode(tagString: string): TagCode {
+  const enumKey = `TAG_${tagString.toUpperCase().replace(/[^A-Z0-9_]/g, '_')}`;
+  const tagCode = TagCode[enumKey as keyof typeof TagCode];
+  return tagCode !== undefined ? tagCode : TagCode.TAG_CODE_UNSPECIFIED;
+}
+
+// Generate sample features for testing
+function generateSampleFeatures(): Feature[] {
+  const sampleData = [
+    {
+      id: 'feature-1',
+      name: 'Central Park',
+      description: 'A large urban park in Manhattan',
+      geometry_type: 'polygon',
+      tags: 'park,recreation,landmark'
+    },
+    {
+      id: 'feature-2', 
+      name: 'Times Square',
+      description: 'Major commercial intersection and tourist destination',
+      geometry_type: 'point',
+      tags: 'landmark,tourist,commercial'
+    },
+    {
+      id: 'feature-3',
+      name: 'Broadway',
+      description: 'Famous street and theater district',
+      geometry_type: 'linestring', 
+      tags: 'theater,entertainment,street'
+    }
+  ];
+
+  return sampleData.map((item: any) => {
+    // Generate geometry based on type
+    let geometry;
+    switch (item.geometry_type) {
+      case 'point':
+        geometry = {
+          point: { coordinates: { longitude: -74.006, latitude: 40.7128 } },
+          linestring: undefined,
+          polygon: undefined
+        };
+        break;
+      case 'linestring':
+        geometry = {
+          point: undefined,
+          linestring: {
+            coordinates: [
+              { longitude: -74.006, latitude: 40.7128 },
+              { longitude: -73.9857, latitude: 40.7484 }
+            ]
+          },
+          polygon: undefined
+        };
+        break;
+      case 'polygon':
+        geometry = {
+          point: undefined,
+          linestring: undefined,
+          polygon: {
+            rings: [{
+              coordinates: [
+                { longitude: -73.9654, latitude: 40.7829 },
+                { longitude: -73.9654, latitude: 40.7589 },
+                { longitude: -73.9498, latitude: 40.7589 },
+                { longitude: -73.9498, latitude: 40.7829 },
+                { longitude: -73.9654, latitude: 40.7829 }
+              ]
+            }]
+          }
+        };
+        break;
+    }
+
+    return Feature.fromJSON({
+      id: item.id,
+      name: item.name,
+      description: item.description,
+      geometry: geometry,
+      mappings: {},
+      tags: item.tags.split(',').map((tag: string) => convertTagToTagCode(tag.trim()))
+    });
+  });
+}
+
+// Calculate payload sizes
+function calculatePayloadSizes(features: Feature[]) {
+  console.log('📊 Protocol Buffer Payload Size Comparison\n');
+
+  let totalJsonSize = 0;
+  let totalProtobufSize = 0;
+  let totalCompressedSize = 0;
+
+  features.forEach((feature, index) => {
+    // JSON size
+    const jsonString = JSON.stringify(feature);
+    const jsonSize = new TextEncoder().encode(jsonString).length;
+    
+    // Protocol Buffer size
+    const binaryWriter = Feature.encode(feature);
+    const protobufData = binaryWriter.finish();
+    const protobufSize = protobufData.length;
+    
+    // Compressed size (using gzip simulation)
+    const compressedSize = Math.round(protobufSize * 0.7); // Approximate gzip compression
+    
+    totalJsonSize += jsonSize;
+    totalProtobufSize += protobufSize;
+    totalCompressedSize += compressedSize;
+
+    console.log(`Feature ${index + 1}: "${feature.name}"`);
+    console.log(`  JSON:        ${jsonSize.toString().padStart(6)} bytes`);
+    console.log(`  Protobuf:    ${protobufSize.toString().padStart(6)} bytes (${((1 - protobufSize/jsonSize) * 100).toFixed(1)}% smaller)`);
+    console.log(`  Compressed:  ${compressedSize.toString().padStart(6)} bytes (${((1 - compressedSize/jsonSize) * 100).toFixed(1)}% smaller)`);
+    console.log('');
+  });
+
+  console.log('📈 Summary:');
+  console.log(`Total JSON:        ${totalJsonSize.toString().padStart(8)} bytes`);
+  console.log(`Total Protobuf:    ${totalProtobufSize.toString().padStart(8)} bytes (${((1 - totalProtobufSize/totalJsonSize) * 100).toFixed(1)}% smaller)`);
+  console.log(`Total Compressed:  ${totalCompressedSize.toString().padStart(8)} bytes (${((1 - totalCompressedSize/totalJsonSize) * 100).toFixed(1)}% smaller)`);
+  
+  console.log('\n💡 Optimization Tips:');
+  console.log('1. Use smaller field numbers for frequently accessed fields');
+  console.log('2. Use [packed = true] for repeated fields');
+  console.log('3. Consider fixed32/sint32 instead of double for coordinates');
+  console.log('4. Remove optional fields for ultra-compact messages');
+  console.log('5. Use gzip compression on top of Protocol Buffers');
+}
+
+export function comparePayloadSizes() {
+  const features = generateSampleFeatures();
+  calculatePayloadSizes(features);
+} 

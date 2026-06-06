@@ -1,0 +1,72 @@
+syntax = "proto3";
+
+package geospatial;
+
+// Import TagCode enum
+import "tags.proto";
+
+// A Position is a fundamental geometry construct, representing a single point in coordinate space.
+// In GeoJSON, this is represented as an array of numbers [longitude, latitude].
+message Position {
+    double longitude = 1;
+    double latitude = 2;
+}
+
+// A GeoJSON-compliant Point geometry.
+message Point {
+    Position coordinates = 1;
+}
+
+// A GeoJSON-compliant LineString geometry.
+message LineString {
+    repeated Position coordinates = 1;
+}
+
+// A GeoJSON-compliant Polygon geometry.
+// For a valid Polygon, the first linear ring defines the exterior boundary.
+// Subsequent linear rings define interior boundaries (holes).
+message Polygon {
+    repeated LineString rings = 1;
+}
+
+// A Geometry message that encapsulates one of the supported geometry types.
+// This corresponds to the 'geometry' member of a GeoJSON Feature.
+message Geometry {
+    oneof geometry_type {
+        Point point = 1;
+        LineString linestring = 2;
+        Polygon polygon = 3;
+    }
+}
+
+// Separate description message for lazy loading
+message FeatureDescription {
+    string feature_id = 1;           // Reference to the feature
+    string description = 2;          // Full description
+}
+
+// Lightweight feature without description (for list views and basic queries)
+message Feature {
+    // An identifier for the feature, corresponding to the 'id' member of a GeoJSON Feature.
+    string id = 1;
+    
+    // The common name of the feature.
+    string name = 2;
+    
+    // The feature's geometry.
+    Geometry geometry = 3;
+    
+    // Primary category of the feature.
+    TagCode category = 4;
+    
+    // A list of tags for categorization and search, using the compact enum.
+    repeated TagCode tags = 5 [packed = true];
+    
+}
+
+// Lightweight feature collection for list views
+message FeatureCollection {
+    repeated Feature features = 1;
+    int32 total_count = 2;
+    bool has_more = 3;
+}

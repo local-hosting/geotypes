@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "customConditions": ["development"],
+    "rootDir": "."
+  },
+  "include": ["src/**/*.ts", "scripts/sync-slugs.ts", "tests/**/*.ts", "vitest.config.ts"],
+  "exclude": ["cli/**", "generated/**"]
+}

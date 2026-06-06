@@ -1,0 +1,1243 @@
+# =========================================================================
+# Cor Universal Geospatial Standards - Commercial & Services
+# =========================================================================
+# Industry Code: 010
+# Domains: 8 | Features: 80
+# retail_shopping(15), food_dining(13), hospitality_accommodation(10),
+# professional_services(10), automotive_services(9), personal_services(11),
+# entertainment_tourism(7), digital_technology(5)
+# Encoding: [010][domain:3bits][feature:4bits]
+# =========================================================================
+
+industry_code: "010"
+industry_name: "commercial_services"
+
+domains:
+
+  retail_shopping:
+    code: "000"
+    features:
+      RSM:
+        name: "shopping_mall"
+        geometry: "polygon"
+        binary: "0b0100000001"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Shopping Mall"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=mall"
+          google: "shopping_mall"
+          here: "SHOPPING_CENTER"
+          foursquare: "shops_services"
+          naics: "452210"
+          icsc: "REGIONAL_MALL"
+
+      RSC:
+        name: "shopping_center"
+        geometry: "polygon"
+        binary: "0b0100000010"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Shopping Center"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=centre"
+          google: "shopping_mall"
+          here: "SHOPPING_CENTER"
+          foursquare: "shops_services"
+          naics: "452990"
+          icsc: "STRIP_CENTER"
+
+      RSD:
+        name: "department_store"
+        geometry: "polygon"
+        binary: "0b0100000011"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Department Store"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=department_store"
+          google: "department_store"
+          here: "DEPARTMENT_STORE"
+          foursquare: "shops_services"
+          naics: "452111"
+
+      RSG:
+        name: "grocery_store"
+        geometry: "polygon"
+        binary: "0b0100000100"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Grocery Store"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=supermarket"
+          google: "supermarket"
+          here: "GROCERY_STORE"
+          foursquare: "shops_services"
+          naics: "445110"
+
+      RSP:
+        name: "pharmacy"
+        geometry: "point"
+        binary: "0b0100000101"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Pharmacy"
+          iso19110: "CommercialFacility"
+          openstreetmap: "amenity=pharmacy"
+          google: "pharmacy"
+          here: "PHARMACY"
+          foursquare: "shops_services"
+          naics: "446110"
+
+      RSV:
+        name: "convenience_store"
+        geometry: "point"
+        binary: "0b0100000110"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Convenience Store"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=convenience"
+          google: "convenience_store"
+          here: "CONVENIENCE_STORE"
+          foursquare: "shops_services"
+          naics: "445120"
+
+      RSE:
+        name: "electronics_store"
+        geometry: "point"
+        binary: "0b0100000111"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Electronics Store"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=electronics"
+          google: "electronics_store"
+          here: "ELECTRONICS_STORE"
+          foursquare: "shops_services"
+          naics: "443142"
+
+      RSA:
+        name: "clothing_store"
+        geometry: "point"
+        binary: "0b0100001000"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Clothing Store"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=clothes"
+          google: "clothing_store"
+          here: "CLOTHING_STORE"
+          foursquare: "shops_services"
+          naics: "448140"
+
+      RSH:
+        name: "hardware_store"
+        geometry: "point"
+        binary: "0b0100001001"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Hardware Store"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=hardware"
+          google: "hardware_store"
+          here: "HARDWARE_STORE"
+          foursquare: "shops_services"
+          naics: "444130"
+
+      RSF:
+        name: "farmers_market"
+        geometry: "polygon"
+        binary: "0b0100001010"
+        mappings:
+          tiger: "C3025"
+          nfdd: "AL013"
+          esri: "Farmers Market"
+          iso19110: "CommercialFacility"
+          openstreetmap: "amenity=marketplace"
+          google: "store"
+          here: "FARMERS_MARKET"
+          foursquare: "shops_services"
+          naics: "445230"
+
+      RSN:
+        name: "florist"
+        geometry: "point"
+        binary: "0b0100001011"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Florist"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=florist"
+          google: "florist"
+          here: "FLORIST"
+          foursquare: "shops_services"
+          naics: "453110"
+
+      RSJ:
+        name: "jewelry_store"
+        geometry: "point"
+        binary: "0b0100001100"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Jewelry Store"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=jewelry"
+          google: "jewelry_store"
+          here: "JEWELRY_STORE"
+          foursquare: "shops_services"
+          naics: "448310"
+
+      RSK:
+        name: "bookstore"
+        geometry: "point"
+        binary: "0b0100001101"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Bookstore"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=books"
+          google: "book_store"
+          here: "BOOKSTORE"
+          foursquare: "shops_services"
+          naics: "451211"
+
+      RSL:
+        name: "liquor_store"
+        geometry: "point"
+        binary: "0b0100001110"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Liquor Store"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=alcohol"
+          google: "liquor_store"
+          here: "LIQUOR_STORE"
+          foursquare: "shops_services"
+          naics: "445310"
+
+      RSO:
+        name: "outlet_mall"
+        geometry: "polygon"
+        binary: "0b0100001111"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Outlet Mall"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=mall"
+          google: "shopping_mall"
+          here: "OUTLET_MALL"
+          foursquare: "shops_services"
+          naics: "452210"
+          icsc: "OUTLET_CENTER"
+
+  food_dining:
+    code: "001"
+    features:
+      FDR:
+        name: "restaurant"
+        geometry: "point"
+        binary: "0b0100010001"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Restaurant"
+          iso19110: "CommercialFacility"
+          openstreetmap: "amenity=restaurant"
+          google: "restaurant"
+          here: "RESTAURANT"
+          foursquare: "dining_drinking"
+          naics: "722511"
+
+      FDF:
+        name: "fast_food"
+        geometry: "point"
+        binary: "0b0100010010"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Fast Food Restaurant"
+          iso19110: "CommercialFacility"
+          openstreetmap: "amenity=fast_food"
+          google: "restaurant"
+          here: "FAST_FOOD"
+          foursquare: "dining_drinking"
+          naics: "722513"
+
+      FDC:
+        name: "cafe"
+        geometry: "point"
+        binary: "0b0100010011"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Cafe"
+          iso19110: "CommercialFacility"
+          openstreetmap: "amenity=cafe"
+          google: "cafe"
+          here: "COFFEE_SHOP"
+          foursquare: "dining_drinking"
+          naics: "722515"
+
+      FDB:
+        name: "bar"
+        geometry: "point"
+        binary: "0b0100010100"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Bar"
+          iso19110: "CommercialFacility"
+          openstreetmap: "amenity=bar"
+          google: "bar"
+          here: "BAR"
+          foursquare: "dining_drinking"
+          naics: "722410"
+
+      FDN:
+        name: "nightclub"
+        geometry: "polygon"
+        binary: "0b0100010101"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Nightclub"
+          iso19110: "CommercialFacility"
+          openstreetmap: "amenity=nightclub"
+          google: "night_club"
+          here: "NIGHTCLUB"
+          foursquare: "dining_drinking"
+          naics: "713110"
+
+      FDW:
+        name: "brewery"
+        geometry: "polygon"
+        binary: "0b0100010110"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Brewery"
+          iso19110: "CommercialFacility"
+          openstreetmap: "craft=brewery"
+          google: "meal_takeaway"
+          here: "BREWERY"
+          foursquare: "dining_drinking"
+          naics: "312120"
+
+      FDT:
+        name: "food_truck"
+        geometry: "point"
+        binary: "0b0100010111"
+        mappings:
+          tiger: "FT0001"
+          nfdd: "AL013"
+          esri: "Food Truck"
+          iso19110: "MobileService"
+          openstreetmap: "amenity=fast_food"
+          google: "meal_takeaway"
+          here: "FOOD_TRUCK"
+          foursquare: "dining_drinking"
+          naics: "722330"
+
+      FDO:
+        name: "food_court"
+        geometry: "polygon"
+        binary: "0b0100011000"
+        mappings:
+          tiger: "C3027"
+          nfdd: "AL013"
+          esri: "Food Court"
+          iso19110: "FoodServiceArea"
+          openstreetmap: "amenity=food_court"
+          google: "meal_takeaway"
+          here: "FOOD_COURT"
+          foursquare: "dining_drinking"
+          naics: "722513"
+
+      FDK:
+        name: "bakery"
+        geometry: "point"
+        binary: "0b0100011001"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Bakery"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=bakery"
+          google: "bakery"
+          here: "BAKERY"
+          foursquare: "dining_drinking"
+          naics: "311811"
+
+      FDI:
+        name: "ice_cream_shop"
+        geometry: "point"
+        binary: "0b0100011010"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Ice Cream Shop"
+          iso19110: "CommercialFacility"
+          openstreetmap: "amenity=ice_cream"
+          google: "restaurant"
+          here: "ICE_CREAM"
+          foursquare: "dining_drinking"
+          naics: "722515"
+
+      FDP:
+        name: "pizzeria"
+        geometry: "point"
+        binary: "0b0100011011"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Pizzeria"
+          iso19110: "CommercialFacility"
+          openstreetmap: "cuisine=pizza"
+          google: "restaurant"
+          here: "PIZZERIA"
+          foursquare: "dining_drinking"
+          naics: "722513"
+
+      FDE:
+        name: "deli"
+        geometry: "point"
+        binary: "0b0100011100"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Delicatessen"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=deli"
+          google: "meal_takeaway"
+          here: "DELI"
+          foursquare: "dining_drinking"
+          naics: "445299"
+
+      FDD:
+        name: "donut_shop"
+        geometry: "point"
+        binary: "0b0100011101"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Donut Shop"
+          iso19110: "CommercialFacility"
+          openstreetmap: "shop=pastry"
+          google: "bakery"
+          here: "DONUT_SHOP"
+          foursquare: "dining_drinking"
+          naics: "311811"
+
+  hospitality_accommodation:
+    code: "010"
+    features:
+      HAH:
+        name: "hotel"
+        geometry: "polygon"
+        binary: "0b0100100001"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Hotel"
+          iso19110: "AccommodationFacility"
+          openstreetmap: "tourism=hotel"
+          google: "lodging"
+          here: "HOTEL"
+          foursquare: "travel_transport"
+          naics: "721110"
+
+      HAM:
+        name: "motel"
+        geometry: "polygon"
+        binary: "0b0100100010"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Motel"
+          iso19110: "AccommodationFacility"
+          openstreetmap: "tourism=motel"
+          google: "lodging"
+          here: "MOTEL"
+          foursquare: "travel_transport"
+          naics: "721110"
+
+      HAB:
+        name: "bed_and_breakfast"
+        geometry: "polygon"
+        binary: "0b0100100011"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Bed and Breakfast"
+          iso19110: "AccommodationFacility"
+          openstreetmap: "tourism=guest_house"
+          google: "lodging"
+          here: "BED_BREAKFAST"
+          foursquare: "travel_transport"
+          naics: "721191"
+
+      HAR:
+        name: "resort"
+        geometry: "polygon"
+        binary: "0b0100100100"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Resort"
+          iso19110: "AccommodationFacility"
+          openstreetmap: "tourism=resort"
+          google: "lodging"
+          here: "RESORT"
+          foursquare: "travel_transport"
+          naics: "721110"
+
+      HAC:
+        name: "campground"
+        geometry: "polygon"
+        binary: "0b0100100101"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Campground"
+          iso19110: "AccommodationFacility"
+          openstreetmap: "tourism=camp_site"
+          google: "campground"
+          here: "CAMPGROUND"
+          foursquare: "travel_transport"
+          naics: "721211"
+
+      HAO:
+        name: "hostel"
+        geometry: "polygon"
+        binary: "0b0100100110"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Hostel"
+          iso19110: "AccommodationFacility"
+          openstreetmap: "tourism=hostel"
+          google: "lodging"
+          here: "HOSTEL"
+          foursquare: "travel_transport"
+          naics: "721198"
+
+      HAV:
+        name: "vacation_rental"
+        geometry: "polygon"
+        binary: "0b0100100111"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Vacation Rental"
+          iso19110: "AccommodationFacility"
+          openstreetmap: "tourism=apartment"
+          google: "lodging"
+          here: "VACATION_RENTAL"
+          foursquare: "travel_transport"
+          naics: "721199"
+
+      HAP:
+        name: "rv_park"
+        geometry: "polygon"
+        binary: "0b0100101000"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "RV Park"
+          iso19110: "AccommodationFacility"
+          openstreetmap: "tourism=caravan_site"
+          google: "rv_park"
+          here: "RV_PARK"
+          foursquare: "travel_transport"
+          naics: "721211"
+
+      HAS:
+        name: "ski_resort"
+        geometry: "polygon"
+        binary: "0b0100101001"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Ski Resort"
+          iso19110: "AccommodationFacility"
+          openstreetmap: "leisure=resort"
+          google: "ski_resort"
+          here: "SKI_RESORT"
+          foursquare: "outdoors_recreation"
+          naics: "713920"
+
+      HAG:
+        name: "golf_resort"
+        geometry: "polygon"
+        binary: "0b0100101010"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Golf Resort"
+          iso19110: "AccommodationFacility"
+          openstreetmap: "leisure=resort"
+          google: "lodging"
+          here: "GOLF_RESORT"
+          foursquare: "outdoors_recreation"
+          naics: "721110"
+
+  professional_services:
+    code: "011"
+    features:
+      PSO:
+        name: "office_building"
+        geometry: "polygon"
+        binary: "0b0100110001"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Office Building"
+          iso19110: "CommercialFacility"
+          openstreetmap: "building=office"
+          google: "establishment"
+          here: "OFFICE_BUILDING"
+          foursquare: "professional_services"
+          naics: "531120"
+          boma: "OFFICE"
+
+      PSB:
+        name: "bank"
+        geometry: "point"
+        binary: "0b0100110010"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Bank"
+          iso19110: "FinancialFacility"
+          openstreetmap: "amenity=bank"
+          google: "bank"
+          here: "BANK"
+          foursquare: "professional_services"
+          naics: "522110"
+
+      PSA:
+        name: "atm"
+        geometry: "point"
+        binary: "0b0100110011"
+        mappings:
+          tiger: "ATM001"
+          nfdd: "AL013"
+          esri: "ATM"
+          iso19110: "FinancialEquipment"
+          openstreetmap: "amenity=atm"
+          google: "atm"
+          here: "ATM"
+          foursquare: "professional_services"
+          naics: "522320"
+
+      PSC:
+        name: "coworking_space"
+        geometry: "polygon"
+        binary: "0b0100110100"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Coworking Space"
+          iso19110: "CommercialFacility"
+          openstreetmap: "amenity=coworking_space"
+          google: "establishment"
+          here: "COWORKING"
+          foursquare: "professional_services"
+          naics: "531120"
+
+      PSL:
+        name: "law_office"
+        geometry: "point"
+        binary: "0b0100110101"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Law Office"
+          iso19110: "ProfessionalService"
+          openstreetmap: "office=lawyer"
+          google: "establishment"
+          here: "LAW_OFFICE"
+          foursquare: "professional_services"
+          naics: "541110"
+
+      PSR:
+        name: "real_estate_office"
+        geometry: "point"
+        binary: "0b0100110110"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Real Estate Office"
+          iso19110: "ProfessionalService"
+          openstreetmap: "office=estate_agent"
+          google: "real_estate_agency"
+          here: "REAL_ESTATE"
+          foursquare: "professional_services"
+          naics: "531210"
+
+      PSN:
+        name: "accounting_firm"
+        geometry: "point"
+        binary: "0b0100110111"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Accounting Firm"
+          iso19110: "ProfessionalService"
+          openstreetmap: "office=accountant"
+          google: "accounting"
+          here: "ACCOUNTING"
+          foursquare: "professional_services"
+          naics: "541211"
+
+      PSI:
+        name: "insurance_office"
+        geometry: "point"
+        binary: "0b0100111000"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Insurance Office"
+          iso19110: "ProfessionalService"
+          openstreetmap: "office=insurance"
+          google: "insurance_agency"
+          here: "INSURANCE"
+          foursquare: "professional_services"
+          naics: "524210"
+
+      PSM:
+        name: "marketing_agency"
+        geometry: "point"
+        binary: "0b0100111001"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Marketing Agency"
+          iso19110: "ProfessionalService"
+          openstreetmap: "office=advertising_agency"
+          google: "establishment"
+          here: "MARKETING"
+          foursquare: "professional_services"
+          naics: "541810"
+
+      PSE:
+        name: "architecture_firm"
+        geometry: "point"
+        binary: "0b0100111010"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Architecture Firm"
+          iso19110: "ProfessionalService"
+          openstreetmap: "office=architect"
+          google: "establishment"
+          here: "ARCHITECTURE"
+          foursquare: "professional_services"
+          naics: "541310"
+
+  automotive_services:
+    code: "100"
+    features:
+      ASG:
+        name: "gas_station"
+        geometry: "point"
+        binary: "0b0101000001"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Gas Station"
+          iso19110: "AutomotiveFacility"
+          openstreetmap: "amenity=fuel"
+          google: "gas_station"
+          here: "GAS_STATION"
+          foursquare: "travel_transport"
+          naics: "447110"
+
+      ASW:
+        name: "car_wash"
+        geometry: "point"
+        binary: "0b0101000010"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Car Wash"
+          iso19110: "AutomotiveService"
+          openstreetmap: "amenity=car_wash"
+          google: "car_wash"
+          here: "CAR_WASH"
+          foursquare: "shops_services"
+          naics: "811192"
+
+      ASR:
+        name: "auto_repair"
+        geometry: "point"
+        binary: "0b0101000011"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Auto Repair Shop"
+          iso19110: "AutomotiveService"
+          openstreetmap: "shop=car_repair"
+          google: "car_repair"
+          here: "AUTO_REPAIR"
+          foursquare: "shops_services"
+          naics: "811111"
+
+      AST:
+        name: "tire_shop"
+        geometry: "point"
+        binary: "0b0101000100"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Tire Shop"
+          iso19110: "AutomotiveService"
+          openstreetmap: "shop=tyres"
+          google: "car_repair"
+          here: "TIRE_SHOP"
+          foursquare: "shops_services"
+          naics: "811198"
+
+      ASD:
+        name: "car_dealership"
+        geometry: "polygon"
+        binary: "0b0101000101"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Car Dealership"
+          iso19110: "AutomotiveFacility"
+          openstreetmap: "shop=car"
+          google: "car_dealer"
+          here: "CAR_DEALERSHIP"
+          foursquare: "shops_services"
+          naics: "441110"
+
+      ASP:
+        name: "auto_parts"
+        geometry: "point"
+        binary: "0b0101000110"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Auto Parts Store"
+          iso19110: "AutomotiveService"
+          openstreetmap: "shop=car_parts"
+          google: "store"
+          here: "AUTO_PARTS"
+          foursquare: "shops_services"
+          naics: "441310"
+
+      ATW:
+        name: "towing_service"
+        geometry: "point"
+        binary: "0b0101000111"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Towing Service"
+          iso19110: "AutomotiveService"
+          openstreetmap: "amenity=towing_service"
+          google: "establishment"
+          here: "TOWING"
+          foursquare: "shops_services"
+          naics: "488410"
+
+      ASL:
+        name: "auto_glass"
+        geometry: "point"
+        binary: "0b0101001000"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Auto Glass Shop"
+          iso19110: "AutomotiveService"
+          openstreetmap: "shop=car_glass"
+          google: "car_repair"
+          here: "AUTO_GLASS"
+          foursquare: "shops_services"
+          naics: "811122"
+
+      ASE:
+        name: "auto_detailing"
+        geometry: "point"
+        binary: "0b0101001001"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Auto Detailing"
+          iso19110: "AutomotiveService"
+          openstreetmap: "shop=car_detailing"
+          google: "car_wash"
+          here: "AUTO_DETAILING"
+          foursquare: "shops_services"
+          naics: "811192"
+
+  personal_services:
+    code: "101"
+    features:
+      PVH:
+        name: "hair_salon"
+        geometry: "point"
+        binary: "0b0101010001"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Hair Salon"
+          iso19110: "PersonalService"
+          openstreetmap: "shop=hairdresser"
+          google: "hair_care"
+          here: "HAIR_SALON"
+          foursquare: "shops_services"
+          naics: "812111"
+
+      PVB:
+        name: "barbershop"
+        geometry: "point"
+        binary: "0b0101010010"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Barbershop"
+          iso19110: "PersonalService"
+          openstreetmap: "shop=hairdresser"
+          google: "hair_care"
+          here: "BARBERSHOP"
+          foursquare: "shops_services"
+          naics: "812111"
+
+      PVN:
+        name: "nail_salon"
+        geometry: "point"
+        binary: "0b0101010011"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Nail Salon"
+          iso19110: "PersonalService"
+          openstreetmap: "shop=beauty"
+          google: "beauty_salon"
+          here: "NAIL_SALON"
+          foursquare: "shops_services"
+          naics: "812113"
+
+      PVS:
+        name: "spa"
+        geometry: "point"
+        binary: "0b0101010100"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Spa"
+          iso19110: "PersonalService"
+          openstreetmap: "leisure=spa"
+          google: "spa"
+          here: "SPA"
+          foursquare: "shops_services"
+          naics: "812199"
+
+      PVL:
+        name: "laundromat"
+        geometry: "point"
+        binary: "0b0101010101"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Laundromat"
+          iso19110: "PersonalService"
+          openstreetmap: "shop=laundry"
+          google: "laundry"
+          here: "LAUNDROMAT"
+          foursquare: "shops_services"
+          naics: "812310"
+
+      PVD:
+        name: "dry_cleaner"
+        geometry: "point"
+        binary: "0b0101010110"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Dry Cleaner"
+          iso19110: "PersonalService"
+          openstreetmap: "shop=dry_cleaning"
+          google: "laundry"
+          here: "DRY_CLEANER"
+          foursquare: "shops_services"
+          naics: "812320"
+
+      PVT:
+        name: "tattoo_studio"
+        geometry: "point"
+        binary: "0b0101010111"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Tattoo Studio"
+          iso19110: "PersonalService"
+          openstreetmap: "shop=tattoo"
+          google: "establishment"
+          here: "TATTOO_STUDIO"
+          foursquare: "shops_services"
+          naics: "812199"
+
+      PVP:
+        name: "pet_grooming"
+        geometry: "point"
+        binary: "0b0101011000"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Pet Grooming"
+          iso19110: "PersonalService"
+          openstreetmap: "shop=pet_grooming"
+          google: "pet_store"
+          here: "PET_GROOMING"
+          foursquare: "shops_services"
+          naics: "812910"
+
+      PVO:
+        name: "optometrist"
+        geometry: "point"
+        binary: "0b0101011001"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Optometrist"
+          iso19110: "PersonalService"
+          openstreetmap: "shop=optician"
+          google: "optometrist"
+          here: "OPTOMETRIST"
+          foursquare: "medical_health"
+          naics: "621320"
+
+      PVV:
+        name: "travel_agency"
+        geometry: "point"
+        binary: "0b0101011010"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Travel Agency"
+          iso19110: "PersonalService"
+          openstreetmap: "office=travel_agent"
+          google: "travel_agency"
+          here: "TRAVEL_AGENCY"
+          foursquare: "travel_transport"
+          naics: "561510"
+
+      PVR:
+        name: "pet_boarding"
+        geometry: "polygon"
+        binary: "0b0101011011"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Pet Boarding"
+          iso19110: "PersonalService"
+          openstreetmap: "amenity=animal_boarding"
+          google: "pet_store"
+          here: "PET_BOARDING"
+          foursquare: "shops_services"
+          naics: "812910"
+
+  entertainment_tourism:
+    code: "110"
+    features:
+      ENC:
+        name: "casino"
+        geometry: "polygon"
+        binary: "0b0101100001"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Casino"
+          iso19110: "EntertainmentFacility"
+          openstreetmap: "amenity=casino"
+          google: "casino"
+          here: "CASINO"
+          foursquare: "arts_entertainment"
+          naics: "713210"
+
+      ENT:
+        name: "performing_arts_theater"
+        geometry: "polygon"
+        binary: "0b0101100010"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Theater"
+          iso19110: "EntertainmentFacility"
+          openstreetmap: "amenity=theatre"
+          google: "performing_arts_theater"
+          here: "THEATER"
+          foursquare: "arts_entertainment"
+          naics: "711110"
+
+      ENH:
+        name: "concert_hall"
+        geometry: "polygon"
+        binary: "0b0101100011"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Concert Hall"
+          iso19110: "EntertainmentFacility"
+          openstreetmap: "amenity=concert_hall"
+          google: "establishment"
+          here: "CONCERT_HALL"
+          foursquare: "arts_entertainment"
+          naics: "711110"
+
+      ENM:
+        name: "comedy_club"
+        geometry: "point"
+        binary: "0b0101100100"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Comedy Club"
+          iso19110: "EntertainmentFacility"
+          openstreetmap: "amenity=stripclub"
+          google: "night_club"
+          here: "COMEDY_CLUB"
+          foursquare: "arts_entertainment"
+          naics: "711190"
+
+      ENS:
+        name: "sports_arena"
+        geometry: "polygon"
+        binary: "0b0101100101"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Sports Arena"
+          iso19110: "SportsVenue"
+          openstreetmap: "leisure=stadium"
+          google: "stadium"
+          here: "SPORTS_ARENA"
+          foursquare: "arts_entertainment"
+          naics: "711320"
+
+      ENP:
+        name: "amusement_park"
+        geometry: "polygon"
+        binary: "0b0101100110"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Amusement Park"
+          iso19110: "EntertainmentFacility"
+          openstreetmap: "tourism=theme_park"
+          google: "amusement_park"
+          here: "AMUSEMENT_PARK"
+          foursquare: "arts_entertainment"
+          naics: "713110"
+
+      ENA:
+        name: "aquarium"
+        geometry: "polygon"
+        binary: "0b0101100111"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Aquarium"
+          iso19110: "EntertainmentFacility"
+          openstreetmap: "tourism=aquarium"
+          google: "aquarium"
+          here: "AQUARIUM"
+          foursquare: "arts_entertainment"
+          naics: "712130"
+
+  digital_technology:
+    code: "111"
+    features:
+      DTD:
+        name: "data_center"
+        geometry: "polygon"
+        binary: "0b0101110001"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Data Center"
+          iso19110: "TechnologyFacility"
+          openstreetmap: "telecom=data_center"
+          google: "establishment"
+          here: "DATA_CENTER"
+          foursquare: "professional_services"
+          naics: "518210"
+
+      DTI:
+        name: "internet_cafe"
+        geometry: "point"
+        binary: "0b0101110010"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Internet Cafe"
+          iso19110: "TechnologyFacility"
+          openstreetmap: "amenity=internet_cafe"
+          google: "cafe"
+          here: "INTERNET_CAFE"
+          foursquare: "professional_services"
+          naics: "722513"
+
+      DTR:
+        name: "tech_repair"
+        geometry: "point"
+        binary: "0b0101110011"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Tech Repair Shop"
+          iso19110: "TechnologyService"
+          openstreetmap: "shop=electronics_repair"
+          google: "electronics_store"
+          here: "TECH_REPAIR"
+          foursquare: "shops_services"
+          naics: "811210"
+
+      DTP:
+        name: "phone_repair"
+        geometry: "point"
+        binary: "0b0101110100"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Phone Repair Shop"
+          iso19110: "TechnologyService"
+          openstreetmap: "shop=mobile_phone_repair"
+          google: "electronics_store"
+          here: "PHONE_REPAIR"
+          foursquare: "shops_services"
+          naics: "811210"
+
+      DTW:
+        name: "wifi_hotspot"
+        geometry: "point"
+        binary: "0b0101110101"
+        mappings:
+          tiger: "WH0001"
+          nfdd: "AT042"
+          esri: "Wi-Fi Hotspot"
+          iso19110: "CommunicationNode"
+          openstreetmap: "internet_access=wlan"
+          google: "point_of_interest"
+          here: "WIFI_HOTSPOT"
+          foursquare: "professional_services"
+          fcc: "WIFI"

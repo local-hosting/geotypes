@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package geotypes.demographics.v1;
+
+/** ACS ZCTA demographics for one US state or territory. */
+message StateDemographics {
+  string state = 1;
+  uint32 schema_version = 2;
+  repeated ZipRow rows = 3;
+}
+
+message ZipRow {
+  string zip = 1;
+  /** Numeric metrics in `CENSUS_NUMERIC_FIELDS` order (pipeline metrics). */
+  repeated float numbers = 2;
+  /** String metrics in `CENSUS_STRING_FIELDS` order. */
+  repeated string strings = 3;
+}

@@ -1,0 +1,55 @@
+event:
+  name: Event
+  id: 4d4b7105d754a06373d81259
+  subcategories:
+    line:
+      name: Line
+      id: 58daa1558bbb0b01f18ec1fa
+    other_event:
+      name: Other Event
+      id: 5267e4d9e4b0ec79466e48c8
+    entertainment_event:
+      name: Entertainment Event
+      id: 63be6904847c3692a84b9bb7
+      subcategories:
+        music_festival:
+          name: Music Festival
+          id: 5267e4d9e4b0ec79466e48d1
+        sporting_event:
+          name: Sporting Event
+          id: 5bae9231bedf3950379f89c5
+        festival:
+          name: Festival
+          id: 5267e4d9e4b0ec79466e48c7
+          subcategories:
+            beer_festival:
+              name: Beer Festival
+              id: 62d587aeda6648532de2b88c
+        parade:
+          name: Parade
+          id: 52741d85e4b0d5d1e3c6a6d9
+    marketplace:
+      name: Marketplace
+      id: 63be6904847c3692a84b9bb8
+      subcategories:
+        stoop_sale:
+          name: Stoop Sale
+          id: 52f2ab2ebcbc57f1066b8b54
+        trade_fair:
+          name: Trade Fair
+          id: 5bae9231bedf3950379f89c3
+        street_fair:
+          name: Street Fair
+          id: 5267e4d8e4b0ec79466e48c5
+        christmas_market:
+          name: Christmas Market
+          id: 52f2ab2ebcbc57f1066b8b3b
+        street_food_gathering:
+          name: Street Food Gathering
+          id: 53e0feef498e5aac066fd8a9
+    conference:
+      name: Conference
+      id: 5267e4d9e4b0ec79466e48c6
+    convention:
+      name: Convention
+      id: 5267e4d9e4b0ec79466e48c9

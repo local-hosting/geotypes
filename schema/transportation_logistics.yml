@@ -1,0 +1,410 @@
+# =========================================================================
+# Cor Universal Geospatial Standards - Transportation & Logistics
+# =========================================================================
+# Industry Code: 001
+# Domains: 4 | Features: 25
+# roads_streets(6), public_transit(7), aviation(6), logistics_warehousing(6)
+# Encoding: [001][domain:3bits][feature:4bits]
+# =========================================================================
+
+industry_code: "001"
+industry_name: "transportation_logistics"
+
+domains:
+
+  roads_streets:
+    code: "000"
+    features:
+      RSH:
+        name: "highway"
+        geometry: "linestring"
+        binary: "0b0010000001"
+        mappings:
+          tiger: "A11"
+          nfdd: "AP030"
+          esri: "Highway"
+          iso19110: "Road"
+          openstreetmap: "highway=motorway"
+          google: "highway"
+          here: "HIGHWAY"
+          foursquare: "travel_transport"
+          dot: "INTERSTATE"
+
+      RSA:
+        name: "arterial_road"
+        geometry: "linestring"
+        binary: "0b0010000010"
+        mappings:
+          tiger: "A21"
+          nfdd: "AP030"
+          esri: "Major Road"
+          iso19110: "Road"
+          openstreetmap: "highway=primary"
+          google: "arterial"
+          here: "ARTERIAL"
+          foursquare: "travel_transport"
+          dot: "ARTERIAL"
+
+      RSL:
+        name: "local_road"
+        geometry: "linestring"
+        binary: "0b0010000011"
+        mappings:
+          tiger: "A41"
+          nfdd: "AP030"
+          esri: "Local Road"
+          iso19110: "Road"
+          openstreetmap: "highway=residential"
+          google: "local"
+          here: "LOCAL"
+          foursquare: "travel_transport"
+          dot: "LOCAL"
+
+      RST:
+        name: "traffic_light"
+        geometry: "point"
+        binary: "0b0010000100"
+        mappings:
+          tiger: "P0101"
+          nfdd: "AP041"
+          esri: "Traffic Light"
+          iso19110: "TrafficControlDevice"
+          openstreetmap: "highway=traffic_signals"
+          google: "establishment"
+          here: "TRAFFIC_LIGHT"
+          foursquare: "travel_transport"
+          mutcd: "SIGNAL"
+
+      RSS:
+        name: "stop_sign"
+        geometry: "point"
+        binary: "0b0010000101"
+        mappings:
+          tiger: "SS0001"
+          nfdd: "AP042"
+          esri: "Stop Sign"
+          iso19110: "TrafficControlDevice"
+          openstreetmap: "highway=stop"
+          google: "establishment"
+          here: "STOP_SIGN"
+          foursquare: "travel_transport"
+          mutcd: "STOP"
+
+      RSR:
+        name: "roundabout"
+        geometry: "polygon"
+        binary: "0b0010000110"
+        mappings:
+          tiger: "RA0001"
+          nfdd: "AP044"
+          esri: "Roundabout"
+          iso19110: "TrafficFeature"
+          openstreetmap: "junction=roundabout"
+          google: "establishment"
+          here: "ROUNDABOUT"
+          foursquare: "travel_transport"
+          mutcd: "ROUNDABOUT"
+
+  public_transit:
+    code: "001"
+    features:
+      PTB:
+        name: "bus_stop"
+        geometry: "point"
+        binary: "0b0010010001"
+        mappings:
+          tiger: "C3081"
+          nfdd: "AN075"
+          esri: "Bus Stop"
+          iso19110: "TransportationFacility"
+          openstreetmap: "highway=bus_stop"
+          google: "bus_station"
+          here: "BUS_STOP"
+          foursquare: "travel_transport"
+          gtfs: "stop"
+          apta: "BUS_STOP"
+
+      PTS:
+        name: "subway_station"
+        geometry: "point"
+        binary: "0b0010010010"
+        mappings:
+          tiger: "C3061"
+          nfdd: "AN060"
+          esri: "Subway Station"
+          iso19110: "TransitFacility"
+          openstreetmap: "railway=subway_entrance"
+          google: "subway_station"
+          here: "SUBWAY_STATION"
+          foursquare: "travel_transport"
+          gtfs: "station"
+          apta: "RAIL_STATION"
+
+      PTT:
+        name: "train_station"
+        geometry: "polygon"
+        binary: "0b0010010011"
+        mappings:
+          tiger: "C3082"
+          nfdd: "AN050"
+          esri: "Train Station"
+          iso19110: "TransitFacility"
+          openstreetmap: "railway=station"
+          google: "train_station"
+          here: "TRAIN_STATION"
+          foursquare: "travel_transport"
+          gtfs: "station"
+          apta: "RAIL_STATION"
+
+      PTF:
+        name: "ferry_terminal"
+        geometry: "polygon"
+        binary: "0b0010010100"
+        mappings:
+          tiger: "C3084"
+          nfdd: "BB081"
+          esri: "Ferry Terminal"
+          iso19110: "MarineTransitFacility"
+          openstreetmap: "amenity=ferry_terminal"
+          google: "establishment"
+          here: "FERRY_TERMINAL"
+          foursquare: "travel_transport"
+          maritime: "FERRY_TERMINAL"
+
+      PTL:
+        name: "light_rail_station"
+        geometry: "point"
+        binary: "0b0010010101"
+        mappings:
+          tiger: "LR0001"
+          nfdd: "AN061"
+          esri: "Light Rail Station"
+          iso19110: "TransitFacility"
+          openstreetmap: "railway=tram_stop"
+          google: "subway_station"
+          here: "LIGHT_RAIL_STATION"
+          foursquare: "travel_transport"
+          gtfs: "station"
+          apta: "LIGHT_RAIL"
+
+      PTC:
+        name: "ev_charging_station"
+        geometry: "point"
+        binary: "0b0010010110"
+        mappings:
+          tiger: "C3083"
+          nfdd: "AN076"
+          esri: "EV Charging Station"
+          iso19110: "TransportationFacility"
+          openstreetmap: "amenity=charging_station"
+          google: "gas_station"
+          here: "CHARGING_STATION"
+          foursquare: "travel_transport"
+          dot: "EV_CHARGING"
+
+      PTP:
+        name: "park_and_ride"
+        geometry: "polygon"
+        binary: "0b0010010111"
+        mappings:
+          tiger: "PR0001"
+          nfdd: "AN075"
+          esri: "Park and Ride"
+          iso19110: "TransitFacility"
+          openstreetmap: "park_ride=yes"
+          google: "parking"
+          here: "PARK_AND_RIDE"
+          foursquare: "travel_transport"
+          apta: "PARK_RIDE"
+
+  aviation:
+    code: "010"
+    features:
+      AVA:
+        name: "airport"
+        geometry: "polygon"
+        binary: "0b0010100001"
+        mappings:
+          tiger: "C3027"
+          nfdd: "GB005"
+          esri: "Airport"
+          iso19110: "Airport"
+          openstreetmap: "aeroway=aerodrome"
+          google: "airport"
+          here: "AIRPORT"
+          foursquare: "travel_transport"
+          faa: "AIRPORT"
+          icao: "AERODROME"
+
+      AVR:
+        name: "runway"
+        geometry: "linestring"
+        binary: "0b0010100010"
+        mappings:
+          tiger: "RW0001"
+          nfdd: "GB045"
+          esri: "Runway"
+          iso19110: "AirportRunway"
+          openstreetmap: "aeroway=runway"
+          google: "establishment"
+          here: "RUNWAY"
+          foursquare: "travel_transport"
+          faa: "RUNWAY"
+          icao: "RUNWAY"
+
+      AVH:
+        name: "heliport"
+        geometry: "polygon"
+        binary: "0b0010100011"
+        mappings:
+          tiger: "HP0001"
+          nfdd: "GB047"
+          esri: "Heliport"
+          iso19110: "HeliportFacility"
+          openstreetmap: "aeroway=heliport"
+          google: "establishment"
+          here: "HELIPORT"
+          foursquare: "travel_transport"
+          faa: "HELIPORT"
+          icao: "HELIPORT"
+
+      AVT:
+        name: "airport_terminal"
+        geometry: "polygon"
+        binary: "0b0010100100"
+        mappings:
+          tiger: "AT0001"
+          nfdd: "GB005"
+          esri: "Airport Terminal"
+          iso19110: "AirportFacility"
+          openstreetmap: "aeroway=terminal"
+          google: "airport"
+          here: "AIRPORT_TERMINAL"
+          foursquare: "travel_transport"
+          faa: "TERMINAL"
+          icao: "TERMINAL"
+
+      AVC:
+        name: "control_tower"
+        geometry: "point"
+        binary: "0b0010100101"
+        mappings:
+          tiger: "CT0001"
+          nfdd: "GB050"
+          esri: "Control Tower"
+          iso19110: "AirTrafficFacility"
+          openstreetmap: "aeroway=control_tower"
+          google: "establishment"
+          here: "CONTROL_TOWER"
+          foursquare: "travel_transport"
+          faa: "ATCT"
+          icao: "TWR"
+
+      AVG:
+        name: "hangar"
+        geometry: "polygon"
+        binary: "0b0010100110"
+        mappings:
+          tiger: "HG0001"
+          nfdd: "GB075"
+          esri: "Aircraft Hangar"
+          iso19110: "AircraftStorageFacility"
+          openstreetmap: "aeroway=hangar"
+          google: "establishment"
+          here: "HANGAR"
+          foursquare: "travel_transport"
+          faa: "HANGAR"
+          icao: "HANGAR"
+
+  logistics_warehousing:
+    code: "011"
+    features:
+      LWW:
+        name: "warehouse"
+        geometry: "polygon"
+        binary: "0b0010110001"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Warehouse"
+          iso19110: "StorageFacility"
+          openstreetmap: "building=warehouse"
+          google: "establishment"
+          here: "WAREHOUSE"
+          foursquare: "professional_services"
+          cscmp: "WAREHOUSE"
+
+      LWD:
+        name: "distribution_center"
+        geometry: "polygon"
+        binary: "0b0010110010"
+        mappings:
+          tiger: "C3024"
+          nfdd: "AL013"
+          esri: "Distribution Center"
+          iso19110: "LogisticsFacility"
+          openstreetmap: "building=warehouse"
+          google: "establishment"
+          here: "DISTRIBUTION_CENTER"
+          foursquare: "professional_services"
+          cscmp: "DC"
+
+      LWP:
+        name: "port"
+        geometry: "polygon"
+        binary: "0b0010110011"
+        mappings:
+          tiger: "C3085"
+          nfdd: "BB081"
+          esri: "Port"
+          iso19110: "PortFacility"
+          openstreetmap: "landuse=port"
+          google: "establishment"
+          here: "PORT"
+          foursquare: "travel_transport"
+          maritime: "PORT"
+
+      LWT:
+        name: "truck_stop"
+        geometry: "polygon"
+        binary: "0b0010110100"
+        mappings:
+          tiger: "TS0001"
+          nfdd: "AL013"
+          esri: "Truck Stop"
+          iso19110: "TransportationFacility"
+          openstreetmap: "amenity=fuel"
+          google: "gas_station"
+          here: "TRUCK_STOP"
+          foursquare: "travel_transport"
+          trucking: "TRUCK_STOP"
+
+      LWC:
+        name: "cold_storage"
+        geometry: "polygon"
+        binary: "0b0010110101"
+        mappings:
+          tiger: "CS0001"
+          nfdd: "AL013"
+          esri: "Cold Storage"
+          iso19110: "RefrigeratedStorageFacility"
+          openstreetmap: "building=warehouse"
+          google: "establishment"
+          here: "COLD_STORAGE"
+          foursquare: "professional_services"
+          cold_chain: "COLD_STORAGE"
+
+      LWF:
+        name: "fulfillment_center"
+        geometry: "polygon"
+        binary: "0b0010110110"
+        mappings:
+          tiger: "FC0001"
+          nfdd: "AL013"
+          esri: "Fulfillment Center"
+          iso19110: "LogisticsFacility"
+          openstreetmap: "building=warehouse"
+          google: "establishment"
+          here: "FULFILLMENT_CENTER"
+          foursquare: "professional_services"
+          cscmp: "FULFILLMENT"

@@ -1,0 +1,976 @@
+# =========================================================================
+# Cor Universal Geospatial Standards - Agriculture & Industrial
+# =========================================================================
+# Industry Code: 100
+# Domains: 6 | Features: 60
+# agriculture_farming(11), livestock_animal(10), agricultural_infrastructure(9),
+# manufacturing_factory(10), mining_extraction(9), power_generation(11)
+# Encoding: [100][domain:3bits][feature:4bits]
+# =========================================================================
+
+industry_code: "100"
+industry_name: "agriculture_industrial"
+
+domains:
+
+  agriculture_farming:
+    code: "000"
+    features:
+      AFC:
+        name: "crop_farm"
+        geometry: "polygon"
+        binary: "0b1000000001"
+        mappings:
+          tiger: "AG0001"
+          nfdd: "EA010"
+          esri: "Crop Farm"
+          iso19110: "AgriculturalFacility"
+          openstreetmap: "landuse=farmland"
+          google: "establishment"
+          here: "FARM"
+          foursquare: "outdoors_recreation"
+          naics: "111100"
+          usda: "CROPLAND"
+
+      AFR:
+        name: "ranch"
+        geometry: "polygon"
+        binary: "0b1000000010"
+        mappings:
+          tiger: "AG0002"
+          nfdd: "EA010"
+          esri: "Ranch"
+          iso19110: "AgriculturalFacility"
+          openstreetmap: "landuse=meadow"
+          google: "establishment"
+          here: "RANCH"
+          foursquare: "outdoors_recreation"
+          naics: "112100"
+          usda: "RANGELAND"
+
+      AFO:
+        name: "orchard"
+        geometry: "polygon"
+        binary: "0b1000000011"
+        mappings:
+          tiger: "AG0003"
+          nfdd: "EA040"
+          esri: "Orchard"
+          iso19110: "AgriculturalFacility"
+          openstreetmap: "landuse=orchard"
+          google: "establishment"
+          here: "ORCHARD"
+          foursquare: "outdoors_recreation"
+          naics: "111300"
+          usda: "ORCHARD"
+
+      AFV:
+        name: "vineyard"
+        geometry: "polygon"
+        binary: "0b1000000100"
+        mappings:
+          tiger: "AG0004"
+          nfdd: "EA040"
+          esri: "Vineyard"
+          iso19110: "AgriculturalFacility"
+          openstreetmap: "landuse=vineyard"
+          google: "establishment"
+          here: "VINEYARD"
+          foursquare: "outdoors_recreation"
+          naics: "111332"
+          usda: "VINEYARD"
+
+      AFG:
+        name: "greenhouse"
+        geometry: "polygon"
+        binary: "0b1000000101"
+        mappings:
+          tiger: "AG0005"
+          nfdd: "EA010"
+          esri: "Greenhouse"
+          iso19110: "AgriculturalFacility"
+          openstreetmap: "landuse=greenhouse_horticulture"
+          google: "establishment"
+          here: "GREENHOUSE"
+          foursquare: "shops_services"
+          naics: "111419"
+          usda: "GREENHOUSE"
+
+      AFN:
+        name: "plant_nursery"
+        geometry: "polygon"
+        binary: "0b1000000110"
+        mappings:
+          tiger: "AG0006"
+          nfdd: "EA010"
+          esri: "Plant Nursery"
+          iso19110: "AgriculturalFacility"
+          openstreetmap: "landuse=plant_nursery"
+          google: "store"
+          here: "PLANT_NURSERY"
+          foursquare: "shops_services"
+          naics: "111421"
+          usda: "NURSERY"
+
+      AFF:
+        name: "fish_farm"
+        geometry: "polygon"
+        binary: "0b1000000111"
+        mappings:
+          tiger: "AG0007"
+          nfdd: "BH030"
+          esri: "Fish Farm"
+          iso19110: "AquacultureFacility"
+          openstreetmap: "landuse=aquaculture"
+          google: "establishment"
+          here: "FISH_FARM"
+          foursquare: "outdoors_recreation"
+          naics: "112510"
+          usda: "AQUACULTURE"
+
+      AFI:
+        name: "cornfield"
+        geometry: "polygon"
+        binary: "0b1000001000"
+        mappings:
+          tiger: "AG0008"
+          nfdd: "EA010"
+          esri: "Cornfield"
+          iso19110: "AgriculturalFacility"
+          openstreetmap: "landuse=farmland"
+          google: "establishment"
+          here: "CORNFIELD"
+          foursquare: "outdoors_recreation"
+          naics: "111150"
+          usda: "CORN"
+
+      AFX:
+        name: "cotton_field"
+        geometry: "polygon"
+        binary: "0b1000001001"
+        mappings:
+          tiger: "AG0009"
+          nfdd: "EA010"
+          esri: "Cotton Field"
+          iso19110: "AgriculturalFacility"
+          openstreetmap: "landuse=farmland"
+          google: "establishment"
+          here: "COTTON_FIELD"
+          foursquare: "outdoors_recreation"
+          naics: "111920"
+          usda: "COTTON"
+
+      AFS:
+        name: "sugarcane_field"
+        geometry: "polygon"
+        binary: "0b1000001010"
+        mappings:
+          tiger: "AG0010"
+          nfdd: "EA010"
+          esri: "Sugarcane Field"
+          iso19110: "AgriculturalFacility"
+          openstreetmap: "landuse=farmland"
+          google: "establishment"
+          here: "SUGARCANE"
+          foursquare: "outdoors_recreation"
+          naics: "111930"
+          usda: "SUGARCANE"
+
+      AFB:
+        name: "apiary"
+        geometry: "point"
+        binary: "0b1000001011"
+        mappings:
+          tiger: "AG0011"
+          nfdd: "EA010"
+          esri: "Apiary"
+          iso19110: "AgriculturalFacility"
+          openstreetmap: "man_made=beehive"
+          google: "establishment"
+          here: "APIARY"
+          foursquare: "outdoors_recreation"
+          naics: "112910"
+          usda: "APIARY"
+
+  livestock_animal:
+    code: "001"
+    features:
+      LAB:
+        name: "barn"
+        geometry: "polygon"
+        binary: "0b1000010001"
+        mappings:
+          tiger: "LS0001"
+          nfdd: "AL013"
+          esri: "Barn"
+          iso19110: "LivestockFacility"
+          openstreetmap: "building=barn"
+          google: "establishment"
+          here: "BARN"
+          foursquare: "outdoors_recreation"
+          naics: "112100"
+          usda: "BARN"
+
+      LAD:
+        name: "dairy_farm"
+        geometry: "polygon"
+        binary: "0b1000010010"
+        mappings:
+          tiger: "LS0002"
+          nfdd: "AL013"
+          esri: "Dairy Farm"
+          iso19110: "DairyFacility"
+          openstreetmap: "landuse=farmyard"
+          google: "establishment"
+          here: "DAIRY_FARM"
+          foursquare: "outdoors_recreation"
+          naics: "112120"
+          usda: "DAIRY"
+
+      LAF:
+        name: "feedlot"
+        geometry: "polygon"
+        binary: "0b1000010011"
+        mappings:
+          tiger: "LS0003"
+          nfdd: "EA010"
+          esri: "Feedlot"
+          iso19110: "LivestockFacility"
+          openstreetmap: "landuse=farmyard"
+          google: "establishment"
+          here: "FEEDLOT"
+          foursquare: "outdoors_recreation"
+          naics: "112112"
+          usda: "FEEDLOT"
+
+      LAP:
+        name: "poultry_farm"
+        geometry: "polygon"
+        binary: "0b1000010100"
+        mappings:
+          tiger: "LS0004"
+          nfdd: "EA010"
+          esri: "Poultry Farm"
+          iso19110: "LivestockFacility"
+          openstreetmap: "landuse=farmyard"
+          google: "establishment"
+          here: "POULTRY_FARM"
+          foursquare: "outdoors_recreation"
+          naics: "112300"
+          usda: "POULTRY"
+
+      LAE:
+        name: "equestrian_facility"
+        geometry: "polygon"
+        binary: "0b1000010101"
+        mappings:
+          tiger: "LS0005"
+          nfdd: "AL013"
+          esri: "Equestrian Facility"
+          iso19110: "LivestockFacility"
+          openstreetmap: "leisure=horse_riding"
+          google: "establishment"
+          here: "EQUESTRIAN_FACILITY"
+          foursquare: "outdoors_recreation"
+          naics: "112920"
+          usda: "EQUINE"
+
+      LAS:
+        name: "sheep_farm"
+        geometry: "polygon"
+        binary: "0b1000010110"
+        mappings:
+          tiger: "LS0006"
+          nfdd: "EA010"
+          esri: "Sheep Farm"
+          iso19110: "LivestockFacility"
+          openstreetmap: "landuse=farmyard"
+          google: "establishment"
+          here: "SHEEP_FARM"
+          foursquare: "outdoors_recreation"
+          naics: "112410"
+          usda: "SHEEP"
+
+      LAG:
+        name: "goat_farm"
+        geometry: "polygon"
+        binary: "0b1000010111"
+        mappings:
+          tiger: "LS0007"
+          nfdd: "EA010"
+          esri: "Goat Farm"
+          iso19110: "LivestockFacility"
+          openstreetmap: "landuse=farmyard"
+          google: "establishment"
+          here: "GOAT_FARM"
+          foursquare: "outdoors_recreation"
+          naics: "112420"
+          usda: "GOAT"
+
+      LAI:
+        name: "pig_farm"
+        geometry: "polygon"
+        binary: "0b1000011000"
+        mappings:
+          tiger: "LS0008"
+          nfdd: "EA010"
+          esri: "Pig Farm"
+          iso19110: "LivestockFacility"
+          openstreetmap: "landuse=farmyard"
+          google: "establishment"
+          here: "PIG_FARM"
+          foursquare: "outdoors_recreation"
+          naics: "112210"
+          usda: "SWINE"
+
+      LAK:
+        name: "kennel"
+        geometry: "polygon"
+        binary: "0b1000011001"
+        mappings:
+          tiger: "LS0009"
+          nfdd: "AL013"
+          esri: "Kennel"
+          iso19110: "AnimalFacility"
+          openstreetmap: "amenity=animal_boarding"
+          google: "pet_store"
+          here: "KENNEL"
+          foursquare: "shops_services"
+          naics: "812910"
+
+      LAR:
+        name: "rabbit_farm"
+        geometry: "polygon"
+        binary: "0b1000011010"
+        mappings:
+          tiger: "LS0010"
+          nfdd: "EA010"
+          esri: "Rabbit Farm"
+          iso19110: "LivestockFacility"
+          openstreetmap: "landuse=farmyard"
+          google: "establishment"
+          here: "RABBIT_FARM"
+          foursquare: "outdoors_recreation"
+          naics: "112930"
+          usda: "RABBIT"
+
+  agricultural_infrastructure:
+    code: "010"
+    features:
+      AIS:
+        name: "grain_silo"
+        geometry: "point"
+        binary: "0b1000100001"
+        mappings:
+          tiger: "AI0001"
+          nfdd: "AL013"
+          esri: "Grain Silo"
+          iso19110: "StorageFacility"
+          openstreetmap: "man_made=silo"
+          google: "establishment"
+          here: "GRAIN_SILO"
+          foursquare: "professional_services"
+          naics: "493130"
+          usda: "GRAIN_STORAGE"
+
+      AIE:
+        name: "grain_elevator"
+        geometry: "polygon"
+        binary: "0b1000100010"
+        mappings:
+          tiger: "AI0002"
+          nfdd: "AL013"
+          esri: "Grain Elevator"
+          iso19110: "AgriculturalFacility"
+          openstreetmap: "man_made=grain_elevator"
+          google: "establishment"
+          here: "GRAIN_ELEVATOR"
+          foursquare: "professional_services"
+          naics: "493130"
+          usda: "GRAIN_ELEVATOR"
+
+      AII:
+        name: "irrigation_system"
+        geometry: "linestring"
+        binary: "0b1000100011"
+        mappings:
+          tiger: "AI0003"
+          nfdd: "BH030"
+          esri: "Irrigation System"
+          iso19110: "WaterDistribution"
+          openstreetmap: "man_made=pipeline"
+          google: "establishment"
+          here: "IRRIGATION_SYSTEM"
+          foursquare: "professional_services"
+          usda: "IRRIGATION"
+
+      AIC:
+        name: "irrigation_canal"
+        geometry: "linestring"
+        binary: "0b1000100100"
+        mappings:
+          tiger: "AI0004"
+          nfdd: "BH010"
+          esri: "Irrigation Canal"
+          iso19110: "Watercourse"
+          openstreetmap: "waterway=ditch"
+          google: "natural_feature"
+          here: "IRRIGATION_CANAL"
+          foursquare: "outdoors_recreation"
+          usgs: "CANAL"
+
+      AIH:
+        name: "hay_barn"
+        geometry: "polygon"
+        binary: "0b1000100101"
+        mappings:
+          tiger: "AI0005"
+          nfdd: "AL013"
+          esri: "Hay Barn"
+          iso19110: "AgriculturalFacility"
+          openstreetmap: "building=barn"
+          google: "establishment"
+          here: "HAY_BARN"
+          foursquare: "professional_services"
+          usda: "HAY_STORAGE"
+
+      AIK:
+        name: "chicken_coop"
+        geometry: "polygon"
+        binary: "0b1000100110"
+        mappings:
+          tiger: "AI0006"
+          nfdd: "AL013"
+          esri: "Chicken Coop"
+          iso19110: "LivestockFacility"
+          openstreetmap: "building=farm_auxiliary"
+          google: "establishment"
+          here: "CHICKEN_COOP"
+          foursquare: "professional_services"
+          usda: "POULTRY_HOUSE"
+
+      AIQ:
+        name: "equipment_shed"
+        geometry: "polygon"
+        binary: "0b1000100111"
+        mappings:
+          tiger: "AI0007"
+          nfdd: "AL013"
+          esri: "Equipment Shed"
+          iso19110: "AgriculturalFacility"
+          openstreetmap: "building=shed"
+          google: "establishment"
+          here: "EQUIPMENT_SHED"
+          foursquare: "professional_services"
+          usda: "EQUIPMENT_STORAGE"
+
+      AIO:
+        name: "compost_facility"
+        geometry: "polygon"
+        binary: "0b1000101000"
+        mappings:
+          tiger: "AI0008"
+          nfdd: "AL013"
+          esri: "Compost Facility"
+          iso19110: "AgriculturalFacility"
+          openstreetmap: "man_made=compost"
+          google: "establishment"
+          here: "COMPOST_FACILITY"
+          foursquare: "professional_services"
+          usda: "COMPOST"
+          epa: "COMPOST_SITE"
+
+      AIW:
+        name: "weather_station"
+        geometry: "point"
+        binary: "0b1000101001"
+        mappings:
+          tiger: "AI0009"
+          nfdd: "AT048"
+          esri: "Weather Station"
+          iso19110: "MonitoringStation"
+          openstreetmap: "man_made=monitoring_station"
+          google: "establishment"
+          here: "WEATHER_STATION"
+          foursquare: "professional_services"
+          noaa: "COOP_STATION"
+          usda: "WEATHER"
+
+  manufacturing_factory:
+    code: "011"
+    features:
+      MFA:
+        name: "assembly_plant"
+        geometry: "polygon"
+        binary: "0b1000110001"
+        mappings:
+          tiger: "MF0001"
+          nfdd: "AL013"
+          esri: "Assembly Plant"
+          iso19110: "IndustrialFacility"
+          openstreetmap: "industrial=factory"
+          google: "establishment"
+          here: "MANUFACTURING_PLANT"
+          foursquare: "professional_services"
+          naics: "336000"
+
+      MFF:
+        name: "food_processing_plant"
+        geometry: "polygon"
+        binary: "0b1000110010"
+        mappings:
+          tiger: "MF0002"
+          nfdd: "AL013"
+          esri: "Food Processing Plant"
+          iso19110: "ProcessingFacility"
+          openstreetmap: "industrial=food_processing"
+          google: "establishment"
+          here: "FOOD_PROCESSING"
+          foursquare: "professional_services"
+          naics: "311000"
+
+      MFC:
+        name: "chemical_plant"
+        geometry: "polygon"
+        binary: "0b1000110011"
+        mappings:
+          tiger: "MF0003"
+          nfdd: "AL013"
+          esri: "Chemical Plant"
+          iso19110: "IndustrialFacility"
+          openstreetmap: "industrial=chemical"
+          google: "establishment"
+          here: "CHEMICAL_PLANT"
+          foursquare: "professional_services"
+          naics: "325000"
+
+      MFS:
+        name: "steel_mill"
+        geometry: "polygon"
+        binary: "0b1000110100"
+        mappings:
+          tiger: "MF0004"
+          nfdd: "AL013"
+          esri: "Steel Mill"
+          iso19110: "IndustrialFacility"
+          openstreetmap: "industrial=steel"
+          google: "establishment"
+          here: "STEEL_MILL"
+          foursquare: "professional_services"
+          naics: "331110"
+
+      MFL:
+        name: "lumber_mill"
+        geometry: "polygon"
+        binary: "0b1000110101"
+        mappings:
+          tiger: "MF0005"
+          nfdd: "AL013"
+          esri: "Lumber Mill"
+          iso19110: "IndustrialFacility"
+          openstreetmap: "industrial=sawmill"
+          google: "establishment"
+          here: "LUMBER_MILL"
+          foursquare: "professional_services"
+          naics: "321113"
+
+      MFI:
+        name: "industrial_park"
+        geometry: "polygon"
+        binary: "0b1000110110"
+        mappings:
+          tiger: "MF0006"
+          nfdd: "AL013"
+          esri: "Industrial Park"
+          iso19110: "IndustrialZone"
+          openstreetmap: "landuse=industrial"
+          google: "establishment"
+          here: "INDUSTRIAL_PARK"
+          foursquare: "professional_services"
+          naics: "531120"
+
+      MFT:
+        name: "textile_mill"
+        geometry: "polygon"
+        binary: "0b1000110111"
+        mappings:
+          tiger: "MF0007"
+          nfdd: "AL013"
+          esri: "Textile Mill"
+          iso19110: "IndustrialFacility"
+          openstreetmap: "industrial=textile"
+          google: "establishment"
+          here: "TEXTILE_MILL"
+          foursquare: "professional_services"
+          naics: "313000"
+
+      MFP:
+        name: "paper_mill"
+        geometry: "polygon"
+        binary: "0b1000111000"
+        mappings:
+          tiger: "MF0008"
+          nfdd: "AL013"
+          esri: "Paper Mill"
+          iso19110: "IndustrialFacility"
+          openstreetmap: "industrial=paper"
+          google: "establishment"
+          here: "PAPER_MILL"
+          foursquare: "professional_services"
+          naics: "322100"
+
+      MFE:
+        name: "cement_plant"
+        geometry: "polygon"
+        binary: "0b1000111001"
+        mappings:
+          tiger: "MF0009"
+          nfdd: "AL013"
+          esri: "Cement Plant"
+          iso19110: "IndustrialFacility"
+          openstreetmap: "industrial=cement"
+          google: "establishment"
+          here: "CEMENT_PLANT"
+          foursquare: "professional_services"
+          naics: "327310"
+
+      MFH:
+        name: "pharmaceutical_plant"
+        geometry: "polygon"
+        binary: "0b1000111010"
+        mappings:
+          tiger: "MF0010"
+          nfdd: "AL013"
+          esri: "Pharmaceutical Plant"
+          iso19110: "IndustrialFacility"
+          openstreetmap: "industrial=pharmaceutical"
+          google: "establishment"
+          here: "PHARMACEUTICAL_PLANT"
+          foursquare: "professional_services"
+          naics: "325412"
+
+  mining_extraction:
+    code: "100"
+    features:
+      MEO:
+        name: "open_pit_mine"
+        geometry: "polygon"
+        binary: "0b1001000001"
+        mappings:
+          tiger: "MN0001"
+          nfdd: "AA010"
+          esri: "Open Pit Mine"
+          iso19110: "MiningFacility"
+          openstreetmap: "landuse=quarry"
+          google: "establishment"
+          here: "OPEN_PIT_MINE"
+          foursquare: "professional_services"
+          naics: "212200"
+          msha: "SURFACE_MINE"
+
+      MEU:
+        name: "underground_mine"
+        geometry: "point"
+        binary: "0b1001000010"
+        mappings:
+          tiger: "MN0002"
+          nfdd: "AA012"
+          esri: "Underground Mine"
+          iso19110: "MiningFacility"
+          openstreetmap: "man_made=mineshaft"
+          google: "establishment"
+          here: "UNDERGROUND_MINE"
+          foursquare: "professional_services"
+          naics: "212200"
+          msha: "UNDERGROUND_MINE"
+
+      MEQ:
+        name: "quarry"
+        geometry: "polygon"
+        binary: "0b1001000011"
+        mappings:
+          tiger: "MN0003"
+          nfdd: "AA010"
+          esri: "Quarry"
+          iso19110: "MiningFacility"
+          openstreetmap: "landuse=quarry"
+          google: "establishment"
+          here: "QUARRY"
+          foursquare: "professional_services"
+          naics: "212310"
+          msha: "QUARRY"
+
+      MEW:
+        name: "oil_well"
+        geometry: "point"
+        binary: "0b1001000100"
+        mappings:
+          tiger: "MN0004"
+          nfdd: "AA020"
+          esri: "Oil Well"
+          iso19110: "ExtractionFacility"
+          openstreetmap: "man_made=petroleum_well"
+          google: "establishment"
+          here: "OIL_WELL"
+          foursquare: "professional_services"
+          naics: "211111"
+          phmsa: "WELL"
+
+      MER:
+        name: "oil_refinery"
+        geometry: "polygon"
+        binary: "0b1001000101"
+        mappings:
+          tiger: "MN0005"
+          nfdd: "AL013"
+          esri: "Oil Refinery"
+          iso19110: "ProcessingFacility"
+          openstreetmap: "industrial=oil"
+          google: "establishment"
+          here: "OIL_REFINERY"
+          foursquare: "professional_services"
+          naics: "324110"
+          phmsa: "REFINERY"
+
+      MEC:
+        name: "coal_mine"
+        geometry: "polygon"
+        binary: "0b1001000110"
+        mappings:
+          tiger: "MN0006"
+          nfdd: "AA010"
+          esri: "Coal Mine"
+          iso19110: "MiningFacility"
+          openstreetmap: "resource=coal"
+          google: "establishment"
+          here: "COAL_MINE"
+          foursquare: "professional_services"
+          naics: "212100"
+          msha: "COAL_MINE"
+
+      MEG:
+        name: "gravel_pit"
+        geometry: "polygon"
+        binary: "0b1001000111"
+        mappings:
+          tiger: "MN0007"
+          nfdd: "AA010"
+          esri: "Gravel Pit"
+          iso19110: "MiningFacility"
+          openstreetmap: "landuse=quarry"
+          google: "establishment"
+          here: "GRAVEL_PIT"
+          foursquare: "professional_services"
+          naics: "212321"
+          msha: "GRAVEL_PIT"
+
+      MES:
+        name: "sand_pit"
+        geometry: "polygon"
+        binary: "0b1001001000"
+        mappings:
+          tiger: "MN0008"
+          nfdd: "AA010"
+          esri: "Sand Pit"
+          iso19110: "MiningFacility"
+          openstreetmap: "landuse=quarry"
+          google: "establishment"
+          here: "SAND_PIT"
+          foursquare: "professional_services"
+          naics: "212322"
+          msha: "SAND_PIT"
+
+      MEN:
+        name: "natural_gas_well"
+        geometry: "point"
+        binary: "0b1001001001"
+        mappings:
+          tiger: "MN0009"
+          nfdd: "AA020"
+          esri: "Natural Gas Well"
+          iso19110: "ExtractionFacility"
+          openstreetmap: "man_made=petroleum_well"
+          google: "establishment"
+          here: "GAS_WELL"
+          foursquare: "professional_services"
+          naics: "211111"
+          phmsa: "GAS_WELL"
+
+  power_generation:
+    code: "101"
+    features:
+      PGN:
+        name: "nuclear_power_plant"
+        geometry: "polygon"
+        binary: "0b1001010001"
+        mappings:
+          tiger: "PG0001"
+          nfdd: "AD010"
+          esri: "Nuclear Power Plant"
+          iso19110: "PowerGenerationFacility"
+          openstreetmap: "power=plant"
+          google: "establishment"
+          here: "NUCLEAR_POWER_PLANT"
+          foursquare: "professional_services"
+          naics: "221113"
+          ferc: "NUCLEAR_PLANT"
+
+      PGH:
+        name: "hydroelectric_plant"
+        geometry: "polygon"
+        binary: "0b1001010010"
+        mappings:
+          tiger: "PG0002"
+          nfdd: "AD010"
+          esri: "Hydroelectric Plant"
+          iso19110: "PowerGenerationFacility"
+          openstreetmap: "power=plant"
+          google: "establishment"
+          here: "HYDROELECTRIC_PLANT"
+          foursquare: "professional_services"
+          naics: "221111"
+          ferc: "HYDRO_PLANT"
+
+      PGD:
+        name: "dam"
+        geometry: "linestring"
+        binary: "0b1001010011"
+        mappings:
+          tiger: "PG0003"
+          nfdd: "BH082"
+          esri: "Dam"
+          iso19110: "WaterControlStructure"
+          openstreetmap: "waterway=dam"
+          google: "establishment"
+          here: "DAM"
+          foursquare: "outdoors_recreation"
+          usgs: "DAM"
+          ferc: "HYDRO_DAM"
+
+      PGW:
+        name: "wind_farm"
+        geometry: "polygon"
+        binary: "0b1001010100"
+        mappings:
+          tiger: "PG0004"
+          nfdd: "AD011"
+          esri: "Wind Farm"
+          iso19110: "RenewableEnergyFacility"
+          openstreetmap: "power=generator"
+          google: "establishment"
+          here: "WIND_FARM"
+          foursquare: "professional_services"
+          naics: "221115"
+          ferc: "WIND_FARM"
+
+      PGS:
+        name: "solar_farm"
+        geometry: "polygon"
+        binary: "0b1001010101"
+        mappings:
+          tiger: "PG0005"
+          nfdd: "AD010"
+          esri: "Solar Farm"
+          iso19110: "RenewableEnergyFacility"
+          openstreetmap: "power=generator"
+          google: "establishment"
+          here: "SOLAR_FARM"
+          foursquare: "professional_services"
+          naics: "221114"
+          ferc: "SOLAR_FARM"
+
+      PGG:
+        name: "natural_gas_plant"
+        geometry: "polygon"
+        binary: "0b1001010110"
+        mappings:
+          tiger: "PG0006"
+          nfdd: "AD010"
+          esri: "Natural Gas Plant"
+          iso19110: "PowerGenerationFacility"
+          openstreetmap: "power=plant"
+          google: "establishment"
+          here: "NATURAL_GAS_PLANT"
+          foursquare: "professional_services"
+          naics: "221112"
+          ferc: "GAS_PLANT"
+
+      PGB:
+        name: "biomass_plant"
+        geometry: "polygon"
+        binary: "0b1001010111"
+        mappings:
+          tiger: "PG0007"
+          nfdd: "AD010"
+          esri: "Biomass Plant"
+          iso19110: "RenewableEnergyFacility"
+          openstreetmap: "power=plant"
+          google: "establishment"
+          here: "BIOMASS_PLANT"
+          foursquare: "professional_services"
+          naics: "221117"
+          ferc: "BIOMASS"
+
+      PGT:
+        name: "geothermal_plant"
+        geometry: "polygon"
+        binary: "0b1001011000"
+        mappings:
+          tiger: "PG0008"
+          nfdd: "AD010"
+          esri: "Geothermal Plant"
+          iso19110: "RenewableEnergyFacility"
+          openstreetmap: "power=plant"
+          google: "establishment"
+          here: "GEOTHERMAL_PLANT"
+          foursquare: "professional_services"
+          naics: "221116"
+          ferc: "GEOTHERMAL"
+
+      PGC:
+        name: "coal_power_plant"
+        geometry: "polygon"
+        binary: "0b1001011001"
+        mappings:
+          tiger: "PG0009"
+          nfdd: "AD010"
+          esri: "Coal Power Plant"
+          iso19110: "PowerGenerationFacility"
+          openstreetmap: "power=plant"
+          google: "establishment"
+          here: "COAL_POWER_PLANT"
+          foursquare: "professional_services"
+          naics: "221112"
+          ferc: "COAL_PLANT"
+
+      PGO:
+        name: "cogeneration_plant"
+        geometry: "polygon"
+        binary: "0b1001011010"
+        mappings:
+          tiger: "PG0010"
+          nfdd: "AD010"
+          esri: "Cogeneration Plant"
+          iso19110: "PowerGenerationFacility"
+          openstreetmap: "power=plant"
+          google: "establishment"
+          here: "COGENERATION_PLANT"
+          foursquare: "professional_services"
+          naics: "221118"
+          ferc: "CHP"
+
+      PGE:
+        name: "energy_storage"
+        geometry: "polygon"
+        binary: "0b1001011011"
+        mappings:
+          tiger: "PG0011"
+          nfdd: "AD010"
+          esri: "Energy Storage Facility"
+          iso19110: "EnergyStorageFacility"
+          openstreetmap: "power=storage"
+          google: "establishment"
+          here: "ENERGY_STORAGE"
+          foursquare: "professional_services"
+          naics: "221122"
+          ferc: "BESS"

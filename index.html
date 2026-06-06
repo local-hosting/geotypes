@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/styles/app.css" />
+    <script>
+      window.__GEOTYPES__ = {
+        maptilerKey: {{ maptilerKey | default('') | dump }},
+      };
+    </script>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="controls" aria-label="Map controls">
+        <header class="controls__head">
+          <p class="eyebrow">{{ title }}</p>
+          <p class="tagline">{{ tagline }}</p>
+        </header>
+        <button type="button" class="btn btn-primary" id="btn-add">Add random feature</button>
+        <button type="button" class="btn btn-secondary" id="btn-clear">Clear all</button>
+        <button type="button" class="btn btn-success" id="btn-export" disabled>Export YAML</button>
+        <label class="btn btn-success file-label">
+          Import YAML
+          <input type="file" id="file-import" accept=".yml,.yaml" hidden />
+        </label>
+        <dl class="stats">
+          <div><dt>Features</dt><dd id="stat-features">0</dd></div>
+          <div><dt>Taxonomy</dt><dd id="stat-taxonomy">—</dd></div>
+        </dl>
+      </aside>
+
+      <main class="map-wrap">
+        <gk-map
+          id="map"
+          class="map"
+          provider="maptiler"
+          lat="39.8283"
+          lng="-98.5795"
+          zoom="4"
+          theme="light"
+        ></gk-map>
+        <p class="map-hint" id="map-hint">Loading map…</p>
+      </main>
+
+      <aside class="feature-list" id="feature-list" aria-label="Generated features" hidden>
+        <h2>On map</h2>
+        <ul id="feature-items"></ul>
+      </aside>
+    </div>
+    <script type="module" src="/scripts/preview.js"></script>
+  </body>
+</html>

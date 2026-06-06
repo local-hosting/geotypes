@@ -1,0 +1,49 @@
+{
+  "name": "@twinfile/geotypes",
+  "version": "0.1.0",
+  "private": true,
+  "description": "POI taxonomy (YAML / proto) + Runtime (CDN venue geotypes)",
+  "license": "MPL-2.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./generated/geospatial": {
+      "types": "./generated/geospatial_pb.d.ts",
+      "import": "./generated/geospatial_pb.js",
+      "default": "./generated/geospatial_pb.js"
+    },
+    "./generated/tags": {
+      "types": "./generated/tags_pb.d.ts",
+      "import": "./generated/tags_pb.js",
+      "default": "./generated/tags_pb.js"
+    }
+  },
+  "scripts": {
+    "generate": "tsx cli/proto.ts generate",
+    "proto": "tsx cli/proto.ts",
+    "category": "tsx cli/category.ts",
+    "test-short-ids": "tsx cli/proto.ts test-short-ids",
+    "open": "yarn preview",
+    "sync:slugs": "tsx scripts/sync-slugs.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "^2.6.0",
+    "@geokit/ui": "portal:../geokit",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@bufbuild/protoc-gen-es": "^2.6.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.15.21",
+    "commander": "^14.0.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "^4.0.18"
+  }
+}

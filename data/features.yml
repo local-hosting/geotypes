@@ -1,0 +1,4429 @@
+- id: CCN
+  name: accounting_firm
+  description: Accounting firm office
+  geometry_type: point
+  mappings:
+    nfdd: AL019
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=accountant
+    google: accountant
+    here: ACCOUNTANT
+    foursquare: professional
+    naics: 541211
+  tags: law_office, legal_professional, professional_services
+  category: business_and_professional_services
+- id: PAC
+  name: accounting_office
+  description: Accounting or tax services
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Accounting Office
+    iso19110: ProfessionalService
+    openstreetmap: office=accountant
+    google: accounting
+    here: ACCOUNTING
+    foursquare: professional_services
+    naics: 541211
+  tags: accounting_and_bookkeeping_service, commercial_services, professional_services
+  category: business_and_professional_services
+- id: AGF
+  name: agricultural_field
+  description: Crop field or agricultural area
+  geometry_type: polygon
+  mappings:
+    nfdd: null
+    esri: Agricultural Field
+    iso19110: AgriculturalArea
+    openstreetmap: landuse=farmland
+    usda: FIELD
+    nass: CROPLAND
+  tags: agriculture_farming
+  category: natural_resources
+- id: TCA
+  name: ai_company
+  description: Artificial intelligence and machine learning company
+  geometry_type: point
+  mappings:
+    nfdd: AL016
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=ai
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 541715
+  tags: technology_companies
+  category: technology_media
+- id: AVA
+  name: airport
+  description: Airport facility
+  geometry_type: polygon
+  mappings:
+    nfdd: GB005
+    esri: Airport
+    iso19110: Airport
+    openstreetmap: aeroway=aerodrome
+    google: airport
+    here: AIRPORT
+    foursquare: travel_transport
+    faa: AIRPORT
+    icao: AERODROME
+  tags: airport, transportation_logistics, aviation
+  category: travel_and_transportation
+- id: RHA
+  name: apartment_building
+  description: Multi-family apartment building
+  geometry_type: point
+  mappings:
+    tiger: H11
+    nfdd: AL013
+    esri: Apartment Building
+    iso19110: ResidentialBuilding
+    openstreetmap: building=apartments
+    google: apartment_building
+    here: APARTMENT_BUILDING
+    foursquare: null
+    naics: 531110
+  tags: apartment_or_condo, community_residential, residential_housing
+  category: community_and_government
+- id: REA
+  name: aquarium
+  description: Aquarium or marine exhibit
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Aquarium
+    iso19110: CulturalFacility
+    openstreetmap: tourism=aquarium
+    google: aquarium
+    here: AQUARIUM
+    foursquare: arts_entertainment
+    naics: 712130
+  tags: recreation_entertainment
+  category: community_residential
+- id: ARA
+  name: arcade
+  description: Video game arcade
+  geometry_type: point
+  mappings:
+    nfdd: AL020
+    esri: Arcade
+    iso19110: EntertainmentFacility
+    openstreetmap: amenity=arcade
+    google: establishment
+    here: ARCADE
+    foursquare: arts_entertainment
+    naics: 713120
+  tags: arcade, entertainment_gaming, amusement_recreation
+  category: arts_and_entertainment
+- id: CSA
+  name: architect_office
+  description: Architectural design office
+  geometry_type: point
+  mappings:
+    nfdd: AL018
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=architect
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 541310
+  tags: construction_services
+  category: construction_real_estate
+- id: RTR
+  name: arterial
+  description: Major arterial road
+  geometry_type: linestring
+  mappings:
+    nfdd: AP030
+    esri: Major Road
+    iso19110: Road
+    openstreetmap: highway=primary
+    google: arterial
+    here: ARTERIAL
+    foursquare: travel_transport
+    dot: ARTERIAL
+  tags: roads_streets
+  category: transportation_logistics
+- id: BBA
+  name: atm
+  description: Automated teller machine
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: ATM
+    iso19110: FinancialFacility
+    openstreetmap: amenity=atm
+    google: atm
+    here: ATM
+    foursquare: financial_services
+    naics: 522320
+  tags: banking_credit
+  category: financial_services
+- id: LSA
+  name: attorney_office
+  description: Individual attorney office
+  geometry_type: point
+  mappings:
+    nfdd: AL019
+    esri: Law Office
+    iso19110: CommercialFacility
+    openstreetmap: office=lawyer
+    google: law_firm
+    here: LAW_OFFICE
+    foursquare: professional
+    naics: 541110
+  tags: law_office, legal_professional, legal_services
+  category: business_and_professional_services
+- id: PSU
+  name: auditing_firm
+  description: Auditing and assurance firm
+  geometry_type: point
+  mappings:
+    nfdd: AL019
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=accountant
+    google: accountant
+    here: ACCOUNTANT
+    foursquare: professional
+    naics: 541211
+  tags: professional_services
+  category: legal_professional
+- id: ASB
+  name: auto_body_shop
+  description: Auto body repair and paint shop
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Auto Body Shop
+    iso19110: AutomotiveService
+    openstreetmap: shop=car_repair
+    google: car_repair
+    here: AUTO_BODY
+    foursquare: shops_services
+    naics: 811121
+  tags: automotive_services
+  category: community_residential
+- id: IAL
+  name: auto_life_insurance
+  description: Auto and life insurance company
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: Insurance Company
+    iso19110: FinancialFacility
+    openstreetmap: office=insurance
+    google: insurance_agency
+    here: INSURANCE_AGENCY
+    foursquare: financial_services
+    naics: 524113
+  tags: insurance_services
+  category: financial_services
+- id: ASR
+  name: auto_repair
+  description: Automotive repair shop
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Auto Repair
+    iso19110: AutomotiveService
+    openstreetmap: shop=car_repair
+    google: car_repair
+    here: AUTO_REPAIR
+    foursquare: shops_services
+    naics: 811111
+  tags: automotive_repair_shop, community_residential, automotive_services
+  category: business_and_professional_services
+- id: MPA
+  name: automotive_plant
+  description: Automotive manufacturing plant
+  geometry_type: polygon
+  mappings:
+    nfdd: AL014
+    esri: Manufacturing Plant
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=automotive
+    google: factory
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 336100
+  tags: manufacturing_plants
+  category: manufacturing_industrial
+- id: PSB
+  name: bank
+  description: Bank or credit union
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Bank
+    iso19110: FinancialFacility
+    openstreetmap: amenity=bank
+    google: bank
+    here: BANK
+    foursquare: professional_services
+    naics: 522110
+  tags: bank, commercial_services, professional_services
+  category: business_and_professional_services
+- id: FDB
+  name: bar
+  description: Bar or tavern
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Bar
+    iso19110: CommercialFacility
+    openstreetmap: amenity=bar
+    google: bar
+    here: BAR
+    foursquare: dining_drinking
+    naics: 722410
+  tags: bar, commercial_services, food_dining
+  category: dining_and_drinking
+- id: BRB
+  name: barbershop
+  description: Barbershop
+  geometry_type: point
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Barbershop
+    iso19110: PersonalService
+    openstreetmap: shop=hairdresser
+    google: hair_care
+    here: BARBERSHOP
+    foursquare: shops_services
+    naics: 812111
+  tags: barbershop, community_residential, personal_services
+  category: business_and_professional_services
+- id: AGB
+  name: barn
+  description: Agricultural barn or storage building
+  geometry_type: polygon
+  mappings:
+    nfdd: AL013
+    esri: Barn
+    iso19110: AgriculturalBuilding
+    openstreetmap: building=barn
+    usda: BARN
+  tags: agriculture_farming
+  category: natural_resources
+- id: SFB
+  name: baseball_field
+  description: Baseball field and diamond
+  geometry_type: polygon
+  mappings:
+    nfdd: AL021
+    esri: Baseball Field
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=baseball
+    google: establishment
+    here: BASEBALL_FIELD
+    foursquare: arts_entertainment
+    naics: 713940
+  tags: baseball_field, sports_fitness, sports_facilities
+  category: sports_and_recreation
+- id: SFK
+  name: basketball_court
+  description: Basketball court and facility
+  geometry_type: point
+  mappings:
+    nfdd: AL021
+    esri: Basketball Court
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=basketball
+    google: establishment
+    here: BASKETBALL_COURT
+    foursquare: outdoors_recreation
+    naics: 713940
+  tags: basketball_court, sports_fitness, sports_facilities
+  category: sports_and_recreation
+- id: HAB
+  name: bed_breakfast
+  description: Bed and breakfast
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Bed and Breakfast
+    iso19110: AccommodationFacility
+    openstreetmap: tourism=guest_house
+    google: lodging
+    here: BED_BREAKFAST
+    foursquare: travel_transport
+    naics: 721191
+  tags: bed_and_breakfast, commercial_services, hospitality_accommodation
+  category: travel_and_transportation
+- id: GCB
+  name: bingo_hall
+  description: Bingo hall and gaming facility
+  geometry_type: point
+  mappings:
+    nfdd: AL020
+    esri: Bingo Hall
+    iso19110: EntertainmentFacility
+    openstreetmap: amenity=bingo
+    google: establishment
+    here: BINGO_HALL
+    foursquare: arts_entertainment
+    naics: 713290
+  tags: bingo_center, entertainment_gaming, gaming_casinos
+  category: arts_and_entertainment
+- id: BIO
+  name: biomass_plant
+  description: Biomass energy facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL017
+    esri: Biomass Plant
+    iso19110: IndustrialFacility
+    openstreetmap: power=biomass
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 221117
+  tags: renewable_energy
+  category: energy_oil_gas
+- id: ARB
+  name: bowling_alley
+  description: Bowling alley and entertainment center
+  geometry_type: point
+  mappings:
+    nfdd: AL020
+    esri: Bowling Alley
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=bowling_alley
+    google: bowling_alley
+    here: BOWLING_ALLEY
+    foursquare: arts_entertainment
+    naics: 713950
+  tags: bowling_alley, entertainment_gaming, amusement_recreation
+  category: arts_and_entertainment
+- id: FDW
+  name: brewery
+  description: Brewery or microbrewery
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Brewery
+    iso19110: CommercialFacility
+    openstreetmap: craft=brewery
+    google: meal_takeaway
+    here: BREWERY
+    foursquare: dining_drinking
+    naics: 713110
+  tags: brewery, commercial_services, food_dining
+  category: dining_and_drinking
+- id: BSN
+  name: bridge_construction
+  description: Bridge construction site
+  geometry_type: polygon
+  mappings:
+    nfdd: AL018
+    esri: Construction Site
+    iso19110: ConstructionFacility
+    openstreetmap: construction=bridge
+    google: establishment
+    here: CONSTRUCTION_SITE
+    foursquare: professional
+    naics: 237310
+  tags: construction_sites
+  category: construction_real_estate
+- id: ISB
+  name: brokerage_firm
+  description: Securities brokerage firm
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: Financial Institution
+    iso19110: FinancialFacility
+    openstreetmap: office=financial
+    google: bank
+    here: BANK
+    foursquare: financial_services
+    naics: 523150
+  tags: stock_broker, financial_services, investment_securities
+  category: business_and_professional_services
+- id: PTB
+  name: bus_stop
+  description: Bus stop
+  geometry_type: point
+  mappings:
+    nfdd: AN075
+    esri: Bus Stop
+    iso19110: TransportationFacility
+    openstreetmap: highway=bus_stop
+    google: bus_station
+    here: BUS_STOP
+    foursquare: travel_transport
+    gtfs: stop
+    apta: BUS_STOP
+  tags: bus_stop, transportation_logistics, public_transit
+  category: travel_and_transportation
+- id: BUS
+  name: business_consulting
+  description: Business consulting firm
+  geometry_type: point
+  mappings:
+    nfdd: AL019
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=consulting
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 541610
+  tags: business_and_strategy_consulting_office, legal_professional, consulting_services
+  category: business_and_professional_services
+- id: FDC
+  name: cafe
+  description: Cafe or coffee shop
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Cafe
+    iso19110: CommercialFacility
+    openstreetmap: amenity=cafe
+    google: cafe
+    here: COFFEE_SHOP
+    foursquare: dining_drinking
+    naics: 722515
+  tags: café, commercial_services, food_dining
+  category: dining_and_drinking
+- id: HAC
+  name: campground
+  description: Campground or RV park
+  geometry_type: polygon
+  mappings:
+    nfdd: AL013
+    esri: Campground
+    iso19110: AccommodationFacility
+    openstreetmap: tourism=camp_site
+    google: campground
+    here: CAMPGROUND
+    foursquare: travel_transport
+    naics: 721211
+  tags: campground, commercial_services, hospitality_accommodation
+  category: landmarks_and_outdoors
+- id: EPC
+  name: capacitor
+  description: Power capacitor
+  geometry_type: polygon
+  mappings:
+    nfdd: AT030
+    esri: Capacitor
+    iso19110: PowerEquipment
+    openstreetmap: power=capacitor
+    ieee: CAP
+    utility: CAPACITOR
+  tags: electric_power
+  category: utilities_infrastructure
+- id: ASD
+  name: car_dealership
+  description: Automobile dealership
+  geometry_type: polygon
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Car Dealership
+    iso19110: AutomotiveRetail
+    openstreetmap: shop=car
+    google: car_dealer
+    here: CAR_DEALERSHIP
+    foursquare: shops_services
+    naics: 441110
+  tags: car_dealership, community_residential, automotive_services
+  category: retail
+- id: ASW
+  name: car_wash
+  description: Car wash facility
+  geometry_type: polygon
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Car Wash
+    iso19110: AutomotiveService
+    openstreetmap: amenity=car_wash
+    google: car_wash
+    here: CAR_WASH
+    foursquare: shops_services
+    naics: 811192
+  tags: car_wash_and_detail, community_residential, automotive_services
+  category: business_and_professional_services
+- id: CMM
+  name: casino
+  description: Casino or gaming facility
+  geometry_type: point
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Casino
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=casino
+    google: casino
+    here: CASINO
+    foursquare: arts_entertainment
+    naics: 713210
+  tags: recreation_entertainment
+  category: community_residential
+- id: GCR
+  name: casino_resort
+  description: Full-service casino resort
+  geometry_type: point
+  mappings:
+    nfdd: AL020
+    esri: Casino
+    iso19110: EntertainmentFacility
+    openstreetmap: amenity=casino
+    google: casino
+    here: CASINO
+    foursquare: arts_entertainment
+    naics: 713210
+  tags: gaming_casinos
+  category: entertainment_gaming
+- id: TCT
+  name: cell_tower
+  description: Cellular communication tower
+  geometry_type: polygon
+  mappings:
+    nfdd: AT042
+    esri: Cell Tower
+    iso19110: CommunicationFacility
+    openstreetmap: man_made=mast
+    fcc: TOWER_COMMS
+    telecom: CELL_SITE
+  tags: telecommunications
+  category: utilities_infrastructure
+- id: RCA
+  name: cemetery
+  description: Cemetery or burial ground
+  geometry_type: polygon
+  mappings:
+    tiger: K2582
+    nfdd: AL036
+    esri: Cemetery
+    iso19110: CulturalFacility
+    openstreetmap: landuse=cemetery
+    google: cemetery
+    here: CEMETERY
+    foursquare: null
+    naics: 812220
+  tags: cemetery, community_residential, religious_cultural
+  category: community_and_government
+- id: PTC
+  name: charging_station
+  description: Electric vehicle charging station
+  geometry_type: point
+  mappings:
+    nfdd: AN076
+    esri: Charging Station
+    iso19110: TransportationFacility
+    openstreetmap: amenity=charging_station
+    google: gas_station
+    here: CHARGING_STATION
+    foursquare: travel_transport
+    dot: EV_CHARGING
+  tags: electric_vehicle_charging_station, transportation_logistics, public_transit
+  category: travel_and_transportation
+- id: MPC
+  name: chemical_plant
+  description: Chemical manufacturing facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL014
+    esri: Manufacturing Plant
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=chemical
+    google: factory
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 325000
+  tags: manufacturing_plants
+  category: manufacturing_industrial
+- id: RCC
+  name: church
+  description: Christian church or chapel
+  geometry_type: polygon
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Church
+    iso19110: ReligiousFacility
+    openstreetmap: amenity=place_of_worship
+    google: church
+    here: CHURCH
+    foursquare: arts_entertainment
+    naics: 813110
+  tags: church, community_residential, religious_cultural
+  category: community_and_government
+- id: EVC
+  name: cinema
+  description: Movie theater and cinema
+  geometry_type: point
+  mappings:
+    nfdd: AL020
+    esri: Cinema
+    iso19110: EntertainmentFacility
+    openstreetmap: amenity=cinema
+    google: movie_theater
+    here: CINEMA
+    foursquare: arts_entertainment
+    naics: 512131
+  tags: entertainment_venues
+  category: entertainment_gaming
+- id: GPL
+  name: city_hall
+  description: City hall or municipal building
+  geometry_type: polygon
+  mappings:
+    tiger: C3023
+    nfdd: AL013
+    esri: City Hall
+    iso19110: GovernmentFacility
+    openstreetmap: amenity=townhall
+    google: city_hall
+    here: CITY_HALL
+    foursquare: professional_services
+    naics: 921110
+  tags: city_hall, community_residential, government_public
+  category: community_and_government
+- id: RSA
+  name: clothing_store
+  description: Clothing and apparel store
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Clothing Store
+    iso19110: CommercialFacility
+    openstreetmap: shop=clothes
+    google: clothing_store
+    here: CLOTHING_STORE
+    foursquare: shops_services
+    naics: 448140
+  tags: clothing_store, commercial_services, retail_shopping
+  category: retail
+- id: STC
+  name: coaching_center
+  description: Sports coaching and instruction center
+  geometry_type: point
+  mappings:
+    nfdd: AL021
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=coaching
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 713940
+  tags: sports_training
+  category: sports_fitness
+- id: WCS
+  name: cold_storage
+  description: Cold storage and refrigerated warehouse
+  geometry_type: polygon
+  mappings:
+    nfdd: AL014
+    esri: Warehouse
+    iso19110: StorageFacility
+    openstreetmap: warehouse=cold_storage
+    google: warehouse
+    here: WAREHOUSE
+    foursquare: professional
+    naics: 493120
+  tags: warehousing_distribution
+  category: manufacturing_industrial
+- id: DCC
+  name: colocation_center
+  description: Data center colocation facility
+  geometry_type: point
+  mappings:
+    nfdd: AL016
+    esri: Data Center
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=data_center
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 518210
+  tags: data_centers
+  category: technology_media
+- id: CSC
+  name: commercial_construction
+  description: Commercial building construction site
+  geometry_type: polygon
+  mappings:
+    nfdd: AL018
+    esri: Construction Site
+    iso19110: ConstructionFacility
+    openstreetmap: construction=commercial
+    google: establishment
+    here: CONSTRUCTION_SITE
+    foursquare: professional
+    naics: 236200
+  tags: construction_sites
+  category: construction_real_estate
+- id: COM
+  name: commercial_development
+  description: Commercial real estate development project
+  geometry_type: point
+  mappings:
+    nfdd: AL018
+    esri: Development Site
+    iso19110: DevelopmentFacility
+    openstreetmap: landuse=commercial
+    google: establishment
+    here: DEVELOPMENT_SITE
+    foursquare: professional
+    naics: 236200
+  tags: real_estate_development
+  category: construction_real_estate
+- id: ELC
+  name: community_college
+  description: Community or junior college
+  geometry_type: polygon
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Community College
+    iso19110: EducationalFacility
+    openstreetmap: amenity=college
+    google: university
+    here: COLLEGE
+    foursquare: education
+    naics: 611210
+  tags: community_college, community_residential, education_learning
+  category: community_and_government
+- id: EVH
+  name: concert_hall
+  description: Concert hall and music venue
+  geometry_type: point
+  mappings:
+    nfdd: AL020
+    esri: Concert Hall
+    iso19110: EntertainmentFacility
+    openstreetmap: amenity=concert_hall
+    google: establishment
+    here: CONCERT_HALL
+    foursquare: arts_entertainment
+    naics: 711110
+  tags: entertainment_venues
+  category: entertainment_gaming
+- id: RHC
+  name: condominium
+  description: Condominium complex
+  geometry_type: point
+  mappings:
+    tiger: H11
+    nfdd: AL013
+    esri: Condominium
+    iso19110: ResidentialBuilding
+    openstreetmap: building=apartments
+    google: condominium_complex
+    here: CONDOMINIUM
+    foursquare: null
+    naics: 531110
+  tags: apartment_or_condo, community_residential, residential_housing
+  category: community_and_government
+- id: CWA
+  name: conservation_area
+  description: Wildlife conservation or protected area
+  geometry_type: polygon
+  mappings:
+    nfdd: FA015
+    esri: Conservation Area
+    iso19110: ProtectedArea
+    openstreetmap: boundary=protected_area
+    usfws: CONSERVATION_AREA
+    nps: PROTECTED_AREA
+  tags: conservation_wildlife
+  category: natural_resources
+- id: AVC
+  name: control_tower
+  description: Air traffic control tower
+  geometry_type: linestring
+  mappings:
+    nfdd: GB048
+    esri: Control Tower
+    iso19110: AirTrafficControlFacility
+    openstreetmap: aeroway=control_tower
+    google: establishment
+    here: CONTROL_TOWER
+    foursquare: travel_transport
+    faa: CONTROL_TOWER
+    icao: CONTROL_TOWER
+  tags: aviation
+  category: transportation_logistics
+- id: RCS
+  name: convenience_store
+  description: Convenience store with limited groceries and snacks
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Convenience Store
+    iso19110: CommercialFacility
+    openstreetmap: shop=convenience
+    google: convenience_store
+    here: CONVENIENCE_STORE
+    foursquare: shops_services
+    naics: 445120
+  tags: convenience_store, commercial_services, retail_shopping
+  category: retail
+- id: LSC
+  name: courthouse
+  description: Courthouse and court facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL019
+    esri: Courthouse
+    iso19110: GovernmentFacility
+    openstreetmap: amenity=courthouse
+    google: courthouse
+    here: COURT
+    foursquare: professional
+    naics: 922110
+  tags: courthouse, legal_professional, legal_services
+  category: community_and_government
+- id: PSC
+  name: coworking_space
+  description: Coworking or shared office space
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Coworking Space
+    iso19110: CommercialFacility
+    openstreetmap: amenity=coworking_space
+    google: corporate_office
+    here: COWORKING
+    foursquare: professional_services
+    naics: 531120
+  tags: coworking_space, commercial_services, professional_services
+  category: business_and_professional_services
+- id: BBC
+  name: credit_union
+  description: Credit union branch
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: Credit Union
+    iso19110: FinancialFacility
+    openstreetmap: amenity=bank
+    google: bank
+    here: BANK
+    foursquare: financial_services
+    naics: 522130
+  tags: credit_union, financial_services, banking_credit
+  category: business_and_professional_services
+- id: FTC
+  name: cryptocurrency_exchange
+  description: Cryptocurrency exchange and trading platform
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: Financial Institution
+    iso19110: FinancialFacility
+    openstreetmap: office=financial
+    google: bank
+    here: BANK
+    foursquare: financial_services
+    naics: 523150
+  tags: financial_technology
+  category: financial_services
+- id: FCD
+  name: dance_studio
+  description: Dance studio and fitness center
+  geometry_type: point
+  mappings:
+    nfdd: AL021
+    esri: Dance Studio
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=dance
+    google: establishment
+    here: DANCE_STUDIO
+    foursquare: arts_entertainment
+    naics: 713940
+  tags: dance_studio, sports_fitness, fitness_centers
+  category: sports_and_recreation
+- id: ELD
+  name: daycare_center
+  description: Daycare or childcare center
+  geometry_type: polygon
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Daycare Center
+    iso19110: EducationalFacility
+    openstreetmap: amenity=childcare
+    google: preschool
+    here: DAY_CARE
+    foursquare: education
+    naics: 624410
+  tags: daycare, community_residential, education_learning
+  category: business_and_professional_services
+- id: FDD
+  name: deli
+  description: Delicatessen
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Delicatessen
+    iso19110: CommercialFacility
+    openstreetmap: shop=deli
+    google: meal_takeaway
+    here: DELI
+    foursquare: dining_drinking
+    naics: 445210
+  tags: food_dining
+  category: commercial_services
+- id: HMD
+  name: dental_office
+  description: Dental office or clinic
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Dental Office
+    iso19110: HealthcareFacility
+    openstreetmap: amenity=dentist
+    google: dentist
+    here: DENTAL_CLINIC
+    foursquare: medical_health
+    naics: 621210
+  tags: healthcare_medical
+  category: community_residential
+- id: RSD
+  name: department_store
+  description: Large department store
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Department Store
+    iso19110: CommercialFacility
+    openstreetmap: shop=department_store
+    google: department_store
+    here: DEPARTMENT_STORE
+    foursquare: shops_services
+    naics: 452111
+  tags: department_store, commercial_services, retail_shopping
+  category: retail
+- id: FTD
+  name: digital_bank
+  description: Digital-only bank or neobank
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: Financial Institution
+    iso19110: FinancialFacility
+    openstreetmap: office=financial
+    google: bank
+    here: BANK
+    foursquare: financial_services
+    naics: 522110
+  tags: financial_technology
+  category: financial_services
+- id: MPD
+  name: digital_media_company
+  description: Digital media and content creation company
+  geometry_type: point
+  mappings:
+    nfdd: AL016
+    esri: Media Company
+    iso19110: CommercialFacility
+    openstreetmap: office=media
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 519130
+  tags: media_production
+  category: technology_media
+- id: LWD
+  name: distribution_center
+  description: Distribution center
+  geometry_type: polygon
+  mappings:
+    nfdd: AL013
+    esri: Distribution Center
+    iso19110: LogisticsFacility
+    openstreetmap: building=warehouse
+    google: establishment
+    here: DISTRIBUTION_CENTER
+    foursquare: professional_services
+    cscmp: DC
+  tags: distribution_center, transportation_logistics, logistics_warehousing
+  category: business_and_professional_services
+- id: EPD
+  name: distribution_line
+  description: Medium-voltage power distribution line
+  geometry_type: polygon
+  mappings:
+    nfdd: AT005
+    esri: Distribution Line
+    iso19110: PowerDistributionLine
+    openstreetmap: power=line
+    ieee: DIST_LINE
+    utility: DIST_LINE
+  tags: electric_power
+  category: utilities_infrastructure
+- id: GPD
+  name: dmv_office
+  description: Department of Motor Vehicles office
+  geometry_type: point
+  mappings:
+    tiger: C3045
+    nfdd: AL013
+    esri: DMV Office
+    iso19110: GovernmentOffice
+    openstreetmap: office=government
+    google: local_government_office
+    here: GOVERNMENT
+    foursquare: professional_services
+    naics: 921190
+  tags: government_public
+  category: community_residential
+- id: RHD
+  name: dormitory
+  description: Student dormitory or residence hall
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Dormitory
+    iso19110: ResidentialBuilding
+    openstreetmap: building=dormitory
+    google: lodging
+    here: DORMITORY
+    foursquare: null
+    naics: 531110
+  tags: residential_housing
+  category: community_residential
+- id: OGD
+  name: drilling_rig
+  description: Oil or gas drilling rig
+  geometry_type: polygon
+  mappings:
+    nfdd: AL017
+    esri: Drilling Rig
+    iso19110: IndustrialFacility
+    openstreetmap: man_made=drilling_rig
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 213111
+  tags: oil_gas_production
+  category: energy_oil_gas
+- id: PSD
+  name: dry_cleaner
+  description: Dry cleaning service
+  geometry_type: point
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Dry Cleaner
+    iso19110: PersonalService
+    openstreetmap: shop=dry_cleaning
+    google: laundry
+    here: DRY_CLEANING
+    foursquare: shops_services
+    naics: 812320
+  tags: dry_cleaner, community_residential, personal_services
+  category: business_and_professional_services
+- id: MPE
+  name: electronics_plant
+  description: Electronics manufacturing facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL014
+    esri: Manufacturing Plant
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=electronics
+    google: factory
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 334000
+  tags: manufacturing_plants
+  category: manufacturing_industrial
+- id: RSE
+  name: electronics_store
+  description: Electronics and computer store
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Electronics Store
+    iso19110: CommercialFacility
+    openstreetmap: shop=electronics
+    google: electronics_store
+    here: ELECTRONICS_STORE
+    foursquare: shops_services
+    naics: 443142
+  tags: computers_and_electronics_retail, commercial_services, retail_shopping
+  category: retail
+- id: ELE
+  name: elementary_school
+  description: Elementary or primary school
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Elementary School
+    iso19110: EducationalFacility
+    openstreetmap: amenity=school
+    google: primary_school
+    here: ELEMENTARY_SCHOOL
+    foursquare: education
+    naics: 611110
+  tags: education_learning
+  category: community_residential
+- id: GPE
+  name: embassy
+  description: Embassy or consulate
+  geometry_type: polygon
+  mappings:
+    tiger: C3023
+    nfdd: AL013
+    esri: Embassy
+    iso19110: GovernmentFacility
+    openstreetmap: office=diplomatic
+    google: embassy
+    here: EMBASSY
+    foursquare: professional_services
+    naics: 928110
+  tags: embassy_or_consulate, community_residential, government_public
+  category: community_and_government
+- id: ESS
+  name: emergency_siren
+  description: Emergency warning siren
+  geometry_type: polygon
+  mappings:
+    nfdd: null
+    esri: Emergency Siren
+    iso19110: EmergencyWarningSystem
+    openstreetmap: man_made=siren
+    fema: SIREN
+  tags: emergency_services
+  category: utilities_infrastructure
+- id: CSE
+  name: engineering_office
+  description: Civil engineering office
+  geometry_type: point
+  mappings:
+    nfdd: AL018
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=engineer
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 541330
+  tags: construction_services
+  category: construction_real_estate
+- id: EVV
+  name: entertainment_venue
+  description: General entertainment venue
+  geometry_type: point
+  mappings:
+    nfdd: AL020
+    esri: Entertainment Venue
+    iso19110: EntertainmentFacility
+    openstreetmap: amenity=venue
+    google: establishment
+    here: ENTERTAINMENT_VENUE
+    foursquare: arts_entertainment
+    naics: 711110
+  tags: entertainment_venues
+  category: entertainment_gaming
+- id: HAE
+  name: extended_stay
+  description: Extended stay hotel
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Extended Stay Hotel
+    iso19110: AccommodationFacility
+    openstreetmap: tourism=hotel
+    google: lodging
+    here: EXTENDED_STAY
+    foursquare: travel_transport
+    naics: 721110
+  tags: hospitality_accommodation
+  category: commercial_services
+- id: ARF
+  name: family_entertainment
+  description: Family entertainment center
+  geometry_type: point
+  mappings:
+    nfdd: AL020
+    esri: Family Entertainment
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=family_entertainment
+    google: establishment
+    here: FAMILY_ENTERTAINMENT
+    foursquare: arts_entertainment
+    naics: 713120
+  tags: amusement_recreation
+  category: entertainment_gaming
+- id: FDF
+  name: fast_food
+  description: Fast food restaurant
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Fast Food Restaurant
+    iso19110: CommercialFacility
+    openstreetmap: amenity=fast_food
+    google: restaurant
+    here: FAST_FOOD
+    foursquare: dining_drinking
+    naics: 722513
+  tags: fast_food_restaurant, commercial_services, food_dining
+  category: dining_and_drinking
+- id: GPF
+  name: federal_building
+  description: Federal government office or building
+  geometry_type: point
+  mappings:
+    tiger: C3045
+    nfdd: AL013
+    esri: Federal Building
+    iso19110: GovernmentOffice
+    openstreetmap: office=government
+    google: government_office
+    here: GOVERNMENT
+    foursquare: professional_services
+    naics: 921190
+  tags: residential_building, community_residential, government_public
+  category: community_and_government
+- id: PTF
+  name: ferry_terminal
+  description: Ferry terminal or dock
+  geometry_type: polygon
+  mappings:
+    nfdd: BB081
+    esri: Ferry Terminal
+    iso19110: MarineTransitFacility
+    openstreetmap: amenity=ferry_terminal
+    google: establishment
+    here: FERRY_TERMINAL
+    foursquare: travel_transport
+    maritime: FERRY_TERMINAL
+  tags: public_transit
+  category: transportation_logistics
+- id: TCF
+  name: fiber_line
+  description: Fiber optic cable line
+  geometry_type: linestring
+  mappings:
+    nfdd: AT042
+    esri: Communication Line
+    iso19110: CommunicationLine
+    openstreetmap: communication=fibre
+    fcc: LINE_COMMS
+    telecom: FIBER_CABLE
+    ieee: FIBER
+  tags: telecommunications
+  category: utilities_infrastructure
+- id: TCN
+  name: fiber_node
+  description: Fiber optic network node
+  geometry_type: polygon
+  mappings:
+    nfdd: AT042
+    esri: Communication Node
+    iso19110: CommunicationNode
+    openstreetmap: man_made=street_cabinet
+    fcc: NODE_COMMS
+    telecom: FIBER_NODE
+    ieee: FIBER_NODE
+  tags: telecommunications
+  category: utilities_infrastructure
+- id: AGO
+  name: field_observation_point
+  description: Agricultural observation or sampling point
+  geometry_type: polygon
+  mappings:
+    nfdd: null
+    esri: Observation Point
+    iso19110: ObservationPoint
+    openstreetmap: null
+    usda: SAMPLE_POINT
+    precision_ag: OBSERVATION
+  tags: agriculture_farming
+  category: natural_resources
+- id: CSF
+  name: financial_consulting
+  description: Financial consulting firm
+  geometry_type: point
+  mappings:
+    nfdd: AL019
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=consulting
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 541610
+  tags: business_and_strategy_consulting_office, legal_professional, consulting_services
+  category: business_and_professional_services
+- id: WSH
+  name: fire_hydrant
+  description: Fire hydrant
+  geometry_type: polygon
+  mappings:
+    nfdd: null
+    esri: Fire Hydrant
+    iso19110: FireHydrant
+    openstreetmap: emergency=fire_hydrant
+    nfpa: HYDRANT
+    awwa: HYDRANT
+    utility: HYDR
+  tags: water_sewer
+  category: utilities_infrastructure
+- id: ESI
+  name: fire_station
+  description: Fire station or fire department
+  geometry_type: polygon
+  mappings:
+    nfdd: AL013
+    esri: Fire Station
+    iso19110: EmergencyService
+    openstreetmap: amenity=fire_station
+    nfpa: STATION
+    fema: FIRE_STATION
+  tags: fire_station, utilities_infrastructure, emergency_services
+  category: community_and_government
+- id: REF
+  name: fitness_center
+  description: Gym or fitness center
+  geometry_type: point
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Fitness Center
+    iso19110: RecreationFacility
+    openstreetmap: leisure=fitness_centre
+    google: gym
+    here: FITNESS_CENTER
+    foursquare: outdoors_recreation
+    naics: 713940
+  tags: recreation_entertainment
+  category: community_residential
+- id: MPF
+  name: food_plant
+  description: Food and beverage processing facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL014
+    esri: Manufacturing Plant
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=food
+    google: factory
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 311000
+  tags: manufacturing_plants
+  category: manufacturing_industrial
+- id: FDT
+  name: food_truck
+  description: Mobile food vendor
+  geometry_type: point
+  mappings:
+    nfdd: null
+    esri: Food Truck
+    iso19110: MobileService
+    openstreetmap: amenity=fast_food
+    google: meal_takeaway
+    here: FOOD_TRUCK
+    foursquare: dining_drinking
+    naics: 722330
+  tags: food_truck, commercial_services, food_dining
+  category: dining_and_drinking
+- id: SFF
+  name: football_field
+  description: Football field and stadium
+  geometry_type: polygon
+  mappings:
+    nfdd: AL021
+    esri: Football Field
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=football
+    google: establishment
+    here: FOOTBALL_FIELD
+    foursquare: outdoors_recreation
+    naics: 713940
+  tags: football_field, sports_fitness, sports_facilities
+  category: sports_and_recreation
+- id: LWF
+  name: fulfillment_center
+  description: E-commerce fulfillment center
+  geometry_type: polygon
+  mappings:
+    nfdd: AL013
+    esri: Fulfillment Center
+    iso19110: LogisticsFacility
+    openstreetmap: building=warehouse
+    google: establishment
+    here: FULFILLMENT_CENTER
+    foursquare: professional_services
+    ecommerce: FULFILLMENT
+    logistics: DC
+  tags: logistics_warehousing
+  category: transportation_logistics
+- id: RCF
+  name: funeral_home
+  description: Funeral home or mortuary
+  geometry_type: polygon
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Funeral Home
+    iso19110: CulturalFacility
+    openstreetmap: amenity=funeral_hall
+    google: funeral_home
+    here: FUNERAL_HOME
+    foursquare: professional_services
+    naics: 812210
+  tags: funeral_home, community_residential, religious_cultural
+  category: business_and_professional_services
+- id: RSF
+  name: furniture_store
+  description: Furniture and home furnishing store
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Furniture Store
+    iso19110: CommercialFacility
+    openstreetmap: shop=furniture
+    google: furniture_store
+    here: FURNITURE_STORE
+    foursquare: shops_services
+    naics: 442110
+  tags: furniture_and_home_store, commercial_services, retail_shopping
+  category: retail
+- id: TCG
+  name: gaming_company
+  description: Video game development company
+  geometry_type: point
+  mappings:
+    nfdd: AL016
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=gaming
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 511210
+  tags: technology_companies
+  category: technology_media
+- id: DEG
+  name: gaming_studio
+  description: Video game development studio
+  geometry_type: point
+  mappings:
+    nfdd: AL020
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=gaming
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 511210
+  tags: digital_entertainment
+  category: entertainment_gaming
+- id: NGM
+  name: gas_meter
+  description: Natural gas meter
+  geometry_type: polygon
+  mappings:
+    nfdd: BI005
+    esri: Gas Meter
+    iso19110: UtilityMeter
+    openstreetmap: man_made=gas_meter
+    aga: METER
+  tags: natural_gas
+  category: utilities_infrastructure
+- id: NGP
+  name: gas_pipeline
+  description: Natural gas pipeline
+  geometry_type: linestring
+  mappings:
+    nfdd: BI005
+    esri: Gas Pipeline
+    iso19110: Pipeline
+    openstreetmap: man_made=pipeline
+    phmsa: PIPELINE
+    aga: PIPELINE
+  tags: natural_gas
+  category: utilities_infrastructure
+- id: ASG
+  name: gas_station
+  description: Gasoline filling station
+  geometry_type: polygon
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Gas Station
+    iso19110: AutomotiveService
+    openstreetmap: amenity=fuel
+    google: gas_station
+    here: GAS_STATION
+    foursquare: travel_transport
+    naics: 447110
+  tags: fuel_station, community_residential, automotive_services
+  category: travel_and_transportation
+- id: NGS
+  name: gas_station_facility
+  description: Gas distribution station
+  geometry_type: polygon
+  mappings:
+    nfdd: BI005
+    esri: Gas Station
+    iso19110: FuelingStation
+    openstreetmap: amenity=fuel
+    aga: STATION
+  tags: natural_gas
+  category: utilities_infrastructure
+- id: CSG
+  name: general_contractor
+  description: General construction contractor office
+  geometry_type: point
+  mappings:
+    nfdd: AL018
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=construction
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 236100
+  tags: general_contractor, construction_real_estate, construction_services
+  category: business_and_professional_services
+- id: WCG
+  name: general_warehouse
+  description: General purpose warehouse facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL014
+    esri: Warehouse
+    iso19110: StorageFacility
+    openstreetmap: warehouse=*
+    google: warehouse
+    here: WAREHOUSE
+    foursquare: professional
+    naics: 493190
+  tags: warehouse, manufacturing_industrial, warehousing_distribution
+  category: business_and_professional_services
+- id: GEO
+  name: geothermal_plant
+  description: Geothermal power plant
+  geometry_type: polygon
+  mappings:
+    nfdd: AL017
+    esri: Geothermal Plant
+    iso19110: IndustrialFacility
+    openstreetmap: power=geothermal
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 221116
+  tags: renewable_energy
+  category: energy_oil_gas
+- id: ARG
+  name: golf_course
+  description: Golf course and country club
+  geometry_type: polygon
+  mappings:
+    nfdd: AL020
+    esri: Golf Course
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=golf_course
+    google: golf_course
+    here: GOLF_COURSE
+    foursquare: outdoors_recreation
+    naics: 713910
+  tags: golf_course, entertainment_gaming, amusement_recreation
+  category: sports_and_recreation
+- id: AGS
+  name: grain_silo
+  description: Grain silo or storage facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL013
+    esri: Grain Silo
+    iso19110: StorageFacility
+    openstreetmap: man_made=silo
+    usda: SILO
+  tags: agriculture_farming
+  category: natural_resources
+- id: AGH
+  name: greenhouse
+  description: Greenhouse or growing facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL013
+    esri: Greenhouse
+    iso19110: AgriculturalBuilding
+    openstreetmap: building=greenhouse
+    usda: GREENHOUSE
+  tags: agriculture_farming
+  category: natural_resources
+- id: RSG
+  name: grocery_store
+  description: Supermarket or grocery store
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Grocery Store
+    iso19110: CommercialFacility
+    openstreetmap: shop=supermarket
+    google: supermarket
+    here: GROCERY_STORE
+    foursquare: shops_services
+    naics: 445110
+  tags: grocery_store, commercial_services, retail_shopping
+  category: retail
+- id: FCG
+  name: gym
+  description: General fitness gym and health club
+  geometry_type: point
+  mappings:
+    nfdd: AL021
+    esri: Gym
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=fitness_centre
+    google: gym
+    here: FITNESS_CENTER
+    foursquare: health_medical
+    naics: 713940
+  tags: gym, sports_fitness, fitness_centers
+  category: sports_and_recreation
+- id: PSS
+  name: hair_salon
+  description: Hair salon or beauty parlor
+  geometry_type: point
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Hair Salon
+    iso19110: PersonalService
+    openstreetmap: shop=hairdresser
+    google: hair_care
+    here: HAIR_SALON
+    foursquare: shops_services
+    naics: 812112
+  tags: hair_salon, community_residential, personal_services
+  category: business_and_professional_services
+- id: MNH
+  name: hardware_company
+  description: Computer hardware manufacturer
+  geometry_type: point
+  mappings:
+    nfdd: AL016
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=hardware
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 334111
+  tags: technology_companies
+  category: technology_media
+- id: RSH
+  name: hardware_store
+  description: Hardware store
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Hardware Store
+    iso19110: CommercialFacility
+    openstreetmap: shop=hardware
+    google: hardware_store
+    here: HARDWARE_STORE
+    foursquare: shops_services
+    naics: 444130
+  tags: hardware_store, commercial_services, retail_shopping
+  category: retail
+- id: IAH
+  name: health_insurance
+  description: Health insurance company
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: Insurance Company
+    iso19110: FinancialFacility
+    openstreetmap: office=insurance
+    google: insurance_agency
+    here: INSURANCE_AGENCY
+    foursquare: financial_services
+    naics: 524114
+  tags: insurance_agency, financial_services, insurance_services
+  category: business_and_professional_services
+- id: ISH
+  name: hedge_fund
+  description: Hedge fund and alternative investment firm
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: Financial Institution
+    iso19110: FinancialFacility
+    openstreetmap: office=financial
+    google: bank
+    here: BANK
+    foursquare: financial_services
+    naics: 523920
+  tags: investment_securities
+  category: financial_services
+- id: AVH
+  name: heliport
+  description: Helicopter landing facility
+  geometry_type: linestring
+  mappings:
+    nfdd: GB047
+    esri: Heliport
+    iso19110: HeliportFacility
+    openstreetmap: aeroway=heliport
+    google: establishment
+    here: HELIPORT
+    foursquare: travel_transport
+    faa: HELIPORT
+    icao: HELIPORT
+  tags: aviation
+  category: transportation_logistics
+- id: ELH
+  name: high_school
+  description: High school or secondary school
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: High School
+    iso19110: EducationalFacility
+    openstreetmap: amenity=school
+    google: secondary_school
+    here: HIGH_SCHOOL
+    foursquare: education
+    naics: 611110
+  tags: education_learning
+  category: community_residential
+- id: HGH
+  name: highway
+  description: Limited access highway
+  geometry_type: linestring
+  mappings:
+    nfdd: AP030
+    esri: Highway
+    iso19110: Road
+    openstreetmap: highway=motorway
+    google: highway
+    here: HIGHWAY
+    foursquare: travel_transport
+    dot: INTERSTATE
+  tags: road, transportation_logistics, roads_streets
+  category: travel_and_transportation
+- id: HRC
+  name: highway_construction
+  description: Highway and road construction site
+  geometry_type: polygon
+  mappings:
+    nfdd: AL018
+    esri: Construction Site
+    iso19110: ConstructionFacility
+    openstreetmap: construction=highway
+    google: establishment
+    here: CONSTRUCTION_SITE
+    foursquare: professional
+    naics: 237300
+  tags: construction_sites
+  category: construction_real_estate
+- id: HMH
+  name: hospital
+  description: General hospital
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Hospital
+    iso19110: HealthcareFacility
+    openstreetmap: amenity=hospital
+    google: hospital
+    here: HOSPITAL
+    foursquare: medical_health
+    naics: 622110
+  tags: hospital, community_residential, healthcare_medical
+  category: health_and_medicine
+- id: ESH
+  name: hospital_emergency_room
+  description: Hospital emergency room
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Hospital
+    iso19110: HealthcareFacility
+    openstreetmap: amenity=hospital
+    fema: HOSPITAL
+  tags: emergency_room, utilities_infrastructure, emergency_services
+  category: health_and_medicine
+- id: HAY
+  name: hostel
+  description: Youth hostel or backpacker accommodation
+  geometry_type: polygon
+  mappings:
+    nfdd: AL013
+    esri: Hostel
+    iso19110: AccommodationFacility
+    openstreetmap: tourism=hostel
+    google: lodging
+    here: HOSTEL
+    foursquare: travel_transport
+    naics: 721198
+  tags: hostel, commercial_services, hospitality_accommodation
+  category: travel_and_transportation
+- id: HAH
+  name: hotel
+  description: Full-service hotel
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Hotel
+    iso19110: AccommodationFacility
+    openstreetmap: tourism=hotel
+    google: lodging
+    here: HOTEL
+    foursquare: travel_transport
+    naics: 721110
+  tags: hospitality_accommodation
+  category: commercial_services
+- id: HCR
+  name: hr_consulting
+  description: Human resources consulting firm
+  geometry_type: point
+  mappings:
+    nfdd: AL019
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=consulting
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 541612
+  tags: human_resources_agency, legal_professional, consulting_services
+  category: business_and_professional_services
+- id: REH
+  name: hydroelectric_plant
+  description: Hydroelectric power plant
+  geometry_type: polygon
+  mappings:
+    nfdd: AL017
+    esri: Hydroelectric Plant
+    iso19110: IndustrialFacility
+    openstreetmap: power=hydro
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 221111
+  tags: renewable_energy
+  category: energy_oil_gas
+- id: FDI
+  name: ice_cream
+  description: Ice cream shop
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Ice Cream Shop
+    iso19110: CommercialFacility
+    openstreetmap: amenity=ice_cream
+    google: meal_takeaway
+    here: ICE_CREAM
+    foursquare: dining_drinking
+    naics: 722513
+  tags: ice_cream_parlor, commercial_services, food_dining
+  category: dining_and_drinking
+- id: SFI
+  name: ice_rink
+  description: Ice skating rink and hockey facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL021
+    esri: Ice Rink
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=ice_rink
+    google: establishment
+    here: ICE_RINK
+    foursquare: outdoors_recreation
+    naics: 713940
+  tags: hockey_rink, sports_fitness, sports_facilities
+  category: sports_and_recreation
+- id: CSI
+  name: industrial_construction
+  description: Industrial building construction site
+  geometry_type: polygon
+  mappings:
+    nfdd: AL018
+    esri: Construction Site
+    iso19110: ConstructionFacility
+    openstreetmap: construction=industrial
+    google: establishment
+    here: CONSTRUCTION_SITE
+    foursquare: professional
+    naics: 236300
+  tags: construction_sites
+  category: construction_real_estate
+- id: REI
+  name: industrial_development
+  description: Industrial real estate development project
+  geometry_type: point
+  mappings:
+    nfdd: AL018
+    esri: Development Site
+    iso19110: DevelopmentFacility
+    openstreetmap: landuse=industrial
+    google: establishment
+    here: DEVELOPMENT_SITE
+    foursquare: professional
+    naics: 236300
+  tags: real_estate_development
+  category: construction_real_estate
+- id: IAB
+  name: insurance_broker
+  description: Insurance broker or agent office
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: Insurance Company
+    iso19110: FinancialFacility
+    openstreetmap: office=insurance
+    google: insurance_agency
+    here: INSURANCE_AGENCY
+    foursquare: financial_services
+    naics: 524210
+  tags: insurance_agency, financial_services, insurance_services
+  category: business_and_professional_services
+- id: PSI
+  name: insurance_office
+  description: Insurance agency office
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Insurance Office
+    iso19110: ProfessionalService
+    openstreetmap: office=insurance
+    google: insurance_agency
+    here: INSURANCE
+    foursquare: professional_services
+    naics: 524210
+  tags: insurance_agency, commercial_services, professional_services
+  category: business_and_professional_services
+- id: LWI
+  name: intermodal_facility
+  description: Intermodal transportation facility
+  geometry_type: linestring
+  mappings:
+    nfdd: AN052
+    esri: Intermodal Facility
+    iso19110: IntermodalFacility
+    openstreetmap: landuse=industrial
+    google: establishment
+    here: INTERMODAL_FACILITY
+    foursquare: travel_transport
+    logistics: INTERMODAL
+    cscmp: INTERMODAL_TERMINAL
+  tags: logistics_warehousing
+  category: transportation_logistics
+- id: TCI
+  name: internet_company
+  description: Internet and web services company
+  geometry_type: point
+  mappings:
+    nfdd: AL016
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=internet
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 518210
+  tags: technology_companies
+  category: technology_media
+- id: TCJ
+  name: junction_box
+  description: Utility junction box
+  geometry_type: polygon
+  mappings:
+    nfdd: null
+    esri: Junction Box
+    iso19110: ElectricalEquipment
+    openstreetmap: power=junction_box
+    utility: JBOX
+  tags: telecommunications
+  category: utilities_infrastructure
+- id: LND
+  name: laundromat
+  description: Self-service laundry facility
+  geometry_type: point
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Laundromat
+    iso19110: PersonalService
+    openstreetmap: shop=laundry
+    google: laundry
+    here: LAUNDROMAT
+    foursquare: shops_services
+    naics: 812310
+  tags: laundromat, community_residential, personal_services
+  category: business_and_professional_services
+- id: LSL
+  name: law_firm
+  description: Law firm office
+  geometry_type: point
+  mappings:
+    nfdd: AL019
+    esri: Law Office
+    iso19110: CommercialFacility
+    openstreetmap: office=lawyer
+    google: law_firm
+    here: LAW_OFFICE
+    foursquare: professional
+    naics: 541110
+  tags: law_office, legal_professional, legal_services
+  category: business_and_professional_services
+- id: PSL
+  name: law_office
+  description: Law office or legal services
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Law Office
+    iso19110: ProfessionalService
+    openstreetmap: office=lawyer
+    google: lawyer
+    here: LAW_OFFICE
+    foursquare: professional_services
+    naics: 541110
+  tags: law_office, commercial_services, professional_services
+  category: business_and_professional_services
+- id: BBL
+  name: lending_office
+  description: Consumer lending office
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: Financial Institution
+    iso19110: FinancialFacility
+    openstreetmap: office=financial
+    google: bank
+    here: BANK
+    foursquare: financial_services
+    naics: 522220
+  tags: banking_credit
+  category: financial_services
+- id: ELL
+  name: library
+  description: Public or academic library
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Library
+    iso19110: CulturalFacility
+    openstreetmap: amenity=library
+    google: library
+    here: LIBRARY
+    foursquare: education
+    naics: 519120
+  tags: education_learning
+  category: community_residential
+- id: PTL
+  name: light_rail_station
+  description: Light rail or tram station
+  geometry_type: point
+  mappings:
+    nfdd: AN061
+    esri: Light Rail Station
+    iso19110: TransitFacility
+    openstreetmap: railway=tram_stop
+    google: subway_station
+    here: LIGHT_RAIL_STATION
+    foursquare: travel_transport
+    gtfs: station
+    apta: LIGHT_RAIL
+  tags: light_rail_station, transportation_logistics, public_transit
+  category: travel_and_transportation
+- id: EDL
+  name: lng_terminal
+  description: Liquefied natural gas terminal
+  geometry_type: polygon
+  mappings:
+    nfdd: AL017
+    esri: LNG Terminal
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=lng
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 486210
+  tags: energy_distribution
+  category: energy_oil_gas
+- id: LOC
+  name: local_road
+  description: Local residential road
+  geometry_type: linestring
+  mappings:
+    nfdd: AP030
+    esri: Local Road
+    iso19110: Road
+    openstreetmap: highway=residential
+    google: local
+    here: LOCAL
+    foursquare: travel_transport
+    dot: LOCAL
+  tags: roads_streets
+  category: transportation_logistics
+- id: MNT
+  name: maintenance_facility
+  description: Industrial maintenance and repair facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL014
+    esri: Manufacturing Plant
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=maintenance
+    google: factory
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 332000
+  tags: industrial_support
+  category: manufacturing_industrial
+- id: CSM
+  name: management_consulting
+  description: Management consulting firm
+  geometry_type: point
+  mappings:
+    nfdd: AL019
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=consulting
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 541610
+  tags: management_consultant, legal_professional, consulting_services
+  category: business_and_professional_services
+- id: MAN
+  name: manhole_cover
+  description: Manhole cover
+  geometry_type: polygon
+  mappings:
+    nfdd: null
+    esri: Manhole Cover
+    iso19110: UtilityInfrastructure
+    openstreetmap: man_made=manhole
+    utility: MANHOLE
+  tags: telecommunications
+  category: utilities_infrastructure
+- id: MAR
+  name: marketing_agency
+  description: Marketing and advertising agency
+  geometry_type: point
+  mappings:
+    nfdd: AL019
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=marketing
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 541810
+  tags: advertising_agency, legal_professional, professional_services
+  category: business_and_professional_services
+- id: FCM
+  name: martial_arts_studio
+  description: Martial arts and self-defense studio
+  geometry_type: point
+  mappings:
+    nfdd: AL021
+    esri: Martial Arts Studio
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=fitness_centre
+    google: gym
+    here: FITNESS_CENTER
+    foursquare: health_medical
+    naics: 713940
+  tags: fitness_centers
+  category: sports_fitness
+- id: MRK
+  name: massage_therapy
+  description: Massage therapy or spa
+  geometry_type: point
+  mappings:
+    tiger: null
+    nfdd: null
+    esri: Massage Therapy
+    iso19110: CommercialFacility
+    openstreetmap: shop=massage
+    google: spa
+    here: MASSAGE
+    foursquare: shops_services
+    naics: 812199
+  tags: massage_clinic, community_residential, personal_services
+  category: business_and_professional_services
+- id: HMC
+  name: medical_clinic
+  description: Medical clinic or outpatient facility
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Medical Clinic
+    iso19110: HealthcareFacility
+    openstreetmap: amenity=clinic
+    google: doctor
+    here: MEDICAL_CLINIC
+    foursquare: medical_health
+    naics: 621111
+  tags: hospital, community_residential, healthcare_medical
+  category: health_and_medicine
+- id: HML
+  name: medical_laboratory
+  description: Medical laboratory or diagnostic center
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Medical Laboratory
+    iso19110: HealthcareFacility
+    openstreetmap: healthcare=laboratory
+    google: medical_lab
+    here: MEDICAL_LABORATORY
+    foursquare: medical_health
+    naics: 621511
+  tags: medical_lab, community_residential, healthcare_medical
+  category: health_and_medicine
+- id: HMS
+  name: medical_specialist
+  description: Specialist medical office
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Medical Specialist
+    iso19110: HealthcareFacility
+    openstreetmap: healthcare=*
+    google: doctor
+    here: MEDICAL_SPECIALIST
+    foursquare: medical_health
+    naics: 621399
+  tags: doctor's_office, community_residential, healthcare_medical
+  category: health_and_medicine
+- id: HMM
+  name: mental_health_facility
+  description: Mental health or counseling center
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Mental Health Facility
+    iso19110: HealthcareFacility
+    openstreetmap: healthcare=counselling
+    google: doctor
+    here: MENTAL_HEALTH
+    foursquare: medical_health
+    naics: 621422
+  tags: mental_health_clinic, community_residential, healthcare_medical
+  category: health_and_medicine
+- id: MPM
+  name: metal_plant
+  description: Metal manufacturing and processing facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL014
+    esri: Manufacturing Plant
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=metal
+    google: factory
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 331000
+  tags: manufacturing_plants
+  category: manufacturing_industrial
+- id: ELM
+  name: middle_school
+  description: Middle school or junior high
+  geometry_type: polygon
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Middle School
+    iso19110: EducationalFacility
+    openstreetmap: amenity=school
+    google: secondary_school
+    here: MIDDLE_SCHOOL
+    foursquare: education
+    naics: 611110
+  tags: middle_school, community_residential, education_learning
+  category: community_and_government
+- id: MES
+  name: mining_site
+  description: Mining extraction site
+  geometry_type: polygon
+  mappings:
+    nfdd: AA012
+    esri: Mining Area
+    iso19110: MiningArea
+    openstreetmap: landuse=quarry
+    msha: MINE_SITE
+    smcra: PERMIT_AREA
+  tags: mining_extraction
+  category: natural_resources
+- id: MIX
+  name: mixed_use_development
+  description: Mixed-use real estate development project
+  geometry_type: point
+  mappings:
+    nfdd: AL018
+    esri: Development Site
+    iso19110: DevelopmentFacility
+    openstreetmap: landuse=mixed
+    google: establishment
+    here: DEVELOPMENT_SITE
+    foursquare: professional
+    naics: 236200
+  tags: real_estate_development
+  category: construction_real_estate
+- id: RHM
+  name: mobile_home_park
+  description: Mobile home or trailer park
+  geometry_type: polygon
+  mappings:
+    tiger: H11
+    nfdd: AL013
+    esri: Mobile Home Park
+    iso19110: ResidentialFacility
+    openstreetmap: landuse=residential
+    google: mobile_home_park
+    here: MOBILE_HOME_PARK
+    foursquare: null
+    naics: 531190
+  tags: residential_housing
+  category: community_residential
+- id: EMS
+  name: monitoring_station
+  description: Environmental monitoring station
+  geometry_type: polygon
+  mappings:
+    nfdd: AC011
+    esri: Monitoring Station
+    iso19110: MonitoringFacility
+    openstreetmap: man_made=monitoring_station
+    epa: MONITOR_SITE
+    usgs: MONITORING_STATION
+    nps: MONITORING_STATION
+  tags: environmental_monitoring
+  category: natural_resources
+- id: RCM
+  name: mosque
+  description: Islamic mosque
+  geometry_type: polygon
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Mosque
+    iso19110: ReligiousFacility
+    openstreetmap: amenity=place_of_worship
+    google: mosque
+    here: MOSQUE
+    foursquare: arts_entertainment
+    naics: 813110
+  tags: mosque, community_residential, religious_cultural
+  category: community_and_government
+- id: HAM
+  name: motel
+  description: Motel or motor inn
+  geometry_type: polygon
+  mappings:
+    nfdd: AL013
+    esri: Motel
+    iso19110: AccommodationFacility
+    openstreetmap: tourism=motel
+    google: lodging
+    here: MOTEL
+    foursquare: travel_transport
+    naics: 721110
+  tags: motel, commercial_services, hospitality_accommodation
+  category: travel_and_transportation
+- id: RET
+  name: movie_theater
+  description: Movie theater or cinema
+  geometry_type: point
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Movie Theater
+    iso19110: EntertainmentFacility
+    openstreetmap: amenity=cinema
+    google: movie_theater
+    here: MOVIE_THEATER
+    foursquare: arts_entertainment
+    naics: 512131
+  tags: movie_theater, community_residential, recreation_entertainment
+  category: arts_and_entertainment
+- id: MXD
+  name: museum
+  description: Museum or cultural institution
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Museum
+    iso19110: CulturalFacility
+    openstreetmap: tourism=museum
+    google: museum
+    here: MUSEUM
+    foursquare: arts_entertainment
+    naics: 712110
+  tags: recreation_entertainment
+  category: community_residential
+- id: ISM
+  name: mutual_fund_company
+  description: Mutual fund and investment company
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: Financial Institution
+    iso19110: FinancialFacility
+    openstreetmap: office=financial
+    google: bank
+    here: BANK
+    foursquare: financial_services
+    naics: 525930
+  tags: investment_securities
+  category: financial_services
+- id: PSN
+  name: nail_salon
+  description: Nail salon or manicure service
+  geometry_type: point
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Nail Salon
+    iso19110: PersonalService
+    openstreetmap: shop=beauty
+    google: beauty_salon
+    here: NAIL_SALON
+    foursquare: shops_services
+    naics: 812113
+  tags: nail_salon, community_residential, personal_services
+  category: business_and_professional_services
+- id: FDN
+  name: nightclub
+  description: Nightclub or dance club
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Nightclub
+    iso19110: CommercialFacility
+    openstreetmap: amenity=nightclub
+    google: night_club
+    here: NIGHTCLUB
+    foursquare: dining_drinking
+    naics: 713110
+  tags: food_dining
+  category: commercial_services
+- id: LSN
+  name: notary_public
+  description: Notary public office
+  geometry_type: point
+  mappings:
+    nfdd: AL019
+    esri: Notary
+    iso19110: CommercialFacility
+    openstreetmap: office=notary
+    google: notary_public
+    here: NOTARY
+    foursquare: professional
+    naics: 541199
+  tags: notary, legal_professional, legal_services
+  category: business_and_professional_services
+- id: NEP
+  name: nuclear_power_plant
+  description: Nuclear power generation facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL017
+    esri: Nuclear Plant
+    iso19110: IndustrialFacility
+    openstreetmap: power=nuclear
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 221113
+  tags: nuclear_energy
+  category: energy_oil_gas
+- id: NES
+  name: nuclear_storage
+  description: Nuclear waste storage facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL017
+    esri: Nuclear Storage
+    iso19110: IndustrialFacility
+    openstreetmap: nuclear=waste
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 562998
+  tags: nuclear_energy
+  category: energy_oil_gas
+- id: RHN
+  name: nursing_home
+  description: Nursing home or long-term care facility
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Nursing Home
+    iso19110: HealthcareFacility
+    openstreetmap: amenity=nursing_home
+    google: lodging
+    here: NURSING_HOME
+    foursquare: medical_health
+    naics: 623110
+  tags: nursing_home, community_residential, residential_housing
+  category: health_and_medicine
+- id: PSO
+  name: office_building
+  description: Commercial office building
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: building=office
+    google: corporate_office
+    here: OFFICE_BUILDING
+    foursquare: professional_services
+    naics: 531120
+    boma: OFFICE
+  tags: office_building, commercial_services, professional_services
+  category: business_and_professional_services
+- id: ASO
+  name: oil_change
+  description: Quick oil change service
+  geometry_type: point
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Oil Change
+    iso19110: AutomotiveService
+    openstreetmap: shop=car_repair
+    google: car_repair
+    here: OIL_CHANGE
+    foursquare: shops_services
+    naics: 811191
+  tags: oil_change_service, community_residential, automotive_services
+  category: business_and_professional_services
+- id: MEW
+  name: oil_gas_well
+  description: Oil or gas well
+  geometry_type: polygon
+  mappings:
+    nfdd: AA012
+    esri: Oil Well
+    iso19110: ExtractionFacility
+    openstreetmap: man_made=petroleum_well
+    msha: WELL
+  tags: mining_extraction
+  category: natural_resources
+- id: AOR
+  name: orchard
+  description: Fruit orchard
+  geometry_type: polygon
+  mappings:
+    nfdd: null
+    esri: Orchard
+    iso19110: AgriculturalArea
+    openstreetmap: landuse=orchard
+    usda: ORCHARD
+  tags: agriculture_farming
+  category: natural_resources
+- id: LSP
+  name: paralegal_services
+  description: Paralegal services office
+  geometry_type: point
+  mappings:
+    nfdd: AL019
+    esri: Law Office
+    iso19110: CommercialFacility
+    openstreetmap: office=paralegal
+    google: law_firm
+    here: LAW_OFFICE
+    foursquare: professional
+    naics: 541199
+  tags: legal_service, legal_professional, legal_services
+  category: business_and_professional_services
+- id: ASP
+  name: parking_lot
+  description: Parking lot or garage
+  geometry_type: polygon
+  mappings:
+    tiger: null
+    nfdd: AL013
+    esri: Parking Lot
+    iso19110: TransportationFacility
+    openstreetmap: amenity=parking
+    google: parking
+    here: PARKING
+    foursquare: travel_transport
+    naics: 812930
+  tags: automotive_services
+  category: community_residential
+- id: FTP
+  name: payment_processor
+  description: Payment processing and fintech company
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: Financial Institution
+    iso19110: FinancialFacility
+    openstreetmap: office=financial
+    google: bank
+    here: BANK
+    foursquare: financial_services
+    naics: 522320
+  tags: financial_technology
+  category: financial_services
+- id: FCP
+  name: personal_training
+  description: Personal training studio
+  geometry_type: polygon
+  mappings:
+    nfdd: AL021
+    esri: Fitness Studio
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=fitness_centre
+    google: gym
+    here: FITNESS_CENTER
+    foursquare: health_medical
+    naics: 713940
+  tags: personal_trainer, sports_fitness, fitness_centers
+  category: sports_and_recreation
+- id: PSP
+  name: pet_grooming
+  description: Pet grooming service
+  geometry_type: point
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Pet Grooming
+    iso19110: PersonalService
+    openstreetmap: shop=pet_grooming
+    google: pet_store
+    here: PET_SERVICES
+    foursquare: shops_services
+    naics: 812910
+  tags: pet_grooming_service, community_residential, personal_services
+  category: business_and_professional_services
+- id: MPP
+  name: pharmaceutical_plant
+  description: Pharmaceutical manufacturing facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL014
+    esri: Manufacturing Plant
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=pharmaceutical
+    google: factory
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 325400
+  tags: manufacturing_plants
+  category: manufacturing_industrial
+- id: RSP
+  name: pharmacy
+  description: Pharmacy or drugstore
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Pharmacy
+    iso19110: CommercialFacility
+    openstreetmap: amenity=pharmacy
+    google: pharmacy
+    here: PHARMACY
+    foursquare: shops_services
+    naics: 446110
+  tags: pharmacy, commercial_services, retail_shopping
+  category: retail
+- id: EDP
+  name: pipeline_station
+  description: Oil or gas pipeline pumping station
+  geometry_type: point
+  mappings:
+    nfdd: AL017
+    esri: Pipeline Station
+    iso19110: IndustrialFacility
+    openstreetmap: man_made=pipeline
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 486000
+  tags: energy_distribution
+  category: energy_oil_gas
+- id: GTH
+  name: playground
+  description: Children's playground
+  geometry_type: point
+  mappings:
+    tiger: K2571
+    nfdd: AL013
+    esri: Playground
+    iso19110: RecreationFacility
+    openstreetmap: leisure=playground
+    google: playground
+    here: PLAYGROUND
+    foursquare: parks_outdoors
+    naics: 713990
+  tags: playground, community_residential, recreation_entertainment
+  category: landmarks_and_outdoors
+- id: ESP
+  name: police_station
+  description: Police station or sheriff's office
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Police Station
+    iso19110: EmergencyService
+    openstreetmap: amenity=police
+    fema: LAW_ENFORCEMENT
+  tags: police_station, utilities_infrastructure, emergency_services
+  category: community_and_government
+- id: LWP
+  name: port
+  description: Shipping port or harbor
+  geometry_type: polygon
+  mappings:
+    nfdd: BB081
+    esri: Port
+    iso19110: PortFacility
+    openstreetmap: landuse=port
+    google: establishment
+    here: PORT
+    foursquare: travel_transport
+    maritime: PORT
+    logistics: SEAPORT
+  tags: port, transportation_logistics, logistics_warehousing
+  category: travel_and_transportation
+- id: GPP
+  name: post_office
+  description: Post office or postal facility
+  geometry_type: point
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Post Office
+    iso19110: GovernmentFacility
+    openstreetmap: amenity=post_office
+    google: post_office
+    here: POST_OFFICE
+    foursquare: professional_services
+    naics: 491110
+  tags: post_office, community_residential, government_public
+  category: community_and_government
+- id: EPP
+  name: power_line_tower
+  description: High-voltage transmission tower
+  geometry_type: polygon
+  mappings:
+    nfdd: AT030
+    esri: Transmission Tower
+    iso19110: PowerTransmissionTower
+    openstreetmap: power=tower
+    ieee: TOWER
+    utility: TX_TOWER
+  tags: electric_power
+  category: utilities_infrastructure
+- id: ELP
+  name: preschool
+  description: Preschool or kindergarten
+  geometry_type: polygon
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Preschool
+    iso19110: EducationalFacility
+    openstreetmap: amenity=kindergarten
+    google: school
+    here: PRESCHOOL
+    foursquare: education
+    naics: 611110
+  tags: preschool, community_residential, education_learning
+  category: community_and_government
+- id: DCP
+  name: private_data_center
+  description: Private enterprise data center
+  geometry_type: point
+  mappings:
+    nfdd: AL016
+    esri: Data Center
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=data_center
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 518210
+  tags: data_centers
+  category: technology_media
+- id: OGG
+  name: processing_plant
+  description: Natural gas processing plant
+  geometry_type: polygon
+  mappings:
+    nfdd: AL017
+    esri: Processing Plant
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=gas_plant
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 211112
+  tags: oil_gas_production
+  category: energy_oil_gas
+- id: APL
+  name: production_line
+  description: Assembly line and production facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL014
+    esri: Manufacturing Plant
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=assembly
+    google: factory
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 332000
+  tags: assembly_production
+  category: manufacturing_industrial
+- id: PRD
+  name: production_studio
+  description: Film and television production studio
+  geometry_type: point
+  mappings:
+    nfdd: AL016
+    esri: Studio
+    iso19110: CommercialFacility
+    openstreetmap: amenity=studio
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 512110
+  tags: media_production
+  category: technology_media
+- id: OGP
+  name: production_well
+  description: Oil or gas production well
+  geometry_type: polygon
+  mappings:
+    nfdd: AL017
+    esri: Oil Well
+    iso19110: IndustrialFacility
+    openstreetmap: man_made=oil_well
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 211000
+  tags: oil_gas_production
+  category: energy_oil_gas
+- id: IAP
+  name: property_casualty_insurance
+  description: Property and casualty insurance company
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: Insurance Company
+    iso19110: FinancialFacility
+    openstreetmap: office=insurance
+    google: insurance_agency
+    here: INSURANCE_AGENCY
+    foursquare: financial_services
+    naics: 524126
+  tags: insurance_agency, financial_services, insurance_services
+  category: business_and_professional_services
+- id: REP
+  name: public_park
+  description: Public park or green space
+  geometry_type: polygon
+  mappings:
+    tiger: H11
+    nfdd: AK120
+    esri: Park
+    iso19110: RecreationArea
+    openstreetmap: leisure=park
+    google: park
+    here: PARK
+    foursquare: outdoors_recreation
+    naics: 712190
+  tags: recreation_entertainment
+  category: community_residential
+- id: PBL
+  name: publisher
+  description: Book, magazine, or digital publisher
+  geometry_type: point
+  mappings:
+    nfdd: AL016
+    esri: Publisher
+    iso19110: CommercialFacility
+    openstreetmap: office=publisher
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 511100
+  tags: publisher, technology_media, media_production
+  category: business_and_professional_services
+- id: WSP
+  name: pump_station
+  description: Water pumping station
+  geometry_type: polygon
+  mappings:
+    nfdd: BH020
+    esri: Pump Station
+    iso19110: WaterTreatmentFacility
+    openstreetmap: man_made=pumping_station
+    awwa: PUMP_STATION
+    utility: PUMP
+  tags: water_sewer
+  category: utilities_infrastructure
+- id: ISQ
+  name: quality_lab
+  description: Quality control and testing laboratory
+  geometry_type: polygon
+  mappings:
+    nfdd: AL014
+    esri: Manufacturing Plant
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=laboratory
+    google: factory
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 541380
+  tags: industrial_support
+  category: manufacturing_industrial
+- id: MEQ
+  name: quarry
+  description: Stone or gravel quarry
+  geometry_type: polygon
+  mappings:
+    nfdd: AA012
+    esri: Quarry
+    iso19110: MiningArea
+    openstreetmap: landuse=quarry
+    msha: QUARRY
+  tags: mining_extraction
+  category: natural_resources
+- id: GCT
+  name: racetrack_casino
+  description: Racetrack with gaming facilities
+  geometry_type: point
+  mappings:
+    nfdd: AL020
+    esri: Racetrack
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=racetrack
+    google: establishment
+    here: RACETRACK
+    foursquare: arts_entertainment
+    naics: 711212
+  tags: gaming_casinos
+  category: entertainment_gaming
+- id: MPR
+  name: radio_station
+  description: Radio broadcasting station
+  geometry_type: point
+  mappings:
+    nfdd: AL016
+    esri: Radio Station
+    iso19110: CommercialFacility
+    openstreetmap: amenity=radio_station
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 515112
+  tags: media_production
+  category: technology_media
+- id: TCR
+  name: radio_tower
+  description: Radio/broadcast tower
+  geometry_type: polygon
+  mappings:
+    nfdd: AT030
+    esri: Radio Tower
+    iso19110: TelecommunicationsTower
+    openstreetmap: man_made=tower
+    fcc: TOWER
+  tags: telecommunications
+  category: utilities_infrastructure
+- id: LWR
+  name: rail_yard
+  description: Railway freight yard
+  geometry_type: linestring
+  mappings:
+    nfdd: AN051
+    esri: Rail Yard
+    iso19110: RailwayFacility
+    openstreetmap: landuse=railway
+    google: establishment
+    here: RAIL_YARD
+    foursquare: travel_transport
+    rail: FREIGHT_YARD
+    logistics: INTERMODAL
+  tags: logistics_warehousing
+  category: transportation_logistics
+- id: AGR
+  name: ranch
+  description: Livestock ranch or cattle operation
+  geometry_type: polygon
+  mappings:
+    nfdd: null
+    esri: Ranch
+    iso19110: AgriculturalArea
+    openstreetmap: landuse=farmland
+    usda: RANCH
+    nass: PASTURE
+  tags: agriculture_farming
+  category: natural_resources
+- id: PSR
+  name: real_estate_office
+  description: Real estate office
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Real Estate Office
+    iso19110: ProfessionalService
+    openstreetmap: office=estate_agent
+    google: real_estate_agency
+    here: REAL_ESTATE
+    foursquare: professional_services
+    naics: 531210
+  tags: professional_services
+  category: commercial_services
+- id: RLS
+  name: real_estate_services
+  description: Real estate appraisal and consulting
+  geometry_type: point
+  mappings:
+    nfdd: AL019
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=real_estate_agent
+    google: real_estate_agency
+    here: REAL_ESTATE_AGENCY
+    foursquare: professional
+    naics: 531320
+  tags: real_estate_service, legal_professional, professional_services
+  category: business_and_professional_services
+- id: OGR
+  name: refinery
+  description: Oil refinery facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL017
+    esri: Refinery
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=refinery
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 324110
+  tags: oil_gas_production
+  category: energy_oil_gas
+- id: EPR
+  name: regulator
+  description: Voltage regulator
+  geometry_type: polygon
+  mappings:
+    nfdd: AT030
+    esri: Voltage Regulator
+    iso19110: PowerEquipment
+    openstreetmap: power=regulator
+    ieee: REG
+    utility: REGULATOR
+  tags: electric_power
+  category: utilities_infrastructure
+- id: HMR
+  name: rehabilitation_center
+  description: Physical therapy or rehabilitation center
+  geometry_type: polygon
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Rehabilitation Center
+    iso19110: HealthcareFacility
+    openstreetmap: healthcare=physiotherapist
+    google: physiotherapist
+    here: REHABILITATION
+    foursquare: medical_health
+    naics: 621340
+  tags: rehabilitation_center, community_residential, healthcare_medical
+  category: community_and_government
+- id: CSR
+  name: residential_construction
+  description: Residential building construction site
+  geometry_type: polygon
+  mappings:
+    nfdd: AL018
+    esri: Construction Site
+    iso19110: ConstructionFacility
+    openstreetmap: construction=residential
+    google: establishment
+    here: CONSTRUCTION_SITE
+    foursquare: professional
+    naics: 236100
+  tags: construction_sites
+  category: construction_real_estate
+- id: RED
+  name: residential_development
+  description: Residential real estate development project
+  geometry_type: point
+  mappings:
+    nfdd: AL018
+    esri: Development Site
+    iso19110: DevelopmentFacility
+    openstreetmap: landuse=residential
+    google: establishment
+    here: DEVELOPMENT_SITE
+    foursquare: professional
+    naics: 236100
+  tags: real_estate_development
+  category: construction_real_estate
+- id: HAR
+  name: resort
+  description: Resort or vacation complex
+  geometry_type: polygon
+  mappings:
+    nfdd: AL013
+    esri: Resort
+    iso19110: AccommodationFacility
+    openstreetmap: tourism=resort
+    google: lodging
+    here: RESORT
+    foursquare: travel_transport
+    naics: 721110
+  tags: resort, commercial_services, hospitality_accommodation
+  category: travel_and_transportation
+- id: FDR
+  name: restaurant
+  description: Full-service restaurant
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Restaurant
+    iso19110: CommercialFacility
+    openstreetmap: amenity=restaurant
+    google: restaurant
+    here: RESTAURANT
+    foursquare: dining_drinking
+    naics: 722511
+  tags: food_dining
+  category: commercial_services
+- id: BBR
+  name: retail_bank
+  description: Retail bank branch
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: Bank
+    iso19110: FinancialFacility
+    openstreetmap: amenity=bank
+    google: bank
+    here: BANK
+    foursquare: financial_services
+    naics: 522110
+  tags: banking_credit
+  category: financial_services
+- id: EMR
+  name: riverbank_survey
+  description: Riverbank erosion survey line
+  geometry_type: linestring
+  mappings:
+    nfdd: null
+    esri: Survey Line
+    iso19110: SurveyLine
+    openstreetmap: waterway=river
+    usfws: SURVEY_LINE
+    epa: RIVER_SURVEY
+  tags: environmental_monitoring
+  category: natural_resources
+- id: RSR
+  name: roundabout
+  description: Traffic roundabout
+  geometry_type: linestring
+  mappings:
+    nfdd: AP044
+    esri: Roundabout
+    iso19110: TrafficFeature
+    openstreetmap: junction=roundabout
+    google: establishment
+    here: ROUNDABOUT
+    foursquare: travel_transport
+    mutcd: ROUNDABOUT
+    dot: ROUNDABOUT
+  tags: roads_streets
+  category: transportation_logistics
+- id: AVR
+  name: runway
+  description: Airport runway
+  geometry_type: linestring
+  mappings:
+    nfdd: GB045
+    esri: Runway
+    iso19110: AirportRunway
+    openstreetmap: aeroway=runway
+    google: establishment
+    here: RUNWAY
+    foursquare: travel_transport
+    faa: RUNWAY
+    icao: RUNWAY
+  tags: aviation
+  category: transportation_logistics
+- id: BBS
+  name: savings_institution
+  description: Savings and loan institution
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: Bank
+    iso19110: FinancialFacility
+    openstreetmap: amenity=bank
+    google: bank
+    here: BANK
+    foursquare: financial_services
+    naics: 522120
+  tags: banking_credit
+  category: financial_services
+- id: LCL
+  name: senior_living
+  description: Senior living or assisted living facility
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Senior Living Facility
+    iso19110: ResidentialFacility
+    openstreetmap: amenity=nursing_home
+    google: lodging
+    here: SENIOR_LIVING
+    foursquare: medical_health
+    naics: 623110
+  tags: assisted_living, community_residential, residential_housing
+  category: community_and_government
+- id: DCS
+  name: server_farm
+  description: Large-scale server farm
+  geometry_type: point
+  mappings:
+    nfdd: AL016
+    esri: Data Center
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=server_farm
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 518210
+  tags: data_centers
+  category: technology_media
+- id: LWS
+  name: shipping_dock
+  description: Loading dock or shipping bay
+  geometry_type: linestring
+  mappings:
+    nfdd: AL013
+    esri: Shipping Dock
+    iso19110: LoadingFacility
+    openstreetmap: amenity=loading_dock
+    google: establishment
+    here: SHIPPING_DOCK
+    foursquare: professional_services
+    logistics: LOADING_DOCK
+    warehouse: DOCK
+  tags: logistics_warehousing
+  category: transportation_logistics
+- id: RSC
+  name: shopping_center
+  description: Strip mall or shopping center
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Shopping Center
+    iso19110: CommercialFacility
+    openstreetmap: shop=centre
+    google: shopping_mall
+    here: SHOPPING_CENTER
+    foursquare: shops_services
+    naics: 452990
+    icsc: STRIP_CENTER
+  tags: retail_shopping
+  category: commercial_services
+- id: RSM
+  name: shopping_mall
+  description: Enclosed shopping mall
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Shopping Mall
+    iso19110: CommercialFacility
+    openstreetmap: shop=mall
+    google: shopping_mall
+    here: SHOPPING_CENTER
+    foursquare: shops_services
+    naics: 452210
+    icsc: REGIONAL_MALL
+  tags: shopping_mall, commercial_services, retail_shopping
+  category: retail
+- id: RHS
+  name: single_family_home
+  description: Single-family detached house
+  geometry_type: point
+  mappings:
+    tiger: H11
+    nfdd: AL013
+    esri: Single Family Home
+    iso19110: ResidentialBuilding
+    openstreetmap: building=house
+    google: lodging
+    here: RESIDENCE
+    foursquare: null
+    naics: 531110
+  tags: residential_housing
+  category: community_residential
+- id: SFO
+  name: soccer_field
+  description: Soccer field and pitch
+  geometry_type: polygon
+  mappings:
+    nfdd: AL021
+    esri: Soccer Field
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=soccer
+    google: establishment
+    here: SOCCER_FIELD
+    foursquare: outdoors_recreation
+    naics: 713940
+  tags: soccer_field, sports_fitness, sports_facilities
+  category: sports_and_recreation
+- id: GPS
+  name: social_services
+  description: Social or human services office
+  geometry_type: point
+  mappings:
+    tiger: C3045
+    nfdd: AL013
+    esri: Social Services
+    iso19110: GovernmentOffice
+    openstreetmap: office=government
+    google: local_government_office
+    here: GOVERNMENT
+    foursquare: community_services
+    naics: 624190
+  tags: social_services_organization, community_residential, government_public
+  category: community_and_government
+- id: TCS
+  name: software_company
+  description: Software development company
+  geometry_type: point
+  mappings:
+    nfdd: AL016
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=software
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 511210
+  tags: technology_companies
+  category: technology_media
+- id: SOL
+  name: solar_farm
+  description: Large-scale solar power facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL017
+    esri: Solar Farm
+    iso19110: IndustrialFacility
+    openstreetmap: power=solar
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 221114
+  tags: renewable_energy
+  category: energy_oil_gas
+- id: SPA
+  name: spa
+  description: Day spa or wellness center
+  geometry_type: point
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Spa
+    iso19110: PersonalService
+    openstreetmap: leisure=spa
+    google: spa
+    here: SPA
+    foursquare: shops_services
+    naics: 812199
+  tags: spa, community_residential, personal_services
+  category: business_and_professional_services
+- id: CSS
+  name: specialty_contractor
+  description: Specialty construction contractor office
+  geometry_type: point
+  mappings:
+    nfdd: AL018
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=construction
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 238000
+  tags: construction_services
+  category: construction_real_estate
+- id: FCS
+  name: specialty_fitness
+  description: Specialty fitness studio (yoga, pilates, etc.)
+  geometry_type: point
+  mappings:
+    nfdd: AL021
+    esri: Fitness Studio
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=fitness_centre
+    google: gym
+    here: FITNESS_CENTER
+    foursquare: health_medical
+    naics: 713940
+  tags: fitness_centers
+  category: sports_fitness
+- id: MPS
+  name: specialty_plant
+  description: Specialty manufacturing facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL014
+    esri: Manufacturing Plant
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=*
+    google: factory
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 339000
+  tags: manufacturing_plants
+  category: manufacturing_industrial
+- id: RSS
+  name: specialty_store
+  description: Specialty retail store
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Specialty Store
+    iso19110: CommercialFacility
+    openstreetmap: shop=*
+    google: store
+    here: RETAIL_STORE
+    foursquare: shops_services
+    naics: 453000
+  tags: retail_shopping
+  category: commercial_services
+- id: CWR
+  name: species_removal_area
+  description: Invasive species removal treatment area
+  geometry_type: polygon
+  mappings:
+    nfdd: null
+    esri: Removal Area
+    iso19110: ManagementArea
+    openstreetmap: null
+    usfws: REMOVAL_AREA
+    conservation: REMOVAL_ZONE
+  tags: conservation_wildlife
+  category: natural_resources
+- id: MEB
+  name: spoil_heap_boundary
+  description: Mining spoil heap boundary with elevation points
+  geometry_type: polygon
+  mappings:
+    nfdd: null
+    esri: Spoil Area
+    iso19110: MiningWaste
+    openstreetmap: landuse=landfill
+    msha: SPOIL_AREA
+    smcra: WASTE_PILE
+  tags: mining_extraction
+  category: natural_resources
+- id: SFS
+  name: sports_complex
+  description: Multi-sport athletic complex
+  geometry_type: point
+  mappings:
+    nfdd: AL021
+    esri: Sports Complex
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=sports_centre
+    google: establishment
+    here: SPORTS_COMPLEX
+    foursquare: outdoors_recreation
+    naics: 713940
+  tags: sports_facilities
+  category: sports_fitness
+- id: STS
+  name: sports_medicine
+  description: Sports medicine and rehabilitation center
+  geometry_type: point
+  mappings:
+    nfdd: AL021
+    esri: Medical Office
+    iso19110: CommercialFacility
+    openstreetmap: amenity=clinic
+    google: establishment
+    here: MEDICAL_OFFICE
+    foursquare: health_medical
+    naics: 621300
+  tags: sports_medicine_clinic, sports_fitness, sports_training
+  category: health_and_medicine
+- id: WSS
+  name: spring
+  description: Natural spring
+  geometry_type: polygon
+  mappings:
+    nfdd: BH020
+    esri: Spring
+    iso19110: NaturalWaterSource
+    openstreetmap: natural=spring
+    awwa: SPRING
+    utility: SPRING
+  tags: water_sewer
+  category: utilities_infrastructure
+- id: EVS
+  name: stadium
+  description: Sports stadium and arena
+  geometry_type: polygon
+  mappings:
+    nfdd: AL020
+    esri: Stadium
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=stadium
+    google: stadium
+    here: STADIUM
+    foursquare: arts_entertainment
+    naics: 711310
+  tags: stadium, entertainment_gaming, entertainment_venues
+  category: arts_and_entertainment
+- id: GCS
+  name: standalone_casino
+  description: Standalone casino facility
+  geometry_type: point
+  mappings:
+    nfdd: AL020
+    esri: Casino
+    iso19110: EntertainmentFacility
+    openstreetmap: amenity=casino
+    google: casino
+    here: CASINO
+    foursquare: arts_entertainment
+    naics: 713210
+  tags: gaming_casinos
+  category: entertainment_gaming
+- id: STP
+  name: stop_sign
+  description: Stop sign
+  geometry_type: linestring
+  mappings:
+    nfdd: AP042
+    esri: Stop Sign
+    iso19110: TrafficControlDevice
+    openstreetmap: highway=stop
+    google: establishment
+    here: STOP_SIGN
+    foursquare: travel_transport
+    mutcd: STOP
+    dot: STOP_SIGN
+  tags: roads_streets
+  category: transportation_logistics
+- id: OGS
+  name: storage_facility
+  description: Oil or gas storage facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL017
+    esri: Storage Facility
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=storage
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 493190
+  tags: oil_gas_production
+  category: energy_oil_gas
+- id: EPS
+  name: substation
+  description: Electrical power substation
+  geometry_type: polygon
+  mappings:
+    nfdd: AT030
+    esri: Electric Substation
+    iso19110: PowerSubstation
+    openstreetmap: power=substation
+    ieee: SUBSTATION
+    utility: SUB
+  tags: electric_power
+  category: utilities_infrastructure
+- id: PTS
+  name: subway_station
+  description: Subway/metro station
+  geometry_type: point
+  mappings:
+    nfdd: AN060
+    esri: Subway Station
+    iso19110: TransitFacility
+    openstreetmap: railway=subway_entrance
+    google: subway_station
+    here: SUBWAY_STATION
+    foursquare: travel_transport
+    gtfs: station
+    apta: RAIL_STATION
+  tags: metro_station, transportation_logistics, public_transit
+  category: travel_and_transportation
+- id: AGT
+  name: survey_transect
+  description: Agricultural survey transect line
+  geometry_type: polygon
+  mappings:
+    nfdd: null
+    esri: Survey Line
+    iso19110: SurveyLine
+    openstreetmap: null
+    usda: TRANSECT
+    precision_ag: SURVEY_LINE
+  tags: agriculture_farming
+  category: natural_resources
+- id: SFP
+  name: swimming_pool
+  description: Swimming pool and aquatic center
+  geometry_type: point
+  mappings:
+    nfdd: AL021
+    esri: Swimming Pool
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=swimming_pool
+    google: establishment
+    here: SWIMMING_POOL
+    foursquare: outdoors_recreation
+    naics: 713940
+  tags: swimming_pool, sports_fitness, sports_facilities
+  category: sports_and_recreation
+- id: EPG
+  name: switch_gear
+  description: Electrical switch gear
+  geometry_type: polygon
+  mappings:
+    nfdd: AT030
+    esri: Switch Gear
+    iso19110: PowerEquipment
+    openstreetmap: power=switch
+    ieee: SWITCH
+    utility: SWITCH
+  tags: electric_power
+  category: utilities_infrastructure
+- id: TTS
+  name: switching_station
+  description: Telecommunications switching station
+  geometry_type: point
+  mappings:
+    nfdd: AL016
+    esri: Utility Building
+    iso19110: IndustrialFacility
+    openstreetmap: telecom=switching_station
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 517000
+  tags: telecommunications
+  category: technology_media
+- id: SYN
+  name: synagogue
+  description: Jewish synagogue or temple
+  geometry_type: polygon
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Synagogue
+    iso19110: ReligiousFacility
+    openstreetmap: amenity=place_of_worship
+    google: synagogue
+    here: SYNAGOGUE
+    foursquare: arts_entertainment
+    naics: 813110
+  tags: synagogue, community_residential, religious_cultural
+  category: community_and_government
+- id: TNN
+  name: tanning_salon
+  description: Tanning salon
+  geometry_type: point
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Tanning Salon
+    iso19110: PersonalService
+    openstreetmap: shop=beauty
+    google: beauty_salon
+    here: TANNING_SALON
+    foursquare: shops_services
+    naics: 812199
+  tags: tanning_salon, community_residential, personal_services
+  category: business_and_professional_services
+- id: GPT
+  name: tax_office
+  description: Tax assessment or collection office
+  geometry_type: point
+  mappings:
+    tiger: C3045
+    nfdd: AL013
+    esri: Tax Office
+    iso19110: GovernmentOffice
+    openstreetmap: office=government
+    google: local_government_office
+    here: GOVERNMENT
+    foursquare: professional_services
+    naics: 921130
+  tags: government_public
+  category: community_residential
+- id: TXS
+  name: tax_services
+  description: Tax preparation and planning services
+  geometry_type: point
+  mappings:
+    nfdd: AL019
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=accountant
+    google: accountant
+    here: ACCOUNTANT
+    foursquare: professional
+    naics: 541213
+  tags: professional_services
+  category: legal_professional
+- id: AVT
+  name: taxiway
+  description: Airport taxiway
+  geometry_type: linestring
+  mappings:
+    nfdd: GB046
+    esri: Taxiway
+    iso19110: AirportTaxiway
+    openstreetmap: aeroway=taxiway
+    google: establishment
+    here: TAXIWAY
+    foursquare: travel_transport
+    faa: TAXIWAY
+    icao: TAXIWAY
+  tags: taxi, transportation_logistics, aviation
+  category: travel_and_transportation
+- id: CST
+  name: technology_consulting
+  description: Technology consulting firm
+  geometry_type: point
+  mappings:
+    nfdd: AL019
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=consulting
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 541512
+  tags: consulting_services
+  category: legal_professional
+- id: TCB
+  name: telecom_building
+  description: Telecommunications building
+  geometry_type: point
+  mappings:
+    nfdd: AT030
+    esri: Telecommunications Building
+    iso19110: TelecommunicationsFacility
+    openstreetmap: building=telecom
+    fcc: CENTRAL_OFFICE
+  tags: telecommunications
+  category: utilities_infrastructure
+- id: TTO
+  name: telecom_office
+  description: Telecommunications company office
+  geometry_type: point
+  mappings:
+    nfdd: AL016
+    esri: Office Building
+    iso19110: CommercialFacility
+    openstreetmap: office=telecom
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 517000
+  tags: telecommunications
+  category: technology_media
+- id: RCT
+  name: temple
+  description: Hindu, Buddhist, or other temple
+  geometry_type: polygon
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Temple
+    iso19110: ReligiousFacility
+    openstreetmap: amenity=place_of_worship
+    google: hindu_temple
+    here: TEMPLE
+    foursquare: arts_entertainment
+    naics: 813110
+  tags: hindu_temple, community_residential, religious_cultural
+  category: community_and_government
+- id: SFT
+  name: tennis_court
+  description: Tennis court and facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL021
+    esri: Tennis Court
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=tennis
+    google: establishment
+    here: TENNIS_COURT
+    foursquare: outdoors_recreation
+    naics: 713940
+  tags: tennis_court, sports_fitness, sports_facilities
+  category: sports_and_recreation
+- id: MPT
+  name: textile_plant
+  description: Textile and apparel manufacturing facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL014
+    esri: Manufacturing Plant
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=textile
+    google: factory
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 313000
+  tags: manufacturing_plants
+  category: manufacturing_industrial
+- id: EVT
+  name: theater
+  description: Live theater and performing arts venue
+  geometry_type: polygon
+  mappings:
+    nfdd: AL020
+    esri: Theater
+    iso19110: EntertainmentFacility
+    openstreetmap: amenity=theatre
+    google: theater
+    here: THEATER
+    foursquare: arts_entertainment
+    naics: 711110
+  tags: performing_arts_venue, entertainment_gaming, entertainment_venues
+  category: arts_and_entertainment
+- id: ARP
+  name: theme_park
+  description: Theme park and amusement park
+  geometry_type: polygon
+  mappings:
+    nfdd: AL020
+    esri: Theme Park
+    iso19110: EntertainmentFacility
+    openstreetmap: tourism=theme_park
+    google: amusement_park
+    here: AMUSEMENT_PARK
+    foursquare: arts_entertainment
+    naics: 713110
+  tags: amusement_park, entertainment_gaming, amusement_recreation
+  category: arts_and_entertainment
+- id: AST
+  name: tire_shop
+  description: Tire sales and service
+  geometry_type: point
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Tire Shop
+    iso19110: AutomotiveRetail
+    openstreetmap: shop=tires
+    google: car_repair
+    here: TIRE_CENTER
+    foursquare: shops_services
+    naics: 441320
+  tags: automotive_services
+  category: community_residential
+- id: RHT
+  name: townhouse
+  description: Townhouse or row house
+  geometry_type: polygon
+  mappings:
+    tiger: H11
+    nfdd: AL013
+    esri: Townhouse
+    iso19110: ResidentialBuilding
+    openstreetmap: building=terrace
+    google: lodging
+    here: TOWNHOUSE
+    foursquare: null
+    naics: 531110
+  tags: residential_building, community_residential, residential_housing
+  category: community_and_government
+- id: ELT
+  name: trade_school
+  description: Trade or vocational school
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Trade School
+    iso19110: EducationalFacility
+    openstreetmap: amenity=college
+    google: school
+    here: TRADE_SCHOOL
+    foursquare: education
+    naics: 611519
+  tags: education_learning
+  category: community_residential
+- id: RST
+  name: traffic_light
+  description: Traffic signal/light
+  geometry_type: linestring
+  mappings:
+    nfdd: AP041
+    esri: Traffic Light
+    iso19110: TrafficControlDevice
+    openstreetmap: highway=traffic_signals
+    google: establishment
+    here: TRAFFIC_LIGHT
+    foursquare: travel_transport
+    mutcd: SIGNAL
+    dot: TRAFFIC_SIGNAL
+  tags: roads_streets
+  category: transportation_logistics
+- id: PTT
+  name: train_station
+  description: Train or railway station
+  geometry_type: polygon
+  mappings:
+    nfdd: AN050
+    esri: Train Station
+    iso19110: TransitFacility
+    openstreetmap: railway=station
+    google: train_station
+    here: TRAIN_STATION
+    foursquare: travel_transport
+    gtfs: station
+    apta: RAIL_STATION
+  tags: rail_station, transportation_logistics, public_transit
+  category: travel_and_transportation
+- id: STT
+  name: training_facility
+  description: Sports training and coaching facility
+  geometry_type: point
+  mappings:
+    nfdd: AL021
+    esri: Training Facility
+    iso19110: EntertainmentFacility
+    openstreetmap: leisure=sports_centre
+    google: establishment
+    here: TRAINING_FACILITY
+    foursquare: outdoors_recreation
+    naics: 713940
+  tags: sports_training
+  category: sports_fitness
+- id: EPT
+  name: transformer
+  description: Electrical power transformer
+  geometry_type: polygon
+  mappings:
+    nfdd: AT030
+    esri: Electric Transformer
+    iso19110: PowerTransformer
+    openstreetmap: power=transformer
+    ieee: XFMR
+    utility: TRANSFORMER
+  tags: electric_power
+  category: utilities_infrastructure
+- id: EPL
+  name: transmission_line
+  description: High-voltage power transmission line
+  geometry_type: linestring
+  mappings:
+    nfdd: AT005
+    esri: Transmission Line
+    iso19110: PowerTransmissionLine
+    openstreetmap: power=line
+    ieee: TRANS_LINE
+    utility: TX_LINE
+  tags: electric_power
+  category: utilities_infrastructure
+- id: EDT
+  name: transmission_substation
+  description: Electrical transmission substation
+  geometry_type: polygon
+  mappings:
+    nfdd: AL017
+    esri: Substation
+    iso19110: IndustrialFacility
+    openstreetmap: power=substation
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 221121
+  tags: energy_distribution
+  category: energy_oil_gas
+- id: PST
+  name: travel_agency
+  description: Travel agency
+  geometry_type: point
+  mappings:
+    nfdd: AL013
+    esri: Travel Agency
+    iso19110: ProfessionalService
+    openstreetmap: shop=travel_agency
+    google: travel_agency
+    here: TRAVEL_AGENCY
+    foursquare: professional_services
+    naics: 561510
+  tags: travel_agency, commercial_services, professional_services
+  category: travel_and_transportation
+- id: WSL
+  name: treatment_plant
+  description: Water treatment plant
+  geometry_type: polygon
+  mappings:
+    nfdd: BH020
+    esri: Water Treatment Plant
+    iso19110: WaterTreatmentFacility
+    openstreetmap: man_made=water_works
+    awwa: PLANT
+    utility: WTP
+  tags: water_sewer
+  category: utilities_infrastructure
+- id: LWT
+  name: truck_stop
+  description: Truck stop or travel plaza
+  geometry_type: polygon
+  mappings:
+    nfdd: AL013
+    esri: Truck Stop
+    iso19110: TransportationFacility
+    openstreetmap: amenity=fuel
+    google: gas_station
+    here: TRUCK_STOP
+    foursquare: travel_transport
+    trucking: TRUCK_STOP
+    logistics: TRUCK_PLAZA
+  tags: truck_stop, transportation_logistics, logistics_warehousing
+  category: travel_and_transportation
+- id: TVS
+  name: tv_station
+  description: Television broadcasting station
+  geometry_type: point
+  mappings:
+    nfdd: AL016
+    esri: TV Station
+    iso19110: CommercialFacility
+    openstreetmap: amenity=tv_station
+    google: establishment
+    here: OFFICE_BUILDING
+    foursquare: professional
+    naics: 515120
+  tags: media_production
+  category: technology_media
+- id: EPE
+  name: underground_cable
+  description: Underground power cable
+  geometry_type: polygon
+  mappings:
+    nfdd: AT005
+    esri: Underground Cable
+    iso19110: PowerDistributionLine
+    openstreetmap: power=cable
+    ieee: UG_CABLE
+    utility: UG_CABLE
+  tags: electric_power
+  category: utilities_infrastructure
+- id: ELU
+  name: university
+  description: University or college campus
+  geometry_type: polygon
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: University
+    iso19110: EducationalFacility
+    openstreetmap: amenity=university
+    google: university
+    here: UNIVERSITY
+    foursquare: education
+    naics: 611310
+  tags: college_and_university, community_residential, education_learning
+  category: community_and_government
+- id: HMU
+  name: urgent_care
+  description: Urgent care center
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Urgent Care
+    iso19110: HealthcareFacility
+    openstreetmap: amenity=clinic
+    google: doctor
+    here: URGENT_CARE
+    foursquare: medical_health
+    naics: 621493
+  tags: urgent_care_center, community_residential, healthcare_medical
+  category: health_and_medicine
+- id: ASU
+  name: used_car_lot
+  description: Used car sales lot
+  geometry_type: point
+  mappings:
+    tiger: C3024
+    nfdd: AL013
+    esri: Used Car Lot
+    iso19110: AutomotiveRetail
+    openstreetmap: shop=car
+    google: car_dealer
+    here: USED_CARS
+    foursquare: shops_services
+    naics: 441120
+  tags: automotive_services
+  category: community_residential
+- id: TCM
+  name: utility_meter
+  description: Utility meter
+  geometry_type: polygon
+  mappings:
+    nfdd: null
+    esri: Utility Meter
+    iso19110: UtilityMeter
+    openstreetmap: man_made=utility_meter
+    utility: METER
+  tags: telecommunications
+  category: utilities_infrastructure
+- id: EPU
+  name: utility_pole
+  description: Overhead power distribution pole
+  geometry_type: polygon
+  mappings:
+    nfdd: AT030
+    esri: Electric Utility Pole
+    iso19110: PowerSupplyFacility
+    openstreetmap: power=pole
+    ieee: POLE_DIST
+    utility: POLE
+  tags: electric_power
+  category: utilities_infrastructure
+- id: HAV
+  name: vacation_rental
+  description: Vacation rental property
+  geometry_type: polygon
+  mappings:
+    nfdd: AL013
+    esri: Vacation Rental
+    iso19110: AccommodationFacility
+    openstreetmap: tourism=apartment
+    google: lodging
+    here: VACATION_RENTAL
+    foursquare: travel_transport
+    naics: 531190
+  tags: vacation_rental, commercial_services, hospitality_accommodation
+  category: travel_and_transportation
+- id: WSV
+  name: valve
+  description: Water valve
+  geometry_type: polygon
+  mappings:
+    nfdd: null
+    esri: Water Valve
+    iso19110: WaterEquipment
+    openstreetmap: man_made=valve
+    awwa: VALVE
+    utility: VALVE
+  tags: water_sewer
+  category: utilities_infrastructure
+- id: ISV
+  name: venture_capital
+  description: Venture capital and private equity firm
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: Financial Institution
+    iso19110: FinancialFacility
+    openstreetmap: office=financial
+    google: bank
+    here: BANK
+    foursquare: financial_services
+    naics: 523910
+  tags: investment_securities
+  category: financial_services
+- id: HMV
+  name: veterinary_clinic
+  description: Veterinary clinic or animal hospital
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Veterinary Clinic
+    iso19110: HealthcareFacility
+    openstreetmap: amenity=veterinary
+    google: veterinary_care
+    here: VETERINARY
+    foursquare: medical_health
+    naics: 541940
+  tags: healthcare_medical
+  category: community_residential
+- id: AGV
+  name: vineyard
+  description: Grape vineyard
+  geometry_type: polygon
+  mappings:
+    nfdd: null
+    esri: Vineyard
+    iso19110: AgriculturalArea
+    openstreetmap: landuse=vineyard
+    usda: VINEYARD
+  tags: agriculture_farming
+  category: natural_resources
+- id: LWW
+  name: warehouse
+  description: Warehouse facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL013
+    esri: Warehouse
+    iso19110: StorageFacility
+    openstreetmap: building=warehouse
+    google: establishment
+    here: WAREHOUSE
+    foursquare: professional_services
+    cscmp: WAREHOUSE
+  tags: warehouse, transportation_logistics, logistics_warehousing
+  category: business_and_professional_services
+- id: CSW
+  name: water_construction
+  description: Water and sewer construction site
+  geometry_type: polygon
+  mappings:
+    nfdd: AL018
+    esri: Construction Site
+    iso19110: ConstructionFacility
+    openstreetmap: construction=water
+    google: establishment
+    here: CONSTRUCTION_SITE
+    foursquare: professional
+    naics: 237110
+  tags: construction_sites
+  category: construction_real_estate
+- id: WST
+  name: water_tower
+  description: Elevated water storage tank
+  geometry_type: polygon
+  mappings:
+    nfdd: BH020
+    esri: Water Tank
+    iso19110: WaterStorageFacility
+    openstreetmap: man_made=water_tower
+    awwa: TANK_ELEVATED
+    utility: TOWER
+  tags: water_sewer
+  category: utilities_infrastructure
+- id: WSW
+  name: water_well
+  description: Water well
+  geometry_type: polygon
+  mappings:
+    nfdd: BH020
+    esri: Water Well
+    iso19110: WaterWell
+    openstreetmap: man_made=water_well
+    awwa: WELL
+    utility: WELL
+  tags: water_sewer
+  category: utilities_infrastructure
+- id: WIN
+  name: wind_farm
+  description: Wind power generation facility
+  geometry_type: polygon
+  mappings:
+    nfdd: AL017
+    esri: Wind Farm
+    iso19110: IndustrialFacility
+    openstreetmap: power=wind
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 221115
+  tags: renewable_energy
+  category: energy_oil_gas
+- id: AWW
+  name: workshop
+  description: Small manufacturing workshop
+  geometry_type: point
+  mappings:
+    nfdd: AL014
+    esri: Manufacturing Plant
+    iso19110: IndustrialFacility
+    openstreetmap: industrial=workshop
+    google: factory
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 332000
+  tags: assembly_production
+  category: manufacturing_industrial
+- id: RCW
+  name: worship_center
+  description: Non-denominational worship center
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Worship Center
+    iso19110: ReligiousFacility
+    openstreetmap: amenity=place_of_worship
+    google: church
+    here: WORSHIP_CENTER
+    foursquare: arts_entertainment
+    naics: 813110
+  tags: religious_cultural
+  category: community_residential
+- id: RSY
+  name: yield_sign
+  description: Yield sign
+  geometry_type: linestring
+  mappings:
+    nfdd: AP043
+    esri: Yield Sign
+    iso19110: TrafficControlDevice
+    openstreetmap: highway=give_way
+    google: establishment
+    here: YIELD_SIGN
+    foursquare: travel_transport
+    mutcd: YIELD
+    dot: YIELD_SIGN
+  tags: roads_streets
+  category: transportation_logistics
+- id: REZ
+  name: zoo
+  description: Zoo or wildlife park
+  geometry_type: point
+  mappings:
+    tiger: C3061
+    nfdd: AL013
+    esri: Zoo
+    iso19110: CulturalFacility
+    openstreetmap: tourism=zoo
+    google: zoo
+    here: ZOO
+    foursquare: arts_entertainment
+    naics: 712130
+  tags: recreation_entertainment
+  category: community_residential
