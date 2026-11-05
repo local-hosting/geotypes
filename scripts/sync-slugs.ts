@@ -32,7 +32,7 @@ function main(): void {
   const lines = [
     '/**',
     ' * Geotypes POI slugs — synced from data/features.yml (`name` field).',
-    ' * Regenerate: yarn workspace @twinfile/geotypes sync:slugs',
+    ' * Regenerate: yarn sync:slugs',
     ' */',
     '',
     'export const GEOTYPE_SLUGS = [',

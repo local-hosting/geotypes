@@ -1,10 +1,17 @@
 {
   "name": "@twinfile/geotypes",
   "version": "0.1.0",
-  "private": true,
-  "description": "POI taxonomy (YAML / proto) + Runtime (CDN venue geotypes)",
+  "description": "POI taxonomy registry (YAML / proto) and runtime slugs for Twinfile place units and geokit",
   "license": "MPL-2.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twinfile/geotypes.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
   "exports": {
     ".": {
       "types": "./src/index.ts",
@@ -20,6 +27,11 @@
       "types": "./generated/tags_pb.d.ts",
       "import": "./generated/tags_pb.js",
       "default": "./generated/tags_pb.js"
+    },
+    "./geokit": {
+      "types": "./src/geokit-adapter.ts",
+      "import": "./src/geokit-adapter.ts",
+      "default": "./src/geokit-adapter.ts"
     }
   },
   "scripts": {
@@ -29,21 +41,27 @@
     "test-short-ids": "tsx cli/proto.ts test-short-ids",
     "open": "yarn preview",
     "sync:slugs": "tsx scripts/sync-slugs.ts",
+    "sync:acronyms": "tsx scripts/sync-acronyms.ts",
+    "sync:providers": "tsx scripts/sync-provider-categories.ts",
+    "sync": "yarn sync:slugs && yarn sync:acronyms && yarn sync:providers",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "check": "yarn typecheck && yarn test"
   },
   "dependencies": {
     "@bufbuild/protobuf": "^2.6.0",
-    "@geokit/ui": "portal:../geokit",
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {
     "@bufbuild/protoc-gen-es": "^2.6.0",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^22.15.21",
+    "@types/node": "^24.10.1",
     "commander": "^14.0.0",
-    "tsx": "^4.19.4",
-    "typescript": "^5.8.3",
-    "vitest": "^4.0.18"
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=24.0.0"
   }
 }

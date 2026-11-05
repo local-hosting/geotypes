@@ -27,11 +27,13 @@ describe('@twinfile/geotypes', () => {
 
   it('prefers properties.geotype on features', () => {
     expect(
-      geotypeFromFeature(
-        { properties: { geotype: 'grocery_store' } },
-        'retail'
-      )
+      geotypeFromFeature({ properties: { geotype: 'grocery_store' } }, 'retail')
     ).toBe('grocery_store');
+    expect(geotypeFromFeature({ properties: {} })).toBeNull();
+  });
+
+  it('falls back to brand when property geotype is absent', () => {
+    expect(geotypeFromFeature({ properties: {} }, 'ikea')).toBe('furniture_store');
   });
 
   it('partitions venue features by geotype', () => {
@@ -40,5 +42,11 @@ describe('@twinfile/geotypes', () => {
       'ikea'
     );
     expect(buckets.get('furniture_store')).toHaveLength(2);
+
+    const strict = partitionFeaturesByGeotype([
+      { properties: {} },
+      { properties: { geotype: 'furniture_store' } },
+    ]);
+    expect(strict.get('furniture_store')).toHaveLength(1);
   });
 });

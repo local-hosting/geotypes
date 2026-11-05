@@ -1,0 +1,45 @@
+name: publish
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          registry-url: https://npm.pkg.github.com
+      - run: corepack enable && corepack prepare yarn@4.9.2 --activate
+      - name: npm auth for Yarn
+        run: |
+          printf '@twinfile:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=%s\n' "$NODE_AUTH_TOKEN" >> .npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.TF_PACKAGES_TOKEN || secrets.GITHUB_TOKEN }}
+      - run: yarn install --immutable
+      - name: Publish to GitHub Packages
+        run: |
+          set +e
+          log=$(mktemp)
+          yarn npm publish --access restricted 2>&1 | tee "$log"
+          code=${PIPESTATUS[0]}
+          if [ "$code" -eq 0 ]; then
+            exit 0
+          fi
+          if grep -qE '409|Cannot publish over existing version|YN0035' "$log"; then
+            echo "Version already on registry; treating as success."
+            exit 0
+          fi
+          exit "$code"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.TF_PACKAGES_TOKEN || secrets.GITHUB_TOKEN }}
+          YARN_NPM_AUTH_TOKEN: ${{ secrets.TF_PACKAGES_TOKEN || secrets.GITHUB_TOKEN }}
