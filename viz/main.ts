@@ -1,7 +1,6 @@
 import {
   applyDefaultDiagramTheme,
   applyGridLinesMode,
-  IC_PLANE_ROW_HOST_ATTR,
   Stage,
   whenDiagramHostCameraReady,
   type DiagramScene,
@@ -22,24 +21,13 @@ import {
 } from '../src/taxonomy-diagram.js';
 import type { PlaceArchetype } from '../src/types/place-layout.js';
 
-/** Match domainspec contract dash — large landscape columns on the iso grid. */
+/** Landscape columns — logical size; CSS flex shares viewport width across four artboards. */
 const VIZ_ARTBOARD_USER_SIZE = artboardUserSizeFromIso216Series(17, {
   landscape: true,
   longEdgePx: 1900,
 });
 
 const GRID_COLS = 4;
-
-/** 2×2 stage grid (continuous row + `row.grid`). */
-const ARCHETYPE_GRID_SLOT: Record<
-  PlaceArchetype,
-  { col: number; row: number }
-> = {
-  single_level: { col: 0, row: 0 },
-  campus: { col: 1, row: 0 },
-  linear: { col: 0, row: 1 },
-  indoor_stack: { col: 1, row: 1 },
-};
 
 const ARCHETYPE_CUBE_COLORS: Record<
   PlaceArchetype,
@@ -154,19 +142,17 @@ viewportEl.classList.add('ic-stage-viewport');
 
 const themeManager = applyDefaultDiagramTheme();
 const artboards = buildGeotypeTaxonomyDiagramArtboards();
-const worldCamera = { fallbackAnchor: viewportEl };
 
 const stageModel = Stage.create({
   layout: 'row',
   row: {
-    continuous: true,
-    grid: true,
-    gapPx: 56,
+    gapPx: 28,
     pitchDeg: 42,
     bearingDeg: 0,
+    syncCamera: true,
   },
   surface: viewportEl,
-  worldCamera,
+  worldCamera: { fallbackAnchor: viewportEl },
 });
 
 viewportEl.replaceChildren(stageModel.container);
@@ -175,7 +161,6 @@ stageModel.mount(
   artboards.map((board) => ({
     id: board.id,
     label: board.label,
-    gridSlot: ARCHETYPE_GRID_SLOT[board.id],
     scene: diagramSceneForCategories(board.id, board.categories),
     embedDotGrid: false,
     contentId: `diagram-host-${board.id}`,
@@ -192,50 +177,29 @@ for (const board of stageModel.handle.getArtboards()) {
   board.host.classList.add('diagram-host');
 }
 
-stageModel.attachPanZoom({ surface: viewportEl });
+const FIT_VIEW_OPTIONS = { artboardPaddingPx: 32, contentPaddingRatio: 0.08 };
 
-const FIT_VIEW_OPTIONS = { artboardPaddingPx: 32, contentPaddingRatio: 0.1 };
+function fitStageToView(): boolean {
+  return stageModel.fitView(FIT_VIEW_OPTIONS);
+}
 
-function resolvePlaneRowCameraHost(): HTMLElement | null {
-  const marked = stageModel.container.querySelector(
-    `[${IC_PLANE_ROW_HOST_ATTR}="true"] .diagram-host`,
-  );
-  if (marked instanceof HTMLElement) {
-    return marked;
+function fitWhenReady(maxFrames = 60): void {
+  const host = stageModel.handle.getArtboards()[0]?.host;
+  if (!host) {
+    requestAnimationFrame(() => fitWhenReady(maxFrames));
+    return;
   }
-  return stageModel.handle.getArtboards()[0]?.host ?? null;
-}
-
-function fitStageToView(): void {
-  stageModel.fitView(FIT_VIEW_OPTIONS);
-  stageModel.syncRowWorldCamera();
-}
-
-function fitWhenCameraReady(host: HTMLElement, maxFrames = 48): void {
   whenDiagramHostCameraReady(
     host,
-    () => {
-      fitStageToView();
-      return true;
-    },
+    () => fitStageToView(),
     { maxFrames },
   );
 }
 
-function scheduleInitialFit(): void {
-  const host = resolvePlaneRowCameraHost();
-  if (!host) {
-    requestAnimationFrame(scheduleInitialFit);
-    return;
-  }
-  fitWhenCameraReady(host);
-}
+stageModel.attachPanZoom({ surface: viewportEl });
+fitWhenReady();
 
-scheduleInitialFit();
-
-window.addEventListener('load', () => fitWhenCameraReady(resolvePlaneRowCameraHost() ?? viewportEl, 24), {
-  once: true,
-});
+window.addEventListener('load', () => fitWhenReady(32), { once: true });
 
 let didFitAfterViewportSized = false;
 const resizeObserver = new ResizeObserver(() => {
@@ -246,9 +210,6 @@ const resizeObserver = new ResizeObserver(() => {
     return;
   }
   didFitAfterViewportSized = true;
-  const host = resolvePlaneRowCameraHost();
-  if (host) {
-    fitWhenCameraReady(host, 24);
-  }
+  fitWhenReady(32);
 });
 resizeObserver.observe(viewportEl);
