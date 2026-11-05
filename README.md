@@ -32,6 +32,20 @@ yarn category          # category tooling
 yarn check             # neutral-language guard + typecheck + tests
 ```
 
+## Taxonomy visualization (isocanvas)
+
+Local iso diagram of category bands grouped by **place archetype** (`single_level`, `campus`, `linear`, `indoor_stack`). Requires a sibling checkout of [`@westlane/isocanvas`](https://github.com/westlane/isocanvas) at `../../westlane/isocanvas` (or set `TF_ISOCANVAS_ROOT`).
+
+```bash
+yarn viz   # http://localhost:5175
+```
+
+Runtime helper (no canvas dependency):
+
+```typescript
+import { buildGeotypeTaxonomyDiagramArtboards } from '@twinfile/geotypes';
+```
+
 ## Exports
 
 | Subpath | Purpose |

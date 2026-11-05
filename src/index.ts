@@ -45,3 +45,9 @@ export {
   partitionFeaturesByGeotype,
   type VenueGeotypeFeature,
 } from './venue.js';
+export {
+  buildGeotypeTaxonomyDiagramArtboards,
+  categoryLabelFromId,
+  type GeotypeTaxonomyDiagramArtboard,
+  type GeotypeTaxonomyDiagramCategory,
+} from './taxonomy-diagram.js';

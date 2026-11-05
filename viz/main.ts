@@ -1,0 +1,141 @@
+import {
+  applyDefaultDiagramTheme,
+  Stage,
+  type DiagramScene,
+  type DiagramSceneNode,
+} from '@westlane/isocanvas';
+import {
+  defaultLatticeStage,
+  DIAGRAM_NODE_FOOTPRINT,
+  planeRectsSpaceBetweenInRow,
+  relayoutDiagramSceneNodesInPackedRows,
+} from '@westlane/isocanvas/layout';
+
+import {
+  buildGeotypeTaxonomyDiagramArtboards,
+  type GeotypeTaxonomyDiagramCategory,
+} from '../src/taxonomy-diagram.js';
+import type { PlaceArchetype } from '../src/types/place-scaffold.js';
+
+const GRID_COLS = 4;
+
+const ARCHETYPE_CUBE_COLORS: Record<
+  PlaceArchetype,
+  NonNullable<DiagramSceneNode['cubeFaceColors']>
+> = {
+  single_level: {
+    top: '#bae6fd',
+    front: '#38bdf8',
+    right: '#0ea5e9',
+    left: '#0284c7',
+    bottom: '#0369a1',
+    labelFill: '#0c4a6e',
+  },
+  campus: {
+    top: '#bbf7d0',
+    front: '#4ade80',
+    right: '#22c55e',
+    left: '#16a34a',
+    bottom: '#15803d',
+    labelFill: '#14532d',
+  },
+  linear: {
+    top: '#fde68a',
+    front: '#fbbf24',
+    right: '#f59e0b',
+    left: '#d97706',
+    bottom: '#b45309',
+    labelFill: '#78350f',
+  },
+  indoor_stack: {
+    top: '#ddd6fe',
+    front: '#a78bfa',
+    right: '#8b5cf6',
+    left: '#7c3aed',
+    bottom: '#6d28d9',
+    labelFill: '#4c1d95',
+  },
+};
+
+function diagramSceneForCategories(
+  archetype: PlaceArchetype,
+  categories: readonly GeotypeTaxonomyDiagramCategory[],
+): DiagramScene {
+  if (categories.length === 0) {
+    return { nodes: [] };
+  }
+
+  const stage = defaultLatticeStage();
+  const footprint = DIAGRAM_NODE_FOOTPRINT;
+  const rowCount = Math.max(1, Math.ceil(categories.length / GRID_COLS));
+  const nodes: DiagramSceneNode[] = [];
+
+  for (let row = 0; row < rowCount; row += 1) {
+    const slice = categories.slice(row * GRID_COLS, (row + 1) * GRID_COLS);
+    const rects = planeRectsSpaceBetweenInRow(row, slice.length, footprint, {
+      stage,
+      gridCols: GRID_COLS,
+      rowCount,
+    });
+    for (let index = 0; index < slice.length; index += 1) {
+      const category = slice[index]!;
+      const rect = rects[index]!;
+      nodes.push({
+        id: category.id,
+        label: `${category.label}\n(${category.slugCount})`,
+        x: rect.x,
+        y: rect.y,
+        w: footprint.widthPx,
+        h: footprint.depthPx,
+        cubeFaceColors: ARCHETYPE_CUBE_COLORS[archetype],
+      });
+    }
+  }
+
+  const relaid = relayoutDiagramSceneNodesInPackedRows(nodes, stage, {
+    gridCols: GRID_COLS,
+    rowCount,
+  });
+
+  return {
+    divisions: stage.divisions,
+    nodes: relaid,
+  };
+}
+
+const viewportEl = document.getElementById('diagram-viewport');
+if (!viewportEl) {
+  throw new Error('geotypes viz: missing #diagram-viewport');
+}
+
+const themeManager = applyDefaultDiagramTheme();
+const artboards = buildGeotypeTaxonomyDiagramArtboards();
+
+const stageModel = Stage.create({
+  layout: 'row',
+  row: {
+    continuous: true,
+    gapPx: 56,
+    pitchDeg: 42,
+    bearingDeg: 0,
+  },
+  artboards: artboards.map((board) => ({
+    id: board.id,
+    label: board.label,
+  })),
+  surface: viewportEl,
+});
+
+viewportEl.replaceChildren(stageModel.container);
+
+stageModel.mount(
+  artboards.map((board) => ({
+    id: board.id,
+    label: board.label,
+    scene: diagramSceneForCategories(board.id, board.categories),
+  })),
+  { colors: themeManager.getTheme().colors },
+);
+
+stageModel.attachPanZoom({ surface: viewportEl });
+stageModel.fitView();

@@ -50,7 +50,8 @@
     "sync": "yarn sync:slugs && yarn sync:acronyms && yarn sync:providers && yarn sync:place-archetypes",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
-    "check": "node scripts/check-neutral-language.mjs && yarn build && yarn typecheck && yarn test"
+    "check": "node scripts/check-neutral-language.mjs && yarn build && yarn typecheck && yarn test",
+    "viz": "vite --config viz/vite.config.ts"
   },
   "dependencies": {
     "@bufbuild/protobuf": "^2.6.0",
@@ -66,11 +67,13 @@
     "@bufbuild/protoc-gen-es": "^2.6.0",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^24.10.1",
+    "@westlane/isocanvas": "portal:../../westlane/isocanvas",
     "axios": "^1.12.2",
     "commander": "^14.0.0",
     "nanoid": "^5.1.6",
     "tsx": "^4.20.5",
     "typescript": "^5.9.3",
+    "vite": "^7.1.0",
     "vitest": "^2.1.8"
   },
   "engines": {
