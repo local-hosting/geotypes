@@ -3,6 +3,7 @@ import path from 'node:path';
 
 import {
   resolveIsocanvasRoot,
+  resolveIsocanvasLayoutEntry,
   resolveIsocanvasSourceEntry,
 } from './resolve-isocanvas-root.mjs';
 
@@ -54,6 +55,14 @@ export function isocanvasViteResolveAlias(isocanvasRoot) {
       replacement: path.join(isocanvasRoot, 'theme/camera/camera.css'),
     },
   ];
+
+  const layoutEntry = resolveIsocanvasLayoutEntry(isocanvasRoot);
+  if (existsSync(layoutEntry)) {
+    aliases.push({
+      find: '@westlane/isocanvas/layout',
+      replacement: layoutEntry,
+    });
+  }
 
   const sourceEntry = resolveIsocanvasSourceEntry(isocanvasRoot);
   if (existsSync(sourceEntry)) {

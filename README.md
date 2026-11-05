@@ -9,13 +9,13 @@ Open POI taxonomy registry for Twinfile place units — slugs, 3-letter acronyms
 
 ```text
 data/features.yml     POI taxonomy (~297 types)
-data/category/        Category YAML
+data/category/              Category YAML (`archetype` on each root)
+data/place-archetype-rules.yml  Authoring-scale defaults + slug overrides
 proto/                geospatial.proto + tags.proto
 generated/            protoc output (`yarn generate`)
 cli/                  Taxonomy maintenance CLI
-data/layout-profiles.yml  Archetype scale defaults + slug overrides
 scripts/              sync helpers (slugs, acronyms, providers, place archetypes)
-src/                  Runtime (slugs, acronyms, provider crosswalk, place scaffolds, venue partition)
+src/                  Runtime (slugs, acronyms, provider crosswalk, archetype resolver, venue)
 ```
 
 ## Commands
@@ -50,7 +50,7 @@ import { buildGeotypeTaxonomyDiagramArtboards } from '@twinfile/geotypes';
 
 | Subpath | Purpose |
 | --- | --- |
-| `@twinfile/geotypes` | Slugs, acronyms, normalization, provider maps, place scaffolds, venue helpers |
+| `@twinfile/geotypes` | Slugs, acronyms, normalization, provider maps, `placeScaffoldForSlug`, venue helpers |
 | `@twinfile/geotypes/geokit` | Optional `PlaceTaxonomyResolver` factory for map hosts (no map SDK dependency here) |
 | `@twinfile/geotypes/generated/*` | Protobuf modules |
 
@@ -58,7 +58,7 @@ import { buildGeotypeTaxonomyDiagramArtboards } from '@twinfile/geotypes';
 
 Reference slugs from place manifests (e.g. `geotype.primary`) against this registry at a pinned semver — documented in `@twinfile/spec`; the full catalog is not embedded in spec or core.
 
-Each slug has a **place scaffold**: suggested `archetype` and `authoring_scale` (map-first; see Twinfile spec `world.md`). Resolve with `placeScaffoldForSlug('shopping_mall')`. Golden **`from:`** bases live in `@twinfile/examples` (`base-campus-mixed`, `base-ordered-route`, etc.) — not in this package.
+Each slug has a **place scaffold**: suggested `archetype` and `authoring_scale` (map-first; see Twinfile spec `doc/place/place.md`). Resolve with `placeScaffoldForSlug('shopping_mall')`. Golden **`from:`** bases live in `@twinfile/examples` (`base-campus-mixed`, `base-ordered-route`, etc.) — not in this package.
 
 ## Optional map-host wiring
 

@@ -14,7 +14,7 @@ import type { PlaceArchetype } from '../src/types/place-scaffold.js';
 
 const pkgRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const featuresPath = path.join(pkgRoot, 'data', 'features.yml');
-const profilesPath = path.join(pkgRoot, 'data', 'layout-profiles.yml');
+const rulesPath = path.join(pkgRoot, 'data', 'place-archetype-rules.yml');
 const categoryDir = path.join(pkgRoot, 'data', 'category');
 const generatedDir = path.join(pkgRoot, 'src', 'generated');
 const configOutPath = path.join(generatedDir, 'place-archetype-config.ts');
@@ -33,17 +33,17 @@ type ProfilesYaml = {
 
 type CategoryRoot = { archetype?: string };
 
-function loadProfilesYaml(): ProfilesYaml {
-  const raw = yaml.load(fs.readFileSync(profilesPath, 'utf8')) as unknown;
+function loadArchetypeRulesYaml(): ProfilesYaml {
+  const raw = yaml.load(fs.readFileSync(rulesPath, 'utf8')) as unknown;
   if (!raw || typeof raw !== 'object' || Array.isArray(raw)) {
-    throw new Error('expected layout-profiles.yml object');
+    throw new Error('expected place-archetype-rules.yml object');
   }
   const obj = raw as Record<string, unknown>;
   if (!obj.archetype_defaults || typeof obj.archetype_defaults !== 'object') {
-    throw new Error('layout-profiles.yml missing archetype_defaults');
+    throw new Error('place-archetype-rules.yml missing archetype_defaults');
   }
   if (!obj.slugs || typeof obj.slugs !== 'object') {
-    throw new Error('layout-profiles.yml missing slugs');
+    throw new Error('place-archetype-rules.yml missing slugs');
   }
   return {
     archetype_defaults: obj.archetype_defaults as ProfilesYaml['archetype_defaults'],
@@ -69,7 +69,7 @@ function loadCategoryArchetypes(): Record<string, { archetype: PlaceArchetype }>
 }
 
 function main(): void {
-  const profiles = loadProfilesYaml();
+  const rules = loadArchetypeRulesYaml();
   const categories = loadCategoryArchetypes();
 
   const raw = yaml.load(fs.readFileSync(featuresPath, 'utf8')) as unknown;
@@ -105,9 +105,9 @@ function main(): void {
   }
 
   const config: PlaceArchetypeConfig = {
-    archetype_defaults: profiles.archetype_defaults,
+    archetype_defaults: rules.archetype_defaults,
     categories,
-    slugs: profiles.slugs,
+    slugs: rules.slugs,
   };
 
   fs.mkdirSync(generatedDir, { recursive: true });

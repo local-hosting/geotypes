@@ -1,8 +1,8 @@
-# Default Twinfile place archetype rules (category roots in data/category/*.yml + slug overrides here).
+# Slug overrides + authoring_scale defaults (category archetype → data/category/*.yml).
 # Regenerate: yarn sync:place-archetypes
 #
-# Archetype defaults follow map-first rules in spec/doc/world/world.md.
-# Golden `from:` bases live in @twinfile/examples (one base per archetype enum value).
+# Map-first resolution: spec/doc/place/place.md
+# Golden `from:` bases: @twinfile/examples (one base per archetype enum value).
 
 archetype_defaults:
   indoor_stack:
@@ -22,7 +22,6 @@ archetype_defaults:
     h3_resolution: 9
     space_granularity: zone
 
-# Category defaults: `archetype` on each root in data/category/*.yml
 # Per-slug overrides (win over category + geometry heuristics).
 slugs:
   shopping_mall:

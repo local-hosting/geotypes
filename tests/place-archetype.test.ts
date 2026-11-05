@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
 
-import { placeScaffoldForGeotypeRef, placeScaffoldForSlug } from '../src/place-scaffold.js';
+import { placeScaffoldForGeotypeRef, placeScaffoldForSlug } from '../src/resolve-place-archetype.js';
 
-describe('place scaffolds (map-first)', () => {
+describe('placeScaffoldForSlug (map-first)', () => {
   it('maps shopping_mall to campus and zone scale (mall property on maps)', () => {
     const scaffold = placeScaffoldForSlug('shopping_mall');
     expect(scaffold).toEqual({

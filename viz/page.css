@@ -1,27 +1,31 @@
 @import "@westlane/isocanvas/theme/schemes.css";
 @import "@westlane/isocanvas/canvas-chrome.css";
 @import "@westlane/isocanvas/theme/diagram-surfaces.css";
+@import "@westlane/isocanvas/layout.css";
+@import "@westlane/isocanvas/camera.css";
 
-:root {
-  color-scheme: light dark;
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
   font-family:
     system-ui,
     -apple-system,
     Segoe UI,
     Roboto,
     sans-serif;
-}
-
-body {
-  margin: 0;
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  background: var(--ic-surface-page, #0f172a);
-  color: var(--ic-text-primary, #e2e8f0);
+  color: var(--ic-canvas-chrome-fg, var(--zui-ink, #292524));
+  background: var(--ic-canvas-chrome-bg, var(--zui-surface, #faf5ff));
 }
 
 .geotypes-viz-header {
+  flex: none;
   padding: 1rem 1.25rem 0.5rem;
   max-width: 52rem;
 }
@@ -36,11 +40,13 @@ body {
   margin: 0;
   font-size: 0.875rem;
   line-height: 1.45;
-  opacity: 0.88;
+  color: var(--ic-canvas-chrome-fg-muted, var(--zui-ink-muted, #78716c));
 }
 
 .geotypes-viz-viewport {
   flex: 1 1 auto;
-  min-height: 24rem;
-  position: relative;
+  width: 100%;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
 }

@@ -1,10 +1,13 @@
 import {
   applyDefaultDiagramTheme,
+  applyGridLinesMode,
   Stage,
+  whenDiagramHostCameraReady,
   type DiagramScene,
   type DiagramSceneNode,
 } from '@westlane/isocanvas';
 import {
+  DEFAULT_ARTBOARD_GRID_DIVISIONS,
   defaultLatticeStage,
   DIAGRAM_NODE_FOOTPRINT,
   planeRectsSpaceBetweenInRow,
@@ -62,12 +65,15 @@ function diagramSceneForCategories(
   categories: readonly GeotypeTaxonomyDiagramCategory[],
 ): DiagramScene {
   if (categories.length === 0) {
-    return { nodes: [] };
+    return { nodes: [], viewBox: { x: 0, y: 0, w: 540, h: 228 } };
   }
 
-  const stage = defaultLatticeStage();
-  const footprint = DIAGRAM_NODE_FOOTPRINT;
   const rowCount = Math.max(1, Math.ceil(categories.length / GRID_COLS));
+  const divisions = Math.max(rowCount, GRID_COLS, DEFAULT_ARTBOARD_GRID_DIVISIONS);
+  const stage = defaultLatticeStage();
+  stage.divisions = divisions;
+
+  const footprint = DIAGRAM_NODE_FOOTPRINT;
   const nodes: DiagramSceneNode[] = [];
 
   for (let row = 0; row < rowCount; row += 1) {
@@ -76,6 +82,7 @@ function diagramSceneForCategories(
       stage,
       gridCols: GRID_COLS,
       rowCount,
+      rowSpan: divisions,
     });
     for (let index = 0; index < slice.length; index += 1) {
       const category = slice[index]!;
@@ -93,11 +100,19 @@ function diagramSceneForCategories(
   }
 
   const relaid = relayoutDiagramSceneNodesInPackedRows(nodes, stage, {
+    footprintUser: footprint,
     gridCols: GRID_COLS,
     rowCount,
+    rowSpan: divisions,
   });
 
   return {
+    viewBox: {
+      x: stage.x ?? 0,
+      y: stage.y ?? 0,
+      w: stage.width,
+      h: stage.height,
+    },
     divisions: stage.divisions,
     nodes: relaid,
   };
@@ -108,22 +123,21 @@ if (!viewportEl) {
   throw new Error('geotypes viz: missing #diagram-viewport');
 }
 
+viewportEl.classList.add('ic-stage-viewport');
+
 const themeManager = applyDefaultDiagramTheme();
 const artboards = buildGeotypeTaxonomyDiagramArtboards();
+const worldCamera = { fallbackAnchor: viewportEl };
 
 const stageModel = Stage.create({
   layout: 'row',
   row: {
-    continuous: true,
     gapPx: 56,
     pitchDeg: 42,
     bearingDeg: 0,
   },
-  artboards: artboards.map((board) => ({
-    id: board.id,
-    label: board.label,
-  })),
   surface: viewportEl,
+  worldCamera,
 });
 
 viewportEl.replaceChildren(stageModel.container);
@@ -133,9 +147,30 @@ stageModel.mount(
     id: board.id,
     label: board.label,
     scene: diagramSceneForCategories(board.id, board.categories),
+    embedDotGrid: false,
+    contentId: `diagram-host-${board.id}`,
   })),
-  { colors: themeManager.getTheme().colors },
+  {
+    colors: themeManager.getTheme().colors,
+    registry: { createDefaults: { embedDotGrid: false } },
+  },
 );
 
+for (const board of stageModel.handle.getArtboards()) {
+  applyGridLinesMode(board.artboard.root, true);
+  board.host.classList.add('diagram-host');
+}
+
 stageModel.attachPanZoom({ surface: viewportEl });
-stageModel.fitView();
+
+const cameraHost = stageModel.handle.getArtboards()[0]?.host;
+if (cameraHost) {
+  whenDiagramHostCameraReady(cameraHost, () => {
+    stageModel.fitView();
+    stageModel.syncRowWorldCamera();
+    return true;
+  });
+} else {
+  stageModel.fitView();
+  stageModel.syncRowWorldCamera();
+}

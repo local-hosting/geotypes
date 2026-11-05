@@ -38,7 +38,7 @@ export {
   type PlaceScaffold,
   type LinearUnit,
   type SpaceGranularity,
-} from './place-scaffold.js';
+} from './resolve-place-archetype.js';
 export { resolveGeotypeRef, type GeotypeRef, type ResolvedGeotype } from './resolve-ref.js';
 export {
   geotypeFromFeature,

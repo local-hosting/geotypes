@@ -20,3 +20,7 @@ export function resolveIsocanvasRoot() {
 export function resolveIsocanvasSourceEntry(isocanvasRoot) {
   return path.join(isocanvasRoot, 'src/index.ts');
 }
+
+export function resolveIsocanvasLayoutEntry(isocanvasRoot) {
+  return path.join(isocanvasRoot, 'src/layout-entry.ts');
+}

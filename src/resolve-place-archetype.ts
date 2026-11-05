@@ -1,7 +1,19 @@
+import { GEOTYPE_LAYOUT_META_BY_SLUG } from './generated/geotype-layout-meta.js';
+import { PLACE_ARCHETYPE_CONFIG } from './generated/place-archetype-config.js';
+import { normalizeGeotypeSlug } from './normalize.js';
+import { resolveGeotypeRef, type GeotypeRef } from './resolve-ref.js';
 import type {
   AuthoringScale,
   PlaceArchetype,
   PlaceScaffold,
+} from './types/place-scaffold.js';
+
+export type {
+  AuthoringScale,
+  PlaceArchetype,
+  PlaceScaffold,
+  LinearUnit,
+  SpaceGranularity,
 } from './types/place-scaffold.js';
 
 export type PlaceArchetypeConfig = {
@@ -27,7 +39,7 @@ export function assertPlaceArchetype(value: string, context: string): PlaceArche
   throw new Error(`invalid archetype "${value}" (${context})`);
 }
 
-/** Map-first defaults when category/slug do not override (see spec world.md). */
+/** Map-first defaults when category/slug do not override (see spec doc/place/place.md). */
 export function resolvePlaceArchetype(
   slug: string,
   meta: GeotypeLayoutMeta,
@@ -64,4 +76,25 @@ export function placeScaffoldForArchetype(
     archetype,
     authoring_scale: { ...authoring_scale },
   };
+}
+
+function lookupPlaceScaffold(slug: string): PlaceScaffold | null {
+  const normalized = normalizeGeotypeSlug(slug);
+  if (!normalized) return null;
+  const meta =
+    GEOTYPE_LAYOUT_META_BY_SLUG[normalized as keyof typeof GEOTYPE_LAYOUT_META_BY_SLUG];
+  if (!meta) return null;
+  const archetype = resolvePlaceArchetype(normalized, meta, PLACE_ARCHETYPE_CONFIG);
+  return placeScaffoldForArchetype(archetype, PLACE_ARCHETYPE_CONFIG);
+}
+
+/** Default `place.yaml` starter for a geotype slug (`archetype` + `authoring_scale`). */
+export function placeScaffoldForSlug(slug: string): PlaceScaffold | null {
+  return lookupPlaceScaffold(slug);
+}
+
+export function placeScaffoldForGeotypeRef(ref: GeotypeRef): PlaceScaffold | null {
+  const resolved = resolveGeotypeRef(ref);
+  if (!resolved) return null;
+  return lookupPlaceScaffold(resolved.slug);
 }
