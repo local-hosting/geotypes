@@ -7,6 +7,7 @@ import {
   type DiagramSceneNode,
 } from '@westlane/isocanvas';
 import {
+  artboardUserSizeFromIso216Series,
   DEFAULT_ARTBOARD_GRID_DIVISIONS,
   defaultLatticeStage,
   DIAGRAM_NODE_FOOTPRINT,
@@ -20,7 +21,24 @@ import {
 } from '../src/taxonomy-diagram.js';
 import type { PlaceArchetype } from '../src/types/place-layout.js';
 
+/** Match domainspec contract dash — large landscape columns on the iso grid. */
+const VIZ_ARTBOARD_USER_SIZE = artboardUserSizeFromIso216Series(17, {
+  landscape: true,
+  longEdgePx: 1900,
+});
+
 const GRID_COLS = 4;
+
+/** 2×2 stage grid (continuous row + `row.grid`). */
+const ARCHETYPE_GRID_SLOT: Record<
+  PlaceArchetype,
+  { col: number; row: number }
+> = {
+  single_level: { col: 0, row: 0 },
+  campus: { col: 1, row: 0 },
+  linear: { col: 0, row: 1 },
+  indoor_stack: { col: 1, row: 1 },
+};
 
 const ARCHETYPE_CUBE_COLORS: Record<
   PlaceArchetype,
@@ -65,12 +83,20 @@ function diagramSceneForCategories(
   categories: readonly GeotypeTaxonomyDiagramCategory[],
 ): DiagramScene {
   if (categories.length === 0) {
-    return { nodes: [], viewBox: { x: 0, y: 0, w: 540, h: 228 } };
+    return {
+      nodes: [],
+      viewBox: {
+        x: 0,
+        y: 0,
+        w: VIZ_ARTBOARD_USER_SIZE.width,
+        h: VIZ_ARTBOARD_USER_SIZE.height,
+      },
+    };
   }
 
   const rowCount = Math.max(1, Math.ceil(categories.length / GRID_COLS));
   const divisions = Math.max(rowCount, GRID_COLS, DEFAULT_ARTBOARD_GRID_DIVISIONS);
-  const stage = defaultLatticeStage();
+  const stage = defaultLatticeStage(VIZ_ARTBOARD_USER_SIZE);
   stage.divisions = divisions;
 
   const footprint = DIAGRAM_NODE_FOOTPRINT;
@@ -133,6 +159,7 @@ const stageModel = Stage.create({
   layout: 'row',
   row: {
     continuous: true,
+    grid: true,
     gapPx: 56,
     pitchDeg: 42,
     bearingDeg: 0,
@@ -147,9 +174,11 @@ stageModel.mount(
   artboards.map((board) => ({
     id: board.id,
     label: board.label,
+    gridSlot: ARCHETYPE_GRID_SLOT[board.id],
     scene: diagramSceneForCategories(board.id, board.categories),
     embedDotGrid: false,
     contentId: `diagram-host-${board.id}`,
+    userSize: VIZ_ARTBOARD_USER_SIZE,
   })),
   {
     colors: themeManager.getTheme().colors,
@@ -167,11 +196,11 @@ stageModel.attachPanZoom({ surface: viewportEl });
 const cameraHost = stageModel.handle.getArtboards()[0]?.host;
 if (cameraHost) {
   whenDiagramHostCameraReady(cameraHost, () => {
-    stageModel.fitView();
+    stageModel.fitView({ artboardPaddingPx: 24 });
     stageModel.syncRowWorldCamera();
     return true;
   });
 } else {
-  stageModel.fitView();
+  stageModel.fitView({ artboardPaddingPx: 24 });
   stageModel.syncRowWorldCamera();
 }
