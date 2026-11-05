@@ -13,8 +13,9 @@ data/category/        Category YAML
 proto/                geospatial.proto + tags.proto
 generated/            protoc output (`yarn generate`)
 cli/                  Taxonomy maintenance CLI
-scripts/              sync helpers (slugs, acronyms, providers)
-src/                  Runtime (slugs, acronyms, provider crosswalk, venue partition)
+data/layout-profiles.yml  Archetype scale defaults + slug overrides
+scripts/              sync helpers (slugs, acronyms, providers, place archetypes)
+src/                  Runtime (slugs, acronyms, provider crosswalk, place scaffolds, venue partition)
 ```
 
 ## Commands
@@ -22,10 +23,11 @@ src/                  Runtime (slugs, acronyms, provider crosswalk, venue partit
 ```bash
 yarn install
 yarn generate          # proto → generated/
-yarn sync              # slugs + acronyms + provider crosswalks
+yarn sync              # slugs + acronyms + provider crosswalks + place archetypes
 yarn sync:slugs        # data/features.yml → src/slugs.ts
 yarn sync:acronyms     # id + name → src/generated/acronyms.ts
 yarn sync:providers    # Foursquare/Google/OSM/HERE → provider-categories.ts
+yarn sync:place-archetypes  # category archetype + layout meta → src/generated/
 yarn category          # category tooling
 yarn check             # neutral-language guard + typecheck + tests
 ```
@@ -34,13 +36,15 @@ yarn check             # neutral-language guard + typecheck + tests
 
 | Subpath | Purpose |
 | --- | --- |
-| `@twinfile/geotypes` | Slugs, acronyms, normalization, provider maps, venue helpers |
+| `@twinfile/geotypes` | Slugs, acronyms, normalization, provider maps, place scaffolds, venue helpers |
 | `@twinfile/geotypes/geokit` | Optional `PlaceTaxonomyResolver` factory for map hosts (no map SDK dependency here) |
 | `@twinfile/geotypes/generated/*` | Protobuf modules |
 
 ## Twinfile
 
 Reference slugs from place manifests (e.g. `geotype.primary`) against this registry at a pinned semver — documented in `@twinfile/spec`; the full catalog is not embedded in spec or core.
+
+Each slug has a **place scaffold**: suggested `archetype` and `authoring_scale` (map-first; see Twinfile spec `world.md`). Resolve with `placeScaffoldForSlug('shopping_mall')`. Golden **`from:`** bases live in `@twinfile/examples` (`base-campus-mixed`, `base-ordered-route`, etc.) — not in this package.
 
 ## Optional map-host wiring
 

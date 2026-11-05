@@ -1,5 +1,6 @@
 business_and_professional_services:
   name: Business and Professional Services
+  archetype: single_level
   id: 4d4b7105d754a06375d81259
   subcategories:
     automotive_service:

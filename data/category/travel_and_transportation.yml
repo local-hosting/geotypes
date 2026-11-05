@@ -1,5 +1,6 @@
 travel_and_transportation:
   name: Travel and Transportation
+  archetype: campus
   id: 4d4b7105d754a06379d81259
   subcategories:
     pier:

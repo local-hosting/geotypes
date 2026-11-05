@@ -1,0 +1,59 @@
+# Default Twinfile place archetype rules (category roots in data/category/*.yml + slug overrides here).
+# Regenerate: yarn sync:place-archetypes
+#
+# Archetype defaults follow map-first rules in spec/doc/world/world.md.
+# Golden `from:` bases live in @twinfile/examples (one base per archetype enum value).
+
+archetype_defaults:
+  indoor_stack:
+    linear_unit: m
+    h3_resolution: 10
+    space_granularity: room
+  single_level:
+    linear_unit: m
+    h3_resolution: 10
+    space_granularity: room
+  campus:
+    linear_unit: m
+    h3_resolution: 9
+    space_granularity: zone
+  linear:
+    linear_unit: m
+    h3_resolution: 9
+    space_granularity: zone
+
+# Category defaults: `archetype` on each root in data/category/*.yml
+# Per-slug overrides (win over category + geometry heuristics).
+slugs:
+  shopping_mall:
+    archetype: campus
+  shopping_center:
+    archetype: campus
+  hospital:
+    archetype: campus
+  airport:
+    archetype: campus
+  university:
+    archetype: campus
+  stadium:
+    archetype: campus
+  theme_park:
+    archetype: campus
+  zoo:
+    archetype: campus
+  public_park:
+    archetype: campus
+  campground:
+    archetype: campus
+  marina:
+    archetype: campus
+  port:
+    archetype: campus
+  bus_stop:
+    archetype: single_level
+  convenience_store:
+    archetype: single_level
+  train_station:
+    archetype: campus
+  apartment_building:
+    archetype: indoor_stack

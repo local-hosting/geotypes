@@ -1,5 +1,6 @@
 sports_and_recreation:
   name: Sports and Recreation
+  archetype: campus
   id: 4f4528bc4b90abdf24c9de85
   subcategories:
     rugby:

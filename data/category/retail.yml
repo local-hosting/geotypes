@@ -1,5 +1,6 @@
 retail:
   name: Retail
+  archetype: single_level
   id: 4d4b7105d754a06378d81259
   subcategories:
     cosmetics_store:

@@ -1,5 +1,6 @@
 landmarks_and_outdoors:
   name: Landmarks and Outdoors
+  archetype: campus
   id: 4d4b7105d754a06377d81259
   subcategories:
     tunnel:

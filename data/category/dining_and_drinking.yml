@@ -1,5 +1,6 @@
 dining_and_drinking:
   name: Dining and Drinking
+  archetype: single_level
   id: 63be6904847c3692a84b9bb5
   subcategories:
     food_truck:

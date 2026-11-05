@@ -30,6 +30,15 @@ export {
   schemaOrgUriForGeotypeRef,
   schemaOrgUriForSlug,
 } from './schema-org.js';
+export {
+  placeScaffoldForGeotypeRef,
+  placeScaffoldForSlug,
+  type AuthoringScale,
+  type PlaceArchetype,
+  type PlaceScaffold,
+  type LinearUnit,
+  type SpaceGranularity,
+} from './place-scaffold.js';
 export { resolveGeotypeRef, type GeotypeRef, type ResolvedGeotype } from './resolve-ref.js';
 export {
   geotypeFromFeature,
