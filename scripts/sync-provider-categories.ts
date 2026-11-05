@@ -101,7 +101,7 @@ function main(): void {
   const lines = [
     '/**',
     ' * Provider category crosswalks — synced from features.yml + data/category/*.yml',
-    ' * Regenerate: yarn workspace @geokit/geotypes sync:providers',
+    ' * Regenerate: yarn sync:providers',
     ' */',
     '',
     ...mapLines('FSQ_CATEGORY_ID_BY_SLUG', fsqObj),

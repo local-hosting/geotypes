@@ -95,3 +95,10 @@ export function createGeokitTaxonomyResolver(): PlaceTaxonomyResolver {
     },
   };
 }
+
+export type {
+  GeotypeRef,
+  PlaceSearchProvider,
+  PlaceTaxonomyResolver,
+  ResolvedGeotype,
+} from './types/place-taxonomy.js';

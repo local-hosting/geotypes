@@ -1,4 +1,4 @@
-/** Contract for geokit place search taxonomy wiring (`@twinfile/geotypes/geokit`). */
+/** Place-search taxonomy resolver contract (`@twinfile/geotypes/geokit`). */
 export type PlaceSearchProvider =
   | 'foursquare'
   | 'google-places'

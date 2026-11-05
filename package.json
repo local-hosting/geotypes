@@ -1,7 +1,8 @@
 {
   "name": "@twinfile/geotypes",
   "version": "0.1.0",
-  "description": "POI taxonomy registry (YAML / proto) and runtime slugs for Twinfile place units and geokit",
+  "packageManager": "yarn@4.9.2",
+  "description": "Open POI taxonomy registry (YAML / proto) and runtime slugs for Twinfile place units",
   "license": "MPL-2.0",
   "type": "module",
   "repository": {
@@ -55,7 +56,9 @@
     "@bufbuild/protoc-gen-es": "^2.6.0",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^24.10.1",
+    "axios": "^1.12.2",
     "commander": "^14.0.0",
+    "nanoid": "^5.1.6",
     "tsx": "^4.20.5",
     "typescript": "^5.9.3",
     "vitest": "^2.1.8"

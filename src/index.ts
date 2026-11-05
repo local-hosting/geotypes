@@ -29,7 +29,3 @@ export {
   partitionFeaturesByGeotype,
   type VenueGeotypeFeature,
 } from './venue.js';
-export type {
-  PlaceSearchProvider,
-  PlaceTaxonomyResolver,
-} from './types/place-taxonomy.js';

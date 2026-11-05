@@ -33,7 +33,7 @@ function main(): void {
   const lines = [
     '/**',
     ' * Geotype acronyms — synced from data/features.yml (`id` + `name`).',
-    ' * Regenerate: yarn workspace @geokit/geotypes sync:acronyms',
+    ' * Regenerate: yarn sync:acronyms',
     ' */',
     '',
     'export const GEOTYPE_BY_ACRONYM = {',
