@@ -1,5 +1,5 @@
 /**
- * Provider category crosswalks — synced from features.yml + data/category/*.yml
+ * Provider category crosswalks — synced from features.yml, schema-org-by-slug.yml, data/category/*.yml
  * Regenerate: yarn sync:providers
  */
 
@@ -2480,6 +2480,7 @@ export const GOOGLE_TYPE_BY_SLUG = {
   'courthouse': 'courthouse',
   'coworking_space': 'corporate_office',
   'credit_union': 'bank',
+  'creek': 'natural_feature',
   'cryptocurrency_exchange': 'bank',
   'dance_studio': 'establishment',
   'daycare_center': 'preschool',
@@ -2734,6 +2735,7 @@ export const GOOGLE_SLUG_BY_TYPE = {
   'mosque': 'mosque',
   'movie_theater': 'movie_theater',
   'museum': 'museum',
+  'natural_feature': 'creek',
   'night_club': 'nightclub',
   'notary_public': 'notary_public',
   'park': 'public_park',
@@ -2822,6 +2824,7 @@ export const HERE_CODE_BY_SLUG = {
   'courthouse': 'COURT',
   'coworking_space': 'COWORKING',
   'credit_union': 'BANK',
+  'creek': 'STREAM',
   'cryptocurrency_exchange': 'BANK',
   'dance_studio': 'DANCE_STUDIO',
   'daycare_center': 'DAY_CARE',
@@ -3078,6 +3081,7 @@ export const OSM_TAG_BY_SLUG = {
   'courthouse': 'amenity=courthouse',
   'coworking_space': 'amenity=coworking_space',
   'credit_union': 'amenity=bank',
+  'creek': 'waterway=stream',
   'cryptocurrency_exchange': 'office=financial',
   'dance_studio': 'leisure=dance',
   'daycare_center': 'amenity=childcare',
@@ -3375,6 +3379,7 @@ export const ESRI_LABEL_BY_SLUG = {
   'courthouse': 'Courthouse',
   'coworking_space': 'Coworking Space',
   'credit_union': 'Credit Union',
+  'creek': 'Stream',
   'cryptocurrency_exchange': 'Financial Institution',
   'dance_studio': 'Dance Studio',
   'daycare_center': 'Daycare Center',
@@ -3799,6 +3804,7 @@ export const ESRI_SLUG_BY_LABEL = {
   'Stadium': 'stadium',
   'Stop Sign': 'stop_sign',
   'Storage Facility': 'storage_facility',
+  'Stream': 'creek',
   'Studio': 'production_studio',
   'Substation': 'transmission_substation',
   'Subway Station': 'subway_station',
@@ -3936,4 +3942,28 @@ export const ESRI_CATEGORY_ID_BY_SLUG = {
   'vineyard': '4bf58dd8d48988d1de941735',
   'warehouse': '52e81612bcbc57f1066b7a36',
   'zoo': '4bf58dd8d48988d17b941735',
+} as const;
+
+export const SCHEMA_ORG_TYPE_BY_SLUG = {
+  'airport': 'Airport',
+  'aquarium': 'Aquarium',
+  'bus_stop': 'BusStop',
+  'campground': 'Campground',
+  'convenience_store': 'ConvenienceStore',
+  'creek': 'BodyOfWater',
+  'electronics_store': 'Store',
+  'furniture_store': 'FurnitureStore',
+  'grocery_store': 'GroceryStore',
+  'hospital': 'Hospital',
+  'museum': 'Museum',
+  'pharmacy': 'Pharmacy',
+  'port': 'Place',
+  'public_park': 'Park',
+  'shopping_center': 'ShoppingCenter',
+  'shopping_mall': 'ShoppingCenter',
+  'stadium': 'StadiumOrArena',
+  'theme_park': 'AmusementPark',
+  'train_station': 'TrainStation',
+  'university': 'CollegeOrUniversity',
+  'zoo': 'Zoo',
 } as const;

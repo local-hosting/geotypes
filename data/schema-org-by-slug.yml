@@ -1,0 +1,25 @@
+# Geotype slug → Schema.org @type local name (JSON-LD: https://schema.org/{Type})
+# Regenerate: yarn sync:providers
+
+airport: Airport
+aquarium: Aquarium
+bus_stop: BusStop
+campground: Campground
+convenience_store: ConvenienceStore
+creek: BodyOfWater
+electronics_store: Store
+furniture_store: FurnitureStore
+grocery_store: GroceryStore
+hospital: Hospital
+museum: Museum
+pharmacy: Pharmacy
+# port: no dedicated Schema.org seaport type
+port: Place
+public_park: Park
+shopping_center: ShoppingCenter
+shopping_mall: ShoppingCenter
+stadium: StadiumOrArena
+theme_park: AmusementPark
+train_station: TrainStation
+university: CollegeOrUniversity
+zoo: Zoo

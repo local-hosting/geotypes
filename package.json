@@ -1,6 +1,6 @@
 {
   "name": "@twinfile/geotypes",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packageManager": "yarn@4.9.2",
   "description": "Open POI taxonomy registry (YAML / proto) and runtime slugs for Twinfile place units",
   "license": "MPL-2.0",
@@ -15,9 +15,9 @@
   },
   "exports": {
     ".": {
-      "types": "./src/index.ts",
-      "import": "./src/index.ts",
-      "default": "./src/index.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     },
     "./generated/geospatial": {
       "types": "./generated/geospatial_pb.d.ts",
@@ -30,12 +30,15 @@
       "default": "./generated/tags_pb.js"
     },
     "./geokit": {
-      "types": "./src/geokit-adapter.ts",
-      "import": "./src/geokit-adapter.ts",
-      "default": "./src/geokit-adapter.ts"
+      "types": "./dist/geokit-adapter.d.ts",
+      "import": "./dist/geokit-adapter.js",
+      "default": "./dist/geokit-adapter.js"
     }
   },
+  "types": "./dist/index.d.ts",
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "yarn build",
     "generate": "tsx cli/proto.ts generate",
     "proto": "tsx cli/proto.ts",
     "category": "tsx cli/category.ts",
@@ -52,6 +55,12 @@
     "@bufbuild/protobuf": "^2.6.0",
     "js-yaml": "^4.1.0"
   },
+  "files": [
+    "dist",
+    "generated",
+    "data",
+    "README.md"
+  ],
   "devDependencies": {
     "@bufbuild/protoc-gen-es": "^2.6.0",
     "@types/js-yaml": "^4.0.9",

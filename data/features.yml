@@ -3237,6 +3237,21 @@
     naics: 522110
   tags: banking_credit
   category: financial_services
+- id: CKR
+  name: creek
+  description: Creek or small stream corridor (access, stage, recreation)
+  geometry_type: linestring
+  mappings:
+    nfdd: null
+    esri: Stream
+    iso19110: Watercourse
+    openstreetmap: waterway=stream
+    google: natural_feature
+    here: STREAM
+    foursquare: outdoors_recreation
+    schemaOrg: BodyOfWater
+  tags: creek, natural_resources, waterway
+  category: natural_resources
 - id: EMR
   name: riverbank_survey
   description: Riverbank erosion survey line

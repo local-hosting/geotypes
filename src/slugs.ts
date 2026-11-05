@@ -65,6 +65,7 @@ export const GEOTYPE_SLUGS = [
   'courthouse',
   'coworking_space',
   'credit_union',
+  'creek',
   'cryptocurrency_exchange',
   'dance_studio',
   'daycare_center',

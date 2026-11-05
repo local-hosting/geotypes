@@ -22,7 +22,14 @@ export {
   GOOGLE_TYPE_BY_SLUG,
   ESRI_LABEL_BY_SLUG,
   ESRI_CATEGORY_ID_BY_SLUG,
+  SCHEMA_ORG_TYPE_BY_SLUG,
 } from './generated/provider-categories.js';
+export {
+  schemaOrgTypeForGeotypeRef,
+  schemaOrgTypeForSlug,
+  schemaOrgUriForGeotypeRef,
+  schemaOrgUriForSlug,
+} from './schema-org.js';
 export { resolveGeotypeRef, type GeotypeRef, type ResolvedGeotype } from './resolve-ref.js';
 export {
   geotypeFromFeature,
