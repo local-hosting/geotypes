@@ -41,36 +41,31 @@ body {
   min-width: 0;
 }
 
-.geotypes-viz-viewport .ic-canvas-stage-row {
-  flex: 1 1 auto;
-  min-height: 0;
-  min-width: 0;
-}
-
-/* Four archetype columns: one row, centered in the viewport (not continuous plane-grid). */
+/* 2×2 plane grid: one merged SVG; labels use ::before (skip extra label-band row gap). */
 .geotypes-viz-viewport.ic-stage-viewport
-  > .ic-canvas-stage.ic-canvas-stage--layout-row {
-  display: flex;
-  flex-direction: column;
+  > .ic-canvas-stage.ic-canvas-stage--layout-row[data-ic-stage-row-continuous] {
   justify-content: center;
   min-height: 100%;
 }
 
 .geotypes-viz-viewport
-  .ic-canvas-stage--layout-row
-  > .ic-canvas-stage-row {
-  align-items: center;
-  justify-content: center;
-  max-height: 100%;
+  .ic-canvas-stage--layout-row[data-ic-stage-row-continuous][data-ic-stage-row-grid] {
+  --ic-grid-label-band-px: 0px;
 }
 
 .geotypes-viz-viewport
-  .ic-canvas-stage--layout-row
+  .ic-canvas-stage--layout-row[data-ic-stage-row-continuous]
+  > .ic-canvas-stage-row {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: min(92vh, 100%);
+  width: 100%;
+  row-gap: var(--ic-stage-row-gap, 56px);
+}
+
+.geotypes-viz-viewport
+  .ic-canvas-stage--layout-row[data-ic-stage-row-continuous]
   > .ic-canvas-stage-row
-  > .ic-artboard {
-  flex: 1 1 0;
-  width: auto;
-  height: min(72vh, 100%);
-  max-height: 100%;
-  max-width: calc((100% - 3 * var(--ic-stage-row-gap, 28px)) / 4);
+  > .ic-artboard[data-ic-plane-row-host] {
+  min-height: 0;
 }
