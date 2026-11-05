@@ -37,7 +37,7 @@ program
   .description('Generate TypeScript from proto files')
   .action(async () => {
     try {
-      await runProtoc(['proto/geospatial.proto', 'proto/tags.proto', 'proto/demographics.proto'], 'generated');
+      await runProtoc(['proto/geospatial.proto', 'proto/tags.proto'], 'generated');
       console.log('✅ Protobuf TypeScript generation complete');
     } catch (err) {
       console.error(err);

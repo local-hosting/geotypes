@@ -39,7 +39,6 @@
     "proto": "tsx cli/proto.ts",
     "category": "tsx cli/category.ts",
     "test-short-ids": "tsx cli/proto.ts test-short-ids",
-    "open": "yarn preview",
     "sync:slugs": "tsx scripts/sync-slugs.ts",
     "sync:acronyms": "tsx scripts/sync-acronyms.ts",
     "sync:providers": "tsx scripts/sync-provider-categories.ts",

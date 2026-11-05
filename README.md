@@ -1,10 +1,9 @@
 # @twinfile/geotypes
 
-POI taxonomy registry for Twinfile place units and geokit map I/O — ~297 place types with 3-letter acronyms, vendor mappings, and maintenance CLI.
+Open POI taxonomy registry for Twinfile place units and geokit map I/O — place-type slugs, 3-letter acronyms, vendor crosswalks, and maintenance CLI.
 
-**Repository:** [github.com/twinfile/geotypes](https://github.com/twinfile/geotypes)
-
-Formerly `twinfile/geotypes` and `@twinfile/geotypes` in monorepo layouts. npm package: **`@twinfile/geotypes`** on GitHub Packages.
+**Repository:** [github.com/twinfile/geotypes](https://github.com/twinfile/geotypes)  
+**npm:** `@twinfile/geotypes` on GitHub Packages
 
 ## Layout
 
@@ -14,7 +13,7 @@ data/category/        Category YAML
 proto/                geospatial.proto + tags.proto
 generated/            protoc output (`yarn generate`)
 cli/                  Taxonomy maintenance CLI
-scripts/preview.mjs   Map preview (optional geokit sibling)
+scripts/              sync helpers (slugs, acronyms, providers)
 src/                  Runtime (slugs, acronyms, provider crosswalk, venue partition)
 ```
 
@@ -31,15 +30,6 @@ yarn category          # category tooling
 yarn check             # typecheck + tests
 ```
 
-## Map preview
-
-Requires a geokit checkout for UI imports (see `scripts/preview.mjs`).
-
-```bash
-cp _secrets.example.yml _secrets.yml   # maptilerKey
-yarn open                              # yarn preview
-```
-
 ## Geokit integration
 
 ```typescript
@@ -49,16 +39,8 @@ import { createGeokitTaxonomyResolver } from '@twinfile/geotypes/geokit';
 setPlaceTaxonomyResolver(createGeokitTaxonomyResolver());
 ```
 
-Geokit should re-export or alias `PlaceTaxonomyResolver` from `@twinfile/geotypes` when the service hook lands.
+When geokit exposes `place-taxonomy` on `@geokit/service`, wire the resolver there. Until then, types live under `@twinfile/geotypes` (`src/types/place-taxonomy.ts`).
 
 ## Twinfile
 
-Reference slugs from place manifests (`geotype.primary`, etc.) against this registry at a pinned semver — see `@twinfile/spec` (not embedded in spec/core).
-
-## Package name
-
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
+Reference slugs from place manifests (e.g. `geotype.primary`) against this registry at a pinned semver — documented in `@twinfile/spec`; the full catalog is not embedded in spec or core.
