@@ -1,6 +1,7 @@
 import {
   applyDefaultDiagramTheme,
   applyGridLinesMode,
+  IC_PLANE_ROW_HOST_ATTR,
   Stage,
   whenDiagramHostCameraReady,
   type DiagramScene,
@@ -193,14 +194,61 @@ for (const board of stageModel.handle.getArtboards()) {
 
 stageModel.attachPanZoom({ surface: viewportEl });
 
-const cameraHost = stageModel.handle.getArtboards()[0]?.host;
-if (cameraHost) {
-  whenDiagramHostCameraReady(cameraHost, () => {
-    stageModel.fitView({ artboardPaddingPx: 24 });
-    stageModel.syncRowWorldCamera();
-    return true;
-  });
-} else {
-  stageModel.fitView({ artboardPaddingPx: 24 });
+const FIT_VIEW_OPTIONS = { artboardPaddingPx: 32, contentPaddingRatio: 0.1 };
+
+function resolvePlaneRowCameraHost(): HTMLElement | null {
+  const marked = stageModel.container.querySelector(
+    `[${IC_PLANE_ROW_HOST_ATTR}="true"] .diagram-host`,
+  );
+  if (marked instanceof HTMLElement) {
+    return marked;
+  }
+  return stageModel.handle.getArtboards()[0]?.host ?? null;
+}
+
+function fitStageToView(): void {
+  stageModel.fitView(FIT_VIEW_OPTIONS);
   stageModel.syncRowWorldCamera();
 }
+
+function fitWhenCameraReady(host: HTMLElement, maxFrames = 48): void {
+  whenDiagramHostCameraReady(
+    host,
+    () => {
+      fitStageToView();
+      return true;
+    },
+    { maxFrames },
+  );
+}
+
+function scheduleInitialFit(): void {
+  const host = resolvePlaneRowCameraHost();
+  if (!host) {
+    requestAnimationFrame(scheduleInitialFit);
+    return;
+  }
+  fitWhenCameraReady(host);
+}
+
+scheduleInitialFit();
+
+window.addEventListener('load', () => fitWhenCameraReady(resolvePlaneRowCameraHost() ?? viewportEl, 24), {
+  once: true,
+});
+
+let didFitAfterViewportSized = false;
+const resizeObserver = new ResizeObserver(() => {
+  if (didFitAfterViewportSized) {
+    return;
+  }
+  if (viewportEl.clientWidth < 1 || viewportEl.clientHeight < 1) {
+    return;
+  }
+  didFitAfterViewportSized = true;
+  const host = resolvePlaneRowCameraHost();
+  if (host) {
+    fitWhenCameraReady(host, 24);
+  }
+});
+resizeObserver.observe(viewportEl);
