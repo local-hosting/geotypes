@@ -7,12 +7,12 @@
 html,
 body {
   height: 100%;
+  width: 100%;
   margin: 0;
+  overflow: hidden;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   min-height: 100dvh;
   font-family:
     system-ui,
@@ -24,29 +24,9 @@ body {
   background: var(--ic-canvas-chrome-bg, var(--zui-surface, #faf5ff));
 }
 
-.geotypes-viz-header {
-  flex: none;
-  padding: 1rem 1.25rem 0.5rem;
-  max-width: 52rem;
-}
-
-.geotypes-viz-header h1 {
-  margin: 0 0 0.35rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
-.geotypes-viz-header p {
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.45;
-  color: var(--ic-canvas-chrome-fg-muted, var(--zui-ink-muted, #78716c));
-}
-
 .geotypes-viz-viewport {
-  flex: 1 1 auto;
   width: 100%;
-  min-height: 0;
-  min-width: 0;
+  height: 100%;
+  min-height: 100dvh;
   overflow: hidden;
 }

@@ -27,7 +27,7 @@ yarn sync              # slugs + acronyms + provider crosswalks + place archetyp
 yarn sync:slugs        # data/features.yml → src/slugs.ts
 yarn sync:acronyms     # id + name → src/generated/acronyms.ts
 yarn sync:providers    # Foursquare/Google/OSM/HERE → provider-categories.ts
-yarn sync:place-archetypes  # category archetype + layout meta → src/generated/
+yarn sync:place-archetypes  # → src/generated/place-archetype-data.ts
 yarn category          # category tooling
 yarn check             # neutral-language guard + typecheck + tests
 ```

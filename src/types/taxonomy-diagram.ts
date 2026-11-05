@@ -1,4 +1,4 @@
-import type { PlaceArchetype } from './place-scaffold.js';
+import type { PlaceArchetype } from './place-layout.js';
 
 export type GeotypeTaxonomyDiagramCategory = {
   id: string;

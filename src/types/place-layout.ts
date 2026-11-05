@@ -10,8 +10,19 @@ export type AuthoringScale = {
   space_granularity: SpaceGranularity;
 };
 
-/** Default place.yaml scaffold for a geotype slug (archetype + authoring scale). */
+/** Default `place.yaml` starter for a geotype slug (`archetype` + `authoring_scale`). */
 export type PlaceScaffold = {
   archetype: PlaceArchetype;
   authoring_scale: AuthoringScale;
+};
+
+export type PlaceArchetypeConfig = {
+  archetype_defaults: Record<PlaceArchetype, AuthoringScale>;
+  categories: Record<string, { archetype: PlaceArchetype }>;
+  slugs: Record<string, { archetype: PlaceArchetype }>;
+};
+
+export type GeotypeLayoutMeta = {
+  category: string;
+  geometry_type: string;
 };

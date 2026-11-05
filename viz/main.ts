@@ -18,7 +18,7 @@ import {
   buildGeotypeTaxonomyDiagramArtboards,
   type GeotypeTaxonomyDiagramCategory,
 } from '../src/taxonomy-diagram.js';
-import type { PlaceArchetype } from '../src/types/place-scaffold.js';
+import type { PlaceArchetype } from '../src/types/place-layout.js';
 
 const GRID_COLS = 4;
 
@@ -132,6 +132,7 @@ const worldCamera = { fallbackAnchor: viewportEl };
 const stageModel = Stage.create({
   layout: 'row',
   row: {
+    continuous: true,
     gapPx: 56,
     pitchDeg: 42,
     bearingDeg: 0,

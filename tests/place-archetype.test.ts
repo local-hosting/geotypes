@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { placeScaffoldForGeotypeRef, placeScaffoldForSlug } from '../src/resolve-place-archetype.js';
+import { placeScaffoldForGeotypeRef, placeScaffoldForSlug } from '../src/place-archetype.js';
 
 describe('placeScaffoldForSlug (map-first)', () => {
   it('maps shopping_mall to campus and zone scale (mall property on maps)', () => {

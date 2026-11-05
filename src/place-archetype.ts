@@ -1,43 +1,26 @@
-import { GEOTYPE_LAYOUT_META_BY_SLUG } from './generated/geotype-layout-meta.js';
-import { PLACE_ARCHETYPE_CONFIG } from './generated/place-archetype-config.js';
+import {
+  GEOTYPE_LAYOUT_META_BY_SLUG,
+  PLACE_ARCHETYPE_CONFIG,
+} from './generated/place-archetype-data.js';
+import { assertPlaceArchetype } from './place-archetype-assert.js';
 import { normalizeGeotypeSlug } from './normalize.js';
 import { resolveGeotypeRef, type GeotypeRef } from './resolve-ref.js';
 import type {
-  AuthoringScale,
+  GeotypeLayoutMeta,
   PlaceArchetype,
+  PlaceArchetypeConfig,
   PlaceScaffold,
-} from './types/place-scaffold.js';
+} from './types/place-layout.js';
 
 export type {
   AuthoringScale,
+  GeotypeLayoutMeta,
   PlaceArchetype,
+  PlaceArchetypeConfig,
   PlaceScaffold,
   LinearUnit,
   SpaceGranularity,
-} from './types/place-scaffold.js';
-
-export type PlaceArchetypeConfig = {
-  archetype_defaults: Record<PlaceArchetype, AuthoringScale>;
-  categories: Record<string, { archetype: PlaceArchetype }>;
-  slugs: Record<string, { archetype: PlaceArchetype }>;
-};
-
-export type GeotypeLayoutMeta = {
-  category: string;
-  geometry_type: string;
-};
-
-export function assertPlaceArchetype(value: string, context: string): PlaceArchetype {
-  if (
-    value === 'indoor_stack' ||
-    value === 'single_level' ||
-    value === 'campus' ||
-    value === 'linear'
-  ) {
-    return value;
-  }
-  throw new Error(`invalid archetype "${value}" (${context})`);
-}
+} from './types/place-layout.js';
 
 /** Map-first defaults when category/slug do not override (see spec doc/place/place.md). */
 export function resolvePlaceArchetype(

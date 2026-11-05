@@ -1,7 +1,9 @@
-import { GEOTYPE_LAYOUT_META_BY_SLUG } from './generated/geotype-layout-meta.js';
-import { PLACE_ARCHETYPE_CONFIG } from './generated/place-archetype-config.js';
-import { resolvePlaceArchetype } from './resolve-place-archetype.js';
-import type { PlaceArchetype } from './types/place-scaffold.js';
+import {
+  GEOTYPE_LAYOUT_META_BY_SLUG,
+  PLACE_ARCHETYPE_CONFIG,
+} from './generated/place-archetype-data.js';
+import { resolvePlaceArchetype } from './place-archetype.js';
+import type { PlaceArchetype } from './types/place-layout.js';
 import type {
   GeotypeTaxonomyDiagramArtboard,
   GeotypeTaxonomyDiagramCategory,
