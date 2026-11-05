@@ -49,7 +49,7 @@
     "sync": "yarn sync:slugs && yarn sync:acronyms && yarn sync:providers",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
-    "check": "node scripts/check-neutral-language.mjs && yarn typecheck && yarn test"
+    "check": "node scripts/check-neutral-language.mjs && yarn build && yarn typecheck && yarn test"
   },
   "dependencies": {
     "@bufbuild/protobuf": "^2.6.0",
