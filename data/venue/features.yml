@@ -2294,6 +2294,7 @@
     iso19110: CulturalFacility
     openstreetmap: tourism=museum
     google: museum
+    imdf: museum
     here: MUSEUM
     foursquare: arts_entertainment
     naics: 712110
