@@ -3,11 +3,10 @@ export type PlaceArchetype =
   | 'single_level'
   | 'campus'
   | 'open_area'
-  | 'linear'
-  | 'network';
+  | 'linear';
 
 /** What public maps show first (spec/doc/place/place-archetypes.md). */
-export type PlaceExtent = 'footprint' | 'site' | 'area' | 'route' | 'network';
+export type PlaceExtent = 'footprint' | 'site' | 'area' | 'route';
 
 /** Polygon extents a category may default to. */
 export type PlacePolygonExtent = Extract<PlaceExtent, 'footprint' | 'site' | 'area'>;

@@ -18,7 +18,6 @@ export const PLACE_ARCHETYPE_AXES: Record<PlaceArchetype, PlaceArchetypeAxes> = 
   campus: { extent: 'site', vertical: 'any', movement: 'free' },
   open_area: { extent: 'area', vertical: 'flat', movement: 'free' },
   linear: { extent: 'route', vertical: 'flat', movement: 'sequenced' },
-  network: { extent: 'network', vertical: 'flat', movement: 'free' },
 };
 
 /** Map-first extent from registry geometry (spec/doc/place/place-archetypes.md). */
@@ -29,8 +28,6 @@ function extentFromGeometry(slug: string, meta: GeotypeLayoutMetaInput, config: 
       return 'footprint';
     case 'linestring':
       return 'route';
-    case 'multilinestring':
-      return 'network';
     case 'polygon': {
       const category = config.categories[meta.category.trim()];
       if (!category) {

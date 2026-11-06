@@ -13,10 +13,9 @@ export const PLACE_ARCHETYPES: readonly PlaceArchetype[] = [
   'campus',
   'open_area',
   'linear',
-  'network',
 ];
 
-export const PLACE_EXTENTS: readonly PlaceExtent[] = ['footprint', 'site', 'area', 'route', 'network'];
+export const PLACE_EXTENTS: readonly PlaceExtent[] = ['footprint', 'site', 'area', 'route'];
 
 export const PLACE_POLYGON_EXTENTS: readonly PlacePolygonExtent[] = ['footprint', 'site', 'area'];
 

@@ -58,14 +58,6 @@ const ARCHETYPE_CUBE_COLORS: Record<
     bottom: '#4d7c0f',
     labelFill: '#365314',
   },
-  network: {
-    top: '#fecdd3',
-    front: '#fb7185',
-    right: '#f43f5e',
-    left: '#e11d48',
-    bottom: '#be123c',
-    labelFill: '#881337',
-  },
 };
 
 const viewportEl = document.getElementById('diagram-viewport');

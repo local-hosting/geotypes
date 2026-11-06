@@ -87,14 +87,21 @@ describe('resolvePlaceAxes', () => {
     expect(resolvePlaceArchetype('hospital', input, PLACE_ARCHETYPE_CONFIG)).toBe('campus');
   });
 
-  it('maps connected line systems to network', () => {
+  it('maps a rail yard linestring to linear and an intermodal polygon to campus', () => {
     expect(
       resolvePlaceArchetype(
         'rail_yard',
         { category: 'transportation_logistics', geometry_type: 'linestring' },
         PLACE_ARCHETYPE_CONFIG,
       ),
-    ).toBe('network');
+    ).toBe('linear');
+    expect(
+      resolvePlaceArchetype(
+        'intermodal_facility',
+        { category: 'transportation_logistics', geometry_type: 'polygon' },
+        PLACE_ARCHETYPE_CONFIG,
+      ),
+    ).toBe('campus');
   });
 
   it('fails fast on unsupported geometry', () => {

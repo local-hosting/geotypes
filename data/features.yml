@@ -2015,7 +2015,7 @@
 - id: LWI
   name: intermodal_facility
   description: Intermodal transportation facility
-  geometry_type: linestring
+  geometry_type: polygon
   mappings:
     nfdd: AN052
     esri: Intermodal Facility

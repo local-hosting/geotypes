@@ -29,7 +29,6 @@ describe('geotype taxonomy diagram', () => {
       'site-flat 1,0 campus',
       'area-flat 2,0 open_area',
       'route-flat 3,0 linear',
-      'network-flat 4,0 network',
       'footprint-stacked 0,1 indoor_stack',
       'site-stacked 1,1 campus',
     ]);
@@ -39,7 +38,7 @@ describe('geotype taxonomy diagram', () => {
   it('labels cells by extent × vertical', () => {
     const labels = buildGeotypeTaxonomyDiagramArtboards().map((b) => b.label);
     expect(labels).toContain('Footprint × stacked');
-    expect(labels).toContain('Network × flat');
+    expect(labels).toContain('Route × flat');
   });
 
   it('splits campus into flat and stacked sites', () => {

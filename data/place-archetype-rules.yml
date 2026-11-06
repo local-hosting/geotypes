@@ -3,7 +3,7 @@
 #
 # Three axes → one archetype: spec/doc/place/place-archetypes.md
 # extent:   slug override → geometry (point → footprint, linestring → route,
-#           multilinestring → network, polygon → category extent)
+#           polygon → category extent)
 # vertical: slug override → category vertical (footprint / site only) → flat
 # movement: slug override → sequenced for route, else free
 #
@@ -36,10 +36,6 @@ archetype_defaults:
     linear_unit: m
     h3_resolution: 9
     space_granularity: zone
-  network:
-    linear_unit: m
-    h3_resolution: 8
-    space_granularity: zone
 
 # Decoration layers each archetype typically adds on top of its golden base.
 archetype_layers:
@@ -48,7 +44,6 @@ archetype_layers:
   campus: [routes]
   open_area: [routes]
   linear: [visits]
-  network: [routes]
 
 # Situation units in @twinfile/examples situations/ (decorators wired via plans/).
 situations:
@@ -295,9 +290,3 @@ slugs:
     situations: []
   taxiway:
     situations: []
-
-  # ── Connected lines and nodes ────────────────────────────────────
-  rail_yard:
-    extent: network
-  intermodal_facility:
-    extent: network

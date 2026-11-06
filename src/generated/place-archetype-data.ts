@@ -28,11 +28,6 @@ export const PLACE_ARCHETYPE_CONFIG = {
       "linear_unit": "m",
       "h3_resolution": 9,
       "space_granularity": "zone"
-    },
-    "network": {
-      "linear_unit": "m",
-      "h3_resolution": 8,
-      "space_granularity": "zone"
     }
   },
   "archetype_layers": {
@@ -46,9 +41,6 @@ export const PLACE_ARCHETYPE_CONFIG = {
     ],
     "linear": [
       "visits"
-    ],
-    "network": [
-      "routes"
     ]
   },
   "situations": [
@@ -410,12 +402,6 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "taxiway": {
       "situations": []
-    },
-    "rail_yard": {
-      "extent": "network"
-    },
-    "intermodal_facility": {
-      "extent": "network"
     }
   },
   "categories": {
@@ -710,7 +696,7 @@ export const GEOTYPE_LAYOUT_META_BY_SLUG = {
   'industrial_development': {"category":"construction_real_estate","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","situations":["severe-weather"],"layers":[]},
   'insurance_broker': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","situations":["severe-weather"],"layers":[]},
   'insurance_office': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","situations":["severe-weather"],"layers":[]},
-  'intermodal_facility': {"category":"transportation_logistics","geometry_type":"linestring","extent":"network","vertical":"flat","movement":"free","archetype":"network","situations":["transit-disruption"],"layers":["routes"]},
+  'intermodal_facility': {"category":"transportation_logistics","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","situations":["transit-disruption"],"layers":["routes"]},
   'internet_company': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","situations":["severe-weather"],"layers":[]},
   'laundromat': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","situations":["severe-weather"],"layers":[]},
   'law_firm': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","situations":["severe-weather"],"layers":[]},
@@ -774,7 +760,7 @@ export const GEOTYPE_LAYOUT_META_BY_SLUG = {
   'quarry': {"category":"natural_resources","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","situations":[],"layers":["sensors","routes"]},
   'racetrack_casino': {"category":"entertainment_gaming","geometry_type":"point","extent":"site","vertical":"flat","movement":"free","archetype":"campus","situations":["severe-weather"],"layers":["routes","assets"]},
   'radio_station': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","situations":["severe-weather"],"layers":[]},
-  'rail_yard': {"category":"transportation_logistics","geometry_type":"linestring","extent":"network","vertical":"flat","movement":"free","archetype":"network","situations":["transit-disruption"],"layers":["routes"]},
+  'rail_yard': {"category":"transportation_logistics","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","situations":["transit-disruption"],"layers":["visits"]},
   'ranch': {"category":"natural_resources","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","situations":[],"layers":["sensors","routes"]},
   'real_estate_office': {"category":"commercial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","situations":["severe-weather"],"layers":["assets"]},
   'real_estate_services': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","situations":["severe-weather"],"layers":[]},
