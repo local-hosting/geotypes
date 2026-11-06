@@ -1,3 +1,5 @@
 natural_resources:
   name: Natural Resources
-  archetype: campus
+  extent: area
+  layers: [sensors]
+  situations: []

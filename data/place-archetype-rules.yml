@@ -1,8 +1,19 @@
-# Slug overrides + authoring_scale defaults (category archetype → data/category/*.yml).
+# Slug overrides + archetype defaults (category defaults → data/category/*.yml).
 # Regenerate: yarn sync:place-archetypes
 #
-# Map-first resolution: spec/doc/place/place.md
-# Golden `from:` bases: @twinfile/examples (one base per archetype enum value).
+# Three axes → one archetype: spec/doc/place/place-archetypes.md
+# extent:   slug override → geometry (point → footprint, linestring → route,
+#           multilinestring → network, polygon → category extent)
+# vertical: slug override → category vertical (footprint / site only) → flat
+# movement: slug override → sequenced for route, else free
+#
+# Decorations (spec/doc/place/decorate-twin.md):
+# situations: slug override (replaces) → category situations → none
+# layers:     archetype_layers ∪ category layers ∪ slug layers
+# Each place slug's axes, archetype, and decorations are materialized on GEOTYPE_LAYOUT_META_BY_SLUG;
+# `assets:` slugs are excluded (GEOTYPE_ASSET_SLUGS).
+# Golden `from:` bases and `with:` mixins: @twinfile/examples (bases/, mixins/).
+# Overrides or assets for slugs missing from features.yml fail the sync.
 
 archetype_defaults:
   indoor_stack:
@@ -17,42 +28,276 @@ archetype_defaults:
     linear_unit: m
     h3_resolution: 9
     space_granularity: zone
+  open_area:
+    linear_unit: m
+    h3_resolution: 9
+    space_granularity: zone
   linear:
     linear_unit: m
     h3_resolution: 9
     space_granularity: zone
+  network:
+    linear_unit: m
+    h3_resolution: 8
+    space_granularity: zone
 
-# Per-slug overrides (win over category + geometry heuristics).
+# Decoration layers each archetype typically adds on top of its golden base.
+archetype_layers:
+  single_level: []
+  indoor_stack: []
+  campus: [routes]
+  open_area: [routes]
+  linear: [visits]
+  network: [routes]
+
+# Situation units in @twinfile/examples situations/ (decorators wired via plans/).
+situations:
+  - severe-weather
+  - transit-disruption
+  - dam-release
+  - litter-pollution
+
+# Point assets with no interior (signs, hydrants, poles, meters, wells, towers).
+# Not places: excluded from GEOTYPE_LAYOUT_META_BY_SLUG; use them as `assets.yaml` kinds.
+assets:
+  - atm
+  - capacitor
+  - cell_tower
+  - charging_station
+  - emergency_siren
+  - fiber_node
+  - field_observation_point
+  - fire_hydrant
+  - gas_meter
+  - junction_box
+  - manhole_cover
+  - oil_gas_well
+  - power_line_tower
+  - production_well
+  - radio_tower
+  - regulator
+  - spring
+  - stop_sign
+  - switch_gear
+  - traffic_light
+  - transformer
+  - utility_meter
+  - utility_pole
+  - valve
+  - water_tower
+  - water_well
+  - yield_sign
+
 slugs:
+  # ── Multi-building sites ──────────────────────────────────────────
   shopping_mall:
-    archetype: campus
+    extent: site
+    vertical: stacked
+    situations: [severe-weather, transit-disruption]
   shopping_center:
-    archetype: campus
+    extent: site
   hospital:
-    archetype: campus
+    extent: site
+    vertical: stacked
+    situations: [severe-weather, transit-disruption]
   airport:
-    archetype: campus
+    extent: site
+    vertical: stacked
   university:
-    archetype: campus
+    extent: site
+    situations: [severe-weather, transit-disruption]
+  high_school:
+    extent: site
   stadium:
-    archetype: campus
+    extent: site
+    situations: [severe-weather, transit-disruption]
   theme_park:
-    archetype: campus
+    extent: site
+    situations: [severe-weather, transit-disruption, litter-pollution]
   zoo:
-    archetype: campus
-  public_park:
-    archetype: campus
-  campground:
-    archetype: campus
-  marina:
-    archetype: campus
+    extent: site
+    situations: [severe-weather, transit-disruption, litter-pollution]
+  sports_complex:
+    extent: site
+  racetrack_casino:
+    extent: site
   port:
-    archetype: campus
-  bus_stop:
-    archetype: single_level
-  convenience_store:
-    archetype: single_level
+    extent: site
+    situations: [severe-weather, transit-disruption, litter-pollution]
+  ferry_terminal:
+    situations: [severe-weather, transit-disruption, litter-pollution]
   train_station:
-    archetype: campus
+    extent: site
+    vertical: stacked
+  ranch:
+    extent: site
+  mining_site:
+    extent: site
+    situations: [severe-weather]
+  hydroelectric_plant:
+    situations: [severe-weather, dam-release]
+  truck_stop:
+    situations: [severe-weather]
+  fulfillment_center:
+    situations: [severe-weather]
+
+  # ── Open land (no buildings that matter to the twin) ─────────────
+  public_park:
+    extent: area
+    situations: [severe-weather, litter-pollution]
+  campground:
+    extent: area
+  playground:
+    extent: area
+  cemetery:
+    extent: area
+  golf_course:
+    extent: area
+  baseball_field:
+    extent: area
+  football_field:
+    extent: area
+  soccer_field:
+    extent: area
+  tennis_court:
+    extent: area
+  parking_lot:
+    extent: area
+  heliport:
+    extent: area
+    situations: []
+  solar_farm:
+    extent: area
+    situations: []
+  wind_farm:
+    extent: area
+    situations: []
+  conservation_area:
+    situations: [litter-pollution]
+  species_removal_area:
+    situations: [litter-pollution]
+  spoil_heap_boundary:
+    situations: [litter-pollution]
+
+  # ── Single buildings inside site / area categories ───────────────
+  bus_stop:
+    extent: footprint
+    situations: [transit-disruption]
+  convenience_store:
+    extent: footprint
+  church:
+    extent: footprint
+  mosque:
+    extent: footprint
+  synagogue:
+    extent: footprint
+  temple:
+    extent: footprint
+  fire_station:
+    extent: footprint
+  embassy:
+    extent: footprint
+  preschool:
+    extent: footprint
+  rehabilitation_center:
+    extent: footprint
+  gas_station:
+    extent: footprint
+    situations: [severe-weather]
+  motel:
+    extent: footprint
+    situations: [severe-weather]
+  vacation_rental:
+    extent: footprint
+    situations: [severe-weather]
+  bed_breakfast:
+    situations: [severe-weather]
+  travel_agency:
+    situations: [severe-weather]
+  ice_rink:
+    extent: footprint
+  personal_training:
+    extent: footprint
+  quality_lab:
+    extent: footprint
+  production_line:
+    extent: footprint
+  cold_storage:
+    extent: footprint
+  maintenance_facility:
+    extent: footprint
+  drilling_rig:
+    extent: footprint
+  barn:
+    extent: footprint
+  grain_silo:
+    extent: footprint
+  greenhouse:
+    extent: footprint
+  monitoring_station:
+    extent: footprint
+  # ── Floors maps do not show ──────────────────────────────────────
   apartment_building:
-    archetype: indoor_stack
+    vertical: stacked
+  condominium:
+    vertical: stacked
+  townhouse:
+    extent: footprint
+    vertical: stacked
+  dormitory:
+    vertical: stacked
+  senior_living:
+    vertical: stacked
+  nursing_home:
+    vertical: stacked
+  hotel:
+    vertical: stacked
+  extended_stay:
+    vertical: stacked
+  hostel:
+    extent: footprint
+    vertical: stacked
+    situations: [severe-weather]
+  casino_resort:
+    vertical: stacked
+  office_building:
+    vertical: stacked
+  federal_building:
+    vertical: stacked
+  city_hall:
+    extent: footprint
+    vertical: stacked
+  courthouse:
+    extent: footprint
+    vertical: stacked
+  department_store:
+    vertical: stacked
+  subway_station:
+    vertical: stacked
+  control_tower:
+    vertical: stacked
+    situations: [severe-weather]
+
+  # ── Small sites without shared situations ────────────────────────
+  shipping_dock:
+    situations: [severe-weather]
+  food_truck:
+    situations: []
+
+  # ── Lines and corridors ──────────────────────────────────────────
+  creek:
+    situations: [dam-release, litter-pollution]
+  riverbank_survey:
+    situations: [dam-release, litter-pollution]
+  highway:
+    situations: [transit-disruption]
+  runway:
+    situations: []
+  taxiway:
+    situations: []
+
+  # ── Connected lines and nodes ────────────────────────────────────
+  rail_yard:
+    extent: network
+  intermodal_facility:
+    extent: network

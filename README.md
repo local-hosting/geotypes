@@ -34,7 +34,7 @@ yarn check             # neutral-language guard + typecheck + tests
 
 ## Taxonomy visualization (isocanvas)
 
-Local iso diagram of category bands grouped by **place archetype** (`single_level`, `campus`, `linear`, `indoor_stack`). Requires a sibling checkout of [`@westlane/isocanvas`](https://github.com/westlane/isocanvas) at `../../westlane/isocanvas` (or set `TF_ISOCANVAS_ROOT`).
+Local iso diagram of registry slugs grouped by **materialized place archetype** (`GEOTYPE_LAYOUT_META_BY_SLUG.archetype`, from `yarn sync:place-archetypes`). Requires a sibling checkout of [`@westlane/isocanvas`](https://github.com/westlane/isocanvas) at `../../westlane/isocanvas` (or set `TF_ISOCANVAS_ROOT`).
 
 ```bash
 yarn viz   # http://localhost:5175
@@ -58,7 +58,9 @@ import { buildGeotypeTaxonomyDiagramArtboards } from '@twinfile/geotypes';
 
 Reference slugs from place manifests (e.g. `geotype.primary`) against this registry at a pinned semver — documented in `@twinfile/spec`; the full catalog is not embedded in spec or core.
 
-Each slug has a **place scaffold**: suggested `archetype` and `authoring_scale` (map-first; see Twinfile spec `doc/place/place.md`). Resolve with `placeScaffoldForSlug('shopping_mall')`. Golden **`from:`** bases live in `@twinfile/examples` (`base-campus-mixed`, `base-ordered-route`, etc.) — not in this package.
+Point assets with no interior (`stop_sign`, `fire_hydrant`, `utility_pole`, …) are not places: `isAssetGeotype` returns true and they have no scaffold (`GEOTYPE_ASSET_SLUGS`). Every other slug has a **place scaffold**: suggested `archetype` and `authoring_scale` (map-first; see Twinfile spec [`doc/place/place.md`](https://github.com/twinfile/spec/blob/main/doc/place/place.md)). Resolve with `placeScaffoldForSlug('shopping_mall')`. Each slug also materializes three axes — **extent**, **vertical**, **movement** — via `placeAxesForSlug('hotel')`, plus suggested decorators (situations + layer files) via `placeDecorationsForSlug('stadium')`; the archetype is a lookup on those axes (`archetypeForAxes`, spec [`doc/place/place-archetypes.md`](https://github.com/twinfile/spec/blob/main/doc/place/place-archetypes.md)). Golden **`from:`** bases live in `@twinfile/examples` (`base-campus`, `base-open-area`, `base-linear`, `base-network`, etc.) — not in this package.
+
+**Authoring a full unit:** Dockerfile-style steps (`from:` → `archetype` → `layers:` → per-space `exposure`) in Twinfile spec [`doc/place/place-recipe.md`](https://github.com/twinfile/spec/blob/main/doc/place/place-recipe.md) (monorepo: `spec/doc/place/place-recipe.md`).
 
 ## Optional map-host wiring
 

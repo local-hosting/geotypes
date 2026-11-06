@@ -1,3 +1,4 @@
 legal_professional:
   name: Legal Professional
-  archetype: single_level
+  extent: footprint
+  situations: [severe-weather]

@@ -1,14 +1,24 @@
-import type { PlaceArchetype } from './place-layout.js';
+import type { PlaceArchetype, PlaceAxes } from './place-layout.js';
+
+export type GeotypeTaxonomyDiagramPlace = {
+  slug: string;
+  label: string;
+};
 
 export type GeotypeTaxonomyDiagramCategory = {
   id: string;
   category: string;
   label: string;
-  slugCount: number;
+  places: readonly GeotypeTaxonomyDiagramPlace[];
 };
 
+/** One extent × vertical cell of the taxonomy grid (columns: extent, rows: vertical). */
 export type GeotypeTaxonomyDiagramArtboard = {
-  id: PlaceArchetype;
+  /** `${extent}-${vertical}`, e.g. `footprint-stacked`. */
+  id: string;
   label: string;
-  categories: GeotypeTaxonomyDiagramCategory[];
+  archetype: PlaceArchetype;
+  axes: PlaceAxes;
+  gridSlot: { col: number; row: number };
+  categories: readonly GeotypeTaxonomyDiagramCategory[];
 };

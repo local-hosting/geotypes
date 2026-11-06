@@ -510,7 +510,7 @@
 - id: EPC
   name: capacitor
   description: Power capacitor
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: AT030
     esri: Capacitor
@@ -586,7 +586,7 @@
 - id: TCT
   name: cell_tower
   description: Cellular communication tower
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: AT042
     esri: Cell Tower
@@ -842,7 +842,7 @@
 - id: AVC
   name: control_tower
   description: Air traffic control tower
-  geometry_type: linestring
+  geometry_type: point
   mappings:
     nfdd: GB048
     esri: Control Tower
@@ -1055,7 +1055,7 @@
 - id: EPD
   name: distribution_line
   description: Medium-voltage power distribution line
-  geometry_type: polygon
+  geometry_type: linestring
   mappings:
     nfdd: AT005
     esri: Distribution Line
@@ -1193,7 +1193,7 @@
 - id: ESS
   name: emergency_siren
   description: Emergency warning siren
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: null
     esri: Emergency Siren
@@ -1325,7 +1325,7 @@
 - id: TCN
   name: fiber_node
   description: Fiber optic network node
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: AT042
     esri: Communication Node
@@ -1367,7 +1367,7 @@
 - id: WSH
   name: fire_hydrant
   description: Fire hydrant
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: null
     esri: Fire Hydrant
@@ -1532,7 +1532,7 @@
 - id: NGM
   name: gas_meter
   description: Natural gas meter
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: BI005
     esri: Gas Meter
@@ -1775,7 +1775,7 @@
 - id: AVH
   name: heliport
   description: Helicopter landing facility
-  geometry_type: linestring
+  geometry_type: polygon
   mappings:
     nfdd: GB047
     esri: Heliport
@@ -2046,7 +2046,7 @@
 - id: TCJ
   name: junction_box
   description: Utility junction box
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: null
     esri: Junction Box
@@ -2211,7 +2211,7 @@
 - id: MAN
   name: manhole_cover
   description: Manhole cover
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: null
     esri: Manhole Cover
@@ -2830,7 +2830,7 @@
 - id: EPP
   name: power_line_tower
   description: High-voltage transmission tower
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: AT030
     esri: Transmission Tower
@@ -2980,7 +2980,7 @@
 - id: WSP
   name: pump_station
   description: Water pumping station
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: BH020
     esri: Pump Station
@@ -3050,7 +3050,7 @@
 - id: TCR
   name: radio_tower
   description: Radio/broadcast tower
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: AT030
     esri: Radio Tower
@@ -3136,7 +3136,7 @@
 - id: EPR
   name: regulator
   description: Voltage regulator
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: AT030
     esri: Voltage Regulator
@@ -3268,7 +3268,7 @@
 - id: RSR
   name: roundabout
   description: Traffic roundabout
-  geometry_type: linestring
+  geometry_type: point
   mappings:
     nfdd: AP044
     esri: Roundabout
@@ -3346,7 +3346,7 @@
 - id: LWS
   name: shipping_dock
   description: Loading dock or shipping bay
-  geometry_type: linestring
+  geometry_type: point
   mappings:
     nfdd: AL013
     esri: Shipping Dock
@@ -3603,7 +3603,7 @@
 - id: WSS
   name: spring
   description: Natural spring
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: BH020
     esri: Spring
@@ -3646,7 +3646,7 @@
 - id: STP
   name: stop_sign
   description: Stop sign
-  geometry_type: linestring
+  geometry_type: point
   mappings:
     nfdd: AP042
     esri: Stop Sign
@@ -3706,7 +3706,7 @@
 - id: AGT
   name: survey_transect
   description: Agricultural survey transect line
-  geometry_type: polygon
+  geometry_type: linestring
   mappings:
     nfdd: null
     esri: Survey Line
@@ -3734,7 +3734,7 @@
 - id: EPG
   name: switch_gear
   description: Electrical switch gear
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: AT030
     esri: Switch Gear
@@ -4007,7 +4007,7 @@
 - id: RST
   name: traffic_light
   description: Traffic signal/light
-  geometry_type: linestring
+  geometry_type: point
   mappings:
     nfdd: AP041
     esri: Traffic Light
@@ -4054,7 +4054,7 @@
 - id: EPT
   name: transformer
   description: Electrical power transformer
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: AT030
     esri: Electric Transformer
@@ -4154,7 +4154,7 @@
 - id: EPE
   name: underground_cable
   description: Underground power cable
-  geometry_type: polygon
+  geometry_type: linestring
   mappings:
     nfdd: AT005
     esri: Underground Cable
@@ -4215,7 +4215,7 @@
 - id: TCM
   name: utility_meter
   description: Utility meter
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: null
     esri: Utility Meter
@@ -4227,7 +4227,7 @@
 - id: EPU
   name: utility_pole
   description: Overhead power distribution pole
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: AT030
     esri: Electric Utility Pole
@@ -4255,7 +4255,7 @@
 - id: WSV
   name: valve
   description: Water valve
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: null
     esri: Water Valve
@@ -4341,7 +4341,7 @@
 - id: WST
   name: water_tower
   description: Elevated water storage tank
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: BH020
     esri: Water Tank
@@ -4354,7 +4354,7 @@
 - id: WSW
   name: water_well
   description: Water well
-  geometry_type: polygon
+  geometry_type: point
   mappings:
     nfdd: BH020
     esri: Water Well
@@ -4413,7 +4413,7 @@
 - id: RSY
   name: yield_sign
   description: Yield sign
-  geometry_type: linestring
+  geometry_type: point
   mappings:
     nfdd: AP043
     esri: Yield Sign

@@ -4,42 +4,15 @@ import {
   IC_PLANE_ROW_HOST_ATTR,
   Stage,
   whenDiagramHostCameraReady,
-  type DiagramScene,
   type DiagramSceneNode,
 } from '@westlane/isocanvas';
-import {
-  artboardUserSizeFromIso216Series,
-  DEFAULT_ARTBOARD_GRID_DIVISIONS,
-  defaultLatticeStage,
-  DIAGRAM_NODE_FOOTPRINT,
-  planeRectsSpaceBetweenInRow,
-  relayoutDiagramSceneNodesInPackedRows,
-} from '@westlane/isocanvas/layout';
 
-import {
-  buildGeotypeTaxonomyDiagramArtboards,
-  type GeotypeTaxonomyDiagramCategory,
-} from '../src/taxonomy-diagram.js';
+import { buildGeotypeTaxonomyDiagramArtboards } from '../src/taxonomy-diagram.js';
 import type { PlaceArchetype } from '../src/types/place-layout.js';
-
-/** Landscape columns — merged on one continuous plane row (single SVG / single camera). */
-const VIZ_ARTBOARD_USER_SIZE = artboardUserSizeFromIso216Series(17, {
-  landscape: true,
-  longEdgePx: 1900,
-});
-
-const GRID_COLS = 4;
-
-/** 2×2 continuous plane grid (one merged SVG / single camera). */
-const ARCHETYPE_GRID_SLOT: Record<
-  PlaceArchetype,
-  { col: number; row: number }
-> = {
-  single_level: { col: 0, row: 0 },
-  campus: { col: 1, row: 0 },
-  linear: { col: 0, row: 1 },
-  indoor_stack: { col: 1, row: 1 },
-};
+import {
+  buildTaxonomyVizDiagramScene,
+  TAXONOMY_VIZ_ARTBOARD_USER_SIZE,
+} from './taxonomy-scene.js';
 
 const ARCHETYPE_CUBE_COLORS: Record<
   PlaceArchetype,
@@ -77,73 +50,23 @@ const ARCHETYPE_CUBE_COLORS: Record<
     bottom: '#6d28d9',
     labelFill: '#4c1d95',
   },
+  open_area: {
+    top: '#d9f99d',
+    front: '#a3e635',
+    right: '#84cc16',
+    left: '#65a30d',
+    bottom: '#4d7c0f',
+    labelFill: '#365314',
+  },
+  network: {
+    top: '#fecdd3',
+    front: '#fb7185',
+    right: '#f43f5e',
+    left: '#e11d48',
+    bottom: '#be123c',
+    labelFill: '#881337',
+  },
 };
-
-function diagramSceneForCategories(
-  archetype: PlaceArchetype,
-  categories: readonly GeotypeTaxonomyDiagramCategory[],
-): DiagramScene {
-  if (categories.length === 0) {
-    return {
-      nodes: [],
-      viewBox: {
-        x: 0,
-        y: 0,
-        w: VIZ_ARTBOARD_USER_SIZE.width,
-        h: VIZ_ARTBOARD_USER_SIZE.height,
-      },
-    };
-  }
-
-  const rowCount = Math.max(1, Math.ceil(categories.length / GRID_COLS));
-  const divisions = Math.max(rowCount, GRID_COLS, DEFAULT_ARTBOARD_GRID_DIVISIONS);
-  const stage = defaultLatticeStage(VIZ_ARTBOARD_USER_SIZE);
-  stage.divisions = divisions;
-
-  const footprint = DIAGRAM_NODE_FOOTPRINT;
-  const nodes: DiagramSceneNode[] = [];
-
-  for (let row = 0; row < rowCount; row += 1) {
-    const slice = categories.slice(row * GRID_COLS, (row + 1) * GRID_COLS);
-    const rects = planeRectsSpaceBetweenInRow(row, slice.length, footprint, {
-      stage,
-      gridCols: GRID_COLS,
-      rowCount,
-      rowSpan: divisions,
-    });
-    for (let index = 0; index < slice.length; index += 1) {
-      const category = slice[index]!;
-      const rect = rects[index]!;
-      nodes.push({
-        id: category.id,
-        label: `${category.label}\n(${category.slugCount})`,
-        x: rect.x,
-        y: rect.y,
-        w: footprint.widthPx,
-        h: footprint.depthPx,
-        cubeFaceColors: ARCHETYPE_CUBE_COLORS[archetype],
-      });
-    }
-  }
-
-  const relaid = relayoutDiagramSceneNodesInPackedRows(nodes, stage, {
-    footprintUser: footprint,
-    gridCols: GRID_COLS,
-    rowCount,
-    rowSpan: divisions,
-  });
-
-  return {
-    viewBox: {
-      x: stage.x ?? 0,
-      y: stage.y ?? 0,
-      w: stage.width,
-      h: stage.height,
-    },
-    divisions: stage.divisions,
-    nodes: relaid,
-  };
-}
 
 const viewportEl = document.getElementById('diagram-viewport');
 if (!viewportEl) {
@@ -155,7 +78,6 @@ viewportEl.classList.add('ic-stage-viewport');
 const themeManager = applyDefaultDiagramTheme();
 const artboards = buildGeotypeTaxonomyDiagramArtboards();
 
-/** One merged diagram on the plane-row host (2×2 grid → single pan/zoom camera). */
 const stageModel = Stage.create({
   layout: 'row',
   row: {
@@ -176,11 +98,11 @@ stageModel.mount(
   artboards.map((board) => ({
     id: board.id,
     label: board.label,
-    gridSlot: ARCHETYPE_GRID_SLOT[board.id],
-    scene: diagramSceneForCategories(board.id, board.categories),
+    gridSlot: board.gridSlot,
+    scene: buildTaxonomyVizDiagramScene(board.id, ARCHETYPE_CUBE_COLORS[board.archetype], board.categories),
     embedDotGrid: false,
     contentId: `diagram-host-${board.id}`,
-    userSize: VIZ_ARTBOARD_USER_SIZE,
+    userSize: TAXONOMY_VIZ_ARTBOARD_USER_SIZE,
   })),
   {
     colors: themeManager.getTheme().colors,

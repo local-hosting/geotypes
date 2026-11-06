@@ -1,3 +1,5 @@
 entertainment_gaming:
   name: Entertainment Gaming
-  archetype: single_level
+  extent: footprint
+  layers: [assets]
+  situations: [severe-weather]

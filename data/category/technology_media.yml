@@ -1,3 +1,4 @@
 technology_media:
   name: Technology Media
-  archetype: single_level
+  extent: footprint
+  situations: [severe-weather]

@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest';
 
-import { placeScaffoldForGeotypeRef, placeScaffoldForSlug } from '../src/place-archetype.js';
+import {
+  isAssetGeotype,
+  placeAxesForSlug,
+  placeDecorationsForSlug,
+  placeScaffoldForGeotypeRef,
+  placeScaffoldForSlug,
+} from '../src/place-archetype.js';
 
 describe('placeScaffoldForSlug (map-first)', () => {
   it('maps shopping_mall to campus and zone scale (mall property on maps)', () => {
@@ -23,6 +29,36 @@ describe('placeScaffoldForSlug (map-first)', () => {
 
   it('maps airport to campus archetype', () => {
     expect(placeScaffoldForSlug('airport')?.archetype).toBe('campus');
+  });
+
+  it('maps public_park to open_area', () => {
+    expect(placeScaffoldForSlug('public_park')?.archetype).toBe('open_area');
+  });
+
+  it('exposes materialized axes per slug', () => {
+    expect(placeAxesForSlug('hotel')).toEqual({ extent: 'footprint', vertical: 'stacked', movement: 'free' });
+    expect(placeAxesForSlug('not_a_real_type')).toBeNull();
+  });
+
+  it('assigns situations and decoration layers per slug', () => {
+    expect(placeDecorationsForSlug('creek')).toEqual({
+      situations: ['dam-release', 'litter-pollution'],
+      layers: ['sensors', 'visits'],
+    });
+    expect(placeDecorationsForSlug('stadium')?.situations).toEqual(['severe-weather', 'transit-disruption']);
+    expect(placeDecorationsForSlug('retail_bank')?.situations).toEqual(['severe-weather']);
+    expect(placeDecorationsForSlug('food_truck')).toEqual({ situations: [], layers: ['assets'] });
+    expect(placeDecorationsForSlug('not_a_real_type')).toBeNull();
+  });
+
+  it('treats point assets as asset kinds, not places', () => {
+    for (const slug of ['fire_hydrant', 'utility_pole', 'stop_sign', 'traffic_light']) {
+      expect(isAssetGeotype(slug), slug).toBe(true);
+      expect(placeScaffoldForSlug(slug), slug).toBeNull();
+      expect(placeDecorationsForSlug(slug), slug).toBeNull();
+    }
+    expect(isAssetGeotype('church')).toBe(false);
+    expect(placeScaffoldForSlug('church')?.archetype).toBe('single_level');
   });
 
   it('resolves from geotype ref', () => {

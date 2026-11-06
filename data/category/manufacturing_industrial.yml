@@ -1,3 +1,5 @@
 manufacturing_industrial:
   name: Manufacturing Industrial
-  archetype: campus
+  extent: site
+  layers: [sensors]
+  situations: [severe-weather]

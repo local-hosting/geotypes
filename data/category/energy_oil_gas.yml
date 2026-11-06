@@ -1,3 +1,5 @@
 energy_oil_gas:
   name: Energy Oil Gas
-  archetype: linear
+  extent: site
+  layers: [sensors]
+  situations: [severe-weather]

@@ -1,6 +1,8 @@
 retail:
   name: Retail
-  archetype: single_level
+  extent: footprint
+  layers: [assets]
+  situations: [severe-weather]
   id: 4d4b7105d754a06378d81259
   subcategories:
     cosmetics_store:

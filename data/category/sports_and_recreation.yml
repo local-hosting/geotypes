@@ -1,6 +1,7 @@
 sports_and_recreation:
   name: Sports and Recreation
-  archetype: campus
+  extent: site
+  situations: [severe-weather]
   id: 4f4528bc4b90abdf24c9de85
   subcategories:
     rugby:

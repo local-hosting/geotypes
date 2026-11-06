@@ -1,3 +1,5 @@
 utilities_infrastructure:
   name: Utilities Infrastructure
-  archetype: linear
+  extent: site
+  layers: [sensors]
+  situations: []

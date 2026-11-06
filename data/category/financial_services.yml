@@ -1,3 +1,4 @@
 financial_services:
   name: Financial Services
-  archetype: single_level
+  extent: footprint
+  situations: [severe-weather]

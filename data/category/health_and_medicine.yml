@@ -1,6 +1,7 @@
 health_and_medicine:
   name: Health and Medicine
-  archetype: campus
+  extent: site
+  situations: [severe-weather]
   id: 63be6904847c3692a84b9bb9
   subcategories:
     mental_health_service:

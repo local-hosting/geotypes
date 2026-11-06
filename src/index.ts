@@ -31,11 +31,27 @@ export {
   schemaOrgUriForSlug,
 } from './schema-org.js';
 export {
+  archetypeForAxes,
+  isAssetGeotype,
+  isPlaceArchetype,
+  PLACE_ARCHETYPE_AXES,
+  PLACE_ARCHETYPES,
+  PLACE_LAYER_KINDS,
+  placeAxesForSlug,
+  placeDecorationsForSlug,
   placeScaffoldForGeotypeRef,
   placeScaffoldForSlug,
+  resolvePlaceAxes,
   type AuthoringScale,
   type PlaceArchetype,
+  type PlaceArchetypeAxes,
+  type PlaceAxes,
+  type PlaceDecorations,
+  type PlaceExtent,
+  type PlaceLayerKind,
+  type PlaceMovement,
   type PlaceScaffold,
+  type PlaceVertical,
   type LinearUnit,
   type SpaceGranularity,
 } from './place-archetype.js';
@@ -48,6 +64,8 @@ export {
 export {
   buildGeotypeTaxonomyDiagramArtboards,
   categoryLabelFromId,
+  placeLabelFromSlug,
   type GeotypeTaxonomyDiagramArtboard,
   type GeotypeTaxonomyDiagramCategory,
+  type GeotypeTaxonomyDiagramPlace,
 } from './taxonomy-diagram.js';
