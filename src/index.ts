@@ -32,6 +32,7 @@ export {
 } from './schema-org.js';
 export {
   archetypeForAxes,
+  geotypeKindForSlug,
   isAssetGeotype,
   isPlaceArchetype,
   PLACE_ARCHETYPE_AXES,
@@ -42,6 +43,7 @@ export {
   placeScaffoldForGeotypeRef,
   placeScaffoldForSlug,
   resolvePlaceAxes,
+  type GeotypeKind,
   type AuthoringScale,
   type PlaceArchetype,
   type PlaceArchetypeAxes,

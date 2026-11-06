@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./page.css" />
   </head>
   <body>
+    <div class="geotypes-kind-toggle" role="group" aria-label="Geotype kind">
+      <button type="button" data-kind="venue" aria-pressed="true">Venues</button>
+      <button type="button" data-kind="resource" aria-pressed="false">Resources</button>
+    </div>
     <div id="diagram-viewport" class="geotypes-viz-viewport ic-stage-viewport"></div>
     <script type="module" src="./main.ts"></script>
   </body>

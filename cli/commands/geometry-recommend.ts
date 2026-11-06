@@ -4,6 +4,8 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as yaml from 'js-yaml';
 
+import { loadFeatureCatalog } from '../../scripts/feature-catalog.ts';
+
 interface Feature {
   id: string;
   name: string;
@@ -258,14 +260,13 @@ function saveYamlFile(filePath: string, data: any): void {
 }
 
 function updateYamlFiles(recommendations: GeometryRecommendation[], confidenceThreshold: number = 0.8): void {
-  const featuresFile = path.join(process.cwd(), 'data', 'features.yml');
-  
-  // Load the features file
-  const data = loadYamlFile(featuresFile);
-  if (!data || !Array.isArray(data)) {
-    console.error('❌ Features file is not a valid YAML array');
-    return;
+  const byFile = new Map<string, Feature[]>();
+  for (const entry of loadFeatureCatalog(process.cwd())) {
+    const list = byFile.get(entry.sourcePath) ?? [];
+    list.push(entry.feature as Feature);
+    byFile.set(entry.sourcePath, list);
   }
+  const data = [...byFile.values()].flat();
   
   // Find features that need updates
   const updates: GeometryRecommendation[] = [];
@@ -290,15 +291,14 @@ function updateYamlFiles(recommendations: GeometryRecommendation[], confidenceTh
   });
   
   if (totalUpdated > 0) {
-    saveYamlFile(featuresFile, data);
-    console.log(`💾 Updated features.yml with ${totalUpdated} geometry changes`);
+    for (const [filePath, features] of byFile) saveYamlFile(filePath, features);
+    console.log(`💾 Updated venue and resource catalogs with ${totalUpdated} geometry changes`);
   }
   
   console.log(`\n🎉 Total features updated: ${totalUpdated}`);
 }
 
 export async function geometryRecommend(opts: { apply?: boolean, json?: boolean }) {
-  const featuresFile = path.join(process.cwd(), 'data', 'features.yml');
   const outputFile = path.join(process.cwd(), 'scripts', 'geometry_recommendations.json');
   const shouldUpdate = !!opts.apply;
   const shouldWriteJson = !!opts.json;
@@ -306,25 +306,20 @@ export async function geometryRecommend(opts: { apply?: boolean, json?: boolean 
 
   console.log('🔍 Analyzing geometry types for all features...\n');
 
-  // Load features from the single YAML file
-  const data = loadYamlFile(featuresFile);
-  if (!data || !Array.isArray(data)) {
-    throw new Error('❌ Features file is not a valid YAML array');
-  }
-
+  const data = loadFeatureCatalog(process.cwd()).map((entry) => entry.feature);
   const allFeatures: Feature[] = [];
 
   // Process each feature
   data.forEach((feature: any, idx: number) => {
     if (!feature || typeof feature !== 'object' || !feature.id || !feature.name || !feature.geometry_type) {
-      console.warn(`\n❗ Problematic entry in features.yml [index ${idx}]:`);
+      console.warn(`\n❗ Problematic catalog entry [index ${idx}]:`);
       console.warn('  Entry:', JSON.stringify(feature, null, 2));
     } else {
       allFeatures.push(feature as Feature);
     }
   });
 
-  console.log(`📊 Loaded ${allFeatures.length} features from features.yml\n`);
+  console.log(`📊 Loaded ${allFeatures.length} features from the venue and resource catalogs\n`);
 
   // Analyze each feature
   const recommendations: GeometryRecommendation[] = [];

@@ -1,5 +1,5 @@
 /**
- * Geotypes POI slugs — synced from data/features.yml (`name` field).
+ * Geotypes POI slugs — synced from data/venue/features.yml and data/resource/features.yml (`name`).
  * Regenerate: yarn sync:slugs
  */
 

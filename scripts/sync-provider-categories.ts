@@ -6,8 +6,9 @@ import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import yaml from 'js-yaml';
 
+import { loadFeatureCatalog } from './feature-catalog.ts';
+
 const pkgRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const featuresPath = path.join(pkgRoot, 'data', 'features.yml');
 const schemaOrgPath = path.join(pkgRoot, 'data', 'schema-org-by-slug.yml');
 const categoryDir = path.join(pkgRoot, 'data', 'category');
 const outPath = path.join(pkgRoot, 'src', 'generated', 'provider-categories.ts');
@@ -74,18 +75,14 @@ function assertSchemaOrgType(type: string, slug: string): string {
 }
 
 function main(): void {
-  const raw = yaml.load(fs.readFileSync(featuresPath, 'utf8')) as unknown;
-  if (!Array.isArray(raw)) throw new Error('expected features.yml array');
-
   const googleBySlug: Record<string, string> = {};
   const hereBySlug: Record<string, string> = {};
   const osmBySlug: Record<string, string> = {};
   const esriBySlug: Record<string, string> = {};
   const schemaOrgBySlug = loadSchemaOrgBySlug();
 
-  for (const entry of raw) {
-    if (!entry || typeof entry !== 'object') continue;
-    const row = entry as FeatureRow;
+  for (const entry of loadFeatureCatalog(pkgRoot)) {
+    const row = entry.feature as FeatureRow;
     const slug = typeof row.name === 'string' ? row.name.trim().toLowerCase() : '';
     if (!slug) continue;
     const mappings = row.mappings ?? {};
@@ -136,7 +133,7 @@ function main(): void {
 
   const lines = [
     '/**',
-    ' * Provider category crosswalks — synced from features.yml, schema-org-by-slug.yml, data/category/*.yml',
+    ' * Provider category crosswalks — synced from data/venue and data/resource feature catalogs, schema-org-by-slug.yml, data/category/*.yml',
     ' * Regenerate: yarn sync:providers',
     ' */',
     '',

@@ -8,7 +8,7 @@ import {
 } from '@westlane/isocanvas';
 
 import { buildGeotypeTaxonomyDiagramArtboards } from '../src/taxonomy-diagram.js';
-import type { PlaceArchetype } from '../src/types/place-layout.js';
+import type { GeotypeKind, PlaceArchetype } from '../src/types/place-layout.js';
 import {
   buildTaxonomyVizDiagramScene,
   TAXONOMY_VIZ_ARTBOARD_USER_SIZE,
@@ -68,7 +68,6 @@ if (!viewportEl) {
 viewportEl.classList.add('ic-stage-viewport');
 
 const themeManager = applyDefaultDiagramTheme();
-const artboards = buildGeotypeTaxonomyDiagramArtboards();
 
 const stageModel = Stage.create({
   layout: 'row',
@@ -86,25 +85,32 @@ const stageModel = Stage.create({
 
 viewportEl.replaceChildren(stageModel.container);
 
-stageModel.mount(
-  artboards.map((board) => ({
-    id: board.id,
-    label: board.label,
-    gridSlot: board.gridSlot,
-    scene: buildTaxonomyVizDiagramScene(board.id, ARCHETYPE_CUBE_COLORS[board.archetype], board.categories),
-    embedDotGrid: false,
-    contentId: `diagram-host-${board.id}`,
-    userSize: TAXONOMY_VIZ_ARTBOARD_USER_SIZE,
-  })),
-  {
-    colors: themeManager.getTheme().colors,
-    registry: { createDefaults: { embedDotGrid: false } },
-  },
-);
+let didFitAfterViewportSized = false;
 
-for (const board of stageModel.handle.getArtboards()) {
-  applyGridLinesMode(board.artboard.root, true);
-  board.host.classList.add('diagram-host');
+const MOUNT_OPTIONS = {
+  colors: themeManager.getTheme().colors,
+  registry: { createDefaults: { embedDotGrid: false } },
+};
+
+function showKind(kind: GeotypeKind): void {
+  stageModel.mount(
+    buildGeotypeTaxonomyDiagramArtboards(kind).map((board) => ({
+      id: board.id,
+      label: board.label,
+      gridSlot: board.gridSlot,
+      scene: buildTaxonomyVizDiagramScene(board.id, ARCHETYPE_CUBE_COLORS[board.archetype], board.categories),
+      embedDotGrid: false,
+      contentId: `diagram-host-${board.id}`,
+      userSize: TAXONOMY_VIZ_ARTBOARD_USER_SIZE,
+    })),
+    MOUNT_OPTIONS,
+  );
+  for (const board of stageModel.handle.getArtboards()) {
+    applyGridLinesMode(board.artboard.root, true);
+    board.host.classList.add('diagram-host');
+  }
+  didFitAfterViewportSized = false;
+  fitWhenReady();
 }
 
 const FIT_VIEW_OPTIONS = { artboardPaddingPx: 32, contentPaddingRatio: 0.08 };
@@ -130,11 +136,32 @@ function fitWhenReady(maxFrames = 60): void {
 }
 
 stageModel.attachPanZoom({ surface: viewportEl });
-fitWhenReady();
 
 window.addEventListener('load', () => fitWhenReady(32), { once: true });
 
-let didFitAfterViewportSized = false;
+const kindToggle = document.querySelector('.geotypes-kind-toggle');
+if (!kindToggle) {
+  throw new Error('geotypes viz: missing kind toggle');
+}
+
+function selectKind(kind: GeotypeKind): void {
+  for (const button of kindToggle.querySelectorAll('button[data-kind]')) {
+    if (!(button instanceof HTMLButtonElement)) continue;
+    button.setAttribute('aria-pressed', button.dataset.kind === kind ? 'true' : 'false');
+  }
+  showKind(kind);
+}
+
+kindToggle.addEventListener('click', (event) => {
+  const button = event.target;
+  if (!(button instanceof HTMLButtonElement)) return;
+  const kind = button.dataset.kind;
+  if (kind !== 'venue' && kind !== 'resource') return;
+  selectKind(kind);
+});
+
+selectKind('venue');
+
 const resizeObserver = new ResizeObserver(() => {
   if (didFitAfterViewportSized) {
     return;

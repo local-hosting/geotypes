@@ -7,6 +7,7 @@ import { resolvePlaceArchetype } from './place-archetype-resolve.js';
 import { normalizeGeotypeSlug } from './normalize.js';
 import { resolveGeotypeRef, type GeotypeRef } from './resolve-ref.js';
 import type {
+  GeotypeKind,
   GeotypeLayoutMeta,
   GeotypeLayoutMetaInput,
   PlaceArchetype,
@@ -28,6 +29,7 @@ export type {
   PlaceAxes,
   PlaceExtent,
   PlaceMovement,
+  GeotypeKind,
   PlaceScaffold,
   PlaceVertical,
   LinearUnit,
@@ -79,6 +81,14 @@ export function placeScaffoldForGeotypeRef(ref: GeotypeRef): PlaceScaffold | nul
 export function placeAxesForSlug(slug: string): PlaceAxes | null {
   const meta = getLayoutMeta(slug);
   return meta ? { extent: meta.extent, vertical: meta.vertical, movement: meta.movement } : null;
+}
+
+/** `venue` for an occupiable place, `resource` for equipment and conveyance (including point assets). */
+export function geotypeKindForSlug(slug: string): GeotypeKind | null {
+  const meta = getLayoutMeta(slug);
+  if (meta) return meta.kind;
+  if (isAssetGeotype(slug)) return 'resource';
+  return null;
 }
 
 /** Point assets with no interior (signs, hydrants, poles): `assets.yaml` kinds, not places. */

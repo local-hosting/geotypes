@@ -8,8 +8,9 @@ Open POI taxonomy registry for Twinfile place units — slugs, 3-letter acronyms
 ## Layout
 
 ```text
-data/features.yml     POI taxonomy (~297 types)
-data/category/              Category YAML (`archetype` on each root)
+data/venue/features.yml     Places a person can be in, at, or travel along
+data/resource/features.yml  Equipment and conveyance (stop signs, cables, pipelines)
+data/category/              Category YAML (`extent` on each root)
 data/place-archetype-rules.yml  Authoring-scale defaults + slug overrides
 proto/                geospatial.proto + tags.proto
 generated/            protoc output (`yarn generate`)
@@ -24,7 +25,7 @@ src/                  Runtime (slugs, acronyms, provider crosswalk, archetype re
 yarn install
 yarn generate          # proto → generated/
 yarn sync              # slugs + acronyms + provider crosswalks + place archetypes
-yarn sync:slugs        # data/features.yml → src/slugs.ts
+yarn sync:slugs        # data/venue + data/resource → src/slugs.ts
 yarn sync:acronyms     # id + name → src/generated/acronyms.ts
 yarn sync:providers    # Foursquare/Google/OSM/HERE → provider-categories.ts
 yarn sync:place-archetypes  # → src/generated/place-archetype-data.ts
@@ -34,7 +35,7 @@ yarn check             # neutral-language guard + typecheck + tests
 
 ## Taxonomy visualization (isocanvas)
 
-Local iso diagram of registry slugs grouped by **materialized place archetype** (`GEOTYPE_LAYOUT_META_BY_SLUG.archetype`, from `yarn sync:place-archetypes`). Requires a sibling checkout of [`@westlane/isocanvas`](https://github.com/westlane/isocanvas) at `../../westlane/isocanvas` (or set `TF_ISOCANVAS_ROOT`).
+Local iso diagram of registry slugs on the extent × vertical grid. The **Venues / Resources** toggle shows one catalog at a time (`data/venue/features.yml`, `data/resource/features.yml`). Requires a sibling checkout of [`@westlane/isocanvas`](https://github.com/westlane/isocanvas) at `../../westlane/isocanvas` (or set `TF_ISOCANVAS_ROOT`).
 
 ```bash
 yarn viz   # http://localhost:5175

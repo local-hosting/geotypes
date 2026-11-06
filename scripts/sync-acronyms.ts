@@ -1,27 +1,23 @@
 #!/usr/bin/env node --import tsx
-/** Regenerate src/generated/acronyms.ts from data/features.yml */
+/** Regenerate src/generated/acronyms.ts from the venue and resource feature catalogs. */
 
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import yaml from 'js-yaml';
+
+import { loadFeatureCatalog } from './feature-catalog.ts';
 
 const pkgRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const featuresPath = path.join(pkgRoot, 'data', 'features.yml');
 const outPath = path.join(pkgRoot, 'src', 'generated', 'acronyms.ts');
 
 type FeatureRow = { id?: string; name?: string };
 
 function main(): void {
-  const raw = yaml.load(fs.readFileSync(featuresPath, 'utf8')) as unknown;
-  if (!Array.isArray(raw)) throw new Error('expected features.yml array');
-
   const byAcronym: Record<string, string> = {};
   const bySlug: Record<string, string> = {};
 
-  for (const entry of raw) {
-    if (!entry || typeof entry !== 'object') continue;
-    const row = entry as FeatureRow;
+  for (const entry of loadFeatureCatalog(pkgRoot)) {
+    const row = entry.feature as FeatureRow;
     const acronym = typeof row.id === 'string' ? row.id.trim().toUpperCase() : '';
     const slug = typeof row.name === 'string' ? row.name.trim().toLowerCase() : '';
     if (!acronym || !slug) continue;
@@ -32,7 +28,7 @@ function main(): void {
   const acronyms = Object.keys(byAcronym).sort();
   const lines = [
     '/**',
-    ' * Geotype acronyms — synced from data/features.yml (`id` + `name`).',
+    ' * Geotype acronyms — synced from data/venue and data/resource feature catalogs (`id` + `name`).',
     ' * Regenerate: yarn sync:acronyms',
     ' */',
     '',

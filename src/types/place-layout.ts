@@ -80,6 +80,9 @@ export type PlaceArchetypeConfig = {
   slugs: Record<string, PlaceSlugOverride>;
 };
 
+/** Top-level geotype divide. An actor (a moving dot) is not a geotype. */
+export type GeotypeKind = 'venue' | 'resource';
+
 /** Slug row inputs used when resolving archetype (sync / tests). */
 export type GeotypeLayoutMetaInput = {
   category: string;
@@ -91,4 +94,11 @@ export type GeotypeLayoutMeta = GeotypeLayoutMetaInput &
   PlaceAxes &
   PlaceDecorations & {
     archetype: PlaceArchetype;
+    kind: GeotypeKind;
   };
+
+/** Point asset row (no place axes). Every asset is a resource. */
+export type GeotypeAssetMeta = {
+  category: string;
+  geometry_type: string;
+};

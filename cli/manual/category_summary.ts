@@ -1,7 +1,6 @@
 #!/usr/bin/env tsx
 
-import { readFileSync } from 'fs';
-import { load } from 'js-yaml';
+import { loadFeatureCatalog } from '../../scripts/feature-catalog.ts';
 
 interface Feature {
   id: string;
@@ -13,12 +12,9 @@ interface Feature {
   category: string;
 }
 
-function analyzeCategories(inputFile: string) {
-  console.log(`Reading features from ${inputFile}...`);
-  
-  // Read the YAML file
-  const yamlContent = readFileSync(inputFile, 'utf8');
-  const features = load(yamlContent) as Feature[];
+function analyzeCategories() {
+  const features = loadFeatureCatalog(process.cwd()).map((entry) => entry.feature as Feature);
+  console.log('Reading venue and resource feature catalogs...');
   
   console.log(`Analyzing ${features.length} features...`);
   
@@ -70,10 +66,8 @@ function analyzeCategories(inputFile: string) {
 }
 
 // Run the script
-const inputFile = 'data/features.yml';
-
 try {
-  analyzeCategories(inputFile);
+  analyzeCategories();
 } catch (error) {
   console.error('❌ Error:', error);
   process.exit(1);

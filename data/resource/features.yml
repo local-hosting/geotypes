@@ -1,0 +1,456 @@
+# Resources — equipment and conveyance fixed on the map.
+# Includes point assets (stop_sign) and lines (underground_cable, pipelines, survey lines).
+# Places a person can occupy live in data/venue/features.yml.
+- id: BBA
+  name: atm
+  description: Automated teller machine
+  geometry_type: point
+  mappings:
+    nfdd: AL015
+    esri: ATM
+    iso19110: FinancialFacility
+    openstreetmap: amenity=atm
+    google: atm
+    here: ATM
+    foursquare: financial_services
+    naics: 522320
+  tags: banking_credit
+  category: financial_services
+- id: EPC
+  name: capacitor
+  description: Power capacitor
+  geometry_type: point
+  mappings:
+    nfdd: AT030
+    esri: Capacitor
+    iso19110: PowerEquipment
+    openstreetmap: power=capacitor
+    ieee: CAP
+    utility: CAPACITOR
+  tags: electric_power
+  category: utilities_infrastructure
+- id: TCT
+  name: cell_tower
+  description: Cellular communication tower
+  geometry_type: point
+  mappings:
+    nfdd: AT042
+    esri: Cell Tower
+    iso19110: CommunicationFacility
+    openstreetmap: man_made=mast
+    fcc: TOWER_COMMS
+    telecom: CELL_SITE
+  tags: telecommunications
+  category: utilities_infrastructure
+- id: PTC
+  name: charging_station
+  description: Electric vehicle charging station
+  geometry_type: point
+  mappings:
+    nfdd: AN076
+    esri: Charging Station
+    iso19110: TransportationFacility
+    openstreetmap: amenity=charging_station
+    google: gas_station
+    here: CHARGING_STATION
+    foursquare: travel_transport
+    dot: EV_CHARGING
+  tags: electric_vehicle_charging_station, transportation_logistics, public_transit
+  category: travel_and_transportation
+- id: EPD
+  name: distribution_line
+  description: Medium-voltage power distribution line
+  geometry_type: linestring
+  mappings:
+    nfdd: AT005
+    esri: Distribution Line
+    iso19110: PowerDistributionLine
+    openstreetmap: power=line
+    ieee: DIST_LINE
+    utility: DIST_LINE
+  tags: electric_power
+  category: utilities_infrastructure
+- id: ESS
+  name: emergency_siren
+  description: Emergency warning siren
+  geometry_type: point
+  mappings:
+    nfdd: null
+    esri: Emergency Siren
+    iso19110: EmergencyWarningSystem
+    openstreetmap: man_made=siren
+    fema: SIREN
+  tags: emergency_services
+  category: utilities_infrastructure
+- id: TCF
+  name: fiber_line
+  description: Fiber optic cable line
+  geometry_type: linestring
+  mappings:
+    nfdd: AT042
+    esri: Communication Line
+    iso19110: CommunicationLine
+    openstreetmap: communication=fibre
+    fcc: LINE_COMMS
+    telecom: FIBER_CABLE
+    ieee: FIBER
+  tags: telecommunications
+  category: utilities_infrastructure
+- id: TCN
+  name: fiber_node
+  description: Fiber optic network node
+  geometry_type: point
+  mappings:
+    nfdd: AT042
+    esri: Communication Node
+    iso19110: CommunicationNode
+    openstreetmap: man_made=street_cabinet
+    fcc: NODE_COMMS
+    telecom: FIBER_NODE
+    ieee: FIBER_NODE
+  tags: telecommunications
+  category: utilities_infrastructure
+- id: AGO
+  name: field_observation_point
+  description: Agricultural observation or sampling point
+  geometry_type: polygon
+  mappings:
+    nfdd: null
+    esri: Observation Point
+    iso19110: ObservationPoint
+    openstreetmap: null
+    usda: SAMPLE_POINT
+    precision_ag: OBSERVATION
+  tags: agriculture_farming
+  category: natural_resources
+- id: WSH
+  name: fire_hydrant
+  description: Fire hydrant
+  geometry_type: point
+  mappings:
+    nfdd: null
+    esri: Fire Hydrant
+    iso19110: FireHydrant
+    openstreetmap: emergency=fire_hydrant
+    nfpa: HYDRANT
+    awwa: HYDRANT
+    utility: HYDR
+  tags: water_sewer
+  category: utilities_infrastructure
+- id: NGM
+  name: gas_meter
+  description: Natural gas meter
+  geometry_type: point
+  mappings:
+    nfdd: BI005
+    esri: Gas Meter
+    iso19110: UtilityMeter
+    openstreetmap: man_made=gas_meter
+    aga: METER
+  tags: natural_gas
+  category: utilities_infrastructure
+- id: NGP
+  name: gas_pipeline
+  description: Natural gas pipeline
+  geometry_type: linestring
+  mappings:
+    nfdd: BI005
+    esri: Gas Pipeline
+    iso19110: Pipeline
+    openstreetmap: man_made=pipeline
+    phmsa: PIPELINE
+    aga: PIPELINE
+  tags: natural_gas
+  category: utilities_infrastructure
+- id: TCJ
+  name: junction_box
+  description: Utility junction box
+  geometry_type: point
+  mappings:
+    nfdd: null
+    esri: Junction Box
+    iso19110: ElectricalEquipment
+    openstreetmap: power=junction_box
+    utility: JBOX
+  tags: telecommunications
+  category: utilities_infrastructure
+- id: MAN
+  name: manhole_cover
+  description: Manhole cover
+  geometry_type: point
+  mappings:
+    nfdd: null
+    esri: Manhole Cover
+    iso19110: UtilityInfrastructure
+    openstreetmap: man_made=manhole
+    utility: MANHOLE
+  tags: telecommunications
+  category: utilities_infrastructure
+- id: MEW
+  name: oil_gas_well
+  description: Oil or gas well
+  geometry_type: polygon
+  mappings:
+    nfdd: AA012
+    esri: Oil Well
+    iso19110: ExtractionFacility
+    openstreetmap: man_made=petroleum_well
+    msha: WELL
+  tags: mining_extraction
+  category: natural_resources
+- id: EPP
+  name: power_line_tower
+  description: High-voltage transmission tower
+  geometry_type: point
+  mappings:
+    nfdd: AT030
+    esri: Transmission Tower
+    iso19110: PowerTransmissionTower
+    openstreetmap: power=tower
+    ieee: TOWER
+    utility: TX_TOWER
+  tags: electric_power
+  category: utilities_infrastructure
+- id: OGP
+  name: production_well
+  description: Oil or gas production well
+  geometry_type: polygon
+  mappings:
+    nfdd: AL017
+    esri: Oil Well
+    iso19110: IndustrialFacility
+    openstreetmap: man_made=oil_well
+    google: establishment
+    here: INDUSTRIAL_FACILITY
+    foursquare: professional
+    naics: 211000
+  tags: oil_gas_production
+  category: energy_oil_gas
+- id: TCR
+  name: radio_tower
+  description: Radio/broadcast tower
+  geometry_type: point
+  mappings:
+    nfdd: AT030
+    esri: Radio Tower
+    iso19110: TelecommunicationsTower
+    openstreetmap: man_made=tower
+    fcc: TOWER
+  tags: telecommunications
+  category: utilities_infrastructure
+- id: EPR
+  name: regulator
+  description: Voltage regulator
+  geometry_type: point
+  mappings:
+    nfdd: AT030
+    esri: Voltage Regulator
+    iso19110: PowerEquipment
+    openstreetmap: power=regulator
+    ieee: REG
+    utility: REGULATOR
+  tags: electric_power
+  category: utilities_infrastructure
+- id: EMR
+  name: riverbank_survey
+  description: Riverbank erosion survey line
+  geometry_type: linestring
+  mappings:
+    nfdd: null
+    esri: Survey Line
+    iso19110: SurveyLine
+    openstreetmap: waterway=river
+    usfws: SURVEY_LINE
+    epa: RIVER_SURVEY
+  tags: environmental_monitoring
+  category: natural_resources
+- id: WSS
+  name: spring
+  description: Natural spring
+  geometry_type: point
+  mappings:
+    nfdd: BH020
+    esri: Spring
+    iso19110: NaturalWaterSource
+    openstreetmap: natural=spring
+    awwa: SPRING
+    utility: SPRING
+  tags: water_sewer
+  category: utilities_infrastructure
+- id: STP
+  name: stop_sign
+  description: Stop sign
+  geometry_type: point
+  mappings:
+    nfdd: AP042
+    esri: Stop Sign
+    iso19110: TrafficControlDevice
+    openstreetmap: highway=stop
+    google: establishment
+    here: STOP_SIGN
+    foursquare: travel_transport
+    mutcd: STOP
+    dot: STOP_SIGN
+  tags: roads_streets
+  category: transportation_logistics
+- id: AGT
+  name: survey_transect
+  description: Agricultural survey transect line
+  geometry_type: linestring
+  mappings:
+    nfdd: null
+    esri: Survey Line
+    iso19110: SurveyLine
+    openstreetmap: null
+    usda: TRANSECT
+    precision_ag: SURVEY_LINE
+  tags: agriculture_farming
+  category: natural_resources
+- id: EPG
+  name: switch_gear
+  description: Electrical switch gear
+  geometry_type: point
+  mappings:
+    nfdd: AT030
+    esri: Switch Gear
+    iso19110: PowerEquipment
+    openstreetmap: power=switch
+    ieee: SWITCH
+    utility: SWITCH
+  tags: electric_power
+  category: utilities_infrastructure
+- id: RST
+  name: traffic_light
+  description: Traffic signal/light
+  geometry_type: point
+  mappings:
+    nfdd: AP041
+    esri: Traffic Light
+    iso19110: TrafficControlDevice
+    openstreetmap: highway=traffic_signals
+    google: establishment
+    here: TRAFFIC_LIGHT
+    foursquare: travel_transport
+    mutcd: SIGNAL
+    dot: TRAFFIC_SIGNAL
+  tags: roads_streets
+  category: transportation_logistics
+- id: EPT
+  name: transformer
+  description: Electrical power transformer
+  geometry_type: point
+  mappings:
+    nfdd: AT030
+    esri: Electric Transformer
+    iso19110: PowerTransformer
+    openstreetmap: power=transformer
+    ieee: XFMR
+    utility: TRANSFORMER
+  tags: electric_power
+  category: utilities_infrastructure
+- id: EPL
+  name: transmission_line
+  description: High-voltage power transmission line
+  geometry_type: linestring
+  mappings:
+    nfdd: AT005
+    esri: Transmission Line
+    iso19110: PowerTransmissionLine
+    openstreetmap: power=line
+    ieee: TRANS_LINE
+    utility: TX_LINE
+  tags: electric_power
+  category: utilities_infrastructure
+- id: EPE
+  name: underground_cable
+  description: Underground power cable
+  geometry_type: linestring
+  mappings:
+    nfdd: AT005
+    esri: Underground Cable
+    iso19110: PowerDistributionLine
+    openstreetmap: power=cable
+    ieee: UG_CABLE
+    utility: UG_CABLE
+  tags: electric_power
+  category: utilities_infrastructure
+- id: TCM
+  name: utility_meter
+  description: Utility meter
+  geometry_type: point
+  mappings:
+    nfdd: null
+    esri: Utility Meter
+    iso19110: UtilityMeter
+    openstreetmap: man_made=utility_meter
+    utility: METER
+  tags: telecommunications
+  category: utilities_infrastructure
+- id: EPU
+  name: utility_pole
+  description: Overhead power distribution pole
+  geometry_type: point
+  mappings:
+    nfdd: AT030
+    esri: Electric Utility Pole
+    iso19110: PowerSupplyFacility
+    openstreetmap: power=pole
+    ieee: POLE_DIST
+    utility: POLE
+  tags: electric_power
+  category: utilities_infrastructure
+- id: WSV
+  name: valve
+  description: Water valve
+  geometry_type: point
+  mappings:
+    nfdd: null
+    esri: Water Valve
+    iso19110: WaterEquipment
+    openstreetmap: man_made=valve
+    awwa: VALVE
+    utility: VALVE
+  tags: water_sewer
+  category: utilities_infrastructure
+- id: WST
+  name: water_tower
+  description: Elevated water storage tank
+  geometry_type: point
+  mappings:
+    nfdd: BH020
+    esri: Water Tank
+    iso19110: WaterStorageFacility
+    openstreetmap: man_made=water_tower
+    awwa: TANK_ELEVATED
+    utility: TOWER
+  tags: water_sewer
+  category: utilities_infrastructure
+- id: WSW
+  name: water_well
+  description: Water well
+  geometry_type: point
+  mappings:
+    nfdd: BH020
+    esri: Water Well
+    iso19110: WaterWell
+    openstreetmap: man_made=water_well
+    awwa: WELL
+    utility: WELL
+  tags: water_sewer
+  category: utilities_infrastructure
+- id: RSY
+  name: yield_sign
+  description: Yield sign
+  geometry_type: point
+  mappings:
+    nfdd: AP043
+    esri: Yield Sign
+    iso19110: TrafficControlDevice
+    openstreetmap: highway=give_way
+    google: establishment
+    here: YIELD_SIGN
+    foursquare: travel_transport
+    mutcd: YIELD
+    dot: YIELD_SIGN
+  tags: roads_streets
+  category: transportation_logistics

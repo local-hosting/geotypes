@@ -1,37 +1,26 @@
 #!/usr/bin/env node --import tsx
-/** Regenerate src/slugs.ts from in-repo data/features.yml */
+/** Regenerate src/slugs.ts from data/venue and data/resource feature catalogs. */
 
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import yaml from 'js-yaml';
+
+import { loadFeatureCatalog } from './feature-catalog.ts';
 
 const pkgRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const featuresPath = path.join(pkgRoot, 'data', 'features.yml');
 
 function main(): void {
-  if (!fs.existsSync(featuresPath)) {
-    throw new Error(`missing ${featuresPath}`);
-  }
-  const raw = yaml.load(fs.readFileSync(featuresPath, 'utf8')) as unknown;
-  if (!Array.isArray(raw)) {
-    throw new Error('expected features.yml array');
-  }
-
   const names = new Set<string>();
-  for (const entry of raw) {
-    if (!entry || typeof entry !== 'object') continue;
-    const name = (entry as { name?: string }).name;
-    if (typeof name === 'string' && name.trim()) {
-      names.add(name.trim().toLowerCase());
-    }
+  for (const entry of loadFeatureCatalog(pkgRoot)) {
+    const name = entry.feature.name;
+    if (typeof name === 'string' && name.trim()) names.add(name.trim().toLowerCase());
   }
 
   const slugs = [...names].sort();
   const out = path.join(pkgRoot, 'src', 'slugs.ts');
   const lines = [
     '/**',
-    ' * Geotypes POI slugs — synced from data/features.yml (`name` field).',
+    ' * Geotypes POI slugs — synced from data/venue/features.yml and data/resource/features.yml (`name`).',
     ' * Regenerate: yarn sync:slugs',
     ' */',
     '',

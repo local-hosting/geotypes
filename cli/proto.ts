@@ -48,7 +48,7 @@ program
 program
   .command("geometry")
   .description("Recommend geometry types for features (optionally --apply to update, --json to save report)")
-  .option("-f, --file <path>", "Path to features file", "data/features.yml")
+  .option("-f, --file <path>", "Unused. Catalogs are data/venue/features.yml and data/resource/features.yml")
   .option("-t, --threshold <number>", "Confidence threshold for auto-update", "0.8")
   .option("--no-update", "Don't update the file, just show recommendations")
   .option("--json", "Write detailed recommendations to geometry_recommendations.json")

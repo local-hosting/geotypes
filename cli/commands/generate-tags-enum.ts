@@ -3,6 +3,8 @@ import * as yaml from 'js-yaml';
 import * as fs from 'fs';
 import * as path from 'path';
 
+import { loadFeatureCatalog } from '../../scripts/feature-catalog.ts';
+
 interface Feature {
   id: string;
   name: string;
@@ -28,12 +30,9 @@ function toEnumName(tag: string): string {
 export function generateTagsEnum(): string {
   const allCodes = new Set<string>();
 
-  // 1. Read from data/features.yml
-  const featuresPath = path.join(process.cwd(), 'data', 'features.yml');
-  if (fs.existsSync(featuresPath)) {
-    const featuresFile = fs.readFileSync(featuresPath, 'utf8');
-    const featuresData = yaml.load(featuresFile) as Feature[];
-
+  // 1. Read venue and resource feature catalogs
+  const featuresData = loadFeatureCatalog(process.cwd()).map((entry) => entry.feature as Feature);
+  if (featuresData.length > 0) {
     featuresData.forEach((feature) => {
       if (feature.tags) {
         feature.tags

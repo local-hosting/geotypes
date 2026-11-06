@@ -1,5 +1,5 @@
 /**
- * Geotype acronyms — synced from data/features.yml (`id` + `name`).
+ * Geotype acronyms — synced from data/venue and data/resource feature catalogs (`id` + `name`).
  * Regenerate: yarn sync:acronyms
  */
 

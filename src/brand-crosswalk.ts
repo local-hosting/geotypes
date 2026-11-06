@@ -4,7 +4,7 @@ import { normalizeGeotypeSlug } from './normalize.js';
 export const VENUE_GEOTYPE_FALLBACK = 'specialty_store';
 
 /**
- * Example retail brand → geotype slug (`data/features.yml` `name`).
+ * Example retail brand → geotype slug (`data/venue/features.yml` `name`).
  * Store format (`kind`) is separate — not encoded here.
  */
 export const BRAND_GEOTYPE_DEFAULTS: Readonly<Record<string, string>> = {

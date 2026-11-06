@@ -1,7 +1,7 @@
-import { GEOTYPE_LAYOUT_META_BY_SLUG } from './generated/place-archetype-data.js';
+import { GEOTYPE_ASSET_BY_SLUG, GEOTYPE_LAYOUT_META_BY_SLUG } from './generated/place-archetype-data.js';
 import { PLACE_ARCHETYPES, PLACE_EXTENTS, PLACE_VERTICALS } from './place-archetype-assert.js';
 import { PLACE_ARCHETYPE_AXES } from './place-archetype-resolve.js';
-import type { PlaceArchetype, PlaceAxes } from './types/place-layout.js';
+import type { GeotypeKind, PlaceArchetype, PlaceAxes } from './types/place-layout.js';
 import type {
   GeotypeTaxonomyDiagramArtboard,
   GeotypeTaxonomyDiagramCategory,
@@ -62,25 +62,50 @@ function getCategories(id: string, places: Map<string, GeotypeTaxonomyDiagramPla
     }));
 }
 
-/** Extent × vertical grid of place geotypes, banded by category (from GEOTYPE_LAYOUT_META_BY_SLUG axes). */
-export function buildGeotypeTaxonomyDiagramArtboards(): GeotypeTaxonomyDiagramArtboard[] {
+function addPlace(
+  byCell: Map<string, Map<string, GeotypeTaxonomyDiagramPlace[]>>,
+  cellId: string,
+  category: string,
+  slug: string,
+): void {
+  const byCategory = byCell.get(cellId) ?? new Map<string, GeotypeTaxonomyDiagramPlace[]>();
+  byCategory.set(category, [...(byCategory.get(category) ?? []), { slug, label: placeLabelFromSlug(slug) }]);
+  byCell.set(cellId, byCategory);
+}
+
+/**
+ * Extent × vertical grid, banded by category.
+ * Pass `kind` to show only venues or only resources. Resource point assets (no place axes) sit on footprint × flat.
+ * Omit `kind` to keep every place cell, including empty ones.
+ */
+export function buildGeotypeTaxonomyDiagramArtboards(kind?: GeotypeKind): GeotypeTaxonomyDiagramArtboard[] {
   const byCell = new Map<string, Map<string, GeotypeTaxonomyDiagramPlace[]>>();
   for (const [slug, meta] of Object.entries(GEOTYPE_LAYOUT_META_BY_SLUG)) {
-    const id = axesCellId(meta);
-    const byCategory = byCell.get(id) ?? new Map<string, GeotypeTaxonomyDiagramPlace[]>();
-    byCategory.set(meta.category, [...(byCategory.get(meta.category) ?? []), { slug, label: placeLabelFromSlug(slug) }]);
-    byCell.set(id, byCategory);
+    if (kind && meta.kind !== kind) continue;
+    addPlace(byCell, axesCellId(meta), meta.category, slug);
+  }
+  if (kind === 'resource') {
+    for (const [slug, meta] of Object.entries(GEOTYPE_ASSET_BY_SLUG)) {
+      addPlace(byCell, 'footprint-flat', meta.category, slug);
+    }
   }
 
-  return getAxesCells().map(({ axes, archetype }) => {
-    const id = axesCellId(axes);
-    return {
-      id,
-      label: axesCellLabel(axes),
-      archetype,
-      axes,
-      gridSlot: { col: PLACE_EXTENTS.indexOf(axes.extent), row: PLACE_VERTICALS.indexOf(axes.vertical) },
-      categories: getCategories(id, byCell.get(id) ?? new Map()),
-    };
-  });
+  const boards = getAxesCells()
+    .map(({ axes, archetype }) => {
+      const id = axesCellId(axes);
+      return {
+        id,
+        label: axesCellLabel(axes),
+        archetype,
+        axes,
+        gridSlot: { col: PLACE_EXTENTS.indexOf(axes.extent), row: PLACE_VERTICALS.indexOf(axes.vertical) },
+        categories: getCategories(id, byCell.get(id) ?? new Map()),
+      };
+    })
+    .filter((board) => !kind || board.categories.length > 0);
+  if (!kind) return boards;
+  return boards.map((board, index) => ({
+    ...board,
+    gridSlot: { col: index % PLACE_EXTENTS.length, row: Math.floor(index / PLACE_EXTENTS.length) },
+  }));
 }

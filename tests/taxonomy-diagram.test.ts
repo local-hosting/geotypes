@@ -53,4 +53,23 @@ describe('geotype taxonomy diagram', () => {
     const commercial = indoor?.categories.find((c) => c.category === 'commercial_services');
     expect(commercial?.places.some((place) => place.slug === 'hotel')).toBe(true);
   });
+
+  it('toggles venues and resources', () => {
+    const slugsIn = (kind: 'venue' | 'resource', id: string) =>
+      buildGeotypeTaxonomyDiagramArtboards(kind)
+        .find((board) => board.id === id)
+        ?.categories.flatMap((category) => category.places.map((place) => place.slug)) ?? [];
+    expect(slugsIn('venue', 'footprint-stacked')).toContain('hotel');
+    expect(slugsIn('venue', 'route-flat')).not.toContain('underground_cable');
+    expect(slugsIn('venue', 'footprint-flat')).not.toContain('stop_sign');
+    expect(slugsIn('resource', 'route-flat')).toEqual(
+      expect.arrayContaining(['underground_cable', 'fiber_line', 'gas_pipeline', 'distribution_line', 'transmission_line']),
+    );
+    expect(slugsIn('resource', 'footprint-flat')).toContain('stop_sign');
+    expect(slugsIn('resource', 'footprint-stacked')).toEqual([]);
+    expect(buildGeotypeTaxonomyDiagramArtboards('resource').map((board) => `${board.id} ${board.gridSlot.col},${board.gridSlot.row}`)).toEqual([
+      'footprint-flat 0,0',
+      'route-flat 1,0',
+    ]);
+  });
 });

@@ -1,5 +1,5 @@
 /**
- * Provider category crosswalks — synced from features.yml, schema-org-by-slug.yml, data/category/*.yml
+ * Provider category crosswalks — synced from data/venue and data/resource feature catalogs, schema-org-by-slug.yml, data/category/*.yml
  * Regenerate: yarn sync:providers
  */
 
@@ -2712,7 +2712,7 @@ export const GOOGLE_SLUG_BY_TYPE = {
   'factory': 'workshop',
   'funeral_home': 'funeral_home',
   'furniture_store': 'furniture_store',
-  'gas_station': 'truck_stop',
+  'gas_station': 'charging_station',
   'golf_course': 'golf_course',
   'government_office': 'federal_building',
   'gym': 'specialty_fitness',
