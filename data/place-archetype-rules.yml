@@ -86,7 +86,7 @@ assets:
 slugs:
   # ── Multi-building sites ──────────────────────────────────────────
   shopping_mall:
-    extent: site
+    extent: footprint
     vertical: stacked
     situations: [severe-weather, transit-disruption]
   shopping_center:

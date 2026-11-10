@@ -51,7 +51,7 @@ export const PLACE_ARCHETYPE_CONFIG = {
   ],
   "slugs": {
     "shopping_mall": {
-      "extent": "site",
+      "extent": "footprint",
       "vertical": "stacked",
       "situations": [
         "severe-weather",
@@ -779,7 +779,7 @@ export const GEOTYPE_LAYOUT_META_BY_SLUG = {
   'server_farm': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","situations":["severe-weather"],"layers":[]},
   'shipping_dock': {"category":"transportation_logistics","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","situations":["severe-weather"],"layers":[]},
   'shopping_center': {"category":"commercial_services","geometry_type":"point","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","situations":["severe-weather"],"layers":["routes","assets"]},
-  'shopping_mall': {"category":"retail","geometry_type":"point","extent":"site","vertical":"stacked","movement":"free","archetype":"campus","kind":"venue","situations":["severe-weather","transit-disruption"],"layers":["routes","assets"]},
+  'shopping_mall': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","situations":["severe-weather","transit-disruption"],"layers":["assets"]},
   'single_family_home': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","situations":["severe-weather"],"layers":[]},
   'soccer_field': {"category":"sports_and_recreation","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","situations":["severe-weather"],"layers":["routes"]},
   'social_services': {"category":"community_and_government","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","situations":["severe-weather"],"layers":[]},

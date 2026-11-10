@@ -9,14 +9,14 @@ import {
 } from '../src/place-archetype.js';
 
 describe('placeScaffoldForSlug (map-first)', () => {
-  it('maps shopping_mall to campus and zone scale (mall property on maps)', () => {
+  it('maps shopping_mall to indoor_stack (stacked retail interior)', () => {
     const scaffold = placeScaffoldForSlug('shopping_mall');
     expect(scaffold).toEqual({
-      archetype: 'campus',
+      archetype: 'indoor_stack',
       authoring_scale: {
         linear_unit: 'm',
-        h3_resolution: 9,
-        space_granularity: 'zone',
+        h3_resolution: 10,
+        space_granularity: 'room',
       },
     });
   });
@@ -62,7 +62,7 @@ describe('placeScaffoldForSlug (map-first)', () => {
   });
 
   it('resolves from geotype ref', () => {
-    expect(placeScaffoldForGeotypeRef('shopping_mall')?.archetype).toBe('campus');
+    expect(placeScaffoldForGeotypeRef('shopping_mall')?.archetype).toBe('indoor_stack');
   });
 
   it('returns null for unknown slug', () => {

@@ -58,7 +58,7 @@ describe('resolvePlaceArchetype (map-first)', () => {
     expect(resolvePlaceArchetypeForSlug('shopping_mall', {
       category: 'retail',
       geometry_type: 'polygon',
-    })).toBe('campus');
+    })).toBe('indoor_stack');
     expect(resolvePlaceArchetypeForSlug('hotel', {
       category: 'travel_and_transportation',
       geometry_type: 'point',
