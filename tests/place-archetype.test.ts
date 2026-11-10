@@ -6,6 +6,7 @@ import {
   placeDecorationsForSlug,
   placeScaffoldForGeotypeRef,
   placeScaffoldForSlug,
+  suggestBuildingImportForSlug,
 } from '../src/place-archetype.js';
 
 describe('placeScaffoldForSlug (map-first)', () => {
@@ -29,6 +30,13 @@ describe('placeScaffoldForSlug (map-first)', () => {
 
   it('maps airport to campus archetype', () => {
     expect(placeScaffoldForSlug('airport')?.archetype).toBe('campus');
+  });
+
+  it('suggests building import only for campus archetype slugs', () => {
+    expect(suggestBuildingImportForSlug('airport')).toBe(true);
+    expect(suggestBuildingImportForSlug('university')).toBe(true);
+    expect(suggestBuildingImportForSlug('shopping_mall')).toBe(false);
+    expect(suggestBuildingImportForSlug('public_park')).toBe(false);
   });
 
   it('maps public_park to open_area', () => {

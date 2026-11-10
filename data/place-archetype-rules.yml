@@ -10,6 +10,10 @@
 # Decorations (spec/doc/place/decorate-twin.md):
 # situations: slug override (replaces) → category situations → none
 # layers:     archetype_layers ∪ category layers ∪ slug layers
+#
+# Building imports (RFC 0005): when true for resolved archetype, twin init writes place/BUILDINGS.md.
+suggest_building_import:
+  campus: true
 # Each place slug's axes, archetype, and decorations are materialized on GEOTYPE_LAYOUT_META_BY_SLUG;
 # `assets:` slugs are excluded (GEOTYPE_ASSET_SLUGS).
 # Golden `from:` bases and `with:` mixins: @twinfile/examples (bases/, mixins/).

@@ -104,9 +104,24 @@ function loadArchetypeRulesYaml(): RulesYaml {
   for (const [slug, node] of Object.entries(obj.slugs as Record<string, YamlNode>)) {
     slugs[slug] = loadSlugOverride(node, situations, `place-archetype-rules.yml slugs.${slug}`);
   }
+  const suggest_building_import: PlaceArchetypeConfig['suggest_building_import'] = {};
+  const rawSuggest = obj.suggest_building_import;
+  if (rawSuggest !== undefined) {
+    if (!rawSuggest || typeof rawSuggest !== 'object' || Array.isArray(rawSuggest)) {
+      throw new Error('place-archetype-rules.yml suggest_building_import must be a map');
+    }
+    for (const [archetype, value] of Object.entries(rawSuggest as YamlNode)) {
+      assertPlaceArchetype(archetype, 'suggest_building_import');
+      if (typeof value !== 'boolean') {
+        throw new Error(`place-archetype-rules.yml suggest_building_import.${archetype} must be boolean`);
+      }
+      suggest_building_import[archetype as keyof typeof suggest_building_import] = value;
+    }
+  }
   return {
     archetype_defaults: defaults as RulesYaml['archetype_defaults'],
     archetype_layers: loadArchetypeLayers(obj.archetype_layers),
+    ...(Object.keys(suggest_building_import).length > 0 ? { suggest_building_import } : {}),
     situations,
     assets: (obj.assets as unknown[]).map(String),
     slugs,
@@ -188,11 +203,13 @@ function main(): void {
     const input = { category, geometry_type };
     const axes = resolvePlaceAxes(slug, input, config);
     const archetype = archetypeForAxes(axes);
+    const suggest_building_import = config.suggest_building_import?.[archetype] ?? false;
     metaBySlug[slug] = {
       ...input,
       ...axes,
       archetype,
       kind,
+      suggest_building_import,
       ...resolvePlaceDecorations(slug, input, archetype, config),
     };
   }

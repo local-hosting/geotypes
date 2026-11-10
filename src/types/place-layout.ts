@@ -75,6 +75,8 @@ export type PlaceSlugOverride = Partial<PlaceAxes> & Partial<PlaceDecorations>;
 export type PlaceArchetypeConfig = {
   archetype_defaults: Record<PlaceArchetype, AuthoringScale>;
   archetype_layers: Record<PlaceArchetype, readonly PlaceLayerKind[]>;
+  /** Per-archetype hint for RFC 0005 child units (`twin init` → `place/BUILDINGS.md`). */
+  suggest_building_import?: Partial<Record<PlaceArchetype, boolean>>;
   situations: readonly string[];
   categories: Record<string, PlaceCategoryDefaults>;
   slugs: Record<string, PlaceSlugOverride>;
@@ -95,6 +97,7 @@ export type GeotypeLayoutMeta = GeotypeLayoutMetaInput &
   PlaceDecorations & {
     archetype: PlaceArchetype;
     kind: GeotypeKind;
+    suggest_building_import: boolean;
   };
 
 /** Point asset row (no place axes). Every asset is a resource. */

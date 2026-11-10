@@ -103,6 +103,12 @@ export function placeDecorationsForSlug(slug: string): PlaceDecorations | null {
   return meta ? { situations: [...meta.situations], layers: [...meta.layers] } : null;
 }
 
+/** When true, `twin init place` writes `place/BUILDINGS.md` (RFC 0005 child units). */
+export function suggestBuildingImportForSlug(slug: string): boolean {
+  const meta = getLayoutMeta(slug);
+  return meta?.suggest_building_import ?? false;
+}
+
 /** Recompute archetype from rules (must match yarn sync:place-archetypes output). */
 export function resolvePlaceArchetypeForSlug(
   slug: string,

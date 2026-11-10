@@ -42,6 +42,7 @@ export {
   placeDecorationsForSlug,
   placeScaffoldForGeotypeRef,
   placeScaffoldForSlug,
+  suggestBuildingImportForSlug,
   resolvePlaceAxes,
   type GeotypeKind,
   type AuthoringScale,
