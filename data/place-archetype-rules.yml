@@ -63,6 +63,7 @@ situations:
   - drought
   - power-outage
   - slope-movement
+  - field-damage
 
 # Point assets with no interior (signs, hydrants, poles, meters, wells, towers).
 # Not places: excluded from GEOTYPE_LAYOUT_META_BY_SLUG; use them as `assets.yaml` kinds.
@@ -293,7 +294,9 @@ slugs:
 
   # ── Lines and corridors ──────────────────────────────────────────
   creek:
-    situations: [dam-release, litter-pollution]
+    situations: [dam-release, flood, litter-pollution]
+  substation:
+    situations: [power-outage, flood, severe-weather]
   riverbank_survey:
     situations: [dam-release, litter-pollution]
   highway:

@@ -50,9 +50,14 @@ describe('placeScaffoldForSlug (map-first)', () => {
 
   it('assigns situations and decoration layers per slug', () => {
     expect(placeDecorationsForSlug('creek')).toEqual({
-      situations: ['dam-release', 'litter-pollution'],
+      situations: ['dam-release', 'flood', 'litter-pollution'],
       layers: ['sensors', 'visits'],
     });
+    expect(placeDecorationsForSlug('substation')?.situations).toEqual([
+      'power-outage',
+      'flood',
+      'severe-weather',
+    ]);
     expect(placeDecorationsForSlug('stadium')?.situations).toEqual(['severe-weather', 'transit-disruption']);
     expect(placeDecorationsForSlug('retail_bank')?.situations).toEqual(['severe-weather']);
     expect(placeDecorationsForSlug('food_truck')).toEqual({ situations: [], layers: ['assets'] });
