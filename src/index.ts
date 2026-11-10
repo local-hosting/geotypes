@@ -4,6 +4,7 @@ export {
   geotypeForBrand,
 } from './brand-crosswalk.js';
 export { normalizeGeotypeSlug, resolveGeotypeSlug } from './normalize.js';
+export { geotypeSlugForMapping } from './format-mapping.js';
 export {
   GEOTYPE_SLUGS,
   type GeotypeSlug,

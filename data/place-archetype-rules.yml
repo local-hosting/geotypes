@@ -55,6 +55,14 @@ situations:
   - transit-disruption
   - dam-release
   - litter-pollution
+  - flood
+  - earthquake
+  - wildfire
+  - tsunami
+  - volcanic-ash
+  - drought
+  - power-outage
+  - slope-movement
 
 # Point assets with no interior (signs, hydrants, poles, meters, wells, towers).
 # Not places: excluded from GEOTYPE_LAYOUT_META_BY_SLUG; use them as `assets.yaml` kinds.

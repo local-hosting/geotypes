@@ -3,7 +3,7 @@
  * Scan a package tree for closed-host product references.
  * Deny tokens live in ENCODED (base64); CI reports rule ids only.
  *
- * Monorepo: edit this file, then `node scripts/sync-vendor-neutral-lib.mjs`.
+ * Monorepo: edit this file, then `yarn sync:vendor-neutral-lib`.
  */
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
@@ -42,7 +42,7 @@ const VENDOR_NEUTRAL_RULES = ENCODED.map((encoded, index) => [
 const DEFAULT_SKIP_DIR = new Set(['node_modules', '.git', '.yarn', 'dist', 'coverage', '.next']);
 const DEFAULT_SKIP_FILES = new Set([
   'scripts/check-vendor-neutral.mjs',
-  'scripts/vendor-neutral-scan-lib.mjs',
+  'scripts/vn-scan-lib.mjs',
 ]);
 
 function walk(dir, root, skipDir, skipRelPrefixes, out = []) {
