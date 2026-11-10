@@ -24,13 +24,13 @@ src/                  Runtime (slugs, acronyms, provider crosswalk, archetype re
 ```bash
 yarn install
 yarn generate          # proto → generated/
-yarn sync              # slugs + acronyms + provider crosswalks + place archetypes
+yarn sync              # slugs + acronyms + provider + format mappings + place archetypes
 yarn sync:slugs        # data/venue + data/resource → src/slugs.ts
 yarn sync:acronyms     # id + name → src/generated/acronyms.ts
 yarn sync:providers    # Foursquare/Google/OSM/HERE → provider-categories.ts
 yarn sync:place-archetypes  # → src/generated/place-archetype-data.ts
 yarn category          # category tooling
-yarn check             # neutral-language guard + typecheck + tests
+yarn check             # vendor-neutral guard + typecheck + tests
 ```
 
 ## Taxonomy visualization (isocanvas)
