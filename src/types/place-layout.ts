@@ -47,7 +47,7 @@ export type PlaceLayerKind =
   | 'levels'
   | 'spaces'
   | 'openings'
-  | 'access_points'
+  | 'markers'
   | 'stations'
   | 'gauges'
   | 'sensors'

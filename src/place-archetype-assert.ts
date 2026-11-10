@@ -28,7 +28,7 @@ export const PLACE_LAYER_KINDS: readonly PlaceLayerKind[] = [
   'levels',
   'spaces',
   'openings',
-  'access_points',
+  'markers',
   'stations',
   'gauges',
   'sensors',
