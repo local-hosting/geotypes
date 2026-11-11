@@ -16,7 +16,7 @@ suggest_building_import:
   campus: true
 # Each place slug's axes, archetype, and decorations are materialized on GEOTYPE_LAYOUT_META_BY_SLUG;
 # `assets:` slugs are excluded (GEOTYPE_ASSET_SLUGS).
-# Golden `from:` bases and `with:` mixins: @twinfile/examples (bases/, mixins/).
+# Golden `from:` bases and `with:` mixins: examples (base-*, mixin-*).
 # Overrides or assets for slugs missing from features.yml fail the sync.
 
 archetype_defaults:
@@ -42,14 +42,15 @@ archetype_defaults:
     space_granularity: zone
 
 # Decoration layers each archetype typically adds on top of its golden base.
+# visits = optional visit moments (layout TOC); not suggested for indoor_stack footprints.
 archetype_layers:
   single_level: []
   indoor_stack: []
-  campus: [routes]
+  campus: [routes, visits]
   open_area: [routes]
   linear: [visits]
 
-# Situation units in @twinfile/hazards situations/ (decorators wired via plans/).
+# Situation units in @twinfile/simulator situations/ (decorators wired via plans/).
 situations:
   - severe-weather
   - transit-disruption
