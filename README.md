@@ -1,9 +1,9 @@
-# @twinfile/geotypes
+# @local-hosting/geotypes
 
 Open POI taxonomy registry for Twinfile place units — slugs, 3-letter acronyms, vendor crosswalks, and maintenance CLI.
 
 **Repository:** [github.com/twinfile/geotypes](https://github.com/twinfile/geotypes)  
-**npm:** `@twinfile/geotypes` on GitHub Packages
+**npm:** `@local-hosting/geotypes` on GitHub Packages
 
 ## Layout
 
@@ -44,20 +44,20 @@ yarn viz   # http://localhost:5175
 Runtime helper (no canvas dependency):
 
 ```typescript
-import { buildGeotypeTaxonomyDiagramArtboards } from '@twinfile/geotypes';
+import { buildGeotypeTaxonomyDiagramArtboards } from '@local-hosting/geotypes';
 ```
 
 ## Exports
 
 | Subpath | Purpose |
 | --- | --- |
-| `@twinfile/geotypes` | Slugs, acronyms, normalization, provider maps, `placeScaffoldForSlug`, venue helpers |
-| `@twinfile/geotypes/geokit` | Optional `PlaceTaxonomyResolver` factory for map hosts (no map SDK dependency here) |
-| `@twinfile/geotypes/generated/*` | Protobuf modules |
+| `@local-hosting/geotypes` | Slugs, acronyms, normalization, provider maps, `placeScaffoldForSlug`, venue helpers |
+| `@local-hosting/geotypes/geokit` | Optional `PlaceTaxonomyResolver` factory for map hosts (no map SDK dependency here) |
+| `@local-hosting/geotypes/generated/*` | Protobuf modules |
 
 ## Twinfile
 
-Reference slugs from place manifests (e.g. `geotype.primary`) against this registry at a pinned semver — documented in `@twinfile/spec`; the full catalog is not embedded in spec or core.
+Reference slugs from place manifests (e.g. `geotype.primary`) against this registry at a pinned semver — documented in `@local-hosting/twinfile`; the full catalog is not embedded in spec or core.
 
 Point assets with no interior (`stop_sign`, `fire_hydrant`, `utility_pole`, …) are not places: `isAssetGeotype` returns true and they have no scaffold (`GEOTYPE_ASSET_SLUGS`). Every other slug has a **place scaffold**: suggested `archetype` and `authoring_scale` (map-first; see Twinfile spec [`doc/place/place.md`](https://github.com/twinfile/spec/blob/main/doc/place/place.md)). Resolve with `placeScaffoldForSlug('shopping_mall')`. Each slug also materializes three axes — **extent**, **vertical**, **movement** — via `placeAxesForSlug('hotel')`, plus suggested decorators (situations + layer files) via `placeDecorationsForSlug('stadium')`; the archetype is a lookup on those axes (`archetypeForAxes`, spec [`doc/place/place-archetypes.md`](https://github.com/twinfile/spec/blob/main/doc/place/place-archetypes.md)). **`suggestBuildingImportForSlug('airport')`** is true when `data/place-archetype-rules.yml` sets **`suggest_building_import.campus: true`** and the slug resolves to **`campus`** — `twin init place` then writes `place/BUILDINGS.md` (RFC 0005). Golden **`from:`** bases live in `core/examples` (`base-campus`, `base-open-area`, `base-linear`, etc.) — not in this package.
 
@@ -69,7 +69,7 @@ Point assets with no interior (`stop_sign`, `fire_hydrant`, `utility_pole`, …)
 import {
   createGeokitTaxonomyResolver,
   type PlaceTaxonomyResolver,
-} from '@twinfile/geotypes/geokit';
+} from '@local-hosting/geotypes/geokit';
 
 const resolver: PlaceTaxonomyResolver = createGeokitTaxonomyResolver();
 // Register `resolver` with your map host's place-taxonomy hook.
