@@ -2,4 +2,4 @@ energy_oil_gas:
   name: Energy Oil Gas
   extent: site
   layers: [sensors]
-  situations: [severe-weather]
+  events: [severe-weather]

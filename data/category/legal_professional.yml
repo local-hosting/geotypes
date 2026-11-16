@@ -1,4 +1,4 @@
 legal_professional:
   name: Legal Professional
   extent: footprint
-  situations: [severe-weather]
+  events: [severe-weather]

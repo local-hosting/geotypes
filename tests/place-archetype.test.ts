@@ -48,19 +48,19 @@ describe('placeScaffoldForSlug (map-first)', () => {
     expect(placeAxesForSlug('not_a_real_type')).toBeNull();
   });
 
-  it('assigns situations and decoration layers per slug', () => {
+  it('assigns events and decoration layers per slug', () => {
     expect(placeDecorationsForSlug('creek')).toEqual({
-      situations: ['dam-release', 'flood', 'litter-pollution'],
+      events: ['dam-release', 'flood', 'litter-pollution'],
       layers: ['sensors', 'visits'],
     });
-    expect(placeDecorationsForSlug('substation')?.situations).toEqual([
+    expect(placeDecorationsForSlug('substation')?.events).toEqual([
       'power-outage',
       'flood',
       'severe-weather',
     ]);
-    expect(placeDecorationsForSlug('stadium')?.situations).toEqual(['severe-weather', 'transit-disruption']);
-    expect(placeDecorationsForSlug('retail_bank')?.situations).toEqual(['severe-weather']);
-    expect(placeDecorationsForSlug('food_truck')).toEqual({ situations: [], layers: ['assets'] });
+    expect(placeDecorationsForSlug('stadium')?.events).toEqual(['severe-weather', 'transit-disruption']);
+    expect(placeDecorationsForSlug('retail_bank')?.events).toEqual(['severe-weather']);
+    expect(placeDecorationsForSlug('food_truck')).toEqual({ events: [], layers: ['assets'] });
     expect(placeDecorationsForSlug('not_a_real_type')).toBeNull();
   });
 

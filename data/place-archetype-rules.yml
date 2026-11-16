@@ -8,7 +8,7 @@
 # movement: slug override → sequenced for route, else free
 #
 # Decorations (spec/doc/place/decorate-twin.md):
-# situations: slug override (replaces) → category situations → none
+# events:     slug override (replaces) → category events → none
 # layers:     archetype_layers ∪ category layers ∪ slug layers
 #
 # Building imports (RFC 0005): when true for resolved archetype, twin init writes place/BUILDINGS.md.
@@ -50,8 +50,8 @@ archetype_layers:
   open_area: [routes]
   linear: [visits]
 
-# Situation units in @local-hosting/twinfile-simulator situations/ (decorators wired via plans/).
-situations:
+# Event units in twinfile catalog/event/ (places host them through role tags).
+events:
   - severe-weather
   - transit-disruption
   - dam-release
@@ -102,39 +102,39 @@ slugs:
   shopping_mall:
     extent: footprint
     vertical: stacked
-    situations: [severe-weather, transit-disruption]
+    events: [severe-weather, transit-disruption]
   shopping_center:
     extent: site
   hospital:
     extent: site
     vertical: stacked
-    situations: [severe-weather, transit-disruption]
+    events: [severe-weather, transit-disruption]
   airport:
     extent: site
     vertical: stacked
   university:
     extent: site
-    situations: [severe-weather, transit-disruption]
+    events: [severe-weather, transit-disruption]
   high_school:
     extent: site
   stadium:
     extent: site
-    situations: [severe-weather, transit-disruption]
+    events: [severe-weather, transit-disruption]
   theme_park:
     extent: site
-    situations: [severe-weather, transit-disruption, litter-pollution]
+    events: [severe-weather, transit-disruption, litter-pollution]
   zoo:
     extent: site
-    situations: [severe-weather, transit-disruption, litter-pollution]
+    events: [severe-weather, transit-disruption, litter-pollution]
   sports_complex:
     extent: site
   racetrack_casino:
     extent: site
   port:
     extent: site
-    situations: [severe-weather, transit-disruption, litter-pollution]
+    events: [severe-weather, transit-disruption, litter-pollution]
   ferry_terminal:
-    situations: [severe-weather, transit-disruption, litter-pollution]
+    events: [severe-weather, transit-disruption, litter-pollution]
   train_station:
     extent: site
     vertical: stacked
@@ -142,18 +142,18 @@ slugs:
     extent: site
   mining_site:
     extent: site
-    situations: [severe-weather]
+    events: [severe-weather]
   hydroelectric_plant:
-    situations: [severe-weather, dam-release]
+    events: [severe-weather, dam-release]
   truck_stop:
-    situations: [severe-weather]
+    events: [severe-weather]
   fulfillment_center:
-    situations: [severe-weather]
+    events: [severe-weather]
 
   # ── Open land (no buildings that matter to the twin) ─────────────
   public_park:
     extent: area
-    situations: [severe-weather, litter-pollution]
+    events: [severe-weather, litter-pollution]
   campground:
     extent: area
   playground:
@@ -174,24 +174,24 @@ slugs:
     extent: area
   heliport:
     extent: area
-    situations: []
+    events: []
   solar_farm:
     extent: area
-    situations: []
+    events: []
   wind_farm:
     extent: area
-    situations: []
+    events: []
   conservation_area:
-    situations: [litter-pollution]
+    events: [litter-pollution]
   species_removal_area:
-    situations: [litter-pollution]
+    events: [litter-pollution]
   spoil_heap_boundary:
-    situations: [litter-pollution]
+    events: [litter-pollution]
 
   # ── Single buildings inside site / area categories ───────────────
   bus_stop:
     extent: footprint
-    situations: [transit-disruption]
+    events: [transit-disruption]
   convenience_store:
     extent: footprint
   church:
@@ -212,17 +212,17 @@ slugs:
     extent: footprint
   gas_station:
     extent: footprint
-    situations: [severe-weather]
+    events: [severe-weather]
   motel:
     extent: footprint
-    situations: [severe-weather]
+    events: [severe-weather]
   vacation_rental:
     extent: footprint
-    situations: [severe-weather]
+    events: [severe-weather]
   bed_breakfast:
-    situations: [severe-weather]
+    events: [severe-weather]
   travel_agency:
-    situations: [severe-weather]
+    events: [severe-weather]
   ice_rink:
     extent: footprint
   personal_training:
@@ -266,7 +266,7 @@ slugs:
   hostel:
     extent: footprint
     vertical: stacked
-    situations: [severe-weather]
+    events: [severe-weather]
   casino_resort:
     vertical: stacked
   office_building:
@@ -285,24 +285,24 @@ slugs:
     vertical: stacked
   control_tower:
     vertical: stacked
-    situations: [severe-weather]
+    events: [severe-weather]
 
-  # ── Small sites without shared situations ────────────────────────
+  # ── Small sites without shared events ────────────────────────
   shipping_dock:
-    situations: [severe-weather]
+    events: [severe-weather]
   food_truck:
-    situations: []
+    events: []
 
   # ── Lines and corridors ──────────────────────────────────────────
   creek:
-    situations: [dam-release, flood, litter-pollution]
+    events: [dam-release, flood, litter-pollution]
   substation:
-    situations: [power-outage, flood, severe-weather]
+    events: [power-outage, flood, severe-weather]
   riverbank_survey:
-    situations: [dam-release, litter-pollution]
+    events: [dam-release, litter-pollution]
   highway:
-    situations: [transit-disruption]
+    events: [transit-disruption]
   runway:
-    situations: []
+    events: []
   taxiway:
-    situations: []
+    events: []

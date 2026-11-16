@@ -2,4 +2,4 @@ entertainment_gaming:
   name: Entertainment Gaming
   extent: footprint
   layers: [assets]
-  situations: [severe-weather]
+  events: [severe-weather]

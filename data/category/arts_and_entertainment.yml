@@ -2,7 +2,7 @@ arts_and_entertainment:
   name: Arts and Entertainment
   extent: footprint
   layers: [assets]
-  situations: [severe-weather]
+  events: [severe-weather]
   id: 4d4b7104d754a06370d81259
   subcategories:
     dance_hall:

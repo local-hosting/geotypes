@@ -1,7 +1,7 @@
 landmarks_and_outdoors:
   name: Landmarks and Outdoors
   extent: area
-  situations: [severe-weather, litter-pollution]
+  events: [severe-weather, litter-pollution]
   id: 4d4b7105d754a06377d81259
   subcategories:
     tunnel:

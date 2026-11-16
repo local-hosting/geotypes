@@ -1,4 +1,4 @@
 community_residential:
   name: Community Residential
   extent: site
-  situations: [severe-weather]
+  events: [severe-weather]

@@ -137,14 +137,14 @@ describe('materialized slug archetypes', () => {
       expect({ extent: meta.extent, vertical: meta.vertical, movement: meta.movement }, slug).toEqual(axes);
       expect(meta.archetype, slug).toBe(archetypeForAxes(axes));
       const decorations = resolvePlaceDecorations(slug, input, meta.archetype, PLACE_ARCHETYPE_CONFIG);
-      expect({ situations: meta.situations, layers: meta.layers }, slug).toEqual(decorations);
+      expect({ events: meta.events, layers: meta.layers }, slug).toEqual(decorations);
     }
   });
 
-  it('only suggests catalog situations', () => {
-    const catalog = new Set(PLACE_ARCHETYPE_CONFIG.situations);
+  it('only suggests catalog events', () => {
+    const catalog = new Set(PLACE_ARCHETYPE_CONFIG.events);
     for (const [slug, meta] of Object.entries(GEOTYPE_LAYOUT_META_BY_SLUG)) {
-      for (const situation of meta.situations) expect(catalog.has(situation), `${slug}: ${situation}`).toBe(true);
+      for (const event of meta.events) expect(catalog.has(event), `${slug}: ${event}`).toBe(true);
     }
   });
 });

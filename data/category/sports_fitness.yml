@@ -1,4 +1,4 @@
 sports_fitness:
   name: Sports Fitness
   extent: footprint
-  situations: [severe-weather]
+  events: [severe-weather]

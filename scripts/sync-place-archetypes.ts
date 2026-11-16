@@ -52,11 +52,11 @@ function loadLayerList(value: unknown, context: string): PlaceLayerKind[] {
   return value.map((kind) => assertPlaceLayerKind(kind, context));
 }
 
-function loadSituationList(value: unknown, catalog: readonly string[], context: string): string[] {
-  if (!Array.isArray(value)) throw new Error(`${context}: situations must be a list`);
+function loadEventList(value: unknown, catalog: readonly string[], context: string): string[] {
+  if (!Array.isArray(value)) throw new Error(`${context}: events must be a list`);
   return value.map((name) => {
     if (typeof name !== 'string' || !catalog.includes(name)) {
-      throw new Error(`${context}: unknown situation "${String(name)}" (add it to situations: in place-archetype-rules.yml)`);
+      throw new Error(`${context}: unknown event "${String(name)}" (add it to events: in place-archetype-rules.yml)`);
     }
     return name;
   });
@@ -67,10 +67,10 @@ function loadSlugOverride(node: YamlNode, catalog: readonly string[], context: s
   if (node.extent !== undefined) override.extent = assertPlaceExtent(node.extent, context);
   if (node.vertical !== undefined) override.vertical = assertPlaceVertical(node.vertical, context);
   if (node.movement !== undefined) override.movement = assertPlaceMovement(node.movement, context);
-  if (node.situations !== undefined) override.situations = loadSituationList(node.situations, catalog, context);
+  if (node.events !== undefined) override.events = loadEventList(node.events, catalog, context);
   if (node.layers !== undefined) override.layers = loadLayerList(node.layers, context);
   if (Object.keys(override).length === 0) {
-    throw new Error(`${context}: set at least one of extent, vertical, movement, situations, layers`);
+    throw new Error(`${context}: set at least one of extent, vertical, movement, events, layers`);
   }
   return override;
 }
@@ -91,7 +91,7 @@ function loadArchetypeRulesYaml(): RulesYaml {
     throw new Error('expected place-archetype-rules.yml object');
   }
   const obj = raw as YamlNode;
-  for (const key of ['archetype_defaults', 'situations', 'assets', 'slugs']) {
+  for (const key of ['archetype_defaults', 'events', 'assets', 'slugs']) {
     if (!obj[key] || typeof obj[key] !== 'object') throw new Error(`place-archetype-rules.yml missing ${key}`);
   }
   const defaults = obj.archetype_defaults as YamlNode;
@@ -99,10 +99,10 @@ function loadArchetypeRulesYaml(): RulesYaml {
   for (const archetype of PLACE_ARCHETYPES) {
     if (!defaults[archetype]) throw new Error(`place-archetype-rules.yml missing archetype_defaults.${archetype}`);
   }
-  const situations = (obj.situations as unknown[]).map(String);
+  const events = (obj.events as unknown[]).map(String);
   const slugs: PlaceArchetypeConfig['slugs'] = {};
   for (const [slug, node] of Object.entries(obj.slugs as Record<string, YamlNode>)) {
-    slugs[slug] = loadSlugOverride(node, situations, `place-archetype-rules.yml slugs.${slug}`);
+    slugs[slug] = loadSlugOverride(node, events, `place-archetype-rules.yml slugs.${slug}`);
   }
   const suggest_building_import: PlaceArchetypeConfig['suggest_building_import'] = {};
   const rawSuggest = obj.suggest_building_import;
@@ -122,7 +122,7 @@ function loadArchetypeRulesYaml(): RulesYaml {
     archetype_defaults: defaults as RulesYaml['archetype_defaults'],
     archetype_layers: loadArchetypeLayers(obj.archetype_layers),
     ...(Object.keys(suggest_building_import).length > 0 ? { suggest_building_import } : {}),
-    situations,
+    events,
     assets: (obj.assets as unknown[]).map(String),
     slugs,
   };
@@ -138,8 +138,8 @@ function loadCategoryDefaults(catalog: readonly string[]): Record<string, PlaceC
       out[categoryKey] = {
         extent: assertPlacePolygonExtent(node.extent, context),
         ...(node.vertical !== undefined ? { vertical: assertPlaceVertical(node.vertical, context) } : {}),
-        ...(node.situations !== undefined
-          ? { situations: loadSituationList(node.situations, catalog, context) }
+        ...(node.events !== undefined
+          ? { events: loadEventList(node.events, catalog, context) }
           : {}),
         ...(node.layers !== undefined ? { layers: loadLayerList(node.layers, context) } : {}),
       };
@@ -174,7 +174,7 @@ function loadFeatureRows(categories: Record<string, PlaceCategoryDefaults>): Arr
 
 function main(): void {
   const { assets, ...rules } = loadArchetypeRulesYaml();
-  const categories = loadCategoryDefaults(rules.situations);
+  const categories = loadCategoryDefaults(rules.events);
   const config: PlaceArchetypeConfig = { ...rules, categories };
   const rows = loadFeatureRows(categories);
 

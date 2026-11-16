@@ -57,7 +57,7 @@ export type PlaceLayerKind =
 
 /** Suggested decorators on top of the archetype base (spec/doc/place/decorate-twin.md). */
 export type PlaceDecorations = {
-  situations: readonly string[];
+  events: readonly string[];
   layers: readonly PlaceLayerKind[];
 };
 
@@ -65,11 +65,11 @@ export type PlaceDecorations = {
 export type PlaceCategoryDefaults = {
   extent: PlacePolygonExtent;
   vertical?: PlaceVertical;
-  situations?: readonly string[];
+  events?: readonly string[];
   layers?: readonly PlaceLayerKind[];
 };
 
-/** Per-slug overrides: any axis, plus situations (replace) and layers (added). */
+/** Per-slug overrides: any axis, plus events (replace) and layers (added). */
 export type PlaceSlugOverride = Partial<PlaceAxes> & Partial<PlaceDecorations>;
 
 export type PlaceArchetypeConfig = {
@@ -77,7 +77,7 @@ export type PlaceArchetypeConfig = {
   archetype_layers: Record<PlaceArchetype, readonly PlaceLayerKind[]>;
   /** Per-archetype hint for RFC 0005 child units (`twin init` → `place/BUILDINGS.md`). */
   suggest_building_import?: Partial<Record<PlaceArchetype, boolean>>;
-  situations: readonly string[];
+  events: readonly string[];
   categories: Record<string, PlaceCategoryDefaults>;
   slugs: Record<string, PlaceSlugOverride>;
 };

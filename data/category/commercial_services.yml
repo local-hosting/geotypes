@@ -2,4 +2,4 @@ commercial_services:
   name: Commercial Services
   extent: footprint
   layers: [assets]
-  situations: [severe-weather]
+  events: [severe-weather]

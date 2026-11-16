@@ -1,4 +1,4 @@
 transportation_logistics:
   name: Transportation Logistics
   extent: site
-  situations: [transit-disruption]
+  events: [transit-disruption]

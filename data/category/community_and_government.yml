@@ -1,7 +1,7 @@
 community_and_government:
   name: Community and Government
   extent: site
-  situations: [severe-weather]
+  events: [severe-weather]
   id: 63be6904847c3692a84b9b9a
   subcategories:
     cemetery:
