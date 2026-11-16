@@ -1,4 +1,4 @@
-/** Place-search taxonomy resolver contract (`@twinfile/geotypes/geokit`). */
+/** Place-search taxonomy resolver contract (`@doppler-group/geotypes/geokit`). */
 export type PlaceSearchProvider =
   | 'foursquare'
   | 'google-places'

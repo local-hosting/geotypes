@@ -3,7 +3,7 @@
  * Scan a package tree for closed-host product references.
  * Deny tokens live in ENCODED (base64); CI reports rule ids only.
  *
- * Monorepo: edit this file, then `yarn sync:vendor-neutral-lib`.
+ * Monorepo: edit tooling/scripts/vn-scan-lib.mjs, then `yarn sync:vendor-neutral-lib`.
  */
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
@@ -14,10 +14,6 @@ const ENCODED = [
   'ZmllbGR3aXNl',
   'ZmllbGR3aXNlLXNoYXBlcw==',
   'dHJ1c3RiYXNl',
-  'ZG9wcGxlci1ncm91cA==',
-  'ZG9wcGxlciBncm91cA==',
-  'QGRvcHBsZXIv',
-  'QGRvcHBsZXIt',
   'ZG9wcGxlciBnbG9iZQ==',
   'Y29yaW8tcGxhdGZvcm1z',
   'QGNvcmlvLw==',

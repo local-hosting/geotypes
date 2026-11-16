@@ -50,7 +50,7 @@ archetype_layers:
   open_area: [routes]
   linear: [visits]
 
-# Situation units in @twinfile/simulator situations/ (decorators wired via plans/).
+# Situation units in @doppler-group/twinfile-simulator situations/ (decorators wired via plans/).
 situations:
   - severe-weather
   - transit-disruption
