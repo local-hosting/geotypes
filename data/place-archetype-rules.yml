@@ -16,7 +16,7 @@ suggest_building_import:
   campus: true
 # Each place slug's axes, archetype, and decorations are materialized on GEOTYPE_LAYOUT_META_BY_SLUG;
 # `assets:` slugs are excluded (GEOTYPE_ASSET_SLUGS).
-# Golden `from:` bases and `with:` mixins: examples (base-*, mixin-*).
+# Golden `from:` bases: examples (base-*).
 # Overrides or assets for slugs missing from features.yml fail the sync.
 
 archetype_defaults:
