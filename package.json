@@ -68,7 +68,6 @@
     "@bufbuild/protoc-gen-es": "^2.6.0",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^24.10.1",
-    "@westlane/isocanvas": "portal:../../westlane/isocanvas",
     "axios": "^1.12.2",
     "commander": "^14.0.0",
     "nanoid": "^5.1.6",
