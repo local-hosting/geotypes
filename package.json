@@ -1,6 +1,6 @@
 {
   "name": "@doppler-group/geotypes",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "packageManager": "yarn@4.9.2",
   "description": "Open POI taxonomy registry (YAML / proto) and runtime slugs for Twinfile place units",
   "license": "MPL-2.0",
