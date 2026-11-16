@@ -2,4 +2,4 @@ utilities_infrastructure:
   name: Utilities Infrastructure
   extent: site
   layers: [sensors]
-  situations: [power-outage]
+  events: [power-outage]

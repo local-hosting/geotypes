@@ -2,7 +2,7 @@ dining_and_drinking:
   name: Dining and Drinking
   extent: footprint
   layers: [assets]
-  situations: [severe-weather]
+  events: [severe-weather]
   id: 63be6904847c3692a84b9bb5
   subcategories:
     food_truck:

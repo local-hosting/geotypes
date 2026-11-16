@@ -2,4 +2,4 @@ natural_resources:
   name: Natural Resources
   extent: area
   layers: [sensors]
-  situations: [drought]
+  events: [drought]

@@ -1,4 +1,4 @@
 financial_services:
   name: Financial Services
   extent: footprint
-  situations: [severe-weather]
+  events: [severe-weather]

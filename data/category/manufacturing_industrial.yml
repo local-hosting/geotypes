@@ -2,4 +2,4 @@ manufacturing_industrial:
   name: Manufacturing Industrial
   extent: site
   layers: [sensors]
-  situations: [severe-weather]
+  events: [severe-weather]

@@ -77,7 +77,7 @@ export function archetypeForAxes(axes: PlaceAxes): PlaceArchetype {
   );
 }
 
-/** Situations: slug override → category → none. Layers: archetype ∪ category ∪ slug, canonical order. */
+/** Events: slug override → category → none. Layers: archetype ∪ category ∪ slug, canonical order. */
 export function resolvePlaceDecorations(
   slug: string,
   meta: GeotypeLayoutMetaInput,
@@ -92,7 +92,7 @@ export function resolvePlaceDecorations(
     ...(override.layers ?? []),
   ]);
   return {
-    situations: [...(override.situations ?? category?.situations ?? [])],
+    events: [...(override.events ?? category?.events ?? [])],
     layers: PLACE_LAYER_KINDS.filter((kind) => layers.has(kind)),
   };
 }

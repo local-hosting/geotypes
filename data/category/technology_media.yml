@@ -1,4 +1,4 @@
 technology_media:
   name: Technology Media
   extent: footprint
-  situations: [severe-weather]
+  events: [severe-weather]

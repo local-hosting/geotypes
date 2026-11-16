@@ -47,7 +47,7 @@ export const PLACE_ARCHETYPE_CONFIG = {
   "suggest_building_import": {
     "campus": true
   },
-  "situations": [
+  "events": [
     "severe-weather",
     "transit-disruption",
     "dam-release",
@@ -66,7 +66,7 @@ export const PLACE_ARCHETYPE_CONFIG = {
     "shopping_mall": {
       "extent": "footprint",
       "vertical": "stacked",
-      "situations": [
+      "events": [
         "severe-weather",
         "transit-disruption"
       ]
@@ -77,7 +77,7 @@ export const PLACE_ARCHETYPE_CONFIG = {
     "hospital": {
       "extent": "site",
       "vertical": "stacked",
-      "situations": [
+      "events": [
         "severe-weather",
         "transit-disruption"
       ]
@@ -88,7 +88,7 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "university": {
       "extent": "site",
-      "situations": [
+      "events": [
         "severe-weather",
         "transit-disruption"
       ]
@@ -98,14 +98,14 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "stadium": {
       "extent": "site",
-      "situations": [
+      "events": [
         "severe-weather",
         "transit-disruption"
       ]
     },
     "theme_park": {
       "extent": "site",
-      "situations": [
+      "events": [
         "severe-weather",
         "transit-disruption",
         "litter-pollution"
@@ -113,7 +113,7 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "zoo": {
       "extent": "site",
-      "situations": [
+      "events": [
         "severe-weather",
         "transit-disruption",
         "litter-pollution"
@@ -127,14 +127,14 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "port": {
       "extent": "site",
-      "situations": [
+      "events": [
         "severe-weather",
         "transit-disruption",
         "litter-pollution"
       ]
     },
     "ferry_terminal": {
-      "situations": [
+      "events": [
         "severe-weather",
         "transit-disruption",
         "litter-pollution"
@@ -149,29 +149,29 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "mining_site": {
       "extent": "site",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "hydroelectric_plant": {
-      "situations": [
+      "events": [
         "severe-weather",
         "dam-release"
       ]
     },
     "truck_stop": {
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "fulfillment_center": {
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "public_park": {
       "extent": "area",
-      "situations": [
+      "events": [
         "severe-weather",
         "litter-pollution"
       ]
@@ -205,34 +205,34 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "heliport": {
       "extent": "area",
-      "situations": []
+      "events": []
     },
     "solar_farm": {
       "extent": "area",
-      "situations": []
+      "events": []
     },
     "wind_farm": {
       "extent": "area",
-      "situations": []
+      "events": []
     },
     "conservation_area": {
-      "situations": [
+      "events": [
         "litter-pollution"
       ]
     },
     "species_removal_area": {
-      "situations": [
+      "events": [
         "litter-pollution"
       ]
     },
     "spoil_heap_boundary": {
-      "situations": [
+      "events": [
         "litter-pollution"
       ]
     },
     "bus_stop": {
       "extent": "footprint",
-      "situations": [
+      "events": [
         "transit-disruption"
       ]
     },
@@ -265,29 +265,29 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "gas_station": {
       "extent": "footprint",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "motel": {
       "extent": "footprint",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "vacation_rental": {
       "extent": "footprint",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "bed_breakfast": {
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "travel_agency": {
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
@@ -352,7 +352,7 @@ export const PLACE_ARCHETYPE_CONFIG = {
     "hostel": {
       "extent": "footprint",
       "vertical": "stacked",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
@@ -381,54 +381,54 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "control_tower": {
       "vertical": "stacked",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "shipping_dock": {
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "food_truck": {
-      "situations": []
+      "events": []
     },
     "creek": {
-      "situations": [
+      "events": [
         "dam-release",
         "flood",
         "litter-pollution"
       ]
     },
     "substation": {
-      "situations": [
+      "events": [
         "power-outage",
         "flood",
         "severe-weather"
       ]
     },
     "riverbank_survey": {
-      "situations": [
+      "events": [
         "dam-release",
         "litter-pollution"
       ]
     },
     "highway": {
-      "situations": [
+      "events": [
         "transit-disruption"
       ]
     },
     "runway": {
-      "situations": []
+      "events": []
     },
     "taxiway": {
-      "situations": []
+      "events": []
     }
   },
   "categories": {
     "arts_and_entertainment": {
       "extent": "footprint",
-      "situations": [
+      "events": [
         "severe-weather"
       ],
       "layers": [
@@ -437,13 +437,13 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "business_and_professional_services": {
       "extent": "footprint",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "commercial_services": {
       "extent": "footprint",
-      "situations": [
+      "events": [
         "severe-weather"
       ],
       "layers": [
@@ -452,25 +452,25 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "community_and_government": {
       "extent": "site",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "community_residential": {
       "extent": "site",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "construction_real_estate": {
       "extent": "footprint",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "dining_and_drinking": {
       "extent": "footprint",
-      "situations": [
+      "events": [
         "severe-weather"
       ],
       "layers": [
@@ -479,7 +479,7 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "energy_oil_gas": {
       "extent": "site",
-      "situations": [
+      "events": [
         "severe-weather"
       ],
       "layers": [
@@ -488,7 +488,7 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "entertainment_gaming": {
       "extent": "footprint",
-      "situations": [
+      "events": [
         "severe-weather"
       ],
       "layers": [
@@ -497,32 +497,32 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "financial_services": {
       "extent": "footprint",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "health_and_medicine": {
       "extent": "site",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "landmarks_and_outdoors": {
       "extent": "area",
-      "situations": [
+      "events": [
         "severe-weather",
         "litter-pollution"
       ]
     },
     "legal_professional": {
       "extent": "footprint",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "manufacturing_industrial": {
       "extent": "site",
-      "situations": [
+      "events": [
         "severe-weather"
       ],
       "layers": [
@@ -531,7 +531,7 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "natural_resources": {
       "extent": "area",
-      "situations": [
+      "events": [
         "drought"
       ],
       "layers": [
@@ -540,7 +540,7 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "retail": {
       "extent": "footprint",
-      "situations": [
+      "events": [
         "severe-weather"
       ],
       "layers": [
@@ -549,31 +549,31 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "sports_and_recreation": {
       "extent": "site",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "sports_fitness": {
       "extent": "footprint",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "technology_media": {
       "extent": "footprint",
-      "situations": [
+      "events": [
         "severe-weather"
       ]
     },
     "transportation_logistics": {
       "extent": "site",
-      "situations": [
+      "events": [
         "transit-disruption"
       ]
     },
     "travel_and_transportation": {
       "extent": "site",
-      "situations": [
+      "events": [
         "severe-weather",
         "transit-disruption"
       ],
@@ -583,7 +583,7 @@ export const PLACE_ARCHETYPE_CONFIG = {
     },
     "utilities_infrastructure": {
       "extent": "site",
-      "situations": [
+      "events": [
         "power-outage"
       ],
       "layers": [
@@ -594,277 +594,277 @@ export const PLACE_ARCHETYPE_CONFIG = {
 } as const satisfies PlaceArchetypeConfig;
 
 export const GEOTYPE_LAYOUT_META_BY_SLUG = {
-  'accounting_firm': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'accounting_office': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'agricultural_field': {"category":"natural_resources","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["drought"],"layers":["sensors","routes"]},
-  'ai_company': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'airport': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"site","vertical":"stacked","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather","transit-disruption"],"layers":["routes","visits","assets"]},
-  'apartment_building': {"category":"community_and_government","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'aquarium': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'arcade': {"category":"arts_and_entertainment","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'architect_office': {"category":"construction_real_estate","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'arterial': {"category":"transportation_logistics","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"venue","suggest_building_import":false,"situations":["transit-disruption"],"layers":["visits"]},
-  'attorney_office': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'auditing_firm': {"category":"legal_professional","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'auto_body_shop': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'auto_life_insurance': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'auto_repair': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'automotive_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'bank': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'bar': {"category":"dining_and_drinking","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'barbershop': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'barn': {"category":"natural_resources","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["drought"],"layers":["sensors"]},
-  'baseball_field': {"category":"sports_and_recreation","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["routes"]},
-  'basketball_court': {"category":"sports_and_recreation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'bed_breakfast': {"category":"travel_and_transportation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'bingo_hall': {"category":"arts_and_entertainment","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'biomass_plant': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'bowling_alley': {"category":"arts_and_entertainment","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'brewery': {"category":"dining_and_drinking","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'bridge_construction': {"category":"construction_real_estate","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'brokerage_firm': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'bus_stop': {"category":"travel_and_transportation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["transit-disruption"],"layers":["assets"]},
-  'business_consulting': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'cafe': {"category":"dining_and_drinking","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'campground': {"category":"landmarks_and_outdoors","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["severe-weather","litter-pollution"],"layers":["routes"]},
-  'car_dealership': {"category":"retail","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'car_wash': {"category":"business_and_professional_services","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'casino': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'casino_resort': {"category":"entertainment_gaming","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'cemetery': {"category":"community_and_government","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["routes"]},
-  'chemical_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'church': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'cinema': {"category":"entertainment_gaming","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'city_hall': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'clothing_store': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'coaching_center': {"category":"sports_fitness","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'cold_storage': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["sensors"]},
-  'colocation_center': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'commercial_construction': {"category":"construction_real_estate","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'commercial_development': {"category":"construction_real_estate","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'community_college': {"category":"community_and_government","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["routes","visits"]},
-  'concert_hall': {"category":"entertainment_gaming","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'condominium': {"category":"community_and_government","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'conservation_area': {"category":"natural_resources","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["litter-pollution"],"layers":["sensors","routes"]},
-  'control_tower': {"category":"transportation_logistics","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'convenience_store': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'courthouse': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'coworking_space': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'credit_union': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'creek': {"category":"natural_resources","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"venue","suggest_building_import":false,"situations":["dam-release","flood","litter-pollution"],"layers":["sensors","visits"]},
-  'cryptocurrency_exchange': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'dance_studio': {"category":"sports_and_recreation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'daycare_center': {"category":"business_and_professional_services","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'deli': {"category":"commercial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'dental_office': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'department_store': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'digital_bank': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'digital_media_company': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'distribution_center': {"category":"business_and_professional_services","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'distribution_line': {"category":"utilities_infrastructure","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"resource","suggest_building_import":false,"situations":["power-outage"],"layers":["sensors","visits"]},
-  'dmv_office': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'dormitory': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'drilling_rig': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["sensors"]},
-  'dry_cleaner': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'electronics_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'electronics_store': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'elementary_school': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'embassy': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'engineering_office': {"category":"construction_real_estate","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'entertainment_venue': {"category":"entertainment_gaming","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'extended_stay': {"category":"commercial_services","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'family_entertainment': {"category":"entertainment_gaming","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'fast_food': {"category":"dining_and_drinking","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'federal_building': {"category":"community_and_government","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'ferry_terminal': {"category":"transportation_logistics","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather","transit-disruption","litter-pollution"],"layers":["routes","visits"]},
-  'fiber_line': {"category":"utilities_infrastructure","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"resource","suggest_building_import":false,"situations":["power-outage"],"layers":["sensors","visits"]},
-  'financial_consulting': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'fire_station': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'fitness_center': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'food_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'food_truck': {"category":"dining_and_drinking","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":[],"layers":["assets"]},
-  'football_field': {"category":"sports_and_recreation","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["routes"]},
-  'fulfillment_center': {"category":"transportation_logistics","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["routes","visits"]},
-  'funeral_home': {"category":"business_and_professional_services","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'furniture_store': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'gaming_company': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'gaming_studio': {"category":"entertainment_gaming","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'gas_pipeline': {"category":"utilities_infrastructure","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"resource","suggest_building_import":false,"situations":["power-outage"],"layers":["sensors","visits"]},
-  'gas_station': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'gas_station_facility': {"category":"utilities_infrastructure","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["power-outage"],"layers":["sensors","routes","visits"]},
-  'general_contractor': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'general_warehouse': {"category":"business_and_professional_services","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'geothermal_plant': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'golf_course': {"category":"sports_and_recreation","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["routes"]},
-  'grain_silo': {"category":"natural_resources","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["drought"],"layers":["sensors"]},
-  'greenhouse': {"category":"natural_resources","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["drought"],"layers":["sensors"]},
-  'grocery_store': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'gym': {"category":"sports_and_recreation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'hair_salon': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'hardware_company': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'hardware_store': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'health_insurance': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'hedge_fund': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'heliport': {"category":"transportation_logistics","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":[],"layers":["routes"]},
-  'high_school': {"category":"community_residential","geometry_type":"point","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["routes","visits"]},
-  'highway': {"category":"travel_and_transportation","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"venue","suggest_building_import":false,"situations":["transit-disruption"],"layers":["visits","assets"]},
-  'highway_construction': {"category":"construction_real_estate","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'hospital': {"category":"health_and_medicine","geometry_type":"point","extent":"site","vertical":"stacked","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather","transit-disruption"],"layers":["routes","visits"]},
-  'hospital_emergency_room': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'hostel': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'hotel': {"category":"commercial_services","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'hr_consulting': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'hydroelectric_plant': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather","dam-release"],"layers":["sensors","routes","visits"]},
-  'ice_cream': {"category":"dining_and_drinking","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'ice_rink': {"category":"sports_and_recreation","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'industrial_construction': {"category":"construction_real_estate","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'industrial_development': {"category":"construction_real_estate","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'insurance_broker': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'insurance_office': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'intermodal_facility': {"category":"transportation_logistics","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["transit-disruption"],"layers":["routes","visits"]},
-  'internet_company': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'laundromat': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'law_firm': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'law_office': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'lending_office': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'library': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'light_rail_station': {"category":"travel_and_transportation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather","transit-disruption"],"layers":["assets"]},
-  'lng_terminal': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'local_road': {"category":"transportation_logistics","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"venue","suggest_building_import":false,"situations":["transit-disruption"],"layers":["visits"]},
-  'maintenance_facility': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["sensors"]},
-  'management_consulting': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'marketing_agency': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'martial_arts_studio': {"category":"sports_fitness","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'massage_therapy': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'medical_clinic': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'medical_laboratory': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'medical_specialist': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'mental_health_facility': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'metal_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'middle_school': {"category":"community_and_government","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["routes","visits"]},
-  'mining_site': {"category":"natural_resources","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'mixed_use_development': {"category":"construction_real_estate","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'mobile_home_park': {"category":"community_residential","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["routes","visits"]},
-  'monitoring_station': {"category":"natural_resources","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["drought"],"layers":["sensors"]},
-  'mosque': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'motel': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'movie_theater': {"category":"arts_and_entertainment","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'museum': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'mutual_fund_company': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'nail_salon': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'nightclub': {"category":"commercial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'notary_public': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'nuclear_power_plant': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'nuclear_storage': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'nursing_home': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'office_building': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'oil_change': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'orchard': {"category":"natural_resources","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["drought"],"layers":["sensors","routes"]},
-  'paralegal_services': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'parking_lot': {"category":"community_residential","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["routes"]},
-  'payment_processor': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'personal_training': {"category":"sports_and_recreation","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'pet_grooming': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'pharmaceutical_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'pharmacy': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'pipeline_station': {"category":"energy_oil_gas","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["sensors"]},
-  'playground': {"category":"landmarks_and_outdoors","geometry_type":"point","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["severe-weather","litter-pollution"],"layers":["routes"]},
-  'police_station': {"category":"community_and_government","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'port': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather","transit-disruption","litter-pollution"],"layers":["routes","visits","assets"]},
-  'post_office': {"category":"community_and_government","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'preschool': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'private_data_center': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'processing_plant': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'production_line': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["sensors"]},
-  'production_studio': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'property_casualty_insurance': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'public_park': {"category":"community_residential","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["severe-weather","litter-pollution"],"layers":["routes"]},
-  'publisher': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'pump_station': {"category":"utilities_infrastructure","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["power-outage"],"layers":["sensors"]},
-  'quality_lab': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["sensors"]},
-  'quarry': {"category":"natural_resources","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["drought"],"layers":["sensors","routes"]},
-  'racetrack_casino': {"category":"entertainment_gaming","geometry_type":"point","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["routes","visits","assets"]},
-  'radio_station': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'rail_yard': {"category":"transportation_logistics","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"venue","suggest_building_import":false,"situations":["transit-disruption"],"layers":["visits"]},
-  'ranch': {"category":"natural_resources","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["drought"],"layers":["sensors","routes","visits"]},
-  'real_estate_office': {"category":"commercial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'real_estate_services': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'refinery': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'rehabilitation_center': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'residential_construction': {"category":"construction_real_estate","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'residential_development': {"category":"construction_real_estate","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'resort': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather","transit-disruption"],"layers":["routes","visits","assets"]},
-  'restaurant': {"category":"commercial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'retail_bank': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'riverbank_survey': {"category":"natural_resources","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"resource","suggest_building_import":false,"situations":["dam-release","litter-pollution"],"layers":["sensors","visits"]},
-  'roundabout': {"category":"transportation_logistics","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["transit-disruption"],"layers":[]},
-  'runway': {"category":"transportation_logistics","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"venue","suggest_building_import":false,"situations":[],"layers":["visits"]},
-  'savings_institution': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'senior_living': {"category":"community_and_government","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'server_farm': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'shipping_dock': {"category":"transportation_logistics","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'shopping_center': {"category":"commercial_services","geometry_type":"point","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["routes","visits","assets"]},
-  'shopping_mall': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather","transit-disruption"],"layers":["assets"]},
-  'single_family_home': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'soccer_field': {"category":"sports_and_recreation","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["routes"]},
-  'social_services': {"category":"community_and_government","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'software_company': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'solar_farm': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":[],"layers":["sensors","routes"]},
-  'spa': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'specialty_contractor': {"category":"construction_real_estate","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'specialty_fitness': {"category":"sports_fitness","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'specialty_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'specialty_store': {"category":"commercial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'species_removal_area': {"category":"natural_resources","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["litter-pollution"],"layers":["sensors","routes"]},
-  'spoil_heap_boundary': {"category":"natural_resources","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["litter-pollution"],"layers":["sensors","routes"]},
-  'sports_complex': {"category":"sports_fitness","geometry_type":"point","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["routes","visits"]},
-  'sports_medicine': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'stadium': {"category":"arts_and_entertainment","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather","transit-disruption"],"layers":["routes","visits","assets"]},
-  'standalone_casino': {"category":"entertainment_gaming","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'storage_facility': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'substation': {"category":"utilities_infrastructure","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["power-outage","flood","severe-weather"],"layers":["sensors","routes","visits"]},
-  'subway_station': {"category":"travel_and_transportation","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather","transit-disruption"],"layers":["assets"]},
-  'survey_transect': {"category":"natural_resources","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"resource","suggest_building_import":false,"situations":["drought"],"layers":["sensors","visits"]},
-  'swimming_pool': {"category":"sports_and_recreation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'switching_station': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'synagogue': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'tanning_salon': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'tax_office': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'tax_services': {"category":"legal_professional","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'taxiway': {"category":"travel_and_transportation","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"venue","suggest_building_import":false,"situations":[],"layers":["visits","assets"]},
-  'technology_consulting': {"category":"legal_professional","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'telecom_building': {"category":"utilities_infrastructure","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["power-outage"],"layers":["sensors"]},
-  'telecom_office': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'temple': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'tennis_court': {"category":"sports_and_recreation","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["routes"]},
-  'textile_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'theater': {"category":"arts_and_entertainment","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'theme_park': {"category":"arts_and_entertainment","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather","transit-disruption","litter-pollution"],"layers":["routes","visits","assets"]},
-  'tire_shop': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'townhouse': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'trade_school': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'train_station': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"site","vertical":"stacked","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather","transit-disruption"],"layers":["routes","visits","assets"]},
-  'training_facility': {"category":"sports_fitness","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'transmission_line': {"category":"utilities_infrastructure","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"resource","suggest_building_import":false,"situations":["power-outage"],"layers":["sensors","visits"]},
-  'transmission_substation': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["sensors","routes","visits"]},
-  'travel_agency': {"category":"travel_and_transportation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'treatment_plant': {"category":"utilities_infrastructure","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["power-outage"],"layers":["sensors","routes","visits"]},
-  'truck_stop': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather"],"layers":["routes","visits","assets"]},
-  'tv_station': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'underground_cable': {"category":"utilities_infrastructure","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"resource","suggest_building_import":false,"situations":["power-outage"],"layers":["sensors","visits"]},
-  'university': {"category":"community_and_government","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather","transit-disruption"],"layers":["routes","visits"]},
-  'urgent_care': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'used_car_lot': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'vacation_rental': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["assets"]},
-  'venture_capital': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'veterinary_clinic': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'vineyard': {"category":"natural_resources","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":["drought"],"layers":["sensors","routes"]},
-  'warehouse': {"category":"business_and_professional_services","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'water_construction': {"category":"construction_real_estate","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'wind_farm': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"situations":[],"layers":["sensors","routes"]},
-  'workshop': {"category":"manufacturing_industrial","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":["sensors"]},
-  'worship_center': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"situations":["severe-weather"],"layers":[]},
-  'zoo': {"category":"community_residential","geometry_type":"point","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"situations":["severe-weather","transit-disruption","litter-pollution"],"layers":["routes","visits"]},
+  'accounting_firm': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'accounting_office': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'agricultural_field': {"category":"natural_resources","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["drought"],"layers":["sensors","routes"]},
+  'ai_company': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'airport': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"site","vertical":"stacked","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather","transit-disruption"],"layers":["routes","visits","assets"]},
+  'apartment_building': {"category":"community_and_government","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'aquarium': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'arcade': {"category":"arts_and_entertainment","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'architect_office': {"category":"construction_real_estate","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'arterial': {"category":"transportation_logistics","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"venue","suggest_building_import":false,"events":["transit-disruption"],"layers":["visits"]},
+  'attorney_office': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'auditing_firm': {"category":"legal_professional","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'auto_body_shop': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'auto_life_insurance': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'auto_repair': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'automotive_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'bank': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'bar': {"category":"dining_and_drinking","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'barbershop': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'barn': {"category":"natural_resources","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["drought"],"layers":["sensors"]},
+  'baseball_field': {"category":"sports_and_recreation","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["routes"]},
+  'basketball_court': {"category":"sports_and_recreation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'bed_breakfast': {"category":"travel_and_transportation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'bingo_hall': {"category":"arts_and_entertainment","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'biomass_plant': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'bowling_alley': {"category":"arts_and_entertainment","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'brewery': {"category":"dining_and_drinking","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'bridge_construction': {"category":"construction_real_estate","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'brokerage_firm': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'bus_stop': {"category":"travel_and_transportation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["transit-disruption"],"layers":["assets"]},
+  'business_consulting': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'cafe': {"category":"dining_and_drinking","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'campground': {"category":"landmarks_and_outdoors","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["severe-weather","litter-pollution"],"layers":["routes"]},
+  'car_dealership': {"category":"retail","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'car_wash': {"category":"business_and_professional_services","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'casino': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'casino_resort': {"category":"entertainment_gaming","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'cemetery': {"category":"community_and_government","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["routes"]},
+  'chemical_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'church': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'cinema': {"category":"entertainment_gaming","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'city_hall': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'clothing_store': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'coaching_center': {"category":"sports_fitness","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'cold_storage': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["sensors"]},
+  'colocation_center': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'commercial_construction': {"category":"construction_real_estate","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'commercial_development': {"category":"construction_real_estate","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'community_college': {"category":"community_and_government","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["routes","visits"]},
+  'concert_hall': {"category":"entertainment_gaming","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'condominium': {"category":"community_and_government","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'conservation_area': {"category":"natural_resources","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["litter-pollution"],"layers":["sensors","routes"]},
+  'control_tower': {"category":"transportation_logistics","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'convenience_store': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'courthouse': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'coworking_space': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'credit_union': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'creek': {"category":"natural_resources","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"venue","suggest_building_import":false,"events":["dam-release","flood","litter-pollution"],"layers":["sensors","visits"]},
+  'cryptocurrency_exchange': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'dance_studio': {"category":"sports_and_recreation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'daycare_center': {"category":"business_and_professional_services","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'deli': {"category":"commercial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'dental_office': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'department_store': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'digital_bank': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'digital_media_company': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'distribution_center': {"category":"business_and_professional_services","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'distribution_line': {"category":"utilities_infrastructure","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"resource","suggest_building_import":false,"events":["power-outage"],"layers":["sensors","visits"]},
+  'dmv_office': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'dormitory': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'drilling_rig': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["sensors"]},
+  'dry_cleaner': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'electronics_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'electronics_store': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'elementary_school': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'embassy': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'engineering_office': {"category":"construction_real_estate","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'entertainment_venue': {"category":"entertainment_gaming","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'extended_stay': {"category":"commercial_services","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'family_entertainment': {"category":"entertainment_gaming","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'fast_food': {"category":"dining_and_drinking","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'federal_building': {"category":"community_and_government","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'ferry_terminal': {"category":"transportation_logistics","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather","transit-disruption","litter-pollution"],"layers":["routes","visits"]},
+  'fiber_line': {"category":"utilities_infrastructure","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"resource","suggest_building_import":false,"events":["power-outage"],"layers":["sensors","visits"]},
+  'financial_consulting': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'fire_station': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'fitness_center': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'food_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'food_truck': {"category":"dining_and_drinking","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":[],"layers":["assets"]},
+  'football_field': {"category":"sports_and_recreation","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["routes"]},
+  'fulfillment_center': {"category":"transportation_logistics","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["routes","visits"]},
+  'funeral_home': {"category":"business_and_professional_services","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'furniture_store': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'gaming_company': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'gaming_studio': {"category":"entertainment_gaming","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'gas_pipeline': {"category":"utilities_infrastructure","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"resource","suggest_building_import":false,"events":["power-outage"],"layers":["sensors","visits"]},
+  'gas_station': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'gas_station_facility': {"category":"utilities_infrastructure","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["power-outage"],"layers":["sensors","routes","visits"]},
+  'general_contractor': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'general_warehouse': {"category":"business_and_professional_services","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'geothermal_plant': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'golf_course': {"category":"sports_and_recreation","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["routes"]},
+  'grain_silo': {"category":"natural_resources","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["drought"],"layers":["sensors"]},
+  'greenhouse': {"category":"natural_resources","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["drought"],"layers":["sensors"]},
+  'grocery_store': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'gym': {"category":"sports_and_recreation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'hair_salon': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'hardware_company': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'hardware_store': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'health_insurance': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'hedge_fund': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'heliport': {"category":"transportation_logistics","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":[],"layers":["routes"]},
+  'high_school': {"category":"community_residential","geometry_type":"point","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["routes","visits"]},
+  'highway': {"category":"travel_and_transportation","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"venue","suggest_building_import":false,"events":["transit-disruption"],"layers":["visits","assets"]},
+  'highway_construction': {"category":"construction_real_estate","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'hospital': {"category":"health_and_medicine","geometry_type":"point","extent":"site","vertical":"stacked","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather","transit-disruption"],"layers":["routes","visits"]},
+  'hospital_emergency_room': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'hostel': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'hotel': {"category":"commercial_services","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'hr_consulting': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'hydroelectric_plant': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather","dam-release"],"layers":["sensors","routes","visits"]},
+  'ice_cream': {"category":"dining_and_drinking","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'ice_rink': {"category":"sports_and_recreation","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'industrial_construction': {"category":"construction_real_estate","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'industrial_development': {"category":"construction_real_estate","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'insurance_broker': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'insurance_office': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'intermodal_facility': {"category":"transportation_logistics","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["transit-disruption"],"layers":["routes","visits"]},
+  'internet_company': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'laundromat': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'law_firm': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'law_office': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'lending_office': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'library': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'light_rail_station': {"category":"travel_and_transportation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather","transit-disruption"],"layers":["assets"]},
+  'lng_terminal': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'local_road': {"category":"transportation_logistics","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"venue","suggest_building_import":false,"events":["transit-disruption"],"layers":["visits"]},
+  'maintenance_facility': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["sensors"]},
+  'management_consulting': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'marketing_agency': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'martial_arts_studio': {"category":"sports_fitness","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'massage_therapy': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'medical_clinic': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'medical_laboratory': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'medical_specialist': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'mental_health_facility': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'metal_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'middle_school': {"category":"community_and_government","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["routes","visits"]},
+  'mining_site': {"category":"natural_resources","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'mixed_use_development': {"category":"construction_real_estate","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'mobile_home_park': {"category":"community_residential","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["routes","visits"]},
+  'monitoring_station': {"category":"natural_resources","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["drought"],"layers":["sensors"]},
+  'mosque': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'motel': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'movie_theater': {"category":"arts_and_entertainment","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'museum': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'mutual_fund_company': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'nail_salon': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'nightclub': {"category":"commercial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'notary_public': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'nuclear_power_plant': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'nuclear_storage': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'nursing_home': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'office_building': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'oil_change': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'orchard': {"category":"natural_resources","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["drought"],"layers":["sensors","routes"]},
+  'paralegal_services': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'parking_lot': {"category":"community_residential","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["routes"]},
+  'payment_processor': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'personal_training': {"category":"sports_and_recreation","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'pet_grooming': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'pharmaceutical_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'pharmacy': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'pipeline_station': {"category":"energy_oil_gas","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["sensors"]},
+  'playground': {"category":"landmarks_and_outdoors","geometry_type":"point","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["severe-weather","litter-pollution"],"layers":["routes"]},
+  'police_station': {"category":"community_and_government","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'port': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather","transit-disruption","litter-pollution"],"layers":["routes","visits","assets"]},
+  'post_office': {"category":"community_and_government","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'preschool': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'private_data_center': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'processing_plant': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'production_line': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["sensors"]},
+  'production_studio': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'property_casualty_insurance': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'public_park': {"category":"community_residential","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["severe-weather","litter-pollution"],"layers":["routes"]},
+  'publisher': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'pump_station': {"category":"utilities_infrastructure","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["power-outage"],"layers":["sensors"]},
+  'quality_lab': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["sensors"]},
+  'quarry': {"category":"natural_resources","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["drought"],"layers":["sensors","routes"]},
+  'racetrack_casino': {"category":"entertainment_gaming","geometry_type":"point","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["routes","visits","assets"]},
+  'radio_station': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'rail_yard': {"category":"transportation_logistics","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"venue","suggest_building_import":false,"events":["transit-disruption"],"layers":["visits"]},
+  'ranch': {"category":"natural_resources","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["drought"],"layers":["sensors","routes","visits"]},
+  'real_estate_office': {"category":"commercial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'real_estate_services': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'refinery': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'rehabilitation_center': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'residential_construction': {"category":"construction_real_estate","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'residential_development': {"category":"construction_real_estate","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'resort': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather","transit-disruption"],"layers":["routes","visits","assets"]},
+  'restaurant': {"category":"commercial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'retail_bank': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'riverbank_survey': {"category":"natural_resources","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"resource","suggest_building_import":false,"events":["dam-release","litter-pollution"],"layers":["sensors","visits"]},
+  'roundabout': {"category":"transportation_logistics","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["transit-disruption"],"layers":[]},
+  'runway': {"category":"transportation_logistics","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"venue","suggest_building_import":false,"events":[],"layers":["visits"]},
+  'savings_institution': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'senior_living': {"category":"community_and_government","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'server_farm': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'shipping_dock': {"category":"transportation_logistics","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'shopping_center': {"category":"commercial_services","geometry_type":"point","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["routes","visits","assets"]},
+  'shopping_mall': {"category":"retail","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather","transit-disruption"],"layers":["assets"]},
+  'single_family_home': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'soccer_field': {"category":"sports_and_recreation","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["routes"]},
+  'social_services': {"category":"community_and_government","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'software_company': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'solar_farm': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":[],"layers":["sensors","routes"]},
+  'spa': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'specialty_contractor': {"category":"construction_real_estate","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'specialty_fitness': {"category":"sports_fitness","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'specialty_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'specialty_store': {"category":"commercial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'species_removal_area': {"category":"natural_resources","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["litter-pollution"],"layers":["sensors","routes"]},
+  'spoil_heap_boundary': {"category":"natural_resources","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["litter-pollution"],"layers":["sensors","routes"]},
+  'sports_complex': {"category":"sports_fitness","geometry_type":"point","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["routes","visits"]},
+  'sports_medicine': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'stadium': {"category":"arts_and_entertainment","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather","transit-disruption"],"layers":["routes","visits","assets"]},
+  'standalone_casino': {"category":"entertainment_gaming","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'storage_facility': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'substation': {"category":"utilities_infrastructure","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["power-outage","flood","severe-weather"],"layers":["sensors","routes","visits"]},
+  'subway_station': {"category":"travel_and_transportation","geometry_type":"point","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather","transit-disruption"],"layers":["assets"]},
+  'survey_transect': {"category":"natural_resources","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"resource","suggest_building_import":false,"events":["drought"],"layers":["sensors","visits"]},
+  'swimming_pool': {"category":"sports_and_recreation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'switching_station': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'synagogue': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'tanning_salon': {"category":"business_and_professional_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'tax_office': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'tax_services': {"category":"legal_professional","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'taxiway': {"category":"travel_and_transportation","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"venue","suggest_building_import":false,"events":[],"layers":["visits","assets"]},
+  'technology_consulting': {"category":"legal_professional","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'telecom_building': {"category":"utilities_infrastructure","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["power-outage"],"layers":["sensors"]},
+  'telecom_office': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'temple': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'tennis_court': {"category":"sports_and_recreation","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["routes"]},
+  'textile_plant': {"category":"manufacturing_industrial","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'theater': {"category":"arts_and_entertainment","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'theme_park': {"category":"arts_and_entertainment","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather","transit-disruption","litter-pollution"],"layers":["routes","visits","assets"]},
+  'tire_shop': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'townhouse': {"category":"community_and_government","geometry_type":"polygon","extent":"footprint","vertical":"stacked","movement":"free","archetype":"indoor_stack","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'trade_school': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'train_station': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"site","vertical":"stacked","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather","transit-disruption"],"layers":["routes","visits","assets"]},
+  'training_facility': {"category":"sports_fitness","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'transmission_line': {"category":"utilities_infrastructure","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"resource","suggest_building_import":false,"events":["power-outage"],"layers":["sensors","visits"]},
+  'transmission_substation': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["sensors","routes","visits"]},
+  'travel_agency': {"category":"travel_and_transportation","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'treatment_plant': {"category":"utilities_infrastructure","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["power-outage"],"layers":["sensors","routes","visits"]},
+  'truck_stop': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather"],"layers":["routes","visits","assets"]},
+  'tv_station': {"category":"technology_media","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'underground_cable': {"category":"utilities_infrastructure","geometry_type":"linestring","extent":"route","vertical":"flat","movement":"sequenced","archetype":"linear","kind":"resource","suggest_building_import":false,"events":["power-outage"],"layers":["sensors","visits"]},
+  'university': {"category":"community_and_government","geometry_type":"polygon","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather","transit-disruption"],"layers":["routes","visits"]},
+  'urgent_care': {"category":"health_and_medicine","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'used_car_lot': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'vacation_rental': {"category":"travel_and_transportation","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["assets"]},
+  'venture_capital': {"category":"financial_services","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'veterinary_clinic': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'vineyard': {"category":"natural_resources","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":["drought"],"layers":["sensors","routes"]},
+  'warehouse': {"category":"business_and_professional_services","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'water_construction': {"category":"construction_real_estate","geometry_type":"polygon","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'wind_farm': {"category":"energy_oil_gas","geometry_type":"polygon","extent":"area","vertical":"flat","movement":"free","archetype":"open_area","kind":"venue","suggest_building_import":false,"events":[],"layers":["sensors","routes"]},
+  'workshop': {"category":"manufacturing_industrial","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":["sensors"]},
+  'worship_center': {"category":"community_residential","geometry_type":"point","extent":"footprint","vertical":"flat","movement":"free","archetype":"single_level","kind":"venue","suggest_building_import":false,"events":["severe-weather"],"layers":[]},
+  'zoo': {"category":"community_residential","geometry_type":"point","extent":"site","vertical":"flat","movement":"free","archetype":"campus","kind":"venue","suggest_building_import":true,"events":["severe-weather","transit-disruption","litter-pollution"],"layers":["routes","visits"]},
 } as const satisfies Record<string, GeotypeLayoutMeta>;
 
 export type GeneratedGeotypeLayoutSlug = keyof typeof GEOTYPE_LAYOUT_META_BY_SLUG;

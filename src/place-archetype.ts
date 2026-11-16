@@ -97,10 +97,10 @@ export function isAssetGeotype(slug: string): boolean {
   return !!normalized && (GEOTYPE_ASSET_SLUGS as readonly string[]).includes(normalized);
 }
 
-/** Suggested situations + decoration layers for a geotype slug. */
+/** Suggested events + decoration layers for a geotype slug. */
 export function placeDecorationsForSlug(slug: string): PlaceDecorations | null {
   const meta = getLayoutMeta(slug);
-  return meta ? { situations: [...meta.situations], layers: [...meta.layers] } : null;
+  return meta ? { events: [...meta.events], layers: [...meta.layers] } : null;
 }
 
 /** When true, `twin init place` writes `place/BUILDINGS.md` (RFC 0005 child units). */
