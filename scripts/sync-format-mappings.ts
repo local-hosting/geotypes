@@ -1,5 +1,5 @@
 #!/usr/bin/env node --import tsx
-/** Regenerate src/generated/format-mappings.ts (bridge / Twinfile format tokens → geotype slug). */
+/** Regenerate src/generated/format-mappings.ts (bridge / format tokens → geotype slug). */
 
 import * as fs from 'node:fs';
 import * as path from 'node:path';

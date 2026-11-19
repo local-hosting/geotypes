@@ -2,12 +2,12 @@
   "name": "@local-hosting/geotypes",
   "version": "0.2.0",
   "packageManager": "yarn@4.9.2",
-  "description": "Open POI taxonomy registry (YAML / proto) and runtime slugs for Twinfile place units",
+  "description": "Open POI taxonomy registry (YAML / proto) and runtime slugs",
   "license": "MPL-2.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twinfile/geotypes.git"
+    "url": "git+https://github.com/local-hosting/geotypes.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
