@@ -3,7 +3,8 @@
  * Scan a package tree for closed-host product references.
  * Deny tokens live in ENCODED (base64); CI reports rule ids only.
  *
- * Monorepo: edit tooling/scripts/vn-scan-lib.mjs, then `yarn sync:vendor-neutral-lib`.
+ * Canonical copy for local-hosting. Sync into geokit/geotypes:
+ *   node tooling/scripts/sync-vendor-neutral-lib.mjs
  */
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
