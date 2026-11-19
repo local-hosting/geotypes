@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { createGeokitTaxonomyResolver } from '../src/geokit-adapter.js';
 
-describe('@doppler-group/geotypes/geokit', () => {
+describe('@local-hosting/geotypes/geokit', () => {
   const resolver = createGeokitTaxonomyResolver();
 
   it('resolves acronym RSE to electronics_store', () => {

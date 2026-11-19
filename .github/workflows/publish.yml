@@ -22,7 +22,7 @@ jobs:
       - run: corepack enable && corepack prepare yarn@4.9.2 --activate
       - name: npm auth for Yarn
         run: |
-          printf '@twinfile:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=%s\n' "$NODE_AUTH_TOKEN" >> .npmrc
+          printf '@local-hosting:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=%s\n' "$NODE_AUTH_TOKEN" >> .npmrc
         env:
           NODE_AUTH_TOKEN: ${{ secrets.TF_PACKAGES_TOKEN || secrets.GITHUB_TOKEN }}
       - run: yarn install --immutable

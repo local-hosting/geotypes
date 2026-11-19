@@ -7,7 +7,7 @@ import {
 } from '../src/schema-org.js';
 import { SCHEMA_ORG_TYPE_BY_SLUG } from '../src/generated/provider-categories.js';
 
-describe('@doppler-group/geotypes schema.org crosswalk', () => {
+describe('@local-hosting/geotypes schema.org crosswalk', () => {
   it('exports synced schema.org types for headline slugs', () => {
     expect(Object.keys(SCHEMA_ORG_TYPE_BY_SLUG).length).toBeGreaterThanOrEqual(20);
     expect(SCHEMA_ORG_TYPE_BY_SLUG.airport).toBe('Airport');

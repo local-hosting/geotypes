@@ -40,25 +40,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@doppler-group/geotypes@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@doppler-group/geotypes@workspace:."
-  dependencies:
-    "@bufbuild/protobuf": "npm:^2.6.0"
-    "@bufbuild/protoc-gen-es": "npm:^2.6.0"
-    "@types/js-yaml": "npm:^4.0.9"
-    "@types/node": "npm:^24.10.1"
-    axios: "npm:^1.12.2"
-    commander: "npm:^14.0.0"
-    js-yaml: "npm:^4.1.0"
-    nanoid: "npm:^5.1.6"
-    tsx: "npm:^4.20.5"
-    typescript: "npm:^5.9.3"
-    vite: "npm:^7.1.0"
-    vitest: "npm:^2.1.8"
-  languageName: unknown
-  linkType: soft
-
 "@esbuild/aix-ppc64@npm:0.21.5":
   version: 0.21.5
   resolution: "@esbuild/aix-ppc64@npm:0.21.5"
@@ -417,6 +398,25 @@ __metadata:
   checksum: 10c0/b5be700e45a775f218589c3466c4ffea630582b4988657652da464e5ab8a7d18bf928ee4fd2363fb346ede4bea9c6ff0bae05a538358c4565ece6199531b5f72
   languageName: node
   linkType: hard
+
+"@local-hosting/geotypes@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@local-hosting/geotypes@workspace:."
+  dependencies:
+    "@bufbuild/protobuf": "npm:^2.6.0"
+    "@bufbuild/protoc-gen-es": "npm:^2.6.0"
+    "@types/js-yaml": "npm:^4.0.9"
+    "@types/node": "npm:^24.10.1"
+    axios: "npm:^1.12.2"
+    commander: "npm:^14.0.0"
+    js-yaml: "npm:^4.1.0"
+    nanoid: "npm:^5.1.6"
+    tsx: "npm:^4.20.5"
+    typescript: "npm:^5.9.3"
+    vite: "npm:^7.1.0"
+    vitest: "npm:^2.1.8"
+  languageName: unknown
+  linkType: soft
 
 "@rollup/rollup-android-arm-eabi@npm:4.68.3":
   version: 4.68.3

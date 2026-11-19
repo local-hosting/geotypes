@@ -4,9 +4,9 @@ import { fileURLToPath } from 'node:url';
 
 const geotypesRoot = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 
-/** Sibling checkout: `Documents/GitHub/westlane/isocanvas` next to `twinfile/geotypes`. */
+/** Sibling checkout: `Documents/GitHub/westlane/isocanvas` next to `local-hosting/geotypes`. */
 export function resolveIsocanvasRoot() {
-  const fromEnv = process.env.TF_ISOCANVAS_ROOT?.trim();
+  const fromEnv = process.env.ISOCANVAS_ROOT?.trim();
   if (fromEnv && existsSync(path.join(fromEnv, 'package.json'))) {
     return path.resolve(fromEnv);
   }

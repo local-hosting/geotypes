@@ -50,7 +50,7 @@ archetype_layers:
   open_area: [routes]
   linear: [visits]
 
-# Event units in twinfile catalog/event/ (places host them through role tags).
+# Event units places may host through role tags.
 events:
   - severe-weather
   - transit-disruption

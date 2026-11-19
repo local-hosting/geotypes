@@ -9,7 +9,7 @@ import {
   partitionFeaturesByGeotype,
 } from '../src/index.js';
 
-describe('@doppler-group/geotypes', () => {
+describe('@local-hosting/geotypes', () => {
   it('exports synced taxonomy slugs', () => {
     expect(GEOTYPE_SLUGS.length).toBeGreaterThan(200);
     expect(isKnownGeotypeSlug('electronics_store')).toBe(true);
