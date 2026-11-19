@@ -28,11 +28,6 @@
       "types": "./generated/tags_pb.d.ts",
       "import": "./generated/tags_pb.js",
       "default": "./generated/tags_pb.js"
-    },
-    "./geokit": {
-      "types": "./dist/geokit-adapter.d.ts",
-      "import": "./dist/geokit-adapter.js",
-      "default": "./dist/geokit-adapter.js"
     }
   },
   "types": "./dist/index.d.ts",

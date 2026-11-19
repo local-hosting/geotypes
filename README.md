@@ -33,15 +33,11 @@ yarn viz        # taxonomy diagram at http://localhost:5175
 | Subpath | Purpose |
 | --- | --- |
 | `@local-hosting/geotypes` | Slugs, acronyms, provider maps, place scaffolds |
-| `@local-hosting/geotypes/geokit` | Optional `PlaceTaxonomyResolver` for map hosts |
 | `@local-hosting/geotypes/generated/*` | Protobuf modules |
 
 ```typescript
 import { placeScaffoldForSlug, isAssetGeotype } from '@local-hosting/geotypes';
-import { createGeokitTaxonomyResolver } from '@local-hosting/geotypes/geokit';
 
 placeScaffoldForSlug('shopping_mall');
 isAssetGeotype('stop_sign'); // true — point assets have no place scaffold
-
-const resolver = createGeokitTaxonomyResolver();
 ```

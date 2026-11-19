@@ -53,44 +53,44 @@ async function getEmbeddings(sentences: string[]): Promise<any> {
 export async function mapSchema(opts: { threshold?: string }) {
   const threshold = parseFloat(opts.threshold || '0.7');
   
-  // 1. Load legacy features from the main features file
+  // 1. Load features from schema/all_features.yml
   const allFeaturesPath = path.join(process.cwd(), 'schema', 'all_features.yml');
   if (!fs.existsSync(allFeaturesPath)) {
     throw new Error(`Error: The features file does not exist at: ${allFeaturesPath}`);
   }
   const allFeatures = yaml.load(fs.readFileSync(allFeaturesPath, 'utf8')) as any[];
-  const legacyItemsRaw = allFeatures.map((f: any) => ({
+  const sourceFeaturesRaw = allFeatures.map((f: any) => ({
     name: f.name,
     description: f.description || '',
     tags: f.tags || ''
   }));
-  const legacyItems = legacyItemsRaw.map(f => `Feature: "${f.name}", described as "${f.description}", used in categories like: ${f.tags}`);
+  const sourceFeatureTexts = sourceFeaturesRaw.map(f => `Feature: "${f.name}", described as "${f.description}", used in categories like: ${f.tags}`);
   
   // 2. Load the new Foursquare-aligned taxonomy
   const newTaxonomy = getFlatSubCategoryList();
   const newItems = newTaxonomy.map(item => `Category: "${item.name}", part of the "${item.parent}" group.`);
 
   // 3. Generate embeddings for both sets
-  console.log('Generating embeddings for legacy features...');
-  const legacyEmbeddingsTensor = await getEmbeddings(legacyItems);
-  const legacyEmbeddings = legacyEmbeddingsTensor.tolist();
+  console.log('Generating embeddings for schema features...');
+  const sourceEmbeddingsTensor = await getEmbeddings(sourceFeatureTexts);
+  const sourceEmbeddings = sourceEmbeddingsTensor.tolist();
 
   console.log('Generating embeddings for new taxonomy items...');
   const newEmbeddingsTensor = await getEmbeddings(newItems);
   const newEmbeddings = newEmbeddingsTensor.tolist();
   
   // 4. Find and print the best matches
-  console.log('\n--- AI-Powered Mappings (Legacy Schema -> New Taxonomy) ---');
+  console.log('\n--- AI-Powered Mappings (schema/all_features.yml → taxonomy) ---');
   let matchesFound = 0;
 
-  for (let i = 0; i < legacyItemsRaw.length; i++) {
-    const legacyItem = legacyItemsRaw[i];
-    const legacyEmbedding = legacyEmbeddings[i];
+  for (let i = 0; i < sourceFeaturesRaw.length; i++) {
+    const sourceFeature = sourceFeaturesRaw[i];
+    const sourceEmbedding = sourceEmbeddings[i];
     let bestMatch = { index: -1, score: -1 };
 
     for (let j = 0; j < newItems.length; j++) {
       const newEmbedding = newEmbeddings[j];
-      const score = cos_sim(legacyEmbedding, newEmbedding);
+      const score = cos_sim(sourceEmbedding, newEmbedding);
 
       if (score > bestMatch.score) {
         bestMatch = { index: j, score };
@@ -100,7 +100,7 @@ export async function mapSchema(opts: { threshold?: string }) {
     if (bestMatch.score >= threshold) {
       matchesFound++;
       const newMatch = newTaxonomy[bestMatch.index];
-      console.log(`- ${legacyItem.name} -> ${newMatch.name} (Score: ${bestMatch.score.toFixed(2)})`);
+      console.log(`- ${sourceFeature.name} -> ${newMatch.name} (Score: ${bestMatch.score.toFixed(2)})`);
     }
   }
 

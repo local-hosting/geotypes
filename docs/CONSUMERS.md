@@ -1,12 +1,5 @@
-# Consumers — migrate to `@local-hosting/geotypes`
+# Consumers — `@local-hosting/geotypes`
 
-| From | To |
-|------|-----|
-| `@doppler-group/geotypes` | `@local-hosting/geotypes` |
-| `@twinfile/geotypes` | `@local-hosting/geotypes` |
+Use **`@local-hosting/geotypes`** in imports, `package.json` dependencies, and registry pins.
 
-```bash
-yarn exec node scripts/migrate-imports.mjs /path/to/repo
-```
-
-Update any `registry:` pins and CI checkout paths to `@local-hosting/geotypes`.
+Canonical repo: [local-hosting/geotypes](https://github.com/local-hosting/geotypes). Point CI checkouts and workspace links at that repository.

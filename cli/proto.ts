@@ -63,7 +63,7 @@ program
 
 program
   .command('map-schema')
-  .description('Map legacy schema features to new Foursquare-aligned taxonomy using AI')
+  .description('Map schema/all_features.yml entries to Foursquare-aligned taxonomy using AI')
   .option('-t, --threshold <value>', 'Similarity threshold for a match', '0.7')
   .action(async (options) => {
     try {
