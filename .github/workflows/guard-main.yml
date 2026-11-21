@@ -1,0 +1,66 @@
+# Blocks direct pushes to main on private repos (no GitHub Team branch protection).
+# Merges from pull requests are allowed; rebase-merge/squash/merge commits link via the commits/:sha/pulls API.
+name: guard main
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  require-pr-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require merged pull request for main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          repo="${GITHUB_REPOSITORY}"
+          sha="${GITHUB_SHA}"
+          max_attempts=12
+
+          check_commit_pulls() {
+            gh api "repos/${repo}/commits/${sha}/pulls" --jq 'length'
+          }
+
+          check_squash_message_fallback() {
+            local msg pr merged_at
+            msg="$(gh api "repos/${repo}/commits/${sha}" --jq '.commit.message')"
+            pr="$(printf '%s\n' "${msg}" | grep -oE '\(#[0-9]+\)' | tail -1 | tr -d '(#)' || true)"
+            if [ -z "${pr}" ]; then
+              return 1
+            fi
+            merged_at="$(gh pr view "${pr}" -R "${repo}" --json mergedAt -q '.mergedAt // empty' 2>/dev/null || true)"
+            if [ -n "${merged_at}" ]; then
+              echo "commit message references merged PR #${pr}; OK (API link still propagating)"
+              return 0
+            fi
+            return 1
+          }
+
+          for attempt in $(seq 1 "${max_attempts}"); do
+            count="$(check_commit_pulls)"
+            if [ "${count}" -ge 1 ]; then
+              echo "main advance is linked to ${count} pull request(s); OK"
+              exit 0
+            fi
+            if check_squash_message_fallback; then
+              exit 0
+            fi
+            if [ "${attempt}" -lt "${max_attempts}" ]; then
+              sleep_sec=$((attempt * 4))
+              echo "pull request link not visible yet (attempt ${attempt}/${max_attempts}); sleeping ${sleep_sec}s…"
+              sleep "${sleep_sec}"
+            fi
+          done
+
+          if check_squash_message_fallback; then
+            exit 0
+          fi
+
+          echo "::error::Direct pushes to main are not allowed. Open a pull request, pass CI, then merge."
+          exit 1
